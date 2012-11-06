@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import "color.css";
+.item_showWords{color:#B32F06; font-weight:bold; font-size:14px;}
+.correlationThing { height: 100px; position: relative; margin-bottom: 15px; padding-top: 15px; padding-right: 0px; padding-left: 0px; }
+a:link.leftArrow,a:visited.leftArrow { background: url(thingArrow.gif); display: block; float: left; height: 74px; width: 16px; overflow: hidden; margin-top: 15px; }
+.correlationThing div.mainThing { width: 920px; height: 113px; float: left; margin: 0px 0px 0px 10px; overflow:hidden; }
+a:link.rightArrow,a:visited.rightArrow { background: url(thingArrow.gif) -16px top; display: block; float: right; margin-top: 15px; height: 74px; width: 16px; overflow: hidden; }
+.mainThing a:link,.mainThing a:visited { float: left; height: 111px; width: 100px; padding: 0px; margin: 0px; clear: none; text-decoration: none; border: 1px solid #FFFFFF; display: block; overflow: hidden; }
+.mainThing_title { position: absolute; top: -10px; right: 0px; color: #CCCCCC; font-size: 11px; }
+.mainThing_title a:link,.mainThing_title a:visited { text-decoration:none; margin-right:5px; }
+.mainThing_title a:hover { text-decoration:underline; }
+.mainThing a:hover { display: block; border: 1px solid #9e9e9e; }
+.mainThing_loading { text-align: center; padding-top: 32px; }
+.mainThing a:link.link_now,
+.mainThing a:visited.link_now { border: 1px solid #f38b1c; background:#fff;}
+.mainThing a b { text-align: center; clear: both; float: none; display: block; font-size: 11px; font-weight: normal; padding-top: 3px; color:#F07302; }
+.mainThing img { height:90px; max-width:90px; display: block; margin-right: auto; margin-left: auto; clear: both; float: none; border-width: 0px; border-style: none;  }
+.item_high_pic_box{ width:380px; height:500px; margin-bottom:10px; text-align: center; position: relative;}
+.item_high_pic_box .viewimgage { width:380px; height:500px; text-align:center; margin:0 auto; display:none; cursor:move;}
+.item_high_pic_box .viewimgage img { float:left; font-size:0;}
+.item_high_pic_box button { position:absolute; width:42px; bottom:10px; z-index:10;}
+.item_high_pic_box .Enlarge,.item_high_pic_box .decrease,.item_high_pic_box .reset{_behavior: url(iepngfix.htc); border:none; cursor:pointer; height:20px;}

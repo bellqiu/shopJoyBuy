@@ -1,0 +1,11 @@
+<#assign pageKeywords = "8.Why was I asked for a "CPF" number? (Brazilian customers)itary addresses?">
+<#assign pageDescription = "8.Why was I asked for a "CPF" number? (Brazilian customers)itary addresses?">
+<#assign pageTitle = "8.Why was I asked for a "CPF" number? (Brazilian customers)itary addresses?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help2-8.hpl">
+
+<#include "/footer/bottom.hpl">

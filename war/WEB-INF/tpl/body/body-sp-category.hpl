@@ -1,0 +1,13 @@
+<#assign pageCategories = pageView.category.subCategories>
+<div class="main_box" id="main_box">
+	<#include "uc-inc/fragments/breadcrumb.hpl">
+	<#include "uc-inc/sp-left.hpl">
+	<div class="right-region">
+	<#if pageCategories?size != 0>
+		<#include "uc-inc/sp-right-categories.hpl">
+	<#else>
+		<#include "uc-inc/sp-right-products.hpl">
+	</#if>
+	</div>
+	<p class="clearBoth"></p>
+</div>

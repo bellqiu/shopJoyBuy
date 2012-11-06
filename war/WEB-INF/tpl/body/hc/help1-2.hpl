@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+
+	<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">4.How do I check my order status?</div>
+  <p><span>Honeybuy has a very easy way for users to keep track of their account.</span>  
+  </div>
+<div class="detail">
+<!--gai-->
+<span>1. <a href="http://www.honeybuy.com/uc/login">Log into your account </a>and click on My Orders at the top of the page </span>
+<img src="/style/image/pic/top.jpg" width="772" height="146" />
+<span>2. You will then be able to view all your orders and their current status</span>
+<img src="/style/image/pic/pic.jpg" width="766" height="195" />
+<!--gai-->
+</div>
+</div>
+<p class="clearBoth"></p>
+</div>
+</div>

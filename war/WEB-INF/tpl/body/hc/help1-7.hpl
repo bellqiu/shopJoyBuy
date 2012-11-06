@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><div class="detail_title">9.How do I contact Customer Service about my order?</div>
+<span>Send email or leave a message with your order number is convenient process for communicating with you about each order placed with us.</span>  
+  </div>
+<div class="detail">
+  <!--gai-->
+  <span><strong>1. Leave us a message with your account in our store</strong></span>
+  <span><strong>Step 1:</strong>
+Sign in to My Orders and find the order number you need to contact us about. Click User Center-My Message </span>
+  <img src="/style/image/pic/top2.jpg" width="768" style="border:1px solid #ccc" />
+    <span><strong>Step 2:</strong>click compose</span>
+  <img src="/style/image/pic/compose.jpg" width="769" style="border:1px solid #ccc" />
+  <span><strong>Step 3:</strong>leave a message, it is better with your order number </span>
+      <img src="/style/image/pic/post.jpg" width="769" style="border:1px solid #ccc" />
+      <span>
+      <p><strong>2. Send Email</strong> to<a href="mailto:service@honeybuy.com">service@honeybuy.com</a> or <a href="mailto:sales@honeybuy.com">sales@honeybuy.com</a> .</p>
+<strong>3. Call us at :</strong> 0086-592-5183012 </span>
+<!--gai-->
+</div>
+</div>
+<p class="clearBoth"></p>
+</div>
+</div>

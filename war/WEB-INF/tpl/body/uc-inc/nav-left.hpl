@@ -1,0 +1,50 @@
+<div class="nav-left-box">
+	
+	<div class="box_title">User Center</div>
+
+	<div class="nav-left-catalog">
+		<dl class="nav-left-item">
+			<dt>My Shopping</dt>
+			<dd>
+				<a href="/uc/myOrder"  
+				<#if  uc_current_page= "myOrder">
+					class="nav-left-item_current"
+				</#if> 
+				>My Order</a>
+			</dd>
+		</dl>
+		<dl class="nav-left-item">
+			<dt>My Feedback</dt>
+			<dd>
+				<a href="/uc/feedback/?optType=viewList"  
+				<#if  uc_current_page= "messageBox">
+					class="nav-left-item_current"
+				</#if> 
+				>Message box</a>
+			</dd>
+		</dl>
+		<dl class="nav-left-item">
+			<dt>Settings</dt>
+			<dd>
+				<a href="/uc/userProfile" <#if  uc_current_page= "userProfile">
+					class="nav-left-item_current"
+				</#if>
+				>My Profile</a>
+			</dd>
+			<dd>
+				<a href="/uc/my-measurements"
+				<#if  uc_current_page= "measurements">
+					class="nav-left-item_current"
+				</#if>
+				>My Measurements</a>
+			</dd>
+			<dd>
+				<a href="/uc/changePwd"
+				<#if  uc_current_page= "changePwd">
+					class="nav-left-item_current"
+				</#if>
+				>Change Password</a>
+			</dd>
+		</dl>
+	</div>
+</div>

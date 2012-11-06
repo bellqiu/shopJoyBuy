@@ -1,0 +1,27 @@
+ <div class="login_left">
+	<div class="box_title">Login to my account</div>
+	<form id="FormLogin" method="post" action="/uc/login">
+		<div>
+			<p class="form_label">E-mail Address</p>
+			<input type="text" name="LoginEmail" class="txt_input" value="${LoginEmail!''}" validation="username">
+			<div class="form_error red" id="LoginEmail_noti">${(userView.err.userAccountErr)!''}</div>
+			<p class="form_label">Password</p>
+			<input type="password" name="LoginPwd" id="LoginPwd"
+				class="txt_input" value="${LoginPwd!''}">
+			<p class="form_label">
+				<input type="checkbox" name="rememberID" id="LoginRember" value="true" checked="checked">
+				<span>Login automatically in next month</span>
+			</p>
+			<p class="form_label">
+				<a class="cursor_point_and_underline" href="/uc/recoverPwd">Forget Password?</a>
+			</p>
+			<input type="hidden" name="landing_page" value="${userView.requestPage!''}">
+			<p class="form_label">
+				<input name="" type="submit" class="button_01" value="Login">
+			</p>
+			<p><img src="/css/song.jpg" alt="get $5" title="get $5" /></p>
+			<p class="form_label">Coupon will be sent to your E-mail after you register.</p>
+		</div>
+	</form>
+
+</div>

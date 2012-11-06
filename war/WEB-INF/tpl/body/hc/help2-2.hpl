@@ -1,0 +1,122 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><div class="detail_title">2.How do I estimate my delivery time?</div>
+<span>The estimated delivery Time is based on several factors, including the destination address, the shipping options you've chosen, and the production time of your dress and this will depend on how easily it can be processed.
+You can estimate the delivery time by taking the processing time for your order and adding the transit time based on the shipping method you've chosen. 
+For example, if you order a wedding dress, it will take us 8-12 business days to make it and 2-4 business days to deliver the package to your door if you select expedited shipping method. Therefore, you can expect to receive your dress in 10-16 business days. 
+Processing time differs from category to category. Refer to the table below for more precise processing and shipping times to better estimate when you will receive your order.</span></div>
+<div class="detail">
+<!--gai-->
+<table width="771">
+  <tr>
+    <th rowspan="2" width="25%">Category</th>
+    <th rowspan="2" width="25%">Order Processing Time
+(business days)
+</th>
+    <th colspan="2"><strong>Shipping Time  (business days)</strong></th>
+  </tr>
+  <tr>
+    <th width="25%">Expedited</th>
+    <th width="25%">Standard</th>
+  </tr>
+  <tr>
+    <td>Wedding Dresses</td>
+    <td>8-12 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Prom Dresses</td>
+    <td>8-12 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Flower Girls Dresses</td>
+    <td>8-12 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Other Dresses</td>
+    <td>8-12 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Spot Goods</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Custom Suits</td>
+    <td>8-12 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Fashion Apparel</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Accessories</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Shoes</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Handbags</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Jewelry</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Hair Wigs</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Tattoo</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Faucets</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+  <tr>
+    <td>Oil Painting</td>
+    <td>2-3 Days</td>
+    <td>2-4 Days</td>
+    <td>5-8 Days</td>
+  </tr>
+</table>
+
+<!--gai-->
+</div>
+</div>
+<p class="clearBoth"></p>
+</div></div>

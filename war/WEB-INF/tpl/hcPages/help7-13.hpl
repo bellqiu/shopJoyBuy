@@ -1,0 +1,11 @@
+<#assign pageKeywords = "13.Changing Payment Methods">
+<#assign pageDescription = "13.Changing Payment Methods">
+<#assign pageTitle = "13.Changing Payment Methods">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-13.hpl">
+
+<#include "/footer/bottom.hpl">

@@ -1,0 +1,36 @@
+<div class="nav-right-box">
+	<div class="box_title">My Orders</div>
+
+	<div class="nav-right-box_content">
+		<div class="right-box_order_con">
+			<ul class="right-box_order_header">
+				<li class="order_header_w1">ORDER DATE</li>
+				<li class="order_header_w2">ORDER NUMBER</li>
+				<li class="order_header_w3">ORDER TOTAL</li>
+				<li class="order_header_w4">ORDER STATUS</li>
+				<li class="order_header_w5">&nbsp;</li>
+			</ul>
+			<#list userOrders as order>
+			<#if order.currency == "USD">
+				<#assign currencyRate = 1>
+			<#else>
+				<#assign currencyRate = siteView.currencies[order.currency]>
+			</#if>
+			<ul class="right-box_order_item">
+				<li class="order_item_w1">${order.updateDate?string("yyyy-MM-dd HH:mm:ss")}</li>
+				<li class="order_item_w2"><a href="/uc/orderDetails?id=${order.name}">${order.name}</a></li>
+				<li class="order_item_w3">${order.currency} ${(currencyRate*(order.totalPrice-order.couponCutOff+order.dePrice))?string(",##0.##")}</li>
+				<li class="order_item_w4">${order.status}</li>
+				<li class="order_item_w5"><a href="/uc/orderDetails?id=${order.name}">View Details</a></li>
+			</ul>
+			</#list>
+		</div>
+		<div>
+			<ul class="right-box_order_footer">
+				<#list 1..userOrdersCount as i>
+					<li><a href="/uc/myOrder?page=${i?string}"  ${(page==i)?string("class='red'","")}>${i?string}</a></li>
+				</#list>
+			</ul>
+		</div>
+	</div>
+</div>

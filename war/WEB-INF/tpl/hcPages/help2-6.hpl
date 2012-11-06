@@ -1,0 +1,11 @@
+<#assign pageKeywords = "6.Are there any additional fees involved in international shipping?">
+<#assign pageDescription = "6.Are there any additional fees involved in international shipping?">
+<#assign pageTitle = "6.Are there any additional fees involved in international shipping?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help2-6.hpl">	
+
+<#include "/footer/bottom.hpl">

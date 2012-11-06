@@ -1,0 +1,11 @@
+<#assign pageKeywords = "4.What shipping methods do you offer?">
+<#assign pageDescription = "4.What shipping methods do you offer?">
+<#assign pageTitle = "4.What shipping methods do you offer?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help2-4.hpl">	
+
+<#include "/footer/bottom.hpl">

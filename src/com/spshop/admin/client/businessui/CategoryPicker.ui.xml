@@ -1,0 +1,12 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HorizontalPanel>
+			<g:HorizontalPanel ui:field="host"/>
+			<g:Button text="Picker Category" ui:field="pickBTN"/>
+		</g:HorizontalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

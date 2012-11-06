@@ -1,0 +1,11 @@
+<#assign pageKeywords = "3. How to pay with PayPal">
+<#assign pageDescription = "3. How to pay with PayPal">
+<#assign pageTitle = "3. How to pay with PayPal">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help5-3.hpl">
+
+<#include "/footer/bottom.hpl">

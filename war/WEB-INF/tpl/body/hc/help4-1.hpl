@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">1.	An item was lost or damaged during shipping</div></div>
+<div class="detail">
+<!--gai-->
+<span><p>If your item was damaged during shipping, you are eligible for a full refund. When requesting your refund, please be ready to provide Customer Service photographs clearly showing the problem with the item and its courier number as soon as possible. Please also provide "Proof of Damage" documentation from your courier. Alternatively, you can open the item in front of the delivery person and if you find that it was damaged during shipping, you can reject it, contact us saying you rejected the package. We will responsible for the follow-up matters. To report a lost or damaged item, please contact our Customer Service. Our Customer Service team will respond to you within 24 hours. Once Customer Service confirms an item is missing, we will begin processing a new one for you.</p>
+<br>
+</span>
+<!--gai-->
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

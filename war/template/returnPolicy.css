@@ -1,0 +1,22 @@
+.qh_tit {
+    background: url("http://s.tidebuy.com/images/newimages/tu.png") no-repeat scroll left 15px transparent;
+    color: black;
+    font-family: Georgia;
+    font-size: 16px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 22px;
+}
+
+.Return dt {
+    color: #000000;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.Return dd p {
+    color: #333333;
+    line-height: 22px;
+    padding: 12px 0;
+}

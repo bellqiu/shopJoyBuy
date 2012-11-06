@@ -1,0 +1,10 @@
+<#assign pageKeywords = "3.How do I calculate shipping costs?">
+<#assign pageDescription = "3.How do I calculate shipping costs?">
+<#assign pageTitle = "3.How do I calculate shipping costs?">
+
+
+
+<#include "/header/top.hpl">
+<#include "/body/hc/help2-3.hpl">	
+
+<#include "/footer/bottom.hpl">

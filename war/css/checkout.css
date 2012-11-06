@@ -1,0 +1,57 @@
+body{background:#fff;}
+#container{width:972px;margin:10px auto;overflow:hidden}
+.content_left{float:left;width:44%}
+.content_right{float:right;width:50%;padding-left:10px;border-left:1px dashed #ccc}
+.box_item_content{overflow:hidden;padding:10px;height:100%;clear:both}
+.box_item_content p{line-height:30px}
+.item_title{font-size:16px;color:black;font-family:Times New Roman;padding-left:20px;margin-bottom:20px;margin-top:20px}
+.item_title select{float:right;margin-right:20px}
+.input_box1{width:190px;height:16px;line-height:16px}
+.input_box2{width:210px;height:16px;line-height:16px}
+.order_address_words{padding-left:28px}
+p.listdescript{line-height:15px;padding-left:10px;margin-top:10px}
+input[type=text]{border-top:1px solid #ccc;border-left:1px solid #ccc;border-right:1px solid #ABADB3;border-bottom:1px solid #ABADB3}
+label{cursor:pointer;margin-right:10px}
+#table_address td{height:28px}
+#table_address td select{height:20px}
+#table_address{height:28px}
+.FS10{font-size:10px}
+.W260{width:260px}
+#table_regest{border:1px solid #AFAFAF;width:86%;margin:0 5%;padding:2%}
+#table_regest th{text-align:center;color:#F00000;font-weight:normal}
+#table_regest td{height:20px}
+#table_regest td input{background:#F2F2F2;width:160px}
+#ship_ul li p span a.edit_address{color:#39c;text-decoration:underline}
+.shippingway span.right{color:#333}
+.Tright{text-align:right}
+.table_regest_col{font-weight:bold;color:#515151}
+.content_right li{margin:20px 20px;overflow:hidden}
+.listdescript{font-family:Times New Roman;font-size:12px;line-height:20px;color:#303030}
+.shippingway{position:relative;overflow:hidden}
+.shippingway span{background:white;padding:0 4px}
+.shippingway_dotted{border-top:2px dotted #303030;position:absolute;z-index:-1;top:7px;height:1px;width:100%}
+.table_ul2{list-style:none;padding:0 0 20px}
+.table_ul2 input,.table_ul2 img{vertical-align:middle}
+.table_ul2 li{padding-top:4px;padding-bottom:4px;clear:both;float:none}
+.table_ul2 li i{font-size:11px;color:#6a636b;padding-top:3px;font-style:normal;padding-left:5px}
+.table_ul2 .pay_div{padding-top:4px;padding-bottom:4px;clear:both;float:none;padding-left:25px}
+.table_ul2 .pay_div i{font-size:11px;color:#6a636b;padding-top:3px;font-style:normal;padding-left:5px}
+#payHidd_paypal,#payHidd_xlmk,#payHidd_yhhk,#payHidd_xyk{border:1px solid #DDD;font-size:11px;line-height:1.5em;padding:5px 10px 10px;color:#6B6B6B;margin:10px}
+.debit_card .payHidd_div{margin:10px}
+.debit_left ul li{margin:6px 10px}
+#table_list{width:100%;border:none}
+#table_list th{background:#8C8C8C;color:white}
+#table_list td{padding:4px}
+#edit_addr{padding:15px;border-radius:5px;height:330px;width:430px}
+#edit_addr table td{padding:4px}
+#table_address2 td{padding:4px}
+.zf{width:320px}
+.zf td{padding:5px;color:#6D6C6C}
+.zf td.price{text-align:right;color:#FF7800}
+.zf td.price span{color:#FF7800}
+.zf td.border{border-bottom:1px solid #E5E5E5;padding-bottom:15px}
+.zf td.total{color:#333;font-size:14px;font-weight:bold}
+.zf td.bold,.zf td #total{font-size:14px}
+.OrderRemarks i{padding:0;text-indent:26px}
+#Remarks h3{font-size:14px}
+.sdiscount_box{position:relative}

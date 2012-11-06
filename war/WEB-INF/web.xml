@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<servlet>
+		<servlet-name>jsp</servlet-name>
+		<servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+		<init-param>
+			<param-name>compilerSourceVM</param-name>
+			<param-value>1.6</param-value>
+		</init-param>
+		<init-param>
+			<param-name>compilerTargetVM</param-name>
+			<param-value>1.6</param-value>
+		</init-param>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>queryService</servlet-name>
+		<servlet-class>com.spshop.admin.server.AdminServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>initServlet</servlet-name>
+		<servlet-class> com.spshop.admin.server.InitCacheService</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			com.spshop.web.support.URLHandlerServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/fe-struts-config.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>application</param-name>
+			<param-value>ApplicationResources</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ImageCreate</servlet-name>
+		<servlet-class>com.spshop.admin.server.ImageProcessor</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImageBatchCreate</servlet-name>
+		<servlet-class>com.spshop.admin.server.ImageBatchProcessor</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AdminLogin</servlet-name>
+		<servlet-class>com.spshop.admin.server.LoginService</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AdminLogin</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>initServlet</servlet-name>
+		<url-pattern>/initServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>queryService</servlet-name>
+		<url-pattern>/workspace/admin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImageCreate</servlet-name>
+		<url-pattern>/workspace/imageUpload</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImageBatchCreate</servlet-name>
+		<url-pattern>/workspace/imageBatchUpload</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.css</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.js</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.png</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.jpg</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.gif</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.ico</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.htm</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.xml</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.txt</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.xsd</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.JPG</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.zip</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.gz</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.xml.gz</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>*.swf</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SpringMVCUserCenter</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/context/webContext.xml,/WEB-INF/context/userCenter.xml</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SpringMVCUserCenter</servlet-name>
+		<url-pattern>/uc/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SpringMVCTags</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/context/webContext.xml,/WEB-INF/context/Tags.xml</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SpringMVCTags</servlet-name>
+		<url-pattern>/tags/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SpringMVCPage</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/context/webContext.xml,/WEB-INF/context/pageContext.xml</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SpringMVCPage</servlet-name>
+		<url-pattern>/c/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SpringMVCHome</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/context/webContext.xml,/WEB-INF/context/homeContext.xml</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SpringMVCHome</servlet-name>
+		<url-pattern>/home/*</url-pattern>
+	</servlet-mapping>
+
+<!--<error-page> -->
+<!-- 		<exception-type>java.lang.Throwable</exception-type> -->
+<!-- 		<location>/500.jsp</location> -->
+<!-- 	</error-page> -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/403.jsp</location>
+	</error-page>
+	<welcome-file-list>
+		<welcome-file>ShopAdmin.html</welcome-file>
+	</welcome-file-list>
+</web-app>

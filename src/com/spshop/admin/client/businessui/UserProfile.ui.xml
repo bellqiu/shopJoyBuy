@@ -1,0 +1,84 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+	<g:Grid>
+		<g:row>
+			<g:customCell>
+				<g:Label text="Name:" />
+			</g:customCell>
+			<g:customCell>
+				<g:Label ui:field="name" />
+			</g:customCell>
+		</g:row>
+		<g:row>
+			<g:customCell>
+				<g:Label text="Create Date:" />
+			</g:customCell>
+			<g:customCell>
+				<g:Label ui:field="createDate" />
+			</g:customCell>
+		</g:row>
+		<g:row>
+			<g:customCell>
+				<g:Label text="Address:" />
+			</g:customCell>
+			<g:customCell>
+				<g:Label ui:field="address" />
+			</g:customCell>
+		</g:row>
+		<g:row>
+			<g:customCell>
+				<g:Label text="Country:" />
+			</g:customCell>
+			<g:customCell>
+				<g:Label ui:field="country" />
+			</g:customCell>
+		</g:row>
+		<g:row>
+			<g:customCell>
+				<g:Label text="Email:" />
+			</g:customCell>
+			<g:customCell>
+				<g:Label ui:field="email" />
+			</g:customCell>
+		</g:row>
+		<g:row>
+			<g:customCell>
+				<g:Label text="First Name:" />
+			</g:customCell>
+			<g:customCell>
+				<g:Label ui:field="firstName" />
+			</g:customCell>
+		</g:row>
+		<g:row>
+			<g:customCell>
+				<g:Label text="Last Name:" />
+			</g:customCell>
+			<g:customCell>
+				<g:Label ui:field="lastName" />
+			</g:customCell>
+		</g:row>
+		<g:row>
+			<g:customCell>
+				<g:Label text="Telephone:" />
+			</g:customCell>
+			<g:customCell>
+				<g:Label ui:field="telephone" />
+			</g:customCell>
+		</g:row>
+		<g:row>
+			<g:customCell>
+				<g:Label text="Zip:" />
+			</g:customCell>
+			<g:customCell>
+				<g:Label ui:field="zipcode" />
+			</g:customCell>
+		</g:row>
+	</g:Grid>
+	</g:HTMLPanel>
+</ui:UiBinder> 

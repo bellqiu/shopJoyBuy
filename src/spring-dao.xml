@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+		<bean id="com.spshop.dao.intf.UserDAO" class="com.spshop.dao.impl.UserDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="com.spshop.dao.intf.FeedBackDAO" class="com.spshop.dao.impl.FeedBackDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.AddressBookDAO" class="com.spshop.dao.impl.AddressBookDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.CategoryDAO" class="com.spshop.dao.impl.CategoryDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.CommentDAO" class="com.spshop.dao.impl.CommentDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.ComponentDAO" class="com.spshop.dao.impl.ComponentDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.ConfigurationDAO" class="com.spshop.dao.impl.ConfigurationDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.CountryDAO" class="com.spshop.dao.impl.CountryDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.CouponDAO" class="com.spshop.dao.impl.CouponDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.CutOffDAO" class="com.spshop.dao.impl.CutOffDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.DeliverDAO" class="com.spshop.dao.impl.DeliverDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.ImageDAO" class="com.spshop.dao.impl.ImageDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.MarkPlaceDAO" class="com.spshop.dao.impl.MarkPlaceDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.NewsletterDAO" class="com.spshop.dao.impl.NewsletterDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.OrderDAO" class="com.spshop.dao.impl.OrderDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.OrderItemDAO" class="com.spshop.dao.impl.OrderItemDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.ProductDAO" class="com.spshop.dao.impl.ProductDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.ProductOptionDAO" class="com.spshop.dao.impl.ProductOptionDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.ProductOptionItemDAO" class="com.spshop.dao.impl.ProductOptionItemDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.ProductPropertyDAO" class="com.spshop.dao.impl.ProductPropertyDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.PromotionDAO" class="com.spshop.dao.impl.PromotionDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.SearchHistoryDAO" class="com.spshop.dao.impl.SearchHistoryDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.SiteDAO" class="com.spshop.dao.impl.SiteDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.UserOptionDAO" class="com.spshop.dao.impl.UserOptionDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.TabSellingDAO" class="com.spshop.dao.impl.TabSellingDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.TabProductDAO" class="com.spshop.dao.impl.TabProductDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.HTMLDAO" class="com.spshop.dao.impl.HTMLDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.EmailDAO" class="com.spshop.dao.impl.EmailDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+
+		<bean id="com.spshop.dao.intf.MessageDAO" class="com.spshop.dao.impl.MessageDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+	</beans>

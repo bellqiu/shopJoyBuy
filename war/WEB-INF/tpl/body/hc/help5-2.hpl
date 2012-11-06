@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">2.	How to pay with credit/debit card</div></div>
+<div class="detail">
+<!--gai-->
+<img src="/style/image/pic/vise.jpg" width="547" height="33" />
+<span><p>We currently accept a variety of credit/debit cards including Visa, MasterCard, and American Express. It’s easy to use a credit/debit card to pay for your orders, just do as follows:</p>
+<p>1. On your Shopping Cart page, click<img src="/style/image/pic/pay.jpg" width="115" height="24" /> after reviewing your items，fill the shipping information, choose shipping methodsand click</p>
+<img src="/style/image/pic/pay.jpg" width="115" height="24" />  once again</p>
+<p>2. On the Order Information page, remember your order number and check the amount you need to pay, if everything is all right, you can click<img src="/style/image/pic/pay.jpg" width="115" height="24" /> fill in your card information and just follow it to finish the payment. </p>
+<br><div class="centent"><img src="/style/image/pic/country.jpg" width="465" height="222"/> </div>
+<img src="/style/image/pic/dingdan.jpg" width="768" height="560" />
+<p>3. Once you’ve filled in your payment details, click<img src="/style/image/pic/continue.jpg" width="128" height="32" /> to complete payment for your item(s).
+Honeybuy.com does not store or review your credit card & personal information. As such, should any issues arise regarding your credit card or debit card transaction, please contact GlobalCollect or your credit card company for assistance.
+</p></span>
+<!--gai-->
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

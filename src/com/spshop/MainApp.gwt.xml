@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="mainapp">
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+	<!-- This will give us shorter obfuscated CSS class names. We guarantee 
+		that there will be no class names that will conflict with /M.+/ -->
+	<set-configuration-property name="CssResource.obfuscationPrefix" value="MainApp" />
+	<source path='admin/client' />
+	<source path='admin/shared' />
+	<source path='admin/client/businessui' />
+	<source path='model' />
+	<source path='exception' />
+	<entry-point class="com.spshop.admin.client.entrypoint.MainApp"></entry-point>
+</module>

@@ -1,0 +1,30 @@
+<#assign productList = (pageView.pageProperties["productsInCategoryPage"])!>
+<#assign imageSize = (pageView.pageProperties["imageSize"])!>
+<#assign calculateImageSize = "com.spshop.web.function.CalculateImage"?new()>
+<#assign hAndPadding = calculateImageSize(imageSize[0]!"438", imageSize[1]!"438", imageSize[2]!"317", "225")>
+
+<div>
+	<#include "fragments/category-img.hpl">
+	
+	<div class="bottom-line1"></div>
+	
+	<#include "fragments/pagination.hpl">
+
+	<div class="height-10"></div>
+	
+	<div class="products-box">
+		<ul>
+		<#list productList as product>
+			<#include "fragments/product-item.hpl">
+		</#list>
+		<p class="clearBoth"></p>
+		</ul>
+		<div class="height-20"></div>
+	</div>
+	
+	<div class="height-10"></div>
+	
+	<#include "fragments/pagination.hpl">
+	
+	<div class="bottom-line1"></div>
+</div>

@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">2.PayPal Isn't Available in My Country</div></div>
+<div class="detail">
+<!--gai-->
+<span><p>It's easy to register for free and create a PayPal account, though PayPal isn't available in every country.  To check whether or not you can use PayPal to pay for your purchase, please<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_display-approved-signup-countries-outside&%0Adispatch=5885d80a13c0db1f822cfe4b06d0ea2b4eee6d2d0c9cb9d63b82c5c6e6c9275b"> click here</a>.</p>
+<p>If PayPal is not available in your country, you can still purchase from us. We also accept payments via Western Union or wire transfer. Please visit our <a href="http://www.honeybuy.com/c/Payment-Method">Accepted Payment Methods page</a> for more information about all the ways you can pay.</p>
+
+<p>For those who are having issues with their PayPal account, please contact PayPal's own Customer Service, who will be more able to assist you with PayPal issues.</p>
+
+</span></div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

@@ -1,0 +1,2 @@
+<#include "fragments/login.hpl">
+<#include "fragments/reg.hpl">

@@ -1,0 +1,11 @@
+<#assign pageKeywords = "1. Why should I create an account?">
+<#assign pageDescription = "1. Why should I create an account?">
+<#assign pageTitle = "1. Why should I create an account?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help6-1.hpl">
+
+<#include "/footer/bottom.hpl">

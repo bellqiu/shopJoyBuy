@@ -1,0 +1,34 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style type="com.spshop.admin.client.businessui.QueryCondition.ConditionStyle" field="style">
+		.conditon {
+			padding: 5px;
+		}
+		
+		.conditonLabel{
+			margin:4px 1px 20px 4px;
+		}
+		
+		.ConditionField {
+			float: left;
+			margin-right: 10px;
+		}
+		
+	</ui:style>
+	<g:HTMLPanel styleName="{style.conditon}">
+		<g:CaptionPanel ui:field="caption" >
+			<g:FlowPanel>
+				<g:FlowPanel styleName="{style.ConditionField}" ui:field="conditionField">
+					<g:InlineLabel text="Name:" styleName="{style.conditonLabel}" />
+					<g:TextBox ui:field="nameBox" />
+					<g:InlineLabel text="Create Date:" styleName="{style.conditonLabel}"/>
+					<g:InlineLabel text="From:" styleName="{style.conditonLabel}"/>
+					<p1:DateBox ui:field="start" />
+					<g:InlineLabel text="To:" styleName="{style.conditonLabel}"/>
+					<p1:DateBox ui:field="end"/>
+					<g:Button ui:field="search">Go</g:Button>
+				</g:FlowPanel>
+			</g:FlowPanel>
+		</g:CaptionPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

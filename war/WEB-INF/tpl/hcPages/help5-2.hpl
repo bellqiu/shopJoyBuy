@@ -1,0 +1,11 @@
+<#assign pageKeywords = "2. How to pay with credit/debit card">
+<#assign pageDescription = "2. How to pay with credit/debit card">
+<#assign pageTitle = "2. How to pay with credit/debit card">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help5-2.hpl">
+
+<#include "/footer/bottom.hpl">

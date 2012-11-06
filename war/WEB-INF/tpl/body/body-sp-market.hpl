@@ -1,0 +1,5 @@
+<#assign pageCategories = pageView.category.subCategories>
+<div class="main_box" id="main_box">
+	<#include "uc-inc/market-content.hpl">
+	<p class="clearBoth"></p>
+</div>

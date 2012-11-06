@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">12.Shipping For Online Sellers</div></div>
+<div class="detail">
+<!--gai-->
+<span>
+<p>Calculating shipping costs for your online store is simple, and you don't need to wait until the orders come in.</p></br>
+<p>On the item's product information page, click the Add to My Bag button. Fill your shipping address in the certain blank, and then choose the shipping methods, standard or expedited, you can check the shipping fee directly in the same line.</p></br>
+<p>Shipping Fees are constantly changing. The cost of shipping with different couriers to different locations is dynamic, going both up and down, which makes updating a reference chart online unfeasible.</p>
+</span></div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

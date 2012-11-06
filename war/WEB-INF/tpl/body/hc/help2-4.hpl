@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+<div class="detail_title">4.What shipping methods do you offer?</div>
+<div class="detail">
+<span>
+<h2>(1) Expedited shipping</h2>
+<p>Delivery time is between 2 - 4 days to all major destinations, the fastest shipping method worldwide. Different items have different shipping costs, but all expedited shipping order will get a 50% discount on shipping costs.</p>
+<h2>(2) Standard shipping</h2>
+<p>Delivery time is between 5 - 8 days free shipping to all major destinations, it is free shipping but takes a bit longer than expedited shipping. The shipping costs differ from item to item, but for the free shipping items standard shipping order will get a 100% discount on shipping costs. However, for the non-free shipping items, you only enjoy a 55% discount for it.</p>
+</br>
+<p>Note:</br> 1. The above delivery estimates do not include order processing time.  </p>
+<p>      2. We are not responsible for customs taxes, thus if your local customs or courier ask for taxes, </p>
+<p>you should pay by yourself. Usually we would mark the parcel as a gift and value low to avoid the custom duty,but different country,different policy.It is better to look into your local custom.</p>
+</span>
+</div>
+</div>
+</div>
+<p class="clearBoth"></p>
+</div></div>

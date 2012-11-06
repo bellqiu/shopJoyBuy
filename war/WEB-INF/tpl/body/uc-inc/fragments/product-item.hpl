@@ -1,0 +1,43 @@
+<li class="item">
+	<div class="item-picture" <#if (hAndPadding?? && (hAndPadding[0] != 0))>style="height: ${hAndPadding[0]?int}px;"</#if>>
+		<#if ((1 - product.actualPrice / product.price) > 0.4)>
+			<div class="sales-logo">
+				<label class="text">
+					Save
+				</label>
+				<label class="percentage">
+					${((1 - product.actualPrice / product.price) * 100)?int + "%"}
+				</label>
+			</div>
+		</#if>
+			<a onclick="redirect('${(siteView.host + "/" + product.name)?string!""}')"
+				href='${(siteView.host + "/" + product.name)?string!""}' title="">
+				
+				<#if product.images[0].strSizeType = "PRODUCT_SQUARE">
+					<img style="padding-top:${hAndPadding[1]?int}px;"
+					alt="${product.title}"
+					src='${(siteView.imageHost + product.images[0].largerUrl)?string!""}'> 
+				<#elseif product.images[0].strSizeType = "PRODUCT_NORMAL">
+					<img
+					alt="${product.title}"
+					src='${(siteView.imageHost + product.images[0].largerUrl)?string!""}'> 
+				</#if>
+			</a>
+	</div> 
+	<strong class="item-name"> 
+		<a	title="${product.title?string!""}"
+			href='${(siteView.host + "/" + product.name)?string!""}'>
+			${product.title?string!""}
+		</a>
+	</strong>
+	<div class="item-price"> 
+		<#if (product.actualPrice > 80)>
+			<img alt="Free" src="/css/shipping.jpg" class="free-shipping-img"/>
+			<span class="free-shipping-text">Free Shipping</span>
+		</#if>
+		${currency }<del>
+		${product.price * userView.currencyRate}
+		</del> <br />
+		<span class="red fontbold" style="font-size: 18px;">${product.actualPrice * userView.currencyRate}</span> 
+	</div>
+</li>

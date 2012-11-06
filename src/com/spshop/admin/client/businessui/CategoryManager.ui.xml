@@ -1,0 +1,34 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:t="urn:import:com.spshop.admin.client.businessui">
+	<ui:style>
+		.innerPanel {
+			padding: 5px;
+		}
+		
+	</ui:style>
+		<g:TabLayoutPanel barUnit="EM" barHeight="2.2"
+			height="100%">
+			<g:tab>
+				<g:header>
+					Category Manager
+				</g:header>
+				<g:SplitLayoutPanel>
+					<g:west size="260">
+						<g:ScrollPanel height="100%">
+							<g:HTMLPanel styleName="{style.innerPanel}">
+								<g:Button ui:field="newCategory">Add Root</g:Button>
+								<g:Button ui:field="newChild">Add Child</g:Button>
+								<t:CategoryTree ui:field="tree"></t:CategoryTree>
+							</g:HTMLPanel>
+						</g:ScrollPanel>
+					</g:west>
+					<g:center>
+						<g:ScrollPanel>
+							<g:HTMLPanel styleName="{style.innerPanel}" ui:field="editor" width="800px" height="800px">
+							</g:HTMLPanel>
+						</g:ScrollPanel>
+					</g:center>
+				</g:SplitLayoutPanel>
+			</g:tab>
+		</g:TabLayoutPanel>
+</ui:UiBinder> 

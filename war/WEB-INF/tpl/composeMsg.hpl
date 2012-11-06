@@ -1,0 +1,8 @@
+<#assign pageKeywords = "Message Box, Honeybuy.com, Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageDescription = "Message Box : Honeybuy.com - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageTitle = "Message Box: Honeybuy.com">
+
+<#include "/header/top.hpl">
+<#include "/body/body-uc-composeMessage.hpl">	
+<#include "/footer/ucf1.hpl">
+<#include "/footer/bottom.hpl">

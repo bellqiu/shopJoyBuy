@@ -1,0 +1,127 @@
+.wedtable {
+    border-left: 1px solid #E1E1E1;
+    border-top: 1px solid #333333;
+}
+
+.wedtable, p.note {
+    margin: 0 0 0 64px;
+}
+
+.wedtable th {
+    background-color: #EBEBEB;
+    border-bottom: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+    font-size: 14px;
+    font-weight: normal;
+    height: 31px;
+    line-height: 31px;
+    text-align: left;
+}
+
+.wedthleft {
+    background: none repeat scroll 0 0 #EBEBEB;
+    height: 28px;
+    line-height: 28px;
+    float: left;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.wedtable .wedtdbg {
+    background: none repeat scroll 0 0 #F7F7F7;
+    color: #333333;
+}
+
+.wedtable td {
+    border-bottom: 1px solid #E1E1E1;
+    border-right: 1px solid #E1E1E1;
+    color: #555555;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.Chart p {
+    color: #666666;
+    line-height: 20px;
+    padding: 10px 0;
+}
+
+/*===============================*/
+.wedpti {
+    border-bottom: 1px dashed #C4C4C4;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-left: 32px;
+    padding-bottom: 6px;
+    padding-top: 20px;
+    width: 886px;
+	margin-bottom: 10px;
+	padding-top:4px;
+}
+.wedpt {
+    font-size: 24px;
+    font-weight: bolder;
+    padding-left: 32px;
+	margin-bottom: 10px;
+	padding-top:0px;
+}
+.wedp {
+    color: #666666;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    padding-left: 34px;
+    padding-right: 20px;
+	margin-bottom: 10px;
+	padding-top:4px;
+}
+.wedptit {
+    color: #000000;
+    font-size: 13px;
+    font-weight: bolder;
+    padding-left: 32px;
+	margin-bottom: 10px;
+	padding-top:4px;
+}
+.wedimgbg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sdl1 {
+    margin-left: 36px;
+}
+
+.sdl {
+    
+    float: left;
+    font-size: 12px;
+    margin-right: 40px;
+    width: 152px;
+}
+.dressp {
+    color: #B50C16;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 0 0 34px;
+}
+.dressul li a {
+    color: #000000;
+    text-decoration: underline;
+}
+.dressul li {
+    float: left;
+    font-size: 12px;
+    line-height: 30px;
+    list-style: none outside none;
+    padding: 0 4px;
+}
+.dressul {
+    border-bottom: 1px dotted #BE333B;
+    border-top: 1px dotted #BE333B;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 20px;
+    text-decoration: underline;
+}

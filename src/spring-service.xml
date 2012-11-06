@@ -1,0 +1,204 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+				<value>classpath:tagConf.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="com.spshop.service.intf.UserService.target" class="com.spshop.service.impl.UserServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.UserService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.UserService.target" />
+	</bean>
+	<bean id="com.spshop.service.intf.FeedBackService.target" class="com.spshop.service.impl.FeedBackServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.FeedBackService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.FeedBackService.target" />
+	</bean>
+	
+	<bean id="com.spshop.service.intf.AddressBookService.target" class="com.spshop.service.impl.AddressBookServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.AddressBookService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.AddressBookService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.CategoryService.target" class="com.spshop.service.impl.CategoryServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.CategoryService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.CategoryService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.CommentService.target" class="com.spshop.service.impl.CommentServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.CommentService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.CommentService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.ComponentService.target" class="com.spshop.service.impl.ComponentServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.ComponentService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.ComponentService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.ConfigurationService.target" class="com.spshop.service.impl.ConfigurationServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.ConfigurationService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.ConfigurationService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.CountryService.target" class="com.spshop.service.impl.CountryServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.CountryService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.CountryService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.CouponService.target" class="com.spshop.service.impl.CouponServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.CouponService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.CouponService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.CutOffService.target" class="com.spshop.service.impl.CutOffServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.CutOffService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.CutOffService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.DeliverService.target" class="com.spshop.service.impl.DeliverServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.DeliverService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.DeliverService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.ImageService.target" class="com.spshop.service.impl.ImageServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.ImageService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.ImageService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.MarkPlaceService.target" class="com.spshop.service.impl.MarkPlaceServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.MarkPlaceService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.MarkPlaceService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.NewsletterService.target" class="com.spshop.service.impl.NewsletterServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.NewsletterService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.NewsletterService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.OrderService.target" class="com.spshop.service.impl.OrderServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.OrderService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.OrderService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.OrderItemService.target" class="com.spshop.service.impl.OrderItemServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.OrderItemService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.OrderItemService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.ProductService.target" class="com.spshop.service.impl.ProductServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.ProductService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.ProductService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.ProductOptionService.target" class="com.spshop.service.impl.ProductOptionServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.ProductOptionService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.ProductOptionService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.ProductOptionItemService.target" class="com.spshop.service.impl.ProductOptionItemServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.ProductOptionItemService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.ProductOptionItemService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.ProductPropertyService.target" class="com.spshop.service.impl.ProductPropertyServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.ProductPropertyService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.ProductPropertyService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.PromotionService.target" class="com.spshop.service.impl.PromotionServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.PromotionService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.PromotionService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.SearchHistoryService.target" class="com.spshop.service.impl.SearchHistoryServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.SearchHistoryService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.SearchHistoryService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.ShopBasketService.target" class="com.spshop.service.impl.ShopBasketServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.ShopBasketService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.ShopBasketService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.SiteService.target" class="com.spshop.service.impl.SiteServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.SiteService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.SiteService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.UserOptionService.target" class="com.spshop.service.impl.UserOptionServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.UserOptionService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.UserOptionService.target" />
+	</bean>
+	
+	<bean id="com.spshop.service.intf.TabSellingService.target" class="com.spshop.service.impl.TabSellingServiceImpl">
+	</bean>
+	<bean id="com.spshop.service.intf.TabSellingService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.TabSellingService.target" />
+	</bean>
+
+	<bean id="com.spshop.service.intf.TabProductService.target" class="com.spshop.service.impl.TabProductServiceImpl">
+	</bean>
+	
+	<bean id="com.spshop.service.intf.TabProductService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.TabProductService.target" />
+	</bean>
+	
+	<bean id="com.spshop.service.intf.HTMLService.target" class="com.spshop.service.impl.HTMLServiceImpl">
+	</bean>
+	
+	<bean id="com.spshop.service.intf.HTMLService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.HTMLService.target" />
+	</bean>
+	
+	<bean id="com.spshop.service.intf.EmailService.target" class="com.spshop.service.impl.EmailServiceImpl">
+	</bean>
+	
+	<bean id="com.spshop.service.intf.EmailService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.EmailService.target" />
+	</bean>
+	
+	<bean id="com.spshop.service.intf.MessageService.target" class="com.spshop.service.impl.MessageServiceImpl">
+	</bean>
+	
+	<bean id="com.spshop.service.intf.MessageService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.MessageService.target" />
+	</bean>
+	
+	<bean id="com.spshop.service.intf.TagsService" class="com.spshop.service.impl.TagsServiceImpl" init-method="init">
+		<property name="indexFile" value="${index.dir}"></property>
+	</bean>
+	
+</beans>

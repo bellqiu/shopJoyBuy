@@ -1,0 +1,14 @@
+<div class="category-tree">
+	<h2 class="title">
+		${pageView.category.displayName?string!""}
+	</h2>
+
+	<ul class="category-tree-items">
+		<#list pageView.category.subCategories as subCategory>
+			<li class="category-tree-item">
+				<a href='${(siteView.host+"/"+"c"+"/"+subCategory.name)?string!""}'>${subCategory.displayName?string!""}</a>
+				<img class="hot-category" src="/css/thing_hot.gif">
+			</li>
+		</#list>
+	</ul>
+</div>

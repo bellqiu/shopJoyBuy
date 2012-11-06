@@ -1,0 +1,11 @@
+<#assign pageKeywords = "1.Accepted Payment Methods">
+<#assign pageDescription = "1.Accepted Payment Methods">
+<#assign pageTitle = "1.Accepted Payment Methods">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-1.hpl">
+
+<#include "/footer/bottom.hpl">

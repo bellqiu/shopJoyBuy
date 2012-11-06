@@ -1,0 +1,21 @@
+<div class="main_box" id="main_box">
+
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id))
+				return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	
+	<#include "home/fragments/home-big-ad.hpl">
+	<div class="height-10"></div>
+	<#include "home/home-left.hpl">
+	<#include "home/home-right.hpl">
+	<p class="clearBoth"></p>
+</div>

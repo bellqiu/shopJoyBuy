@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true">
+
+	<diskStore path="/home/project/data"/>
+
+	<defaultCache eternal="true" maxElementsInMemory="50"
+		memoryStoreEvictionPolicy="LFU" />
+
+	<cache name="global" eternal="false"
+		timeToLiveSeconds="86400" maxElementsInMemory="1000"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+		
+	<cache name="cart" eternal="false"
+		timeToLiveSeconds="600" maxElementsInMemory="200"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+		
+	<cache name="product" eternal="false"
+		timeToLiveSeconds="86400" maxElementsInMemory="1000"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+	
+	<cache name="tabProductNames" eternal="false"
+		timeToLiveSeconds="600" maxElementsInMemory="800"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+	
+	<cache name="categoryProductNames" eternal="false"
+		timeToLiveSeconds="600" maxElementsInMemory="1000"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+		
+	<cache name="countryCache" eternal="false"
+		timeToLiveSeconds="60" maxElementsInMemory="1000"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+		
+	<cache name="orderCache" eternal="false"
+		timeToLiveSeconds="1" maxElementsInMemory="200"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+		
+	<cache name="colorCache" eternal="false"
+		timeToLiveSeconds="86400" maxElementsInMemory="1000"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+	
+	<cache name="others" eternal="false"
+		timeToLiveSeconds="86400" maxElementsInMemory="1000"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+		
+	<cache name="shoppingcart" eternal="false"
+		timeToLiveSeconds="864000" maxElementsInMemory="200"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+	
+	<cache name="tagsProduct" eternal="false"
+		timeToLiveSeconds="864000" maxElementsInMemory="10"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
+
+</ehcache>

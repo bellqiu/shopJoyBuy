@@ -1,0 +1,188 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.spshop.admin.client.rich"
+	xmlns:p2="urn:import:com.spshop.admin.client.businessui">
+	<ui:style>
+		.scrollContent{
+			height: 100%;
+		}
+		
+		.maunualHTML{
+			border: solid 1px #BBBBBB;
+		}
+	</ui:style>
+	<g:HTMLPanel height="100%">
+		<g:Button ui:field="Save">Save</g:Button>
+		<g:Button ui:field="copy">Copy</g:Button>
+		<g:TabLayoutPanel barUnit="EM" barHeight="2.2" height="100%" ui:field="host">
+			<g:tab>
+				<g:header>
+					Basic Info
+				</g:header>
+				<g:ScrollPanel styleName="{style.scrollContent}">
+					<g:HTMLPanel>
+						<g:Grid>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Name:" />
+								</g:customCell>
+								<g:customCell>
+									<g:TextBox ui:field="name" />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Title:" />
+								</g:customCell>
+								<g:customCell>
+									<g:TextBox width="236px" ui:field="title" />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Tags" />
+								</g:customCell>
+								<g:customCell>
+									<g:TextArea width="236px" height="50px" ui:field="tags" />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Keywords" />
+								</g:customCell>
+								<g:customCell>
+									<g:TextArea width="236px" height="50px" ui:field="keywords" />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Categories"/>
+								</g:customCell>
+								<g:customCell>
+									<p2:CategoryPicker ui:field="categoryPicker"/>
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Option Type"/>
+								</g:customCell>
+								<g:customCell>
+									<g:ListBox ui:field="optionTypes">
+									</g:ListBox>
+								</g:customCell>
+							</g:row>
+							<!-- <g:row>
+								<g:customCell>
+									<g:Label text="Abstract:" />
+								</g:customCell>
+								<g:customCell>
+									<p1:RichText />
+								</g:customCell> 
+							</g:row>-->
+							<g:row>
+								<g:customCell>
+									<g:Label text="Detail:" />
+								</g:customCell>
+								<g:customCell>
+									<p1:RichText ui:field="detail" height="400px" width="800px"/>
+								</g:customCell>
+							</g:row>
+							<g:row/>
+						</g:Grid>
+					</g:HTMLPanel>
+				</g:ScrollPanel>
+			</g:tab>
+			<g:tab>
+				<g:header>
+					Options
+			</g:header>
+				<g:ScrollPanel styleName="{style.scrollContent}">
+					<g:HTMLPanel>
+						<g:Button text="Add Option" ui:field="addOption"></g:Button>
+						<g:Button text="Remove" ui:field="removeOption" />
+						<p2:ProdOptionManager ui:field="optionManager" />
+					</g:HTMLPanel>
+				</g:ScrollPanel>
+			</g:tab>
+
+			<g:tab>
+				<g:header>
+					Attributes
+			</g:header>
+				<g:ScrollPanel styleName="{style.scrollContent}">
+					<g:HTMLPanel width="100%">
+						<p2:ProdAttributeManager ui:field="attributeManager" />
+					</g:HTMLPanel>
+				</g:ScrollPanel>
+			</g:tab>
+
+			<g:tab>
+				<g:header>
+					Images/ReletedProduct
+			</g:header>
+			 <g:ScrollPanel styleName="{style.scrollContent}">
+				<g:HTMLPanel width="100%">
+					<p2:ProdImageManager ui:field="imageManager" />
+					<g:Button ui:field="pickRelatedProduct" text="Pick Related Product"></g:Button>
+					<p2:TopSellingManager ui:field="relatedProduct"/>
+				</g:HTMLPanel>
+			 </g:ScrollPanel>
+			</g:tab>
+			<g:tab>
+				<g:header>
+					Others
+			</g:header>
+			<g:ScrollPanel styleName="{style.scrollContent}">
+				<g:HTMLPanel width="100%">
+					<g:Grid>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Price:"/>
+							</g:customCell>
+							<g:customCell>
+								<g:DoubleBox ui:field="prodPrice"/>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Actual Price"/>
+							</g:customCell>
+							<g:customCell>
+								<g:DoubleBox ui:field="prodActualPrice"/>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Show Comments:"/>
+							</g:customCell>
+							<g:customCell>
+								<g:CheckBox text="Show Comments" ui:field="showComments"/>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Show like button"/>
+							</g:customCell>
+							<g:customCell>
+								<g:CheckBox text="Show like button" ui:field="showLikeButton"/>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Manual:"/>
+							</g:customCell>
+							<g:customCell>
+								<g:HorizontalPanel>
+									<g:Button text="Select A Manual" ui:field="manualPicker"/>
+									<g:Button text="Remove Manual" ui:field="removeManual"/>
+								</g:HorizontalPanel>
+							</g:customCell>
+						</g:row>
+					</g:Grid>
+					<g:TabLayoutPanel ui:field="manual" styleName="{style.maunualHTML}" barHeight="2" barUnit="EM" height="420px">
+					</g:TabLayoutPanel>
+					</g:HTMLPanel>
+				</g:ScrollPanel>	
+			</g:tab>
+		</g:TabLayoutPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

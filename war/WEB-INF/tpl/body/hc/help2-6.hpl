@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><div class="detail_title">6.Are there any additional fees involved in international shipping?</div></div>
+<div class="detail">
+<!--gai-->
+<span>In some cases, there will be VAT or other taxes, customs duties or fees levied by the destination country. Additional charges for taxes or customs clearance must be borne by the recipient; we have no control over these charges and cannot predict what they may be. Customs and taxation policies vary widely from country to country. For more information, please contact your local customs. When customs clearance procedures are required, it can cause delays beyond our original delivery estimates.
+</span>
+<!--gai-->
+</div>
+</div>
+<p class="clearBoth"></p>
+</div>
+</div>

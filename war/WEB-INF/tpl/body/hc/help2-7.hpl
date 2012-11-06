@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">7.<strong>Do  you ship to PO Boxes or APO/FPO military  addresses?</strong></div></div>
+<div class="detail">
+<span>Sorry, at this time our shipping partners are unable to ship to PO Boxes or APO/FPO military addresses at present. You had better to provide a street address to us. If you provide a PO Box or APO/FPO military address, it will delay shipment of your items.
+</span>
+</div>
+</div>
+<p class="clearBoth"></p>
+</div>
+</div>

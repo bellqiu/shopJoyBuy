@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">7.	How can I view prices in my currency?</div></div>
+<div class="detail">
+<!--gai-->
+<span>The default currency display on HoneyBuy.com is US dollars, but you can easily set it to any of the following currencies003A</span>
+<ul>
+<li><a href="#">Australian Dollar</a></li>
+<li><a href="#" class="use1">Canadian Dollar</a></li>
+<li><a href="#" class="use2">Switzerland Francs</a></li>
+<li><a href="#" class="use3">Euro</a></li>
+<li><a href="#" class="use4">GB Pound</a></li>
+<li><a href="#" class="use5">Hong Kong Dollars</a></li>
+<li><a href="#" class="use6">Japanese Yen</a></li>
+<li><a href="#" class="use7">Rouble</a></li>
+<li><a href="#" class="use8">US Dollar</a></li>
+</ul>
+<span>To do so, click the currency drop-down menu at the top center of any page. Hold your mouse over the currency symbol to see a drop-down menu of all available currencies </span>
+<!--gai-->
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

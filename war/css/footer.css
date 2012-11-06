@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+.bottom{clear:both;margin: 0 auto;position: relative;width: 972px;}
+.content_box{ width:972px; margin:0 auto;overflow: hidden;}
+.shareus{ padding:8px 25px 5px 0;}
+.shareus img{ vertical-align:middle; margin:0 4px;}
+.footermenu_box{ background:url(footermenu_bg.gif) repeat-x; padding-top:15px;}
+.footer_menu ul li{ float:left; width:25%; color:#666;}
+.footer_menu ul li dl dt{ font-size:14px; font-weight:bold; padding:5px 0;}
+.footer_menu ul li dl dd{ line-height:20px; font-size:11px;}
+.footer_menu ul li dl dd a{ color:#666;}
+.footer_menu ul li dl dd a:hover{ color:#ff5a00;}
+.otherinfo_box{ background:#e7e1d2 url(otherinfo_bg.gif) repeat-x; padding-top:25px;}
+.otherinfo{ float:left; border-right:#8f8b85 dashed 1px; width:210px; padding:0px 16px 10px; line-height:20px; font-size:11px; height:200px;}
+.otherinfo h3{ height:40px; line-height:40px; color:#212121; font-size:14px; padding-left:35px;}
+.otherinfo_box .first{ padding:0 16px 10px 0;}
+.otherinfo_box .first h3{ background:url(footer_icon.gif) no-repeat 0 7px;}
+.otherinfo_box .second h3{ background:url(footer_icon.gif) no-repeat 0 -33px;}
+.otherinfo_box .third h3{ background:url(footer_icon.gif) no-repeat 0 -75px;}
+.otherinfo_box .fourth{ background:url(shareusto_bg.gif) no-repeat 10px 0; border-right:none;}
+.otherinfo_box .fourth table{  margin-top:47px;}
+.otherinfo_box .fourth table td{ text-align:center; font-size:10px; padding:2px 0;}
+.search_tags{ font-size:11px; line-height:20px;}
+.search_tags i{ font-style:normal; font-weight:bold;}
+.search_tags a{ color:#1E4E8E;}
+.bottom_menu,.bottom_menu a{ color:#575247;}
+.bottom_Friendlink img{ vertical-align:middle; margin:4px;}

@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">8. Viewing Prices in Different Currencies</div></div>
+<div class="detail">
+<!--gai-->
+<h2>How can I view prices on your website in different currencies?</h2>
+<span>
+<p>You can choose to view prices in different currencies using the drop-down Currencies menu at the top of the center of our homepage. You can also change the currency on individual product pages, by placing your mouse pointer over the currency denomination next to the item's price. </p>
+<p>You can view prices in the following currencies:</p>
+</span><ul>
+<li><a href="#">Australian Dollar</a></li>
+<li><a href="#" class="use1">Canadian Dollar</a></li>
+<li><a href="#" class="use2">Switzerland Francs</a></li>
+<li><a href="#" class="use3">Euro</a></li>
+<li><a href="#" class="use4">GB Pound</a></li>
+<li><a href="#" class="use5">Hong Kong Dollars</a></li>
+<li><a href="#" class="use6">Japanese Yen</a></li>
+<li><a href="#" class="use7">Rouble</a></li>
+<li><a href="#" class="use8">US Dollar</a></li>
+</ul></div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

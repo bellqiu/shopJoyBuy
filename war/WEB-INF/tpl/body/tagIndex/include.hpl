@@ -1,0 +1,47 @@
+
+<div class="Path_title Light_gray2">
+	<a href="${siteView.host}" title="Home" class="Light_gray2">Home</a> <span>&gt;</span>
+
+	<a title="Wedding Apparel" title="Tags" href="${siteView.host}/tags/index"> Tags
+	</a>
+	<#if currentKeyword ??>
+		<span>&gt;</span> <a title="${currentKeyword}"
+		href='${siteView.host}/tags/index/${currentKeyword?trim?replace(" ", "-")}'> ${currentKeyword} </a>
+	</#if>
+	
+	<#if currentKeyword2 ??>
+		<span>&gt;</span> <a title="${currentKeyword2}"
+		href='${siteView.host}/tags/k/${currentKeyword2?trim?replace(" ", "-")}'> ${currentKeyword2} </a>
+	</#if>
+	
+	 
+</div>
+<div class="tag-index-banner ">
+	<a href="${siteView.host}/tags/index/A">A</a>&nbsp;|&nbsp; <a
+		href="${siteView.host}/tags/index/B">B</a>&nbsp;|&nbsp; <a
+		href="${siteView.host}/tags/index/C">C</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/D">D</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/E">E</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/F">F</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/G">G</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/H">H</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/I">I</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/J">J</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/K">K</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/L">L</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/M">M</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/N">N</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/O">O</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/P">P</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/Q">Q</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/R">R</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/S">S</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/T">T</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/U">U</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/V">V</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/W">W</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/X">X</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/Y">Y</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/Z">Z</a>&nbsp;|&nbsp;<a
+		href="${siteView.host}/tags/index/0_9">0_9</a>
+</div>

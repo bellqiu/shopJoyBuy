@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">9. Western Union and Wire Transfer Fees</div></div>
+<div class="detail">
+<!--gai-->
+<span>
+<p>You may have to pay a fee when using Western Union or wire transfer to make a payment to HoenyBuy. These fees are separate from paying for your order and are charged by Western Union or your bank, not by us.</p></br>
+<p>When choosing these payment methods, please make sure to find out if any fees may apply and, if so, how much they will be so that you can account for these fees when making your payment. This will guarantee that the full price is paid and that there are no difficulties with your payment. </p></br>
+<p>You can send your wire transfer payments in any currency and HoenyBuy pays any bank conversion fees within China Merchants Bank.</p>
+
+</span></div>
+</div><p class="clearBoth"></p>
+</div></div>

@@ -1,0 +1,11 @@
+<#assign pageKeywords = "2. I forgot my password">
+<#assign pageDescription = "2. I forgot my password">
+<#assign pageTitle = "2. I forgot my password">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help6-2.hpl">
+
+<#include "/footer/bottom.hpl">

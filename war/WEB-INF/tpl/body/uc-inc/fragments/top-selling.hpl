@@ -1,0 +1,25 @@
+<div class="top-selling">
+	<h3 class="title">Top Selling</h3>
+	<ul>
+		<#list topSellingProduct as topProduct >
+			<li class="top-selling-item">
+				<a title="${topProduct.title?string}" href='${(siteView.host+"/"+topProduct.name)?string!""}'>
+					<#if topProduct.images[0].strSizeType == "PRODUCT_SQUARE">
+						<img src='${(siteView.imageHost+topProduct.images[0].thumbnailUrl)?string!""}'
+							 alt="${topProduct.title?string}"
+							 style="padding-top:${(87-65)/2}px; padding-bottom:${(87-65)/2}px;">
+					<#elseif topProduct.images[0].strSizeType == "PRODUCT_NORMAL">
+						<img src='${(siteView.imageHost+topProduct.images[0].thumbnailUrl)?string!""}'
+							 alt="${topProduct.title?string}"
+							 style="height: 87px;">
+					</#if>
+				</a>
+				<br>
+				<a title="" href='${(siteView.host+"/"+topProduct.name)?string!""}' class="">
+					${topProduct.title}
+				</a>
+			</li>	
+		</#list>
+		<p class="clearBoth"></p>
+	</ul>
+</div>

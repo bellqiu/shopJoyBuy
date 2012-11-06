@@ -1,0 +1,185 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.spshop.admin.client.businessui">
+	<ui:style>
+		.outer {
+			border: 1px solid #999;
+			cursor: pointer;
+			width: 100%;
+		}
+	
+		.header {
+			gwt-image: 'gradient';
+			background-color: #d3d6dd;
+			table-layout: fixed;
+			width: 100%;
+			height: 2EM;
+			border: 0px;
+		}
+		
+		.header td {
+			font-weight: bold;
+			text-shadow: #fff 0 2px 2px;
+			padding: 2px 0 1px 10px;
+			border: 0px;
+		}
+		
+		.orderInfo{
+			width:100%;
+		}
+		
+		.table {
+			table-layout: fixed;
+			width: 100%;
+		}
+		
+		.table td {
+			padding: 2px 0 2px 10px;
+			border-bottom: 1px solid #FFF;
+		}
+		.items{
+			width: 60px;
+			margin-right: 10px;
+			font-weight: bolder;
+		}
+		.value{
+			margin-right: 20px;
+		}
+		.odd{
+			background-color: #b3b3b3;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:SplitLayoutPanel styleName='{style.outer}' height="100%" width="100%">
+			<g:north size="370">
+				<g:VerticalPanel styleName="{style.orderInfo}" width="100%">
+				<g:Grid>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Order Stauts" />
+						</g:customCell>
+						<g:customCell>
+							<p1:OrderStatusSelection ui:field="orderStatus"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Button text="Save" ui:field="button"/>
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+				<g:Grid>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Order Trace:"/>
+						</g:customCell>
+						<g:customCell>
+							<g:TextArea width="500px" height="80px" name="traceInfo" ui:field="txtTraceInfo"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Button ui:field="btnSaveTrace" text="Save"/>
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+				<g:Grid width="100%" borderWidth="1">
+					<g:row>
+						<g:customCell>
+							<g:Label text="Order Id" styleName="{style.items}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="orderId" styleName="{style.value}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label text="TotalPrice" styleName="{style.items}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="totalPrice" styleName="{style.value}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label text="DePrice" styleName="{style.items}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="dePrice" styleName="{style.value}"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Currency" styleName="{style.items}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="currency" styleName="{style.value}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label text="CreateDate" styleName="{style.items}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="createDate" styleName="{style.value}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label text="Coupon Id" styleName="{style.items}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label styleName="{style.value}" ui:field="couponId"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Email" styleName="{style.items}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="email" styleName="{style.value}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="message" styleName="{style.items}" text="Shipping Type"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label styleName="{style.value}" ui:field="shippingType"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="bbb" styleName="{style.items}" text="Coupon Price"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="couponPrice"/>
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+				<g:Grid width="100%" borderWidth="1">
+					<g:row>
+						<g:customCell>
+							<g:Label styleName="{style.items}" text="Primary Address"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label styleName="{style.value}" ui:field="primaryAddr"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label styleName="{style.items}" text="Billing Address"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="billingAddr" styleName="{style.value}"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Message" styleName="{style.items}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="customerMsg"/>
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+				</g:VerticalPanel>
+			</g:north>
+			<g:center>
+				<g:DockLayoutPanel unit="EM" width="100%" height="100%">
+					<g:north size="2">
+						<g:FlexTable styleName="{style.header}" ui:field="orderHeader"></g:FlexTable>
+					</g:north>
+					<g:center>
+						<g:ScrollPanel>
+							<g:FlexTable styleName="{style.table}" ui:field="orderTable" height="20"></g:FlexTable>
+						</g:ScrollPanel>
+					</g:center>
+				</g:DockLayoutPanel>
+			</g:center>
+		</g:SplitLayoutPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

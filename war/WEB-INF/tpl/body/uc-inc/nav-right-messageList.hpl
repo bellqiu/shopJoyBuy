@@ -1,0 +1,30 @@
+<div class="nav-right-box">
+	<div class="box_title">My Messages</div>
+
+	<div class="nav-right-box_content">
+		<div class="right-box_feedback_con">
+			<ul class="right-box_feedback_header">
+				<li class="feedback_header_w1">Message Title</li>
+				<li class="feedback_header_w2">Create Date</li>
+				<li class="feedback_header_w3">Status</li>
+				<li class="feedback_header_w4">&nbsp;</li>
+			</ul>
+			<#list messages as msg>
+			<ul class="right-box_feedback_item">
+				<li class="feedback_item_w1">${(msg.name)!'N/A'}</li>
+				<li class="feedback_item_w2">${(msg.createDate?string("yyyy-MM-dd hh:mm:ss a"))}</li>
+				<li class="feedback_item_w3">${msg.replied?string('Replied','Awaiting Reply')}</li>
+				<li class="feedback_item_w4"><a href="/uc/feedback/?messageId=${msg.id}&optType=viewThread">View Thread</a></li>
+			</ul>
+			</#list>
+		</div>
+		<div>
+			<form method="post" action="/uc/feedback">
+			<ul class="right-box_feedback_footer">
+				<input type="hidden" name="optType" value="compose"/>
+				<li><input class="button_01" type="submit" value="Compose"></li>
+			</ul>
+			</form>
+		</div>
+	</div>
+</div>

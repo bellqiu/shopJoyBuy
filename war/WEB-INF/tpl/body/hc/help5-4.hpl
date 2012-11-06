@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">4.	How can I change payment methods?</div></div>
+<div class="detail">
+<!--gai-->
+<span><p>If you have a pending or draft order and want to use a different payment method, it' s easy:</p></span>
+<span>
+<p>1.Sign into your accountand Click My Order in the center.</p></span>
+<img src="/style/image/pic/top.jpg" width="772" height="146" />
+<span><p>2. Click on the pending order you need help with.</p></span>
+<img src="/style/image/pic/pic2.jpg" width="766" height="195" />
+<span><p>3. Click View Details, you will then be directed to your Order Information page, check your order information, if there is no problem, you can click<img src="/style/image/pic/order.jpg" width="104" height="24" /> just follow it to finish the payment.</p></span>
+<!--gai-->
+</div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

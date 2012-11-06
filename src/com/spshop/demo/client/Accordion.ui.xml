@@ -1,0 +1,27 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	 xmlns:mail='urn:import:com.spshop.admin.client'>
+	<ui:style>
+		
+	</ui:style>
+	<g:StackLayoutPanel unit="EM" width="20EM" height="40EM">
+		<g:stack>
+			<g:header size="2">aaa</g:header>
+			<g:FlowPanel>
+				<g:Label>aaa</g:Label>
+			</g:FlowPanel>
+		</g:stack>
+		<g:stack>
+			<g:header size="2">bbb</g:header>
+			<g:FlowPanel>
+				<g:Label>bbbb</g:Label>
+			</g:FlowPanel>
+		</g:stack>
+		<g:stack>
+			<g:header size="2">ccc</g:header>
+			<g:FlowPanel>
+				<g:Label>cccc</g:Label>
+			</g:FlowPanel>
+		</g:stack>
+	</g:StackLayoutPanel>
+</ui:UiBinder> 

@@ -1,0 +1,11 @@
+<#assign pageKeywords = "2. How to measure my size?">
+<#assign pageDescription = "2. How to measure my size?">
+<#assign pageTitle = "2. How to measure my size?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help3-2.hpl">
+
+<#include "/footer/bottom.hpl">

@@ -1,0 +1,11 @@
+<#assign pageKeywords = "7. How can I view prices in my currency?">
+<#assign pageDescription = "7. How can I view prices in my currency?">
+<#assign pageTitle = "7. How can I view prices in my currency?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help5-7.hpl">
+
+<#include "/footer/bottom.hpl">

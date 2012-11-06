@@ -1,0 +1,11 @@
+<#assign pageKeywords = "9. Western Union and Wire Transfer Fees">
+<#assign pageDescription = "9. Western Union and Wire Transfer Fees">
+<#assign pageTitle = "9. Western Union and Wire Transfer Fees">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-9.hpl">
+
+<#include "/footer/bottom.hpl">

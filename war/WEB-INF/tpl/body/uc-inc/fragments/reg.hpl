@@ -1,0 +1,54 @@
+<div class="login_right">
+		<div class="box_title">
+			<p class="reg">New user registration</p>
+		</div>
+		<#assign regSucInfo = (userView.msg.accountSuc)!'no'>
+		<#if regSucInfo!='no'>
+			<div class="form_error blue">${userView.msg.accountSuc}</div>
+			<div class="form_error blue">
+				<a class="blue" onclick="window.location.href=decodeURI('${userView.requestPage!siteView.host}');">>>Continue</a><br>
+				<a class="blue" href="/uc/userProfile">>>Complete my profile</a><br>
+			</div>
+		</#if>
+		<#if regSucInfo=='no'>
+			<form action="/uc/createAccount" method="post">
+				<p class="form_label">
+					E-mail Address <span class="red">*</span>
+				</p>
+				<p>
+					<input type="text" name="RegEmail" id="RegEmail" class="txt_input" value="${(regUser.email)!''}" validation="is_email_exist">
+				</p>
+				<h1>${(book?if_exists)?string}</h1>
+				<div class="form_error red" id="RegEmail_noti">${userView.err.RegEmailErr!''}</div>
+				<p class="form_label gray">Please fill in a true and valid Email address,
+					which will be a very important way for us to contact you.</p>
+				<p class="form_label">
+					Password <span  class="red">*</span>
+				</p>
+				<input type="password" name="RegPwd" id="RegPwd"  class="txt_input" value="${(regUser.password)!''}">
+				<div class="form_error red">${userView.err.RegPwdErr!''}</div>
+				<p class="gray form_label">Must have 6 to 30 characters and no spaces.</p>
+				<span id="sp_pwd"></span>
+				<p class="form_label">
+					Re-type Password <span class="red">*</span>
+				</p>
+				<input type="password" name="RegPwdRe" id="RegPwdRe"  class="txt_input">
+				<div class="form_error red">${(userView.err.RegPwdReErr)!''}</div>
+				<p>&nbsp;</p>
+				<p>
+					<input type="checkbox" name="acceptLicense" id="cbx_agree" value="true"
+						checked="checked" class="cheo">&nbsp;&nbsp;I agree that I
+					accept <a
+						href="http://www.honeybuy.com/c/Terms-Of-Use"
+						target="_blank" class="cursor_point_and_underline">Terms of
+						Usage</a>
+				</p>
+				<div class="form_error red">${userView.err.acceptLicenseErr!''}</div>
+				<input type="hidden" name="landing_page" value="${userView.requestPage!siteView.host}">
+				<p class="form_label">
+					<input name="input" type="submit" 
+						class="button_01" value="Create a new account">
+				</p>
+			</form>
+		</#if>
+</div>

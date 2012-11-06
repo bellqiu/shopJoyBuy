@@ -1,0 +1,164 @@
+
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+	<div id="helpcenter">
+	<div class="help_right">
+		<div class="help_ti">
+			<div class="help_title">Welcome to Honeybuy.com Knowledge Base!</div>
+			<span>Honeybuy.com Knowledge Base was developed to assist you with standard information you may need, It also includes all the
+				frequently asked questions from our customers. You can browse by categories you are interested or you can search some information you
+				want to know. </span>
+		</div>
+		<div class="help_Problem">
+
+			<!--right-->
+			<div class="help_Problem_Block">
+				<h4 class="help_title">Part One: About the order Status</h4>
+				<ul>
+					<li><a href="/uc/helpCenter/help1-8">1. Placing Orders?</a></li>
+                    <li><a href="/uc/helpCenter/help1-9">2. Track Order?</a></li>
+                    <li><a href="/uc/helpCenter/help1-1">3. What does my order status mean?</a></li>
+                    <li><a href="/uc/helpCenter/help1-2">4. How do I check my order status?</a></li>
+                    <li><a href="/uc/helpCenter/help1-3">5. How can I cancel my order?</a></li>
+				</ul>
+				<span><a href="/uc/helpCenter/more-1">More>></a>
+				</span>
+			</div>
+			<!--right-->
+			<!--right-->
+			<div class="help_Problem_Block one">
+				<h4 class="help_title">Part Two: Shipping & Delivery</h4>
+				<ul>
+					<li><a href="/uc/helpCenter/help2-1">How can I track my
+							package?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help2-2">How do I estimate my
+							delivery time?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help2-3">How do I calculate
+							shipping costs?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help2-4">What shipping methods
+							do you offer?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help2-5">What countries or
+							regions do you ship to?</a>
+					</li>
+				</ul>
+				<span><a href="/uc/helpCenter/more-2">More>></a>
+				</span>
+			</div>
+			<!--right-->
+			<!--right-->
+			<div class="help_Problem_Block">
+				<h4 class="help_title">Part Three: About the made to custom
+					order</h4>
+				<ul>
+					<li><a href="/uc/helpCenter/help3-1">What does made-to-order mean?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help3-2">How to measure my
+							size?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help3-3">What is the tailoring
+							time for my made-to-order dress?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help3-4">How far in advance
+							should I order my dress?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help3-5">Can I modify a dress'
+							design such as style/fabric/length?</a>
+					</li>
+				</ul>
+				<span><a href="/uc/helpCenter/more-3">More>></a>
+				</span>
+			</div>
+			<!--right-->
+			<!--right-->
+			<div class="help_Problem_Block one">
+				<h4 class="help_title">Part Four: Returns & Refunds FAQs</h4>
+				<ul>
+					<li><a href="/uc/helpCenter/help4-1">An item was lost or
+							damaged during shipping?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help4-2">An item is missing
+							from my shipment?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help4-3">I received a wrong
+							item?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help4-4">Have you received my
+							returned items?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help4-5">Our Return &
+							Cancellation Policy?</a>
+					</li>
+				</ul>
+				<span><a href="/uc/helpCenter/more-4">More>></a>
+				</span>
+			</div>
+			<!--right-->
+			<!--right-->
+			<div class="help_Problem_Block">
+				<h4 class="help_title">Part Five: Payment FAQs</h4>
+				<ul>
+					<li><a href="/uc/helpCenter/help5-1">Which payment methods
+							do you accept?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help5-2">How to pay with
+							credit/debit card?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help5-3">How to pay with
+							PayPal?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help5-4">How can I change
+							payment methods?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help5-5">When will I be
+							charged for my items?</a>
+					</li>
+				</ul>
+				<span><a href="/uc/helpCenter/more-5">More>></a>
+				</span>
+			</div>
+			<!--right-->
+			<!--right-->
+			<div class="help_Problem_Block one" style="height: 185px">
+				<h4 class="help_title">Part Six: My Account FAQs</h4>
+				<ul>
+					<li><a href="/uc/helpCenter/help6-1">Why should I create
+							an account?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help6-2">I forgot my password?</a>
+					</li>
+				</ul>
+
+			</div>
+			<!--right-->
+			<!--right-->
+			<div class="help_Problem_Block">
+				<h4 class="help_title">Part Seven: How to Pay</h4>
+				<ul>
+					<li><a href="/uc/helpCenter/help7-1">Accepted Payment
+							Methods?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help7-2">PayPal Isn't
+							Available in My Country?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help7-3">How Does Paypal Work?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help7-4">Paying by Credit Card?</a>
+					</li>
+					<li><a href="/uc/helpCenter/help7-5">What is Honeybuy's
+							PayPal account?</a>
+					</li>
+				</ul>
+				<span><a href="/uc/helpCenter/more-7">More>></a>
+				</span>
+			</div>
+			<!--right-->
+		</div>
+	</div><p class="clearBoth"></p>
+</div>
+</div>

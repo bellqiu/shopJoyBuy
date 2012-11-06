@@ -1,0 +1,54 @@
+<div class="main_box" id="main_box">
+	<#include "include.hpl">
+	<div class="tag-index-container_keys">
+	<#if currentIndexKeyList ??> 
+		<#assign ck= currentKeyword?trim?replace(" ", "-")>
+		<dl>
+			<dt>
+				<a title="${currentKeyword}"
+					href='${siteView.host}/tags/index/${ck}'>
+					${currentKeyword} </a>
+			</dt>
+			<#list currentIndexKeyList as kw>
+
+			<dd>
+				<a href='${siteView.host}/tags/k/${kw?trim?replace(" ", "-")}'>${kw}</a>
+			</dd>
+
+			</#list> 
+		</dl>
+		<p class="clearBoth"></p>
+		<#if  (currentIndexKeyPageCount > 1)>
+		<div class="tag-index-pager">
+			<a title="${currentKeyword}" href='${siteView.host}/tags/index/${ck}/1'>&lt;&lt;</a>&nbsp;
+			<#if (currentIndexKeyPage > 1) >
+				<a title="${currentKeyword}" href='${siteView.host}/tags/index/${ck}/${(currentIndexKeyPage-1)?string("0")}'>&lt;</a>&nbsp;
+			</#if>
+			<a title="${currentKeyword}" href='${siteView.host}/tags/index/${ck}/${(currentIndexKeyPage)?string("0")}' style="color: red">${(currentIndexKeyPage)?string("0")}</a>&nbsp;
+			
+			<#if (currentIndexKeyPage < (currentIndexKeyPageCount - 1)) >
+				<a title="${currentKeyword}" href='${siteView.host}/tags/index/${ck}/${(currentIndexKeyPage + 1)?string("0")}'>${(currentIndexKeyPage + 1)?string("0")}</a>&nbsp;
+			</#if>
+			
+			<#if (currentIndexKeyPage < (currentIndexKeyPageCount - 2)) >
+				<a title="${currentKeyword}" href='${siteView.host}/tags/index/${ck}/${(currentIndexKeyPage + 2)?string("0")}'>${(currentIndexKeyPage + 2)?string("0")}</a>&nbsp;
+			</#if>
+			
+			<#if (currentIndexKeyPage < (currentIndexKeyPageCount - 3)) >
+				<a title="${currentKeyword}" href='${siteView.host}/tags/index/${ck}/${(currentIndexKeyPage + 3)?string("0")}'>${(currentIndexKeyPage + 3)?string("0")}</a>&nbsp;
+			</#if>
+			
+			<#if (currentIndexKeyPage < (currentIndexKeyPageCount - 4)) >
+				<a title="${currentKeyword}" href='${siteView.host}/tags/index/${ck}/${(currentIndexKeyPage + 4)?string("0")}'>${(currentIndexKeyPage + 4)?string("0")}</a>&nbsp;
+			</#if>
+			
+			<#if (currentIndexKeyPage < (currentIndexKeyPageCount - 1)) >
+				<a title="${currentKeyword}" href='${siteView.host}/tags/index/${ck}/${(currentIndexKeyPage + 1)?string("0")}'>&gt</a>&nbsp;
+			</#if>
+			<a title="${currentKeyword}" href='${siteView.host}/tags/index/${ck}/${currentIndexKeyPageCount?string("0")}'>&gt;&gt;</a>&nbsp;
+		</div>
+		</#if>
+	</#if>
+	</div>
+	<p class="clearBoth"></p>
+</div>

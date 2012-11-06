@@ -1,0 +1,15 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">2.An item is missing from my shipment</div></div>
+<div class="detail">
+<!--gai-->
+<span><p>If your order is missing an item, please contact Customer Service, Our Customer Service team will respond to you within 24 hours. Once Customer Service confirms an item is missing, we will begin processing a new one for you.</p></span>
+<!--gai-->
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

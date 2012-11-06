@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><div class="detail_title">8.I ordered a standard sized dress, not a custom size, why is it taking so long?</div>
+<span>All of our dresses are made-to-order, whether you ordered a standard or custom size, and require a tailoring time of 8-12 business days. If you add this time to the shipping time, you"ll have an idea of when to expect your item.</span>  
+  </div>
+<div class="detail">
+<!--gai-->
+<table width="769">
+  <tr>
+    <th width="40%"><strong>My Order Status Is:</strong></th>
+    <th width="20%"><strong>Tailoring Time
+(business days)
+</strong></th>
+    <th width="20%"><strong>Expedited Shipping<br />
+(business days)</strong></th>
+    <th width="20%">Standard Shipping
+(business days)
+</th>
+  </tr>
+  <tr>
+    <th>Wedding Apparel,  Special Occasion Dresses, Suits</th>
+    <th>8-12</th>
+    <th>2-4</th>
+    <th>5-8</th>
+  </tr>
+  <tr>
+    <th>Wedding Accessories, Fashion Apparel, Shoes, Handbags, Jewelry & Beauty, Home & Outdoor</th>
+    <th>2-3</th>
+    <th>2-4</th>
+    <th>5-8</th>
+</tr>
+    </table>
+<!--gai-->
+</div>
+</div>
+<p class="clearBoth"></p>
+</div>
+</div>

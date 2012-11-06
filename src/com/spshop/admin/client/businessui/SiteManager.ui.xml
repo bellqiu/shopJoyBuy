@@ -1,0 +1,106 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.spshop.admin.client.rich">
+	<ui:style>
+		
+	</ui:style>
+	<g:ScrollPanel width="100%" height="100%">
+	<g:HTMLPanel>
+	
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Label ui:field="cacheStatus"/>
+				</g:customCell>
+				<g:customCell>
+					<g:FormPanel ui:field="updateCatlogForm" method="METHOD_GET">
+						<g:Button width="100%" height="100%" text="Update category cache" ui:field="updateCategoryCache"/>
+					</g:FormPanel>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		
+			<g:HTMLPanel>
+				<g:Grid>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Logo"/>
+						</g:customCell>
+						<g:customCell>
+							<g:FlowPanel>
+								<g:Button text="Pick a Image" ui:field="logoPicker"/>
+								<g:SimplePanel ui:field="logoImage"/>
+							</g:FlowPanel>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="FeaturedCat"/>
+						</g:customCell>
+						<g:customCell>
+							<g:FlowPanel>
+								<g:Button text="Pick a Image" ui:field="featuredPicker"/>
+								<g:SimplePanel ui:field="featuredImage"/>
+							</g:FlowPanel>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Delivery"/>
+						</g:customCell>
+						<g:customCell>
+							<g:FlowPanel>
+								<g:Button text="Pick a Image" ui:field="deliverPicker"/>
+								<g:SimplePanel ui:field="deliverImage"/>
+							</g:FlowPanel>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Featured URL"/>
+						</g:customCell>
+						<g:customCell>
+							<g:TextBox ui:field="featuredUrl"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Deliver URL"/>
+						</g:customCell>
+						<g:customCell>
+							<g:TextBox ui:field="deliverUrl"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Free Delivery Price"/>
+						</g:customCell>
+						<g:customCell>
+							<g:DoubleBox ui:field="freeDeliveryPrice"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Side bar"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:RichText height="300px" width="800px" ui:field="siderBar"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Footer"/>
+						</g:customCell>
+						<g:customCell>
+							<p1:RichText height="300px" width="800px" ui:field="siteFooter"/>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Button text="Save" ui:field="save"/>
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+			</g:HTMLPanel>
+	</g:HTMLPanel>
+	</g:ScrollPanel>
+</ui:UiBinder> 

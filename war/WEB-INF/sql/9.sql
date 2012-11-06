@@ -1,0 +1,1 @@
+ALTER TABLE `sshop`.`shop_product` add(tags varchar(800));

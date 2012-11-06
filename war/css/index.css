@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+.ad_list_box{ width:771px; overflow:hidden;}
+.index_bigad{ width:972px; position:relative; overflow:hidden;}
+.index_item_box1{padding:0 0 5px 5px; top:5px; right:200px; background:white;width:158px;}
+.index_item_box3{padding:0 0 5px 5px; top:5px; right:20px; background:white;width:158px;}
+.index_item_box2{padding:5px 5px 0 5px; bottom:0; right:25px; background:white;}
+.index_bigad img{}
+.index_bigad .index_item_position{position:absolute;z-index:9}
+.index_item_words{ padding:10px 10px 10px 5px;}
+.index_item_words h3{font-size:14px;}
+.index_item_words h3 a{color:#6B353F;}
+.index_item_words div{width:133px; color:#727272;}
+.index_tab{height:352px; overflow:hidden;}
+.index_left{overflow:hidden;}
+.index_content01{}
+.index_content01 .index_left .feature_list li h4 a{color:red;}
+.Promotions_tab{ background:url(Promotions_tab.gif) repeat-x; height:39px;}
+.Promotions_tab h3{ float:left; border-right:#beb7b0 solid 1px; padding:0 20px; line-height:39px; color:#614f11; cursor:pointer; text-shadow:0 1px 0 rgba(255, 255, 255, 0.8); font-size:12px;}
+.Promotions_tab h3.link_now{ background:url(Promotions_tabon.gif) repeat-x; color:#4a1805;}
+.tab_content{ height:315px;}
+
+.daily_madness{ padding:10px 0 0 8px; display:block;}
+.daily_madness dl{ float:left; padding:4px; width:234px; height:126px; border:#e9e9e9 solid 2px; margin:5px 7px 5px 0;  _margin:2px 7px 0px 0; }
+.daily_madness dl dt{ float:left; width:105px; overflow:hidden;}
+.daily_madness dl dt img{ height:125px;}
+.daily_madness dl dd{color:#666; font-size:10px;}
+.daily_madness dl dd strong{ display:block; height:30px; margin-bottom:8px; overflow:hidden; font-weight:normal; line-height:14px;}
+.daily_madness dl dd .spacing{ padding-bottom:7px;}
+.daily_madness dl dd .display_right{ text-align:right;}
+.dilyMadness_priceTip {
+    background: url("indexIntegration_bg.png") no-repeat scroll 0 -341px transparent;
+    bottom: 2px;
+    color: #C60000;
+    font-size: 12px;
+    font-weight: bold;
+    height: 38px;
+    line-height: 32px;
+    position: absolute;
+    right: -6px;
+    text-align: center;
+    width: 84px;
+}
+.Spotlight{ display:none;}
+/*
+.Spotlight .goods_list{ margin:10px 5px 10px 12px; _margin:5px 2px 10px 12px;}
+*/
+.index_content02{overflow:hidden;}
+.Recommended{ background:url(Recommended_bg.gif) repeat-y;}
+.Recomm_text{ width:198px; float:left;}
+.Recommended ul li{ line-height:20px; padding:7px 7px 0; cursor:pointer; color:#8b877e; font-size:11px; height:55px;}
+.Recommended ul li.display_now{ background:url(Recommended_onbg.gif) no-repeat 0 0;}
+
+.Recomm_goods .goods_list{ margin:5px 5px 10px 12px; _margin:5px 2px 10px 12px;}
+
+.index_content03{}
+
+.main_Categories404{width:145px; padding:0 0 5px 7px; overflow:hidden;}
+.main_Categories{ width:145px; padding:0 0 5px 7px; overflow:hidden;height:108px; }
+.main_Categories dt,.main_Categories404 dt{ padding-bottom:5px;}
+
+.daily_madness { display:none;}
+.Spotlight,.Newarrivals { display:none;}
+.Recomm_goods { display:none;}

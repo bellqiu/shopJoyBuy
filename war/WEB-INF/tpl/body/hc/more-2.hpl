@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><h2>Part Two: Shipping & Delivery</h2>
+</div>
+<div class="help_more"><ul>
+   <li><a href="/uc/helpCenter/help2-1">How can I track my package?</a></li>
+   <li><a href="/uc/helpCenter/help2-2">How do I estimate my delivery time?</a></li>
+    <li><a href="/uc/helpCenter/help2-3">How do I calculate shipping costs?</a></li>
+    <li><a href="/uc/helpCenter/help2-4">What shipping methods do you offer?</a></li>
+    <li><a href="/uc/helpCenter/help2-5">What countries or regions do you ship to?</a></li>
+    <li><a href="/uc/helpCenter/help2-6">Are there any additional fees involved in international shipping?</a></li>
+    <li><a href="/uc/helpCenter/help2-7">Do you ship to PO Boxes or APO/FPO military addresses?</a></li>
+  <span><a href="/uc/helpCenter/hcIndex">&lt;&lt;Back</a></span>
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

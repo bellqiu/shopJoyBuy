@@ -1,0 +1,18 @@
+<module rename-to="workspace">
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.user.theme.clean.Clean'/>
+	<!--
+		This will give us shorter obfuscated CSS class names. We guarantee
+		that there will be no class names that will conflict with /M.+/
+	-->
+	<set-configuration-property name="CssResource.obfuscationPrefix" value="M" />
+	
+	<entry-point class='com.spshop.admin.client.AdminWorkspace' />
+
+	<source path='admin/client' />
+	<source path='admin/shared' />
+	<source path='admin/client/businessui' />
+	<source path='model' />
+	<source path='exception' />
+
+</module>

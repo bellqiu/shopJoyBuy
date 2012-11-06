@@ -1,0 +1,3 @@
+<div class="right-region index-tab borderstyle-01">
+	<#include "fragments/promotions.hpl">
+</div>

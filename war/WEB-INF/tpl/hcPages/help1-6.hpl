@@ -1,0 +1,11 @@
+<#assign pageKeywords = "8.I ordered a standard sized dress, not a custom size, why is it taking so long?">
+<#assign pageDescription = "8.I ordered a standard sized dress, not a custom size, why is it taking so long?">
+<#assign pageTitle = "8.I ordered a standard sized dress, not a custom size, why is it taking so long?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help1-6.hpl">	
+
+<#include "/footer/bottom.hpl">

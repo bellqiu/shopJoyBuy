@@ -1,0 +1,38 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<div id="blablabla">
+<#include "left.hpl">
+
+	<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><div class="detail_title">5. How can I cancel my order?</div>
+<span>The majority of our products can be cancelled up until they are shipped for the refund. 
+If your order status is On Shopping or Pending, you can just ignore the order. We only process the order which is paid. 
+</br>If your order status is Paid, you can submit one email or call to cancel your order and we can only refund your part refund. 
+The rest will be as a compensation for our company, because we spend lots of energy and labor to deal with your order. 
+Once an order has been shipped, it can no longer be cancelled. 
+<p>See the chart below for information on products that may require a restocking/processing fee:</p></span>  
+  </div>
+<div class="detail">
+<!--gai-->
+<table width="769">
+  <tr>
+    <th width="50%" height="26"><strong>Within  24 hours of payment confirmation*</strong></th>
+    <th width="50%"><strong>24-72  hours after payment confirmation*</strong></th>
+    </tr>
+  <tr>
+    <th>Full Refund</th>
+    <th>50% refund of the  product price, full refund of the shipping price</th>
+    </tr>
+  </table>
+<div class="detail_font">
+  <p>When you receive an email entitled "Order Received and Payment Confirmation "please note that your payment has been confirmed. </p>
+</div>
+<!--gai-->
+</div>
+</div>
+</div>
+<p class="clearBoth"></p>
+</div>
+</div>

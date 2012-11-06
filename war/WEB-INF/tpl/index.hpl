@@ -1,0 +1,9 @@
+<#assign pageKeywords = '${homeView.category.relatedKeyword!""}'>
+<#assign pageDescription = '${homeView.category.description!""}'>
+<#assign pageTitle = '${homeView.category.pageTitle!""}'>
+<#assign pageBaseURL = '${siteView.host+"/"}'>
+
+<#include "/header/top.hpl">
+<#include "/body/body-sp-home.hpl">	
+<#include "/footer/ucf1.hpl">
+<#include "/footer/bottom.hpl">

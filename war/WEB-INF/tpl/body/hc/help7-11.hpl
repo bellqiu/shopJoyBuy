@@ -1,0 +1,18 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">11.Can I pay by credit card if I am not a PayPal member?</div></div>
+<div class="detail">
+<!--gai-->
+<span>
+<p>Yes you can. Paying by credit card or debit card is safe, easy and convenient at Honeybuy.com. We currently accept Visa, Master Card, and American Express credit card payments from most locations worldwide. </p></br>
+<p>Using Your Credit Card or Debit Card</p>
+
+</span></div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

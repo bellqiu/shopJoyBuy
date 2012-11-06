@@ -1,0 +1,7 @@
+<div class="left-region">
+	<#include "fragments/side-bar.hpl">
+	<div class="height-10"></div>
+	<#include "fragments/facebook-box.hpl">
+	<div class="height-10"></div>
+	<#include "fragments/mail-box.hpl">
+</div>

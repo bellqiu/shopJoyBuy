@@ -1,0 +1,11 @@
+<#assign pageKeywords = "7.I originally chose Western Union, can I change to PayPal?">
+<#assign pageDescription = "7.I originally chose Western Union, can I change to PayPal?">
+<#assign pageTitle = "7.I originally chose Western Union, can I change to PayPal?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-7.hpl">
+
+<#include "/footer/bottom.hpl">

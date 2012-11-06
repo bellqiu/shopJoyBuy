@@ -1,0 +1,353 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.spshop.admin.client.rich">
+	<ui:style field="selectionStyle"
+		type="com.spshop.admin.client.businessui.ColorSelector.SelectionStyle">
+			.selected {
+				border: solid 2px #CCC;
+			}
+			
+			.popup {
+				z-index: 99999;
+			}
+		</ui:style>
+	<ui:style>
+		.Grape {
+			border-color: #715380 #563457 #563457 #715380;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Lilac {
+			border-color: #D0B5D7 #C0A2BF #C0A2BF #D0B5D7;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Lightskyblue {
+			border-color: #AFDBE4 #92B4DE #92B4DE #AFDBE4;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Lavender {
+			border-color: #E49BFF #B35AFF #B35AFF #E49BFF;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Pink {
+			border-color: #FFD2FB #FBB3FF #FBB3FF #FFD2FB;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Browncoffee {
+			border-color: #BB9A76 #87643F #87643F #BB9A76;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Chocolate {
+			border-color: #946D44 #6B4F37 #6B4F37 #946D44;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Black {
+			border-color: #4D4C4C #131313 #131313 #4D4C4C;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Champagne {
+			border-color: #E7B37A #CA9837 #CA9837 #E7B37A;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Gold {
+			border-color: #DCC181 #C5A272 #C5A272 #DCC181;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Ivory {
+			border-color: #FFFFFF #F7EED6 #F7EED6 #FFFFFF;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Burgundy {
+			border-color: #A43755 #551B29 #551B29 #A43755;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Red {
+			border-color: #FF4D4D #D00000 #D00000 #FF4D4D;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Orange {
+			border-color: #FFA448 #FF7504 #FF7504 #FFA448;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.White {
+			border-color: #FFFFFF #D9D9D9 #D9D9D9 #FFFFFF;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Silver {
+			border-color: #EBEBEB #CFCFCF #CFCFCF #EBEBEB;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Huntergreen {
+			border-color: #266364 #033534 #033534 #266364;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Green {
+			border-color: #2CDA40 #119A37 #119A37 #2CDA40;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Sage {
+			border-color: #C6DAC1 #B3BE8E #B3BE8E #C6DAC1;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Royalblue {
+			border-color: #7DACED #4B79C4 #4B79C4 #7DACED;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Blue {
+			border-color: #4074E7 #2E50A5 #2E50A5 #4074E7;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Darknavy {
+			border-color: #647281 #1E2023 #1E2023 #647281;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Daffodil {
+			border-color: #CFCA68 #C1B141 #C1B141 #CFCA68;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Darkgreen {
+			border-color: #466025 #162121 #162121 #466025;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+		
+		.Fuchsia {
+			border-color: #F24A78;
+			border-style: solid;
+			border-width: 9px;
+			height: 0;
+			margin-right: 2px;
+			width: 0;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<g:Grid ui:field="table">
+			<g:row>
+				<g:customCell>
+						<p1:ColorButton  ui:field="black"
+							name="black" value="#4D4C4C #131313 #131313 #4D4C4C" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton ui:field="blue"
+						name="blue" value="#4074E7 #2E50A5 #2E50A5 #4074E7" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="browncoffee" name="browncoffee" value="#BB9A76 #87643F #87643F #BB9A76" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="burgundy" name="burgundy" value="#A43755 #551B29 #551B29 #A43755" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="champagne" name="champagne" value="#E7B37A #CA9837 #CA9837 #E7B37A" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="chocolate" name="chocolate" value="#946D44 #6B4F37 #6B4F37 #946D44" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="daffodil" name="daffodil" value="#CFCA68 #C1B141 #C1B141 #CFCA68" />
+				</g:customCell>
+			</g:row>
+
+			<g:row>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="darkgreen" name="darkgreen" value="#466025 #162121 #162121 #466025" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="darknavy" name="darknavy" value="#647281 #1E2023 #1E2023 #647281" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="fuchsia" name="fuchsia" value="#F24A78 #C8183F #C8183F #F24A78" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton ui:field="gold"
+						name="gold" value="#DCC181 #C5A272 #C5A272 #DCC181" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton ui:field="grape"
+						name="grape" value="#715380 #563457 #563457 #715380" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="huntergreen" name="huntergreen" value="#266364 #033534 #033534 #266364" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton ui:field="ivory"
+						name="ivory" value="#FFFFFF #F7EED6 #F7EED6 #FFFFFF" />
+				</g:customCell>
+			</g:row>
+
+			<g:row>
+				<g:customCell>
+					<p1:ColorButton ui:field="silver"
+						name="silver" value="#EBEBEB #CFCFCF #CFCFCF #EBEBEB" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton ui:field="white"
+						name="white" value="#FFFFFF #D9D9D9 #D9D9D9 #FFFFFF" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton ui:field="sage"
+						name="sage" value="#C6DAC1 #B3BE8E #B3BE8E #C6DAC1" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="royalblue" name="royalblue" value="#7DACED #4B79C4 #4B79C4 #7DACED" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton ui:field="pink"
+						name="pink" value="#FFD2FB #FBB3FF #FBB3FF #FFD2FB" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton ui:field="red"
+						name="red" value="#FF4D4D #D00000 #D00000 #FF4D4D" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton ui:field="orange"
+						name="orange" value="#FFA448 #FF7504 #FF7504 #FFA448" />
+				</g:customCell>
+			</g:row>
+
+			<g:row>
+				<g:customCell>
+					<p1:ColorButton ui:field="lilac"
+						name="lilac" value="#D0B5D7 #C0A2BF #C0A2BF #D0B5D7" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="lightskyblue" name="lightskyblue" value="#AFDBE4 #92B4DE #92B4DE #AFDBE4" />
+				</g:customCell>
+				<g:customCell>
+					<p1:ColorButton
+						ui:field="lavender" name="lavender" value="#E49BFF #B35AFF #B35AFF #E49BFF" />
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		<g:Button ui:field="seletor" text="Select" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

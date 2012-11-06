@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">7.Can I cancel the dress if I change my mind?</div></div>
+<div class="detail">
+<!--gai-->
+<span>Our dresses aren't just pulled from a warehouse. Once your order is confirmed, our tailors begin selecting materials in the color you requested and cutting fabric based on your measurements. Even standard size dresses are made-to-order for each customer. The custom nature of our dresses means our cancellation policy is stricter than for other items, so it's important to order carefully. Please see the table below for our cancellation policy:
+</span>
+<table width="769">
+  <tr>
+    <th width="50%" height="26"><strong>Within  24 hours of payment confirmation*</strong></th>
+    <th width="50%"><strong>24-72  hours after payment confirmation*</strong></th>
+    </tr>
+  <tr>
+    <th>Full Refund</th>
+    <th>50% refund of the  product price, full refund of the shipping price</th>
+    </tr>
+  </table>
+  <div class="detail_font">
+  <p>Please kindly notice that when you receive an email entitled "Order Received and</p>
+  <p>Payment Confirmation" please note that your payment has been confirmed.</p>
+</div>
+<!--gai-->
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

@@ -1,0 +1,11 @@
+<#assign pageKeywords = "12.Shipping For Online Sellers">
+<#assign pageDescription = "12.Shipping For Online Sellers">
+<#assign pageTitle = "12.Shipping For Online Sellers">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-12.hpl">
+
+<#include "/footer/bottom.hpl">

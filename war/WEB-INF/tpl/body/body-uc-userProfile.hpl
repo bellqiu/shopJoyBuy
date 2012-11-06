@@ -1,0 +1,6 @@
+<div class="main_box" id="main_box">
+	<#assign "uc_current_page"="userProfile">
+	<#include "uc-inc/nav-left.hpl">
+	<#include "uc-inc/nav-right-userProfile.hpl">
+	<p class="clearBoth"></p>
+</div>

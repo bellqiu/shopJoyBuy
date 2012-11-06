@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">6.	Can I change my size after I placed my order?</div></div>
+<div class="detail">
+<span><p>Our dresses aren't just pulled from a warehouse - once your order is confirmed,our tailors begin selecting materials in the color you requested and cutting fabric based on your measurements. Even standard size dresses are made-to-order for each customer. Therefore, if you want to change the size of a dress you can advise us this change by phone or email in 24 hours.There will be no additional charges. After 24 hours have passed, there will be additional charges involved in changing the size. Please contact our customer services for more details.
+</p>
+<p>Please kindly notice that when you receive an email entitled "Order Received and Payment Confirmation" please note that your payment has been confirmed.</p>
+</span>
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

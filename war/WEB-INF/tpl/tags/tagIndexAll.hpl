@@ -1,0 +1,9 @@
+<#assign pageKeywords = "tag, tags, keyword, Honeybuy.com">
+<#assign pageDescription = "Tags on Honeybuy.com, search your fashion product with tags! Quality Guaranteed! Buy Now!">
+<#assign pageTitle = "Tags on Honeybuy.com, find your fashion and cheap product with tags on honeybuy!">
+
+<#include "/header/top.hpl">
+
+<#include "/body/tagIndex/body-tag-index_all.hpl">	
+
+<#include "/footer/bottom.hpl">

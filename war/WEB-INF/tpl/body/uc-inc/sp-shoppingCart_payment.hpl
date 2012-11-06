@@ -1,0 +1,166 @@
+<div class="scart_con">
+	<#assign order = currentOrder!userView.cart.order> <#if
+	((order.items?size)> 0) >
+	<form action="/uc/shoppingCart_payment_2_pay" method="post">
+
+		<div class="scart_step3"></div>
+		<div class="sc_order">
+			Your order has been placed successfully. <span class="red">Order
+				NO. ${order.name} </span><br> Now, you can make the payment for your
+			order.
+		</div>
+		<div class="separator"></div>
+		<dl class="scart_summary_list">
+			<dd>
+				Item Sub total:<span class="red">${(order.currency)}&nbsp;${(userView.currencyRate*order.totalPrice)?string(",##0.##")}</span>
+			</dd>
+			<dd>
+				Coupon:<span class="red">${(order.currency)}&nbsp;-${(userView.currencyRate*order.couponCutOff)?string(",##0.##")}</span>
+			</dd>
+			<dd>
+				Shipping Cost:<span class="red">${(order.currency)}&nbsp;${(userView.currencyRate*order.dePrice)?string(",##0.##")}</span>
+			</dd>
+			<dd class="separator"></dd>
+			<dd class="red">
+				<b>Grand Total:<span id="GrabdTotal">${(order.currency)}&nbsp;<span
+						class="order_grand_total">${(userView.currencyRate*(order.totalPrice-order.couponCutOff+order.dePrice))?string(",##0.##")}</span></span></b>
+			</dd>
+			<dd class="red">
+				<span> <a href="/uc/shoppingCart_address">Back >> </a> <input
+					type="submit" class="button_01" value="Processed to Pay">
+				</span>
+			</dd>
+		</dl>
+		<p class="clearBoth"></p>
+		<div class="separator_margin"></div>
+		<div class="scart_header2">Make payment via</div>
+		<ul class="scart_m">
+			<li>
+				<div class="shipping_title">
+					<input name="payType" type="radio" value="paypal" checked="checked">
+					<span>Paypal<img
+						src="${siteView.host}/style/image/home_97.gif">The safer,
+						easier way to pay.
+					</span>
+				</div>
+				<div class="shipping_desc">
+					<p>How to pay by PayPal?</p>
+					<p>If you have PayPal account, please pay your order by PayPal
+						account directly. If you do not have PayPal account, it does not
+						matter. You can make the payment via PayPal with your credit card
+						or your debit card. HoneyBuy's PayPal account is:
+						payment@honeybuy.com</p>
+					<img src="${siteView.host}/style/image/horizontal_solution_PP.gif">
+					<img src="${siteView.host}/style/image/PaypalVerify.gif"> <br />
+					<input type="submit" class="button_01" value="Processed to Pay">
+				</div>
+			</li>
+			<li>
+				<div class="shipping_title">
+					<input name="payType" type="radio" value="Paypal"> <span>Credit
+						Card <img width="30" height="20"
+						src="${siteView.host}/style/image/home_103.gif"> <img
+						width="29" height="20" src="${siteView.host}/style/image/--.jpg">
+						<img width="31" height="20"
+						src="${siteView.host}/style/image/amex.jpg"> <img width="33"
+						height="20" src="${siteView.host}/style/image/dse.jpg">
+					</span>
+				</div>
+				<div class="shipping_desc">
+					<p>How to pay by a Credit Card.</p>
+					<p>You can pay via paypal with your credit card or debit card.
+						Payment with this way is traceable, immediate and convenient, and
+						the payment is deposited directly into HoneyBuy's account.
+						Moreover, credit card companies typically provide some level of
+						identity and purchase protection. Please do not block any pop-up
+						windows when going through the paying process.</p>
+					<br /> <input type="submit" class="button_01"
+						value="Processed to Pay">
+				</div>
+			</li>
+			<li>
+				<div class="shipping_title" style="display: none;">
+					<input name="payType" type="radio" value="YoursPay"> <span>Yours
+						Pay<img width="30" height="20"
+						src="${siteView.host}/style/image/home_103.gif"> <img
+						width="29" height="20" src="${siteView.host}/style/image/--.jpg">
+						<img width="31" height="20"
+						src="${siteView.host}/style/image/amex.jpg"> <img width="33"
+						height="20" src="${siteView.host}/style/image/dse.jpg">
+					</span>
+				</div>
+				<div class="shipping_desc" style="display: none;">
+					<p>How to pay by a Credit Card.</p>
+					<p>Visa Only! You can pay direct with your visa card. Payment
+						with this way is traceable, immediate and convenient, and the
+						payment is deposited directly into HoneyBuy’s account. Moreover,
+						credit card companies typically provide some level of identity and
+						purchase protection. Please do not block any pop-up windows when
+						going through the paying process</p>
+					<br /> <input type="submit" class="button_01"
+						value="Processed to Pay">
+				</div>
+			</li>
+			<li>
+				<div class="shipping_title" > 
+					<input name="payType" type="radio" value="alipay^boc-visa" id="ali-visa"> <span>VISA
+					<img  height="20"
+						src="${siteView.host}/style/image/visa.png">
+					</span>
+				</div>
+				<div class="shipping_desc" style="display: none;">
+					Only support USD. If the currency is not USD, we will convert it to USD.
+					<input type="hidden" value="boc-visa" name="default_bank" checked="checked" id="ali-default_bank">Visa
+					<!-- <input type="radio" value="" name="default_bank">Master card -->
+					
+					<br /> <input type="submit" class="button_01"
+						value="Processed to Pay">
+				</div>
+			</li>
+			
+			<li>
+				<div class="shipping_title" > 
+					<input name="payType" type="radio" value="alipay^boc-master" id="ali-master-card"> <span>MASTER CARD
+					<img height="20"
+						src="${siteView.host}/style/image/mastercard.png">
+					</span>
+				</div>
+				<div class="shipping_desc" style="display: none;">
+					Only support USD. If the currency is not USD, we will convert it to USD.
+					<br /> <input type="submit" class="button_01"
+						value="Processed to Pay">
+				</div>
+			</li>
+		</ul>
+		<#assign order = currentOrder!userView.cart.order> <#assign "address"=
+		primary!order.primaryAddress >
+		<div class="scart_header2">Address Details</div>
+		<ul class="address_l">
+			<li class="l1">Shipping to this address:</li>
+			<li class="l2">${address.fullName}</li>
+			<li>${address.address1!''}</li>
+			<li>${address.address2!''}</li>
+			<li>${address.city!''}, ${address.stateProvince!''},
+				${siteView.countryMap[address.country?string].name}</li>
+			<li>Postal code: ${address.postalCode!''}</li>
+			<li>Phone Number: ${address.phone!''}</li>
+		</ul>
+		<#if order.billingSameAsPrimary> <#assign "address"=
+		billing!userView.cart.order.primaryAddress > <#else> <#assign
+		"address"= billing!userView.cart.order.billingAddress > </#if>
+		<ul class="address_r">
+			<li class="l1">Billing to this address:</li>
+			<li class="l2">${address.fullName}</li>
+			<li>${address.address1!''}</li>
+			<li>${address.address2!''}</li>
+			<li>${address.city!''}, ${address.stateProvince!''},
+				${siteView.countryMap[address.country?string].name}</li>
+			<li>Postal code: ${address.postalCode!''}</li>
+			<li>Phone Number: ${address.phone!''}</li>
+		</ul>
+		<p class="clearBoth"></p>
+	</form>
+	<#else>
+	<p class="red">No items</p>
+	</#if>
+</div>

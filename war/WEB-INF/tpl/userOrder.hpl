@@ -1,0 +1,10 @@
+<#assign pageKeywords = "My Orders on Honeybuy.com, Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageDescription = "My Orders on Honeybuy.com - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageTitle = "My Order on Honeybuy.com: Fashion Dress, Apparel, Suits With Free Shipping">
+
+
+
+<#include "/header/top.hpl">
+<#include "/body/body-uc-userOrder.hpl">	
+
+<#include "/footer/bottom.hpl">

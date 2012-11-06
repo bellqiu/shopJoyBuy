@@ -1,0 +1,36 @@
+<div class="top_box">
+	<div class="logo_box">
+		<a href="http://www.honeybuy.com/" title="home">
+			<img alt="" src="http://www.honeybuy.com/image/4614200824386.jpg">
+		</a>
+	</div>
+	<div class="search">
+		<form action="" method="get" name="formss" id="formss" onsubmit="">
+			<div class="search_box">
+				<input type="hidden" name="class" value="0"> <input
+					type="text" name="textfield" value="" id="top_search_box"
+					class="search_text font_size11 Light_gray" autocomplete="off">
+				<input type="button" class="search_button" name=""
+					onclick="formss1.submit();">
+			</div>
+
+			<div id="top_search_box_rs_div" class="ep_qsearch"
+				style="display: none;">
+				<ul id="top_search_box_rs">
+					<li><a href="javascript:void(0);"><b>A</b>katsuki</a></li>
+				</ul>
+			</div>
+		</form>
+	</div>
+	<div class="security">
+		<a href="http://www.honeybuy.com/" title="home">
+			<img alt="" src="http://www.honeybuy.com/image/19326069330463.jpg">
+		</a>
+		<a href="http://www.honeybuy.com/" title="home">
+			<img alt="" src="http://www.honeybuy.com/image/20740160421148.jpg">
+		</a>
+	</div>
+	
+	<#include "catalog/categoryMenu.hpl">
+	
+</div>

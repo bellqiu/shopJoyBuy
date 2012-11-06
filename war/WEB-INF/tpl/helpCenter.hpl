@@ -1,0 +1,11 @@
+<#assign pageKeywords = "Knowledge Base, Customer Service, Ways To Save, Company Policy on Honeybuy.com">
+<#assign pageDescription = "Welcome to Honeybuy.com Knowledge Base! - Customer Service, Company Info, Ways To Save, Company Policy on Honeybuy.com">
+<#assign pageTitle = "Welcome to Honeybuy.com Knowledge Base!">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/hcIndex.hpl">	
+
+<#include "/footer/bottom.hpl">

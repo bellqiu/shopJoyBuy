@@ -1,0 +1,6 @@
+<div class="left-region">
+	<#include "fragments/category-tree.hpl">
+	<div class="height-10"></div>
+	<#assign topSellingProduct = (pageView.topSellingProducts.products) >
+	<#include "fragments/top-selling.hpl">
+</div>

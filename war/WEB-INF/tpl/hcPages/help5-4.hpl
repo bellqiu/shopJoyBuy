@@ -1,0 +1,11 @@
+<#assign pageKeywords = "4. How can I change payment methods?">
+<#assign pageDescription = "4. How can I change payment methods?">
+<#assign pageTitle = "4. How can I change payment methods?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help5-4.hpl">
+
+<#include "/footer/bottom.hpl">

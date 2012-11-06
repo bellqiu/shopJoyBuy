@@ -1,0 +1,11 @@
+<#assign pageKeywords = "7.Do you ship to PO Boxes or APO/FPO military addresses?">
+<#assign pageDescription = "7.Do you ship to PO Boxes or APO/FPO military addresses?">
+<#assign pageTitle = "7.Do you ship to PO Boxes or APO/FPO military addresses?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help2-7.hpl">
+
+<#include "/footer/bottom.hpl">

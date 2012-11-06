@@ -1,0 +1,74 @@
+<div class="nav-right-box">
+	<div class="box_title">User Profile</div>
+	<div class="box_sub_item_title">User Account</div>
+	<form action="/uc/userProfile" method="post">
+	<input type="hidden" name="action" value="updateAccount">
+	<div class="form_error blue">${(userView.msg.updateAccountSuc)!''}</div>
+	<div class="nav-right-box_content">
+		<table class="form_table">
+			<tbody>
+				<tr>
+					<td width="161" height="30" align="right">First Name<span class="red">*</span></td>
+					<td><input name="c_user_first_name" id="c_user_first_name" type="text"
+						class="txt_input" value="${(userView.loginUser.firstName)!''}" validation="username"> 
+						<span class="red" id="c_user_first_name_noti">
+						${(userView.err.firstNameErr)!''}
+						</span></td>
+				</tr>
+				
+				<tr>
+					<td align="right">Last Name<span class="red">*</span></td>
+					<td><input name="c_user_last_name" id="c_user_last_name" type="text"
+						class="txt_input" value="${(userView.loginUser.lastName)!''}" validation="username"> <span class="red" id="c_user_last_name_noti">
+						${(userView.err.lastNameErr)!''}
+						</span></td>
+				</tr>
+				
+				<tr>
+					<td align="right">Email<span class="red">*</span></td>
+					<td>
+						${userView.loginUser.email}
+					</td>
+				</tr>
+					<tr>
+					<td align="right">&nbsp;</td>
+					<td><input type="submit" class="button_01" value="Save"><span class="red"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</form>
+	<#assign "addType"='primary' >
+	<#assign "address"= (primaryAddress)!userView.loginUser.primaryAddress >
+	<form action="/uc/userProfile" method="post">
+		<input type="hidden" name="addType" value="${(addType)!''}">
+		<input type="hidden" value="updateAddress1" name="action">
+		<div class="box_sub_item_title">User Primary Address</div>
+		<div class="form_error blue">${(userView.msg.updateAddress1SUC)!''}</div>
+		<#assign "showSubmitBtn"=true >
+		<#assign "SubmitBtnTxt"='Save' >
+		<div class="nav-right-box_content">
+			<#include "fragments/address.hpl">
+		</div>
+	</form>
+	<#assign "addType"='billing' >
+	<#assign "address"= (billingAddress)!userView.loginUser.billingAddress >
+	<form action="/uc/userProfile" method="post">
+		<input type="hidden" name="addType" value="${(addType)!''}">
+		<input type="hidden" value="updateAddress2" name="action">
+		<div class="box_sub_item_title">User Billing Address</div>
+		<div class="form_error blue">${(userView.msg.updateAddress2SUC)!''}</div>
+		<div class="nav-right-box_content" >
+			<div class="conditon_to_show_box">
+				<input id="billingAddress_check_box" type="checkbox" name="billingSameAsPrimary" ${userView.loginUser.billingSameAsPrimary?string('checked="checked"','')} value="true" ><span>Same as Primary Address</span>
+			</div>
+			<div class="${userView.loginUser.billingSameAsPrimary?string('hidden','')}" id="billingAddress_content">
+				<#include "fragments/address.hpl">
+			</div>
+			<div class="conditon_to_show_box ${userView.loginUser.billingSameAsPrimary?string('','hidden')}" id="billingAddress_content_2">
+				<input type="submit" class="button_01" value="${SubmitBtnTxt}"><span
+					id="sp_msg" style="color: Red; font-weight: bold;">
+			</div>
+		</div>
+	</form>
+</div>

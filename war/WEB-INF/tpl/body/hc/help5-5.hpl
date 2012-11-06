@@ -1,0 +1,15 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">5.When will I be charged for my items?</div></div>
+<div class="detail">
+<!--gai-->
+<span><p>You will be charged for your order when your payment status is changed to "Paid" We will then confirm your payment and begin processing your order right away. In some cases, PayPal and credit/debit card payments may take up to 24 hours to confirm (When you receive an email entitled "Order Received and Payment Confirmation" please note that your payment has been confirmed).</p></span>
+<!--gai-->
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

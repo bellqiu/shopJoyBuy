@@ -1,0 +1,11 @@
+<#assign pageKeywords = "6.Can I pay by Western Union?">
+<#assign pageDescription = "6.Can I pay by Western Union?">
+<#assign pageTitle = "6.Can I pay by Western Union?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-6.hpl">
+
+<#include "/footer/bottom.hpl">

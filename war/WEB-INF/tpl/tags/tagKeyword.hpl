@@ -1,0 +1,9 @@
+<#assign pageKeywords = "${currentKeyword2!''}, cheap ${currentKeyword2!''}, wholesale ${currentKeyword2!''}">
+<#assign pageDescription = "Buy ${currentKeyword2!''} on big discount from HoneyBuy.com! New fashion ${currentKeyword2!''} are on hot sale! Quality Guaranteed! Buy Now! - page ${currentIndexKeyPage}">
+<#assign pageTitle = "Buy ${currentKeyword2!''} online | HoneyBuy.com - page ${currentIndexKeyPage}">
+
+<#include "/header/top.hpl">
+
+<#include "/body/tagIndex/body-tag-keyword.hpl">	
+<#include "/footer/ucf1.hpl">
+<#include "/footer/bottom.hpl">

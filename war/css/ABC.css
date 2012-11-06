@@ -1,0 +1,18 @@
+@charset "utf-8"; 
+
+/* CSS Document */
+
+.ABC_item {height:18px;  overflow:hidden;  width:450px;  clear:both;  float:none;  margin-right:auto;  margin-left:auto;  }
+.ABC_item i {display:block;   padding-right:4px;  float:left;  font-size:12px; font-style:normal; font-weight:bold; }
+.ABC_item a:link,.ABC_item a:visited{margin:0px 2px;  text-decoration:none;  color:#1e4e8e; }
+.ABC_item a:hover{ color:#5E2500;  text-decoration:underline; }
+.ABC_item a:link.link_now,.ABC_item a:visited.link_now {background:#FFFBEC; border:1px solid #FFCB6A; color:#5E2500; }
+.ABC_box { padding-top:20px; overflow:hidden; width:70%; float:left; }
+.ABC_box a:link,.ABC_box a:visited{display:block; font:13px Verdana, Geneva, sans-serif; text-decoration:none; float:left; padding-left:8px; padding-top:3px; color:#444; margin:4px; height:20px; line-height:20px; width:200px; overflow:hidden; }
+.ABC_box a:hover{background:#FFFFAC; }
+.ABC_sitem {height:24px; overflow:hidden; width:720px; clear:both; float:none; margin-right:auto; margin-left:auto; }
+.ABC_sitem a:link,.ABC_sitem a:visited{display:block; padding:4px; font:11px Verdana, Geneva, sans-serif; text-decoration:none; background:#F5F5F5; border:1px solid #999; margin-right:4px; margin-left:4px; float:left; color:#666; }
+.ABC_sitem a:hover{background:#FFFBEC; border:1px solid #FFCB6A; color:#5E2500; }
+
+.right_Ad{ float:right; width:250px; text-align:right; overflow:hidden;}
+.right_Ad img{ margin-bottom:10px;}

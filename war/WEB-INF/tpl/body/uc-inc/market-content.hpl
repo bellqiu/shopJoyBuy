@@ -1,0 +1,3 @@
+<div class="market-content">
+	${(pageView.category.marketContent)!""}
+</div>

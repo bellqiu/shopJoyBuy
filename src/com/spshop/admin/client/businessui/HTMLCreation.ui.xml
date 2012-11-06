@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.spshop.admin.client.rich">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Button text="Save" ui:field="save"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="Name:"/>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox ui:field="name"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="HTML:"/>
+				</g:customCell>
+				<g:customCell>
+					<p1:RichText width="700px" height="400px" ui:field="html" />
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">1.Accepted Payment Methods</div></div>
+<div class="detail">
+<!--gai-->
+<span><p>Honeybuy.com makes paying for your orders easy by providing a range of convenient payment options. Below is a guide to the different payment methods used by LightInTheBox.com, so you can choose the right way for you.</p></span>
+<p>Payment Methods:</p>
+<p>Credit and Debit Card</p>
+<p>PayPal</p>
+<img src="/style/image/pic/vise.jpg" width="547" height="33" />
+<span><p>We currently accept Visa, MasterCard, and American Express credit card payments from most locations worldwide. Paying by credit card or debit card is safe, easy and convenient at Honeybuy.com.</p></span>
+<h2>Using Your Credit Card or Debit Card</h2>
+<span><p>Note: Honeybuy.com does not store or review your credit card & personal </p>
+<p>information. As such, should any issues arise regarding your credit card or debit card transaction, please contact GlobalCollect or your credit card company for assistance. Honeybuy.com cannot accept any responsibility for any credit card or debit card payment issues.</p></span>
+<h2>Paying with PayPal</h2>
+<img src="/style/image/pic/pay11.jpg" width="520" height="30" />
+<img src="/style/image/pic/PayPal.jpg" width="72" height="70" />
+<p>PayPal is a secure and trusted payment processing service which allows you to shop online. PayPal can be used at Honeybuy.com to purchase items by Credit Card (Visa, MasterCard, Discover, and American Express), Debit Card, or E-check (i.e. using your regular Bank Account).</p>
+<h2>Using PayPal</h2>
+<p>You do not need to have a PayPal account before ordering from Honeybuy.com. We offer two different ways to pay using PayPal, which are as follows:</p></br>
+<p>1. On your Shopping Cart page, click<img src="/style/image/pic/pay.jpg" width="115" height="24" /> after reviewing your items. You will then leave Honeybuy.com and enter PayPal. Log in to your PayPal account, or create one if you haven't already, and follow the on-screen instructions given by PayPal. Once you’ve completed your payment information, you will be directed back to our site.</p>
+</br>
+<p>2. At your Shopping Cart, choose Proceed to Pay and you will be taken to the Order Information page. Under Payment Methods, select PayPal and then click on Continue<img src="/style/image/pic/pay.jpg" width="115" height="24" /> You will then go to PayPal where you can complete your order payment.</p>
+</br>
+<p>2. At your Shopping Cart, choose Proceed to Pay and you will be taken to the Order Information page. Under Payment Methods, select PayPal and then click on </p>
+<h2>Advantages of using PayPal:</h2>
+<span><p>1.	Your payment status can be traced via your PayPal account..</p>
+<p>2. PayPal doesn't require you to use your credit card online. Instead, you can transfer directly from your bank account.  </p>
+<p>3. PayPal will protect your personal details if you choose to pay by credit card.</p>
+</span>
+<span><p>With PayPal, you can send payment quickly and securely online. Through PayPal, you can pay with credit card, debit card, or bank account balance. Once your order is submitted, you will be redirected to PayPal's site where you could make the payment.</p>
+</br>
+<p>For security we use Paypal and online real-time payment gateway which is one of the leading online payment processing companies in the world. All transactions take place in a secure environment (SSL), and we are not given any of your credit card details, simply a confirmation is given from Paypal that your payment has been authorized.</p>
+</br>
+<p>Our PayPal Account is: <a href="mailto:paypal@honeybuy.com">paypal@honeybuy.com</a> .</p>
+<p>If you require further information about Paypal, please don't hesitate to visit them at <a href="http://www.paypal.com">www.paypal.com</a> .</p>
+</span>
+</div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

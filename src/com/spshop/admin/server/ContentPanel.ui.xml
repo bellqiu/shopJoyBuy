@@ -1,0 +1,39 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+  xmlns:g='urn:import:com.google.gwt.user.client.ui'
+  xmlns:mail='urn:import:com.spshop.admin.client'>
+
+  <ui:style>
+  .detail {
+    border: 1px solid #666;
+    background-color: white;
+  }
+
+  .header {
+    background: #eee;
+    border-bottom: 1px solid #666;
+    padding: 0.25em;
+  }
+
+  .headerItem {
+    margin-bottom:0.5em;
+  }
+
+  .body {
+    padding: 5px 5px;
+  }
+  </ui:style>
+
+  <g:DockLayoutPanel unit='EM' styleName='{style.detail}'>
+    <g:north size='2'>
+      <g:HTMLPanel styleName='{style.header}'>
+        <div class='{style.headerItem}' ui:field='subject'/>
+      </g:HTMLPanel>
+    </g:north>
+
+    <g:center>
+	      <g:HTMLPanel styleName='{style.body}' ui:field='body'>
+	      </g:HTMLPanel>
+    </g:center>
+  </g:DockLayoutPanel>
+
+</ui:UiBinder>

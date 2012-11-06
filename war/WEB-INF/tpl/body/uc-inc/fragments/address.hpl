@@ -1,0 +1,67 @@
+<table class="form_table">
+	<tbody>
+		<tr>
+			<td width="161" height="30" align="right">Full name<span class="red">*</span></td>
+			<td><input name="${(addType)!''}username" id="${(addType)!''}username" type="text"
+				class="txt_input" value="${(address.fullName)!''}" validation="username"> <span class="red" id="${(addType)!''}username_noti">${(userView.err[((addType)!'')+'usernameErr'])!''}</span></td>
+		</tr>
+		<tr>
+			<td height="50" align="right" valign="top">Address 1<span class="red">*</span>
+			</td>
+			<td><textarea name="${(addType)!''}address1" id="${(addType)!''}address1"
+					class="txt_area" validation="address">${(address.address1)!''}</textarea> <span class="red" id="${(addType)!''}address1_noti">${(userView.err[((addType)!'')+'address1Err'])!''}</span>
+					<p class="gray"> PO Boxes or similar addresses are not available for shipping,thank you!</p></td>
+		</tr>
+		<tr>
+			<td height="45" align="right" valign="top">Address 2</td>
+			<td><textarea name="${(addType)!''}address2" id="${(addType)!''}address2"
+					class="txt_area" >${(address.address2)!''}</textarea><span class="red" id="${(addType)!''}address2_noti">${(userView.err[((addType)!'')+'address2Err'])!''}</span></td>
+		</tr>
+		<tr>
+			<td height="30" align="right">City<span class="red">*</span>
+			</td>
+			<td><input name="${(addType)!''}city" id="${(addType)!''}city" type="text" class="txt_input" value="${(address.city)!''}" validation="city"><span
+				class="red" id="${(addType)!''}city_noti">${(userView.err[((addType)!'')+'cityErr'])!''}</span></td>
+		</tr>
+		<tr>
+			<td height="30" align="right">State / Province / Region <span class="red">*</span> </td>
+			<td><input name="${(addType)!''}stateProvince" id="${(addType)!''}stateProvince" type="text" value="${(address.stateProvince)!''}"
+				class="txt_input" validation="city"><span class="red" id="${(addType)!''}stateProvince_noti">${(userView.err[((addType)!'')+'stateProvinceErr'])!''}</span></td>
+		</tr>
+		<tr>
+			<td height="30" align="right">Country / Region <span class="red">*</span>
+			</td>
+			<td><select id="${(addType)!''}country" name="${(addType)!''}country"
+				style="width: 224px;" class="txt_select" validation="country">
+				<option value="0">Please Select</option>
+				<#list siteView.countries as country>
+					<option value="${country.id}" 
+						<#if ((address.country)!0) ==country.id > selected="selected" </#if>
+					>${country.name}</option>
+				</#list>
+			</select> <span class="red" id="${(addType)!''}country_noti">${(userView.err[((addType)!'')+'countryErr'])!''}</span></td>
+		</tr>
+		<tr>
+			<td height="36" align="right">Postal Code<span class="red">*</span></td>
+			<td><input name="${(addType)!''}postalCode" id="${(addType)!''}postalCode" type="text" class="txt_input" value="${(address.postalCode)!''}" validation="code"><span
+				class="red" id="${(addType)!''}postalCode_noti">${(userView.err[((addType)!'')+'postalCodeErr'])!''}</span></td>
+		</tr>
+		<tr>
+			<td height="40" align="right" valign="top" >Phone Number<span class="red">*</span></td>
+			<td valign="top"><input name="${(addType)!''}telNum" id="${(addType)!''}telNum" type="text" value="${(address.phone)!''}"
+				class="txt_input " validation="phone"><span
+				class="red" id="${(addType)!''}telNum_noti">${(userView.err[((addType)!'') +'telNumErr'])!''}</span>
+				<p class="gray"> Your phone number is needed so we or the shipping company can
+					contact you in case of problems.</p></td>
+		</tr>
+		<#if showSubmitBtn>
+			<#if SubmitBtnTxt ??>
+			<tr>
+				<td align="right">&nbsp;</td>
+				<td><input name="" type="submit" class="button_01" value="${SubmitBtnTxt}"><span
+					id="sp_msg" style="color: Red; font-weight: bold;"></span></td>
+			</tr>
+			</#if>
+		</#if>
+	</tbody>
+</table>

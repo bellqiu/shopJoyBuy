@@ -1,0 +1,235 @@
+<style type="text/css">
+.W_border {
+	border-color: #572A1E;
+}
+
+.private_shresults {
+	width: 760px;
+	margin-top: 25px;
+	clear: right;
+	float: right;
+}
+
+.private_SRLr,.private_SRLl {
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+}
+
+.private_SRLr {
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+	position: relative;
+}
+
+.private_shresults .content {
+	border-radius: 5px 5px 5px 5px;
+	line-height: 22px;
+	margin: 0 11px;
+	padding: 3px 10px 10px;
+	position: relative;
+	width: 618px;
+	word-wrap: break-word;
+	float: left;
+	border-color: #572A1E;
+}
+
+.private_SRLr .face,.private_SRLl .face {
+	display: inline;
+	position: relative;
+	width: 50px;
+}
+
+.private_SRLl .face,.private_SRLl .content {
+	float: left;
+}
+
+.private_SRLr .face,.private_SRLr .content {
+	float: right;
+}
+
+.content {
+	background: none repeat scroll 0 0 #f5f5f5;
+}
+
+.private_SRLr .face img,.private_SRLl .face img {
+	display: block;
+}
+
+.clearfix {
+	display: block;
+}
+
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.private_shresults .private_operate .txt {
+	display: inline-block;
+	float: left;
+	height: auto;
+	width: 396px;
+}
+
+.private_SRLl .arrow {
+	left: -7px;
+}
+
+.private_SRLr .arrow {
+	right: -7px;
+}
+
+.private_shresults .arrow {
+	height: 14px;
+	position: absolute;
+	top: 19px;
+	width: 7px;
+	z-index: 20;
+}
+
+.private_SRLl .arrow {
+	background-position: 0 0;
+}
+
+.private_SRLr .arrow {
+	background-position: -7px 0;
+}
+
+/****************************************/
+.send_private_msg {
+	margin-top: 20px;
+	width: 760px;
+	clear: right;
+	float: right;
+}
+
+.send_private_msg .content {
+	border-radius: 5px 5px 5px 5px;
+	line-height: 22px;
+	margin: 0 11px;
+	position: relative;
+	width: 640px;
+	word-wrap: break-word;
+}
+
+.private_SRLr .headportrait,.private_SRLr .content {
+	float: right;
+}
+
+.send_private_msg .R_msg {
+	padding-bottom: 5px;
+}
+
+.send_private_msg .content {
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+.send_private_msg .private_operate {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-radius: 5px 5px 0 0;
+	padding: 5px 5px 5px 7px;
+}
+
+.send_private_msg .textarea {
+	width: 638px;
+}
+
+textarea {
+	resize: none;
+}
+
+.send_private_msg .send_handle {
+	border-top-style: solid;
+	border-top-width: 1px;
+	padding: 5px 5px 0 7px;
+}
+
+.send_private_msg .send_handle .btn_s {
+	float: right;
+}
+
+.send_private_msg .arrow {
+	height: 14px;
+	position: absolute;
+	right: -7px;
+	top: 19px;
+	width: 7px;
+	z-index: 20;
+}
+</style>
+<#assign lastMsgId = messageThread[0].id>
+<div class="send_private_msg">
+	<dl class="private_SRLr clearfix">
+		<dt class="headportrait">
+			<a title=""><img width="50" height="50" src="/image/png-0010.png" alt="Me" title="Me"></a>
+		</dt>
+		<dd class="W_border content">
+			<div class="R_msg">
+			<form action="/uc/feedback" method="post">
+				<input type="hidden" name="lastMsgId" value="${lastMsgId}"/>
+				<input type="hidden" name="optType" value="postMsg"/>
+				<div>
+					<textarea name="newMessage" class="textarea"
+						style="margin: 0px; padding: 0px; font-size: 12px; word-wrap: break-word; line-height: 18px; overflow: hidden; outline: medium none; height: 36px;"></textarea>
+				</div>
+				<div>
+					<div class="btn_s">
+						<input class="button_01" type="submit" value="Compose">
+					</div>
+				</div>
+			</form>
+			</div>
+		</dd>
+	</dl>
+</div>
+
+<div class="private_shresults">
+	<#list messageThread as msg>
+	
+	<#if msg.user.id != currentUserId>
+	<dl node-type="msgList" class="private_SRLl clearfix">
+		<dt class="face">
+			<a title=""><img width="50" height="50" src="/image/png-0656.png" alt="Customer Service" title="Customer Service"></a>
+		</dt>
+		<dd class="W_border content">
+			<div class="R_msg">
+				<div class="private_operate clearfix">
+					<div class="fl">
+						<em href="" class="W_textb date">${msg.createDate?string("yyyy-MM-dd hh:mm:ss a")}</em>
+					</div>
+					<div class="txt">${msg.content?string}</div>
+				</div>
+				<dl class="private clearfix">
+					<dd class="piclist"></dd>
+				</dl>
+			</div>
+			<div class="arrow"></div>
+		</dd>
+	</dl>
+	<#else>
+	<dl node-type="msgList" class="private_SRLr clearfix">
+		<dt class="face">
+			<a title=""><img width="50" height="50" src="/image/png-0010.png" alt="Me" title="Me"></a>
+		</dt>
+		<dd class="W_border content">
+			<div class="R_msg">
+				<div class="private_operate clearfix">
+					<div class="fl">
+						<em href="" class="W_textb date">${msg.createDate?string("yyyy-MM-dd hh:mm:ss a")}</em>
+					</div>
+					<div class="txt">${msg.content?string}</div>
+				</div>
+				<dl class="private clearfix">
+					<dd class="piclist"></dd>
+				</dl>
+			</div>
+			<div class="arrow"></div>
+		</dd>
+	</dl>
+	</#if>
+	</#list>
+</div>

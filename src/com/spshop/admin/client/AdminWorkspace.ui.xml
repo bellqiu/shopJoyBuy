@@ -1,0 +1,23 @@
+<ui:UiBinder
+  xmlns:ui='urn:ui:com.google.gwt.uibinder'
+  xmlns:g='urn:import:com.google.gwt.user.client.ui'
+  xmlns:workSpace='urn:import:com.spshop.admin.client'>
+
+  <g:DockLayoutPanel unit='EM'>
+    <g:north size='5'>
+      <workSpace:TopPanel ui:field='topPanel' />
+    </g:north>
+
+    <g:center>
+      <g:SplitLayoutPanel>
+        <g:west size='200'>
+          <workSpace:Shortcuts ui:field='shortcuts' />
+        </g:west>
+        <g:center>
+          <workSpace:ContentPanel ui:field="contentPanel"></workSpace:ContentPanel>
+        </g:center>
+      </g:SplitLayoutPanel>
+    </g:center>
+  </g:DockLayoutPanel>
+
+</ui:UiBinder>

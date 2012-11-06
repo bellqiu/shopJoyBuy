@@ -1,0 +1,15 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">3.	I received a wrong item</div></div>
+<div class="detail">
+<!--gai-->
+<span><p>If you received a wrong item, please contact our Customer Service. It's better for you to provide photographs clearly showing the problem with the item and its order number to our Customer Service. When they receive your email, they will contact you soon. After our confirmation, you can exchange it for the correct item or receive a full refund.</p></span>
+<!--gai-->
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

@@ -1,0 +1,11 @@
+<#assign pageKeywords = "6. How do I use a coupon?">
+<#assign pageDescription = "6. How do I use a coupon?">
+<#assign pageTitle = "6. How do I use a coupon?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help5-6.hpl">
+
+<#include "/footer/bottom.hpl">

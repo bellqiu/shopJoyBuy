@@ -1,0 +1,77 @@
+<link rel="stylesheet" type="text/css"
+	href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+	
+		<#include "left.hpl">
+<div id="helpcenter">
+		<div class="help_right">
+			<div class="help_ti">
+				<div class="detail_title">3.What does my order status mean?</div>
+				<p>
+					<span>In <a href="http://www.honeybuy.com/uc/myOrder">My Orders</a>, you can easily find each order you've
+						placed and its current status. On your order details page, various
+						help options will be available based on your order status. </span>
+				</p>
+				<p>&nbsp;</p>
+				<p>
+					<span>Please see the table below to learn what options are
+						available to you at each stage of your order.</span>
+				</p>
+			</div>
+			<div class="detail">
+				<!--gai-->
+				<table width="769">
+					<tr>
+						<td width="25%" height="26"><strong>My Order Status
+								Is:</strong>
+						</td>
+						<td width="50%"><strong>That Means:</strong>
+						</td>
+						<td width="25%"><strong>Right Now I Can:</strong>
+						</td>
+					</tr>
+					<tr>
+						<td><strong>On Shopping</strong>
+						</td>
+						<td>Your order is currently incomplete, awaiting payment.
+							Once we've received your payment, we will confirm it within 24
+							hours and begin processing your order.</td>
+						<td>Complete your payment<br /> Edit order<br /> Delete
+							this order</td>
+					</tr>
+					<tr>
+						<td><strong>Pending</strong>
+						</td>
+						<td>Your order is currently incomplete, awaiting payment.
+							Once we've received your payment, we will confirm it within 24
+							hours and begin processing your order.</td>
+						<td>Complete your payment<br /> Edit order<br /> Delete
+							this order</td>
+					</tr>
+					<tr>
+						<td><strong>Paid</strong>
+						</td>
+						<td>Your payment has just been confirmed and we will begin
+							processing your order immediately.</td>
+						<td><p>
+								Check order progress<br /> Resolve a payment issue<br />
+								Cancel this order*
+							</p> Request a change of shipping address</td>
+					</tr>
+					<tr>
+						<td><strong>Shipping</strong>
+						</td>
+						<td>Everything in your order has been packaged and sent to
+							the shipping address you provided.</td>
+						<td><p>
+								Resolve a payment issue <br /> Request a return or refund<br />
+								Report missing or wrong products
+							</p> Inquire about tariffs</td>
+					</tr>
+				</table>
+				<!--gai-->
+			</div>
+		</div><p class="clearBoth"></p>
+	</div>
+	

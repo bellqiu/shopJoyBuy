@@ -1,0 +1,11 @@
+<#assign pageKeywords = "3.How Does Paypal Work?">
+<#assign pageDescription = "3.How Does Paypal Work?">
+<#assign pageTitle = "3.How Does Paypal Work?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-3.hpl">
+
+<#include "/footer/bottom.hpl">

@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><h2>Part Four:Returns & Refunds FAQs</h2>
+</div>
+<div class="help_more"><ul>
+    <li><a href="/uc/helpCenter/help4-1">An item was lost or damaged during shipping?</a></li>
+   <li><a href="/uc/helpCenter/help4-2">An item is missing from my shipment?</a></li>
+    <li><a href="/uc/helpCenter/help4-3">I received a wrong item?</a></li>
+    <li><a href="/uc/helpCenter/help4-4">Have you received my returned items?</a></li>
+    <li><a href="/uc/helpCenter/help4-5">Our Return & Cancellation Policy?</a></li></ul>
+  <span><a href="/uc/helpCenter/hcIndex">&lt;&lt;Back</a></span>
+</div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

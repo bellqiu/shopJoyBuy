@@ -1,0 +1,66 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Grid>
+								<g:row>
+									<g:customCell>
+										<g:Label text="Country Name:"/>
+									</g:customCell>
+									<g:customCell>
+										<g:TextBox ui:field="countryName"/>
+									</g:customCell>
+								</g:row>
+								<g:row>
+									<g:customCell>
+										<g:Label text="Country abbr:"/>
+									</g:customCell>
+									<g:customCell>
+										<g:TextBox ui:field="countryAbbr"/>
+									</g:customCell>
+								</g:row>
+								<g:row>
+									<g:customCell>
+										<g:Label text="Standard:"/>
+									</g:customCell>
+									<g:customCell>
+										<g:DoubleBox ui:field="dePrice"/>
+									</g:customCell>
+								</g:row>
+								<g:row>
+									<g:customCell>
+										<g:InlineLabel text="Expedited"/>
+									</g:customCell>
+									<g:customCell>
+										<g:DoubleBox ui:field="hDPrice"/>
+									</g:customCell>
+								</g:row>
+									<g:row>
+									<g:customCell>
+										<g:Label text="Free Standard:"/>
+									</g:customCell>
+									<g:customCell>
+										<g:DoubleBox ui:field="freeBasicD"/>
+									</g:customCell>
+								</g:row>
+								<g:row>
+									<g:customCell>
+										<g:InlineLabel text="Free Expedited"/>
+									</g:customCell>
+									<g:customCell>
+										<g:DoubleBox ui:field="freeHD"/>
+									</g:customCell>
+								</g:row>
+								<g:row>
+									<g:customCell>
+									<g:HorizontalPanel>
+										<g:Button text="Save" ui:field="save"/>
+										<g:Button text="New" ui:field="newCountry"/>
+									</g:HorizontalPanel>
+									</g:customCell>
+								</g:row>
+							</g:Grid>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,68 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:TabLayoutPanel barUnit="EM" barHeight="2.2"
+		height="700px" ui:field="tab">
+		<g:tab>
+			<g:header>
+					Create/Edit Image
+			</g:header>
+			<g:FormPanel action="/workspace/imageUpload" method="post" ui:field="formPanel">
+				<g:HTMLPanel>
+					<g:Hidden name="id" ui:field="id"/>
+					<g:Grid>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Name:"/>
+							</g:customCell>
+							<g:customCell>
+								<g:TextBox ui:field="imageName" name="imageName"></g:TextBox>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Type:"/>
+							</g:customCell>
+							<g:customCell>
+								<g:ListBox ui:field="imageType" name="imageType"></g:ListBox>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Image"/>
+							</g:customCell>
+							<g:customCell>
+								<g:FileUpload ui:field="imageFile" name="image"></g:FileUpload>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:Button ui:field="submit" text="Create"/>
+							</g:customCell>
+							
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:HTML></g:HTML>
+							</g:customCell>
+							<g:customCell>
+								<g:FlowPanel  ui:field="small"/>
+							</g:customCell>
+						</g:row>
+						<g:row>
+								<g:customCell>
+										<g:HTML></g:HTML>
+								</g:customCell>
+							<g:customCell>
+								<g:VerticalPanel ui:field="links"/>
+							</g:customCell>
+						</g:row>
+					</g:Grid>
+				</g:HTMLPanel>
+			</g:FormPanel>
+		</g:tab>
+	</g:TabLayoutPanel>
+</ui:UiBinder> 

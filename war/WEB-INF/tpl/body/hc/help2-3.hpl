@@ -1,0 +1,13 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><div class="detail_title">3.How do I calculate shipping costs?</div></div>
+<div class="detail">
+<span>The shipping costs differ from item to item.  In general, our company would bear the shipping cost if you select the standard shipping method. But please kindly notice that the policy only applies to the Asian, Europe, Australia and North America regions. If you choose the expedited shipping way, you should have to pay for the extra shipping fee by yourself.</span>
+</div>
+</div>
+<p class="clearBoth"></p>
+</div></div>

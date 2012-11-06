@@ -1,0 +1,21 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:TextBox  ui:field="name"/>
+				</g:customCell>
+				<g:customCell>
+					<g:HorizontalPanel ui:field="value"/>
+				</g:customCell>
+				<g:customCell>
+					<g:Button ui:field="delete">Delete</g:Button>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:HTMLPanel>
+</ui:UiBinder> 

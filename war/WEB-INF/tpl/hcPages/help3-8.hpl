@@ -1,0 +1,11 @@
+<#assign pageKeywords = "8.Do you sell fabric swatches or can I buy material directly from you?">
+<#assign pageDescription = "8.Do you sell fabric swatches or can I buy material directly from you?">
+<#assign pageTitle = "8.Do you sell fabric swatches or can I buy material directly from you?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help3-8.hpl">
+
+<#include "/footer/bottom.hpl">

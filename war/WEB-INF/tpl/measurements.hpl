@@ -1,0 +1,10 @@
+<#assign pageKeywords = "Measurements">
+<#assign pageDescription = "Measurements">
+<#assign pageTitle = "Measurements">
+
+
+
+<#include "/header/top.hpl">
+<#include "/body/measurements.hpl">	
+
+<#include "/footer/bottom.hpl">

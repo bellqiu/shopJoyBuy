@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">10. I Want To Contact PayPal Customer Service But Can't Find A Phone Number For Them? Please Help!</div></div>
+<div class="detail">
+<!--gai-->
+<span>
+<p>Finding this information on the PayPal website is quite tricky and some users have suggested this may be because they prefer receiving requests by email and want to reduce the number of calls. You can contact PayPal customer service at the toll-free contact numbers below:</p></br>
+<p>Toll Free for Business/Premier, USA & Canada: 1-888-221-1161 / 1-888-204-4481</p>
+<p>Personal Accounts: 1-402-935-2050</p>
+<p>PayPal UK: 0870 7307 191</p></br>
+<p>They are open between the following hours:</p>
+<p>4:00 AM PDT to 10:00 PM PDT Monday through Friday</p>
+<p>6:00 AM PDT to 8:00 PM PDT on Saturday and Sunday</p>
+</span></div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><h2>Part One:About the order Status</h2>
+</div>
+<div class="help_more"><ul>
+    <li><a href="/uc/helpCenter/help1-8">1. Placing Orders?</a></li>
+   <li><a href="/uc/helpCenter/help1-9">2. Track Order?</a></li>
+   <li><a href="/uc/helpCenter/help1-1">3. What does my order status mean?</a></li>
+   <li><a href="/uc/helpCenter/help1-2">4. How do I check my order status?</a></li>
+    <li><a href="/uc/helpCenter/help1-3">5. How can I cancel my order?</a></li>
+    <li><a href="/uc/helpCenter/help1-4">6. Can I make changes to my order?</a></li>
+     <li><a href="/uc/helpCenter/help1-5">7. When will I receive my order?</a></li>
+    <li><a href="/uc/helpCenter/help1-6">8. I ordered a standard sized dress, not a custom size, why is it taking so long?</a></li>
+    <li><a href="/uc/helpCenter/help1-7">9. How do I contact Customer Service about my order?</a></li></ul>
+  <span><a href="/uc/helpCenter/hcIndex">&lt;&lt;Back</a></span>
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

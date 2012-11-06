@@ -1,0 +1,11 @@
+<#assign pageKeywords = "7.Can I cancel the dress if I change my mind?">
+<#assign pageDescription = "7.Can I cancel the dress if I change my mind?">
+<#assign pageTitle = "7.Can I cancel the dress if I change my mind?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help3-7.hpl">
+
+<#include "/footer/bottom.hpl">

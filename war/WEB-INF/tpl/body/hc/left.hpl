@@ -1,0 +1,95 @@
+<script>
+	jq("#helpcenter").ready(function(){
+		imgSite = "${siteView.imageHost!"http://www.honeybuy.com"}";
+		jq('img[id^="collapse"]').click(function(){
+			var ulId = this.id+"_content";
+			if(this.src == imgSite + "/style/image/pic/sanjiao.png"){
+				this.src = imgSite + "/style/image/pic/sanjiao-x.png";
+				jq('ul[id='+ulId+']').show();
+			} else {
+				this.src = imgSite + "/style/image/pic/sanjiao.png";
+				jq('ul[id='+ulId+']').hide();
+			}
+		});
+	});
+</script>
+<div id="helpcenter">
+<div class="help_left"><h3><a href="/uc/helpCenter/hcIndex">Knowledge Base</a></h3>
+ <div class="help_menu">
+   <span><img id="collapse_1" class="collapse_btn" src="/style/image/pic/sanjiao.png"/><a href="/uc/helpCenter/more-1">Part One: About the order Status</a></span>
+<ul id="collapse_1_content">
+   <li><a href="/uc/helpCenter/help1-8">1. Placing Orders?</a></li>
+   <li><a href="/uc/helpCenter/help1-9">2. Track Order?</a></li>
+   <li><a href="/uc/helpCenter/help1-1">3. What does my order status mean?</a></li>
+   <li><a href="/uc/helpCenter/help1-2">4. How do I check my order status?</a></li>
+    <li><a href="/uc/helpCenter/help1-3">5. How can I cancel my order?</a></li>
+    <li><a href="/uc/helpCenter/help1-4">6. Can I make changes to my order?</a></li>
+     <li><a href="/uc/helpCenter/help1-5">7. When will I receive my order?</a></li>
+    <li><a href="/uc/helpCenter/help1-6">8. I ordered a standard sized dress, not a custom size, why is it taking so long?</a></li>
+    <li><a href="/uc/helpCenter/help1-7">9. How do I contact Customer Service about my order?</a></li>
+</ul>
+   <span><img id="collapse_2" class="collapse_btn" src="/style/image/pic/sanjiao.png"/><a href="/uc/helpCenter/more-2">Part Two: Shipping & Delivery</a> </span>
+<ul id="collapse_2_content">
+   <li><a href="/uc/helpCenter/help2-1">1. How can I track my package?</a></li>
+   <li><a href="/uc/helpCenter/help2-2">2. How do I estimate my delivery time?</a></li>
+    <li><a href="/uc/helpCenter/help2-3">3. How do I calculate shipping costs?</a></li>
+    <li><a href="/uc/helpCenter/help2-4">4. What shipping methods do you offer?</a></li>
+    <li><a href="/uc/helpCenter/help2-5">5. What countries or regions do you ship to?</a></li>
+    <li><a href="/uc/helpCenter/help2-6">6. Are there any additional fees involved in international shipping?</a></li>
+    <li><a href="/uc/helpCenter/help2-7">7. Do you ship to PO Boxes or APO/FPO military addresses?</a></li>
+</ul>
+   <span><img id="collapse_3" class="collapse_btn" src="/style/image/pic/sanjiao.png"/><a href="/uc/helpCenter/more-3">Part Three: About the made to custom order</a></span>
+<ul id="collapse_3_content">
+   <li><a href="/uc/helpCenter/help3-1">1. What does made-to-order mean?</a></li>
+   <li><a href="/uc/helpCenter/help3-2">2. How to measure my size?</a></li>
+    <li><a href="/uc/helpCenter/help3-3">3. What is the tailoring time for my made-to-order dress?</a></li>
+    <li><a href="/uc/helpCenter/help3-4">4. How far in advance should I order my dress?</a></li>
+    <li><a href="/uc/helpCenter/help3-5">5. Can I modify a dress' design such as style/fabric/length?</a></li>
+    <li><a href="/uc/helpCenter/help3-6">6. Can I change my size after I placed my order?</a></li>
+    <li><a href="/uc/helpCenter/help3-7">7. Can I cancel the dress if I change my mind?</a></li>
+    <li><a href="/uc/helpCenter/help3-8">8. Do you sell fabric swatches or can I buy material directly from you?</a></li>
+    <li><a href="/uc/helpCenter/help3-9">9. Made-to-Order dresses alteration options & return policy</a></li>
+</ul>
+   <span><img id="collapse_4" class="collapse_btn" src="/style/image/pic/sanjiao.png"/><a href="/uc/helpCenter/more-4">Part Four: Returns & Refunds FAQs</a></span>
+<ul id="collapse_4_content">
+   <li><a href="/uc/helpCenter/help4-1">1. An item was lost or damaged during shipping</a></li>
+   <li><a href="/uc/helpCenter/help4-2">2. An item is missing from my shipment</a></li>
+    <li><a href="/uc/helpCenter/help4-3">3. I received a wrong item</a></li>
+    <li><a href="/uc/helpCenter/help4-4">4. Have you received my returned items?</a></li>
+    <li><a href="/uc/helpCenter/help4-5">5. Our Return & Cancellation Policy</a></li>
+</ul>
+   <span><img id="collapse_5" class="collapse_btn" src="/style/image/pic/sanjiao.png"/><a href="/uc/helpCenter/more-5">Part Five: Payment FAQs</a></span>
+<ul id="collapse_5_content">
+   <li><a href="/uc/helpCenter/help5-1">1. Which payment methods do you accept?</a></li>
+   <li><a href="/uc/helpCenter/help5-2">2. How to pay with credit/debit card</a></li>
+    <li><a href="/uc/helpCenter/help5-3">3. How to pay with PayPal</a></li>
+    <li><a href="/uc/helpCenter/help5-4">4. How can I change payment methods?</a></li>
+    <li><a href="/uc/helpCenter/help5-5">5. When will I be charged for my items?</a></li>
+    <li><a href="/uc/helpCenter/help5-6">6. How do I use a coupon?</a></li>
+    <li><a href="/uc/helpCenter/help5-7">7. How can I view prices in my currency?</a></li>
+    <li><a href="/uc/helpCenter/help5-8">8. How do you calculate currency rates?</a></li>
+</ul>
+   <span><img id="collapse_6" class="collapse_btn" src="/style/image/pic/sanjiao.png"/><a href="#">Part Six: My Account FAQs</a></span>
+<ul id="collapse_6_content">
+   <li><a href="/uc/helpCenter/help6-1">1. Why should I create an account?</a></li>
+   <li><a href="/uc/helpCenter/help6-2">2. I forgot my password</a></li>
+</ul>
+   <span><img id="collapse_7" class="collapse_btn" src="/style/image/pic/sanjiao.png"/><a href="/uc/helpCenter/more-7">Part Seven: How to Pay</a></span>
+<ul id="collapse_7_content">
+    <li><a href="/uc/helpCenter/help7-1">1. Accepted Payment Methods</a></li>
+    <li><a href="/uc/helpCenter/help7-2">2. PayPal Isn't Available in My Country</a></li>
+    <li><a href="/uc/helpCenter/help7-3">3. How Does Paypal Work?</a></li>
+    <li><a href="/uc/helpCenter/help7-4">4. Paying by Credit Card</a></li>
+    <li><a href="/uc/helpCenter/help7-5">5. What is Honeybuy's PayPal account?</a></li>
+    <li><a href="/uc/helpCenter/help7-6">6. Can I pay by Western Union?</a></li>
+    <li><a href="/uc/helpCenter/help7-7">7. I originally chose Western Union, can I change to PayPal?</a></li>
+    <li><a href="/uc/helpCenter/help7-8">8. Viewing Prices in Different Currencies</a></li>
+    <li><a href="/uc/helpCenter/help7-9">9. Western Union and Wire Transfer Fees</a></li>
+    <li><a href="/uc/helpCenter/help7-10">10. I Want To Contact PayPal Customer Service But Can't Find A Phone Number For Them? Please Help!</a></li>
+    <li><a href="/uc/helpCenter/help7-11">11. Can I pay by credit card if I am not a PayPal member?</a></li>
+    <li><a href="/uc/helpCenter/help7-12">12. Shipping For Online Sellers</a></li>
+    <li><a href="/uc/helpCenter/help7-13">13. Changing Payment Methods</a></li>
+</ul>
+   </div>
+  </div>
+  </div>

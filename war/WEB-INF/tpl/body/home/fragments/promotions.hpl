@@ -1,0 +1,109 @@
+<#assign tabData = homeView.tabSelling>
+<#assign calculateImageSize = "com.spshop.web.function.CalculateImage"?new()>
+
+<div class="promotions-tab" id="promotions-tab">
+	<#list tabData.tabs as tabTitle>
+		<#if (tabTitle_index = 0)>
+		<h3 aim="promotions-content&gt;.daily-madness"
+			class="link-now">
+				<a style="display: block">${tabTitle.name}</a>
+		</h3>
+		<#else>
+		<h3 aim="promotions-content&gt;.Spotlight${tabTitle_index}">
+				<a style="display: block">${tabTitle.name}</a>
+		</h3>
+		</#if>
+	</#list>
+</div>
+<div id="promotions-content" class="promotions-content" style="background: #FBF9F7;">
+	<#list tabData.tabs as tabContent>
+		<#if (tabContent_index = 0)>
+		<div class="daily-madness" style="display: block;">
+			<ul>
+			<#assign imageSize = tabImageInfo["0"]>
+			<#assign hAndPadding = calculateImageSize(imageSize[0]!"265", imageSize[1]!"265", imageSize[2]!"192", "164")>
+			<#list tabContent.products as tabProduct>
+				<li class="goods-list box-shadow">
+					<div class="goods-picture">
+						<a href='${(siteView.host + "/" + tabProduct.name)?string!""}' 
+						   title="${tabProduct.title}">
+							<#if (tabProduct.images[0].strSizeType = "PRODUCT_SQUARE")>
+							<img style="width:164px; padding-top: ${hAndPadding[1]?int}px;padding-bottom: ${hAndPadding[1]?int}px;" src='${(siteView.imageHost + tabProduct.images[0].thumbnailUrl)?string!""}' alt="${tabProduct.title}" />
+							</#if>
+							<#if (tabProduct.images[0].strSizeType = "PRODUCT_NORMAL")>
+							<img style="width:164px;" src='${(siteView.imageHost + tabProduct.images[0].thumbnailUrl)?string!""}' alt="${tabProduct.title}" />
+							</#if>
+						</a>
+					</div>
+					<strong class="goods-name">
+						<a href='${(siteView.host + "/" + tabProduct.name)?string!""}' title="${tabProduct.title}">
+							${tabProduct.title}
+						</a>
+					</strong>
+					<div class="dailyMadness-save">
+						<#if (tabProduct.actualPrice != tabProduct.price)>
+						<p class="save-title">Save</p>
+						<p class="save-num">
+							${((1 - tabProduct.actualPrice / tabProduct.price) * 100)?int + "%"}
+						</p>
+						</#if>
+					</div>
+					<del>
+						${currency } ${tabProduct.price * userView.currencyRate}
+					</del>
+					<p class="dailyMadness-priceTip">
+						${currency } ${tabProduct.actualPrice * userView.currencyRate}
+					</p>
+				</li>
+			</#list>
+			</ul>
+		</div>
+		</#if>
+		<#if (tabContent_index > 0)>
+		<div id="Spotlight" class="Spotlight${tabContent_index}" style="display: none;">
+			<div class="other-progoods" id="spotlightList">
+				<div>
+				<#assign imageSize = tabImageInfo['${tabContent_index?string}']>
+				<#assign hAndPadding = calculateImageSize(imageSize[0]!"265", imageSize[1]!"265", imageSize[2]!"192", "97")>
+				<#list tabContent.products as tabProduct>
+					<dl>
+						<dt>
+							<a title="${tabProduct.name}"
+								href='${(siteView.host + "/" + tabProduct.name)?string!""}'>
+								<#if (tabProduct.images[0].strSizeType = "PRODUCT_SQUARE")>
+								<img style="padding-top: ${hAndPadding[1]?int}px;padding-bottom: ${hAndPadding[1]?int}px;" alt="${tabProduct.name}"
+								     src='${(siteView.imageHost + tabProduct.images[0].thumbnailUrl)?string!""}'>
+								</#if>
+								<#if (tabProduct.images[0].strSizeType = "PRODUCT_NORMAL")>
+								<img alt="${tabProduct.name}"
+								     src='${(siteView.imageHost + tabProduct.images[0].thumbnailUrl)?string!""}'>
+								</#if>
+							</a>
+						</dt>
+						<dd>
+							<p class="goods-name">
+								<a title="${tabProduct.name}"
+								   href='${(siteView.host + "/" + tabProduct.name)?string!""}'>
+								   ${tabProduct.title}
+								</a>
+							</p>
+							<p class="save-per">
+							<#if (tabProduct.actualPrice != tabProduct.price)>
+								Save:${((1 - tabProduct.actualPrice / tabProduct.price) * 100)?int + "%"}
+							</#if>
+							</p>
+							<del>
+							 ${currency } ${tabProduct.price * userView.currencyRate}
+							</del>
+							<p class="goods-price">
+							 ${currency } ${tabProduct.actualPrice * userView.currencyRate}
+							</p>
+						</dd>
+					</dl>
+				</#list>
+				</div>
+			</div>
+		</div>
+		</#if>
+	</#list>
+</div>

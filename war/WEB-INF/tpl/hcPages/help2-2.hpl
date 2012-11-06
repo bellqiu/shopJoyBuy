@@ -1,0 +1,11 @@
+<#assign pageKeywords = "2.How do I estimate my delivery time?">
+<#assign pageDescription = "2.How do I estimate my delivery time?">
+<#assign pageTitle = "2.How do I estimate my delivery time?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help2-2.hpl">	
+
+<#include "/footer/bottom.hpl">

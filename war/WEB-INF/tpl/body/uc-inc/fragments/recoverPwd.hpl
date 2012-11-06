@@ -1,0 +1,19 @@
+<div class="login_left">
+	<div class="box_title">Recover password</div>
+	<form id="FormLogin" method="post" action="/uc/recoverPwd">
+		<div>
+			<p class="form_label">E-mail Address</p>
+			<input type="text" name="LoginEmail" class="txt_input" value="">
+			<div class="form_error red">${(userView.err.userAccountErr)!''}</div>
+			<div class="form_error blue">${(userView.msg.recoverSuccess)!''}</div>
+			<p class="form_label">
+				<a class="cursor_point_and_underline" href="/uc/login">Go Login?</a>
+			</p>
+			<p class="gray form_label">Fill your account email address, then submit. We will send the password to your email</p>
+			<p class="form_label">
+				<input name="" type="submit" class="button_01" value="Recover password">
+			</p>
+		</div>
+	</form>
+
+</div>

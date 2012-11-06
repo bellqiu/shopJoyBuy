@@ -1,0 +1,11 @@
+<#assign pageKeywords = "8.How do you calculate currency rates?">
+<#assign pageDescription = "8.How do you calculate currency rates?">
+<#assign pageTitle = "8.How do you calculate currency rates?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help5-8.hpl">
+
+<#include "/footer/bottom.hpl">

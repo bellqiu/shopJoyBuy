@@ -1,0 +1,14 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">8.Do you sell fabric swatches or can I buy material directly from you?</div></div>
+<div class="detail">
+<span><p>Yes, we sell swatches for you to know exactly what the dress material will be like. We do not list this in our store at this time, and if you want to buy fabric swatches, you can contact our customer service by phone or email, email is our preferred. Then our customer service would offer you professional service.</p>
+</span>
+</div>
+</div><p class="clearBoth"></p>
+</div></div>

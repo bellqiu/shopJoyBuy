@@ -1,0 +1,22 @@
+<div class="main_box" id="main_box">
+	<#include "include.hpl">
+	<div class="tag-index-container">
+	<#list (tagIndexs?keys) as key >
+		<dl>
+			<dt> <a href='/tags/index/${key?trim?replace(" ", "-")}'>${key}</a></dt>
+			<#list (tagIndexs[key]) as keyword >
+				<dd>
+					<a
+						href='/tags/k/${keyword?trim?replace(" ", "-")}'>${keyword}</a>
+				</dd>
+			</#list>
+		</dl>
+		
+		<#if ((key_index +1) % 4) == 0 >
+			<p class="clearBoth"></p>
+		</#if>
+	</#list>
+		<p class="clearBoth"></p>
+	</div>
+	<p class="clearBoth"></p>
+</div>

@@ -1,0 +1,11 @@
+<#assign pageKeywords = "2.PayPal Isn't Available in My Country">
+<#assign pageDescription = "2.PayPal Isn't Available in My Country">
+<#assign pageTitle = "2.PayPal Isn't Available in My Country">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-2.hpl">
+
+<#include "/footer/bottom.hpl">

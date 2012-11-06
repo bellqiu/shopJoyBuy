@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+.us_flag, .eu_flag, .jp_flag, .en_flag, .ca_flag,.au_flag,.sw_flag,.hk_flag,.cn_flag,.fr_flag,.it_flag,.ne_flag,.es_flag,.da_flag,.de_flag,.ru_flag,.mx_flag {
+	background: url(flag.png) no-repeat;
+	font-size: 0px;
+	line-height: 0px;
+	height: 11px;
+	width:20px;
+	float:left; margin-top:5px;
+	overflow: hidden;
+}
+/* 美国 */
+.us_flag {
+	background-position: left top;
+}/* 欧元 */
+.eu_flag {
+	background-position: left -11px;
+}/* 日本 */
+.jp_flag {
+	background-position: left -22px;
+}
+/* 英国 */
+.en_flag {
+	background-position: left -33px;
+}
+/* 加拿大 */
+.ca_flag {
+	background-position: left -44px;
+}/* 澳大利亚 */
+.au_flag {
+	background-position: left -55px;
+}/* 瑞士 */
+.sw_flag {
+	background-position: left -66px;
+}/* 香港 */
+.hk_flag {
+	background-position: left -77px;
+}
+/* 中国 */
+.cn_flag {
+	background-position: left -88px;
+}
+/* 法国 */
+.fr_flag {
+	background-position: left -99px;
+}
+/* 意大利 */
+.it_flag {
+	background-position: left -110px;
+}
+/* 荷兰 */
+.ne_flag {
+	background-position: left -121px;
+}
+/* 西班牙 */
+.es_flag {
+	background-position: left -132px;
+}
+/* 丹麦 */
+.da_flag {
+	background-position: left -143px;
+}
+/* 德国 */
+.de_flag {
+	background-position: left -154px;
+}
+/* 俄国 */
+.ru_flag {
+	background-position: left -166px;
+}
+/* 墨西哥 */
+.mx_flag {
+	background-position: left -177px;
+}

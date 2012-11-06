@@ -1,0 +1,11 @@
+<#assign pageKeywords = "Placing Orders">
+<#assign pageDescription = "1. Placing Orders on Honeybuy.com">
+<#assign pageTitle = "1. Placing Orders on Honeybuy.com">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help1-8.hpl">	
+
+<#include "/footer/bottom.hpl">

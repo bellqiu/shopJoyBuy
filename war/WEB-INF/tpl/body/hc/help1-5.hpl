@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+<div class="detail_title">7.When will I receive my order?</div>
+<span>All of our items require processing time on top of the shipping time. Processing time can be as short as 24 hours, but for most items are between 8-12 business days (See <a href="#">how do I estimate my delivery date?</a>). Shipping time varies based on the shipping methods you chose at checkout, see the chart below for our different shipping options:</span>
+</div>
+<div class="detail">
+<table width="769">
+  <tr>
+    <th height="26" colspan="2"><strong>Shipping Time  (Business Days)*</strong></th>
+    </tr>
+  <tr>
+    <th width="50%" height="26"><strong>Expedited</strong></th>
+    <th width="50%">Standard</th>
+    </tr>
+  <tr>
+    <th>2-4</th>
+    <th>5-8</th>
+    </tr>
+  </table></div>
+  <div class="detail_font">
+  <p>For example, if you order a wedding dress, it will need 8-12 business days of processing time and then 2-4 business days of shipping time if you select expedited shipping. Therefore, you can expect to receive it in 10-16 business days.    </p>
+  <p>You can go to My Orders and click on the order you need help with to check the current status of your order and view the estimated shipping date.</p>
+<p>Once your items have shipped, we"ll send you an email confirming shipment and include all relevant tracking information we can provide. </p></div>
+</div>
+<p class="clearBoth"></p>
+</div>
+</div>

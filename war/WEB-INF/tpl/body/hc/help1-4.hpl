@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<div id="blablabla">
+<#include "left.hpl">
+
+	
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+<div class="detail_title">6.Can I make changes to my order?</div>
+<p><span>If your order status is Draft or Pending, you can easily delete your order yourself and </span><span>place a new order. If you want to change your </span></p>
+<p><span>order after the payment, you had </span><span>better </span><span>to tell us within 24 hours after our payment confirmation. Otherwise, we may have to</span></p>
+<p><span> ask for the processing fee once your dress is in the processing. </span></p>
+</div>
+</div>
+</div>
+<p class="clearBoth"></p>
+</div>
+</div>

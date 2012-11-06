@@ -1,0 +1,37 @@
+.w-bp-a:after,.w-bp:after,.w-b:after,.w-p:after {
+	clear: both;
+	content: ".";
+	display: block;
+	font: 0pt/0 arial;
+	height: 0;
+	visibility: hidden;
+}
+
+#joinOurCommunity {
+	padding: 10px;
+}
+
+/* .w-b,.w-bp { */
+/* 	border: 1px solid #DDDDDD; */
+/* } */
+
+.w-bp-a,.w-bp,.w-b,.w-p,.widget,.clearfix,.section {
+	clear: both;
+	margin-bottom: 10px;
+}
+
+.commH2 {
+	font-size: 16px;
+	padding: 7px 0;
+	color: #666666;
+	float: left;
+	margin-right: 10px;
+}
+
+#followBarButtons{
+	float: left;
+}
+
+#followBarButtons a {
+	margin-left: 10px;
+}

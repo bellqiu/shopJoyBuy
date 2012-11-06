@@ -1,0 +1,11 @@
+<#assign pageKeywords = "11.Can I pay by credit card if I am not a PayPal member?">
+<#assign pageDescription = "11.Can I pay by credit card if I am not a PayPal member?">
+<#assign pageTitle = "11.Can I pay by credit card if I am not a PayPal member?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-11.hpl">
+
+<#include "/footer/bottom.hpl">

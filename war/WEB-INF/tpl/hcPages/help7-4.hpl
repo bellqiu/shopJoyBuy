@@ -1,0 +1,11 @@
+<#assign pageKeywords = "4.Paying by Credit Card">
+<#assign pageDescription = "4.Paying by Credit Card">
+<#assign pageTitle = "4.Paying by Credit Card">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help7-4.hpl">
+
+<#include "/footer/bottom.hpl">

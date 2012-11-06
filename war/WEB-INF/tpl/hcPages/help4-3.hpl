@@ -1,0 +1,11 @@
+<#assign pageKeywords = "3. I received a wrong item">
+<#assign pageDescription = "3. I received a wrong item">
+<#assign pageTitle = "3. I received a wrong item">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help4-3.hpl">
+
+<#include "/footer/bottom.hpl">

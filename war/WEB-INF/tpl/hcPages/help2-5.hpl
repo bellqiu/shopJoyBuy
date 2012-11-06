@@ -1,0 +1,11 @@
+<#assign pageKeywords = "5.What countries or regions do you ship to?">
+<#assign pageDescription = "5.What countries or regions do you ship to?">
+<#assign pageTitle = "5.What countries or regions do you ship to?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help2-5.hpl">	
+
+<#include "/footer/bottom.hpl">

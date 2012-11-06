@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">3.How Does Paypal Work?</div></div>
+<div class="detail">
+<!--gai-->
+<span>
+<p>PayPal allows you to use a variety of different methods to pay for your purchases:
+Send money from your credit/debit card</p>
+<p>Send money directly from your bank account: the amount is sent directly to the recipient's Paypal account.</p>
+<p>Use existing PayPal account credits</p>
+
+</span></div>
+</div><p class="clearBoth"></p>
+</div></div>

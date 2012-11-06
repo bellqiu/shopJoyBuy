@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">8.Why was I asked for a &quot;CPF&quot; number?  (Brazilian customers)</div></div>
+<div class="detail">
+<span><p>Our customers in Brazil have informed us that for international shipments, all individuals are supposed to state their ¡°CPF¡± number on invoices and companies are required to include a ¡°CNPJ¡± number.</p>
+Therefore, if you want us to ship your order to Brazil, please make sure to provide the correct "CPF" or "CNPJ" number so your package can smoothly clear Customs.
+</span>
+</div>
+</div>
+<p class="clearBoth"></p>
+</div>
+</div>

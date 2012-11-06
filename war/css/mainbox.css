@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+.index_bigad{overflow:hidden; width:972px; height:428px; position:relative;}
+.index_item_box1{padding:0 0 5px 5px; top:5px; right:200px; background:white;width:158px;}
+.index_item_box3{padding:0 0 5px 5px; top:5px; right:20px; background:white;width:158px;}
+.index_item_box2{padding:5px 5px 0 5px; bottom:0; right:25px; background:white;}
+.index_bigad img{}
+.index_bigad .index_item_position{position:absolute;z-index:9}
+.index_item_words{ padding:10px 10px 10px 5px;}
+.index_item_words h3{font-size:14px;}
+.index_item_words h3 a{color:#6B353F;}
+.index_item_words div{width:133px; color:#727272;}
+/*7.4*/.index_tab{height:800px; overflow:hidden;}
+.index_left{overflow:hidden;}
+.index_content01{}
+.index_content01 .index_left .feature_list li h4 a{color:#333333;}
+.index_content01 .index_left .feature_list li:hover h4 a{color:#e26500;}
+.Promotions_tab{ background:url(Promotions_tab.gif) repeat-x; height:39px;}
+.Promotions_tab h3{ float:left; border-right:#beb7b0 solid 1px; padding:0 12px; line-height:39px; color:#614f11; cursor:pointer; text-shadow:0 1px 0 rgba(255, 255, 255, 0.8); font-size:12px;}
+.Promotions_tab h3.link_now{ background:url(Promotions_tabon.gif) repeat-x; color:#4a1805;}
+/*7.4每日抢购样式修改*/
+.tab_content{ height:770px; background:#FBF9F7; position:relative; overflow:hidden;}
+.daily_madness{ padding:0 0 0 8px;}
+.daily_madness li{ overflow:visible; position:relative; height:335px; margin:10px 8px 30px;}
+.countdown_sun{ float:none; clear:right;}
+.countdown_sun span{ display:inline-block; background:#FBF9F7; position:relative; z-index:5;}
+.countdown_sun span.text{ font-size:16px; font-weight:normal;}
+.daily_madness div#daily_madness_title{ height:40px; text-align:center;}
+.daily_madness div #title_link{position:absolute; right:0; top:14px; color:#709FCF;background:#FBF9F7; padding:0 4px;}
+.daily_madness div#daily_madness_title div{position:absolute; left:0; top:22px; width:740px; background:#EAE4D9; height:1px;overflow:hidden;}
+   
+.dilyMadness_save{ bottom:5px;color: red;font-size: 16px; left:7px;position: absolute;}
+.dilyMadness_save .save_title{font-size:18px; color:#ffbe41;font-weight: bold; margin-bottom:-5px;}
+.dilyMadness_save .save_num{font-size:28px; color:#e50001;}
+.daily_madness del{position:absolute;right:6px;bottom:40px; font-size:11px; color:#8b8b8b;}
+  
+.other_Progoods{ margin:10px 0 0 8px; display:block;}
+.other_Progoods dl{ float:left; padding:8px 4px; width:234px; height:145px; border:#e9e9e9 solid 2px; margin:10px 7px 7px 0; display:inline; background:#fff; }
+.other_Progoods dl:hover{ background:#fff5c0;}
+.other_Progoods dl dt{ float:left; width:118px; overflow:hidden;}
+.other_Progoods dl dt img{width: 97px;}
+.daily_madness dl dd{color:#666; font-size:10px;}
+.other_Progoods dl .goods_name{ font-size:11px; height:69px; overflow:hidden; line-height:13px;}
+.other_Progoods dl .save_per{ color:#f1312c; height:40px;}
+.other_Progoods dl del{ color:#8d8c8a; font-size:11px;}
+.other_Progoods dl .goods_price{ color:#000;}
+/*7.4每日抢购样式修改*/
+.Spotlight{ display:none;}
+/*
+.Spotlight .goods_list{ margin:10px 5px 10px 12px; _margin:5px 2px 10px 12px;}
+*/
+.index_content02{overflow:hidden;}
+.Recommended{ background:url(Recommended_bg.gif) repeat-y;}
+.Recomm_text{ width:198px; float:left;}
+.Recommended ul li{ line-height:20px; padding:7px 7px 0; cursor:pointer; color:#8b877e; font-size:11px; height:55px;}
+.Recommended ul li a{text-decoration:none;}
+.Recommended ul li.display_now{ background:url(Recommended_onbg.gif) no-repeat 0 0;}
+
+.Recomm_goods .goods_list{ margin:5px 5px 10px 12px; _margin:5px 2px 10px 12px;}
+
+.index_content03{}
+
+.main_Categories404{width:145px; padding:0 0 5px 7px; overflow:hidden;}
+.main_Categories{ width:145px; padding:0 0 5px 7px; overflow:hidden;height:108px; }
+.main_Categories dt,.main_Categories404 dt{ padding-bottom:5px;}
+
+.daily_madness { display:none;}
+.Spotlight,.Newarrivals { display:none;}
+.Recomm_goods { display:none;}
+
+/**feature_list*/
+.feature_list li:hover{background:#FFF5C0;}

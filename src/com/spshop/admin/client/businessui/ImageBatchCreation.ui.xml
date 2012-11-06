@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:TabLayoutPanel barUnit="EM" barHeight="2.2"
+		height="700px" ui:field="tab">
+		<g:tab>
+			<g:header>
+					Create Batch Image
+			</g:header>
+			<g:FormPanel action="/workspace/imageBatchUpload" method="post" ui:field="formPanel">
+				<g:HTMLPanel>
+					<g:Grid>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Zip file"/>
+							</g:customCell>
+							<g:customCell>
+								<g:FileUpload ui:field="imageZipFile" name="imageZipFile"></g:FileUpload>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:InlineLabel text="Size Type:"/>
+							</g:customCell>
+							<g:customCell>
+								<g:ListBox visibleItemCount="1" ui:field="sizeType" name="sizeType"/>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:Button ui:field="submit" text="Create"/>
+							</g:customCell>
+							
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:HTML></g:HTML>
+							</g:customCell>
+							<g:customCell>
+								<g:FlowPanel  ui:field="small"/>
+							</g:customCell>
+						</g:row>
+						<g:row/>
+					</g:Grid>
+				</g:HTMLPanel>
+			</g:FormPanel>
+		</g:tab>
+	</g:TabLayoutPanel>
+</ui:UiBinder> 

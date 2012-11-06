@@ -1,0 +1,38 @@
+<div class="nav-right-box">
+<form action="/uc/changePwd" method="post">
+	<div class="box_title">Change Password</div>
+	<div class="box_sub_item_title">Change Password</div>
+	
+	<div class="form_error blue">${(userView.msg.accountSuc)!''}</div>
+	<div class="nav-right-box_content">
+		<table class="form_table">
+			<tbody>
+				<tr>
+					<td width="188" align="right">Old Password:</td>
+					<td width="490" class="inputbg"><input name="txtPwd" validation="code"
+						type="password" id="txtPwd" class="txt_input">&nbsp;&nbsp;<span class="red" id="txtPwd_noti">
+							${(userView.err.wrongPWD)!''}
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td align="right" >New Password:</td>
+					<td class="inputbg"><input name="txtNewPwd1" type="password"
+						id="txtNewPwd1" class="txt_input" validation="code">&nbsp;&nbsp;<span
+						class="red" id="txtNewPwd1_noti"> </span></td>
+				</tr>
+				<tr>
+					<td valign="top" align="right">Confirm New Password:</td>
+					<td class="inputbg"><input name="txtNewPwd2" type="password"
+						id="txtNewPwd2" class="txt_input" validation="code"><br>
+						<span class="red" id="txtNewPwd2_noti">${(userView.err.RegPwdReErr)!''} </span></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td class="c_pass"><input  type="submit" class="button_01" value="Confirm"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</form>
+</div>

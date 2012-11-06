@@ -1,0 +1,79 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:workspace='urn:import:com.spshop.admin.client.businessui'>
+
+	<ui:image field='gradient' src='../gradient_bg_dark.png'
+		repeatStyle='Horizontal' />
+
+	<ui:style>
+		.outer {
+			border: 1px solid #999;
+			cursor: pointer;
+			width: 100%;
+		}
+		
+		@sprite .header {
+			gwt-image: 'gradient';
+			background-color: #d3d6dd;
+			table-layout: fixed;
+			width: 100%;
+			height: 2EM;
+			border: 0px;
+		}
+		
+		.header td {
+			font-weight: bold;
+			text-shadow: #fff 0 2px 2px;
+			padding: 2px 0 1px 10px;
+			border: 0px;
+		}
+		
+		.table {
+			table-layout: fixed;
+			width: 100%;
+		}
+		
+		.table td {
+			padding: 2px 0 2px 10px;
+			border-bottom: 1px solid #FFF;
+		}
+		
+		.inner {
+			cursor: hand;
+		}
+		
+		.search {
+			padding: 3px;
+			margin: 6px;
+		}
+	</ui:style>
+
+	<ui:style field='selectionStyle'
+		type='com.spshop.admin.client.businessui.ComponentQuery.SelectionStyle'>
+			.selectedRow {
+				background: #adcce7;
+			}
+			
+			.selectedRow td {
+				border-bottom: 1px solid #7b97d0;
+			}
+		</ui:style>
+
+	<g:SplitLayoutPanel styleName='{style.outer}' height="100%" ui:field="container">
+		<g:north size="90">
+			<workspace:QueryCondition ui:field="queryCondition"/>
+		</g:north>
+		<g:center>
+			<g:DockLayoutPanel unit="EM" styleName='{style.inner}'>
+				<g:north size="2">
+					<g:FlexTable styleName="{style.header}" ui:field="header"></g:FlexTable>
+				</g:north>
+				<g:center>
+					<g:ScrollPanel>
+						<g:FlexTable styleName="{style.table}" ui:field="table"></g:FlexTable>
+					</g:ScrollPanel>
+				</g:center>
+			</g:DockLayoutPanel>
+
+		</g:center>
+	</g:SplitLayoutPanel>
+</ui:UiBinder>

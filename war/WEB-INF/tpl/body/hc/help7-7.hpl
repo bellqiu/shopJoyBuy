@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">7.I originally chose Western Union, can I change to PayPal?</div></div>
+<div class="detail">
+<!--gai-->
+<span>
+<p>It's no problem to change. Even if you first chose Western Union, you can still pay via PayPal.</p>
+
+<p>You can send money directly to our PayPal account: <a href="mailto:paypal@honeybuy.com">paypal@honeybuy.com </a></p>
+
+<p>Please let us know your order number in the comments (when you pay via PayPal you can add comments).</p>
+
+<p>As soon as we confirm that payment has been received, we will start to process your order.</p>
+
+</span></div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

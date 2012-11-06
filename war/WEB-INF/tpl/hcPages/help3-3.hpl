@@ -1,0 +1,11 @@
+<#assign pageKeywords = "3. What is the tailoring time for my made-to-order  dress?">
+<#assign pageDescription = "3. What is the tailoring time for my made-to-order  dress?">
+<#assign pageTitle = "3. What is the tailoring time for my made-to-order  dress?">
+
+
+
+<#include "/header/top.hpl">
+
+<#include "/body/hc/help3-3.hpl">
+
+<#include "/footer/bottom.hpl">

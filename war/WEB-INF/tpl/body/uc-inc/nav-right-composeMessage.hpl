@@ -1,0 +1,27 @@
+<div class="nav-right-box">
+	<div class="box_title">Leave Message</div>
+	<div class="box_sub_item_title">Leave Message</div>
+	
+	<form method="post" action="/uc/feedback">
+		<input type="hidden" name="optType" value="postMsg"/>
+		<div class="nav-right-box_content">
+		<table class="form_table">
+			<tbody>
+				<tr>
+					<td width="161" height="30" align="right">Title:<span class="red">*</span></td>
+					<td><input type="text" value="" class="txt_input" id="msgTitle" name="messageTitle"> <span id="messageTitle_noti" class="red"></span></td>
+				</tr>
+				<tr>
+					<td valign="top" height="50" align="right">Message:<span class="red">*</span>
+					</td>
+					<td><textarea class="txt_area" name="newMessage"></textarea> <span id="newMessage_noti" class="red"></span>
+				</tr>
+				<tr>
+					<td align="right">&nbsp;</td>
+					<td><input type="submit" value="Post" class="button_01"><span class="red"></span></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</form>
+</div>

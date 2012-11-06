@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.spshop.model">
+	<!-- <class name="Address" table="SHOP_Address">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" insert="false" update="false" column="site_id"></many-to-one>
+		
+		<property name="address" length="255"></property>
+	</class> -->
+	
+	<class name="AddressBook" table="SHOP_Address">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<property name="address" length="255"></property>
+		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
+	</class>
+
+	<class name="Category" table="SHOP_Category">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
+		<many-to-one name="parent" class="Category" column="parent_id" cascade="none"></many-to-one>
+		<property name="displayName" length="200"></property>
+		<many-to-one name="specialOfferImage" class="Image" cascade="none" column="specialOffer_image"></many-to-one>
+		<property name="url"></property>
+		<property name="relatedKeyword"></property>
+		<property name="pageTitle"></property>
+		<property name="specialOffer"></property>
+		<property name="displayMarketOnly" column="market_only"></property>
+		<property name="enable" column="isEnable"></property>
+		<property name="deleted" ></property>
+		<property name="description" column="description" length="500"></property>
+		<property name="index" column="idx"></property>
+		<property name="marketContent" type="text"></property>
+		<bag name="subCategories" order-by="idx asc" cascade="all">
+			<key>
+				<column name="parent_id"></column>
+			</key>
+			<one-to-many class="Category" not-found="ignore"/>
+		</bag>		
+	</class>
+	
+	<class name="Comment" table="SHOP_Comment">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
+		
+		<property name="content" length="8000"></property>
+		<property name="rate"></property>
+		<many-to-one name="product" class="Product" column="product_id"></many-to-one>
+		<bag name="replyList">
+			<key>
+				<column name="reply_for"></column>
+			</key>
+			<one-to-many class="Comment" not-found="ignore"/>
+		</bag>
+		<many-to-one name="user" class="Product" column="user_id"></many-to-one>
+	</class>
+	
+	<class name="Configuration" table="SHOP_Configuration">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
+		
+		<property name="strType" length="20"></property>
+		<property name="value" length="100"></property>
+	</class>
+	
+	<class name="Country" table="SHOP_Country">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<property name="code" length="100"></property>
+		<property name="abbrCode" length="50"></property>
+		<property name="dePrice"></property>
+		<property name="adDePrice"></property>
+		<property name="freeDePrice"></property>
+		<property name="freeAdDePrice"></property>
+	</class>
+	
+	<class name="Deliver" table="SHOP_Deliver">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		
+		<property name="company" length="100"></property>
+		<property name="price"></property>
+		
+		<many-to-one name="country" class="Country" column="country_id"></many-to-one>
+	</class>
+	
+	
+	<class name="FeedBack" table="SHOP_FeedBack">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
+		
+		<many-to-one name="user" class="User" column="user_id"></many-to-one>
+		<property name="content" length="8000"></property>
+		<property name="strType" length="50"></property>
+	</class>
+	
+	<class name="Image" table="SHOP_Image">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" column="site_id" cascade="none"></many-to-one>
+		
+		<property name="altTitle" length="200"></property>
+		<property name="largerUrl" length="200"></property>
+		<property name="logoUrl" length="200"></property>
+		<property name="noChangeUrl" length="200"></property>
+		<property name="smallUrl" length="200"></property>
+		<property name="iconUrl" length="200"></property>
+		<property name="thumbnailUrl" length="200"></property>
+		<property name="strSizeType" length="200"></property>
+		<property name="strType" length="200"></property>
+	</class>
+	
+	<class name="Newsletter" table="SHOP_Newsletter">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
+		
+		<property name="email" length="100"></property>
+	</class>
+	
+	<class name="SearchHistory" table="SHOP_SearchHistory">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="keywords" length="100"></property>
+		<property name="hit"></property>
+	</class>
+	
+	<class name="Order" table="SHOP_Order">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
+		
+		<property name="customerAddress" length="200"></property>
+		<property name="customerAddress2" length="200"></property>
+		<property name="customerCompany" length="200" ></property>
+		<property name="customerCountry" length="200"></property>
+		<property name="customerEmail" length="200"></property>
+		<property name="customerName" length="200"></property>
+		<property name="customerTelephone" length="200"></property>
+		<property name="customerZipcode" length="200"></property>
+		<property name="deliverCode" length="200"></property>
+		<property name="deliverCompany" length="200"></property>
+		<property name="deliverPhone" length="200"></property>
+		<property name="orderType" length="200"></property>
+		<property name="addressType" length="200"></property>
+		<property name="city" length="200"></property>
+		<property name="dePrice"></property>
+		<property name="currency" length="200"></property>
+		<property name="customerMsg" ></property>
+		<property name="bcustomerName" ></property>
+		<property name="customGender" ></property>
+		<property name="bcustomGender" ></property>
+		<property name="bcustomerAddress" ></property>
+		<property name="bcustomerAddress2" ></property>
+		<property name="bcity" ></property>
+		<property name="state" ></property>
+		<property name="couponCode" ></property>
+		<property name="couponCutOff" ></property>
+		<property name="bstate" ></property>
+		<property name="bcustomerZipcode" ></property>
+		<property name="bphone" ></property>
+		<property name="billingSameAsPrimary" ></property>
+		<property name="country" ></property>
+		<property name="bcountry" ></property>
+		<property name="customerBCountry" ></property>
+		<property name="shippingMethod" ></property>
+		<property column="traceInfo" generated="never" lazy="false" name="traceInfo" length="255"/>
+		
+		<!-- measurement -->
+		<property name="height" ></property>
+		<property name="weight" ></property>
+		<property name="age" ></property>
+		<property name="shoulder" ></property>
+		<property name="chest" ></property>
+		<property name="stomch" ></property>
+		<property name="posture" ></property>
+		<property name="shirtNeck" ></property>
+		<property name="jacketShirtLenght" ></property>
+		<property name="chestSize" ></property>
+		<property name="stomachSize" ></property>
+		<property name="jacketHips" ></property>
+		<property name="shoulderSize" ></property>
+		<property name="sleeveLength" ></property>
+		<property name="bicepSize" ></property>
+		<property name="wristSize" ></property>
+		<property name="pantsLength" ></property>
+		<property name="waist" ></property>
+		<property name="crotch" ></property>
+		<property name="thighSize" ></property>
+		<property name="kneeSize" ></property>
+		<property name="SuitMeasurementComplete" column="suitMeasurement"></property>
+		<!-- end measurement -->
+		
+		<property name="status" length="255" column="order_status"></property>
+		
+		
+		
+		<bag name="items" cascade="all">
+			<key column="order_id"></key>
+			<one-to-many class="OrderItem"/>
+		</bag>
+		<property name="totalPrice"></property>
+		<many-to-one name="user" class="User" column="user_id"></many-to-one>
+	</class>
+	
+	<class name="OrderItem" table="SHOP_OrderItem">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="999"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		
+		<property name="finalPrice"></property>
+		<many-to-one name="product" class="Product" column="product_id"></many-to-one>
+		<property name="quantity"></property>
+		<bag name="userOptions" cascade="all">
+			<key column="item_id"></key>
+			<one-to-many class="UserOption"/>
+		</bag>
+	</class>
+	
+	<class name="HTML" table="SHOP_HTML">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<property name="content"></property>
+	</class>
+	
+	<class name="Coupon" table="SHOP_Coupon_01">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<property name="componentStatus"></property>
+		<property name="code"></property>
+		<property name="value"></property>
+		<property name="cutOff"></property>
+		<property name="onetime"></property>
+		<property name="usedCount"></property>
+		<property name="startDate"></property>
+		<property name="endTime"></property>
+		<property name="minexpend" ></property>
+	</class>
+	
+	<class name="Product" table="SHOP_Product">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
+		
+		<property name="abstractText" length="400"></property>
+		<property name="keywords" length="400"></property>
+		<property name="hit"></property>
+		<property name="weight"></property>
+		<property name="rateCount"></property>
+		<property name="rate"></property>
+		<property name="title" length="200"></property>
+		<property name="detail" length="8000"></property>
+		<property name="commentsTotal"></property>
+		<property name="priority"></property>
+		<property name="showComments"></property>
+		<property name="showlikeButton"></property>
+		<property name="tabProductKey"></property>
+		<property name="price"></property>
+		<property name="optType"></property>
+		<property name="actualPrice"></property>
+		<property name="manualKey"></property>
+		<property name="tags"></property>
+		<!--  <many-to-one name="cutOff" class="CutOff" column="product_id"></many-to-one>-->
+		<bag name="properties" cascade="all">
+			<key column="product_id"></key>
+			<one-to-many class="ProductProperty"/>
+		</bag>
+		<bag name="options" cascade="all">
+			<key column="product_id"></key>
+			<one-to-many class="ProductOption"/>
+		</bag>
+		
+		<bag name="categories" table="SHOP_Product_Category">
+			<key column="product_id"></key>
+			<many-to-many class="Category" column="category_id"></many-to-many>
+		</bag>
+		
+		<bag name="images" table="SHOP_Product_image">
+			<key column="product_id"></key>
+			<many-to-many class="Image" column="image_id"></many-to-many>
+		</bag>
+	</class>
+	
+	<class name="ProductOption" table="SHOP_ProductOption">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+
+		<property name="defaultValue" length="200"></property>
+		<property name="description" length="800"></property>
+		<property name="strSelectType" length="50"></property>
+		<many-to-one name="product" class="Product" column="product_id"></many-to-one>
+		<bag name="items" cascade="all">
+			<key column="product_option_id"></key>
+			<one-to-many class="ProductOptionItem"/>
+		</bag>
+	</class>
+	
+	<class name="ProductOptionItem" table="SHOP_ProductOptionItem">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		
+		<property name="altTitle" length="200"></property>
+		<property name="displayName" length="200"></property>
+		<property name="value" length="400"></property>
+		<many-to-one name="icon" class="Image" column="icon_id"></many-to-one>
+		<many-to-one name="option" class="ProductOption" column="product_option_id"></many-to-one>
+	</class>
+	
+	<class name="ProductProperty" table="SHOP_ProductProperty">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<property name="value" length="1000"></property>
+		<many-to-one name="product" class="Product" column="product_id"></many-to-one>
+	</class>
+	
+	<class name="TabProduct" table="SHOP_TabProduct">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		
+		<bag name="products" cascade="all" table="tab_product">
+			<key column="tab_id"></key>
+			<many-to-many class="Product" column="product_id" />
+		</bag>
+	</class>
+	
+	<class name="TabSelling" table="SHOP_TabSelling">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<bag name="tabs" cascade="all" table="tab_product_selling">
+			<key column="selling_id"></key>
+			<many-to-many class="TabProduct" column="t_product_id" />
+		</bag>
+	</class>
+	
+	<class name="Site" table="SHOP_Site">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="domain" length="100"></property>
+		<property name="imageMagicCommand" length="200"></property>
+		<property name="imagePath"></property>
+		<property name="suffix" length="100"></property>
+		<property name="prefix" length="100"></property>
+		<property name="siteFooter"></property>
+		<property name="sideBar"></property>
+		<property name="freeDeliveryPrice"></property>
+		<many-to-one name="logo" class="Image" column="log_id"></many-to-one>
+		<many-to-one name="delivery" class="Image" column="delivery_img_id"></many-to-one>
+		<many-to-one name="featuredCat" class="Image" column="featuredCat_img_id"></many-to-one>
+		<property name="deliveryURL" length="200"></property>
+		<property name="featuredCatURL" length="200"></property>
+	</class>
+	
+	<class name="User" table="SHOP_User">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
+		
+		<property name="address" length="200"></property>
+		<property name="country" length="50"></property>
+		<property name="email" length="200"></property>
+		<property name="firstName" length="200"></property>
+		<property name="lastName" length="200"></property>
+		<property name="password" length="200"></property>
+		<property name="telephone" length="200"></property>
+		<property name="zipcode" length="200"></property>
+		<property name="gender" length="50"></property>
+		<property name="city" length="100"></property>
+		<property name="state" length="100"></property>
+		
+		<property name="fullNameP" ></property>
+		<property name="fullNameB" ></property>
+		
+		<property name="address1P" ></property>
+		<property name="address1B" ></property>
+		
+		<property name="address2P"></property>
+		<property name="address2B" ></property>
+		
+		<property name="cityP" ></property>
+		<property name="cityB" ></property>
+		
+		<property name="stateProvinceP" ></property>
+		<property name="stateProvinceB" ></property>
+		
+		<property name="countryP" ></property>
+		<property name="countryB" ></property>
+		
+		<property name="postalCodeP" ></property>
+		<property name="postalCodeB" ></property>
+		
+		<property name="phoneP" ></property>
+		<property name="phoneB" ></property>
+		
+		<property name="billingSameAsPrimary" ></property>
+		
+		<!-- measurement -->
+		<property name="height" ></property>
+		<property name="weight" ></property>
+		<property name="age" ></property>
+		<property name="shoulder" ></property>
+		<property name="chest" ></property>
+		<property name="stomch" ></property>
+		<property name="posture" ></property>
+		<property name="shirtNeck" ></property>
+		<property name="jacketShirtLenght" ></property>
+		<property name="chestSize" ></property>
+		<property name="stomachSize" ></property>
+		<property name="jacketHips" ></property>
+		<property name="shoulderSize" ></property>
+		<property name="sleeveLength" ></property>
+		<property name="bicepSize" ></property>
+		<property name="wristSize" ></property>
+		<property name="pantsLength" ></property>
+		<property name="waist" ></property>
+		<property name="crotch" ></property>
+		<property name="thighSize" ></property>
+		<property name="kneeSize" ></property>
+		<property name="SuitMeasurementComplete" column="suitMeasurement"></property>
+		<!-- end measurement -->
+		
+	</class>
+	
+	<class name="UserOption" table="SHOP_UserOption">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<property name="strOptionType"></property>
+		<property name="optionName" length="200"></property>
+		<property name="value" length="200"></property>
+	</class>
+	
+	<class name="Email" table="SHOP_Email">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="name" length="100"></property>
+		<property name="createDate"></property>
+		<property name="updateDate"></property>
+		<property name="emailAddress" length="100"></property>
+	</class>
+
+	<class name="Message" table="SHOP_Message">
+		<id column="ID" name="id">
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" length="100" name="name" />
+		<property generated="never" lazy="false" name="createDate" />
+		<property generated="never" lazy="false" name="updateDate" />
+		<property generated="never" lazy="false" length="1000" name="content" />
+		<many-to-one class="Message" column="replyTo" name="replyTo"
+			not-found="ignore" />
+		<many-to-one class="Message" column="replyBy" name="replyBy"
+			not-found="ignore" />
+		<property generated="never" lazy="false" name="replied" />
+		<many-to-one class="User" column="user_id" name="user" />
+	</class>
+</hibernate-mapping>

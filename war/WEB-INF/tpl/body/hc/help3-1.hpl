@@ -1,0 +1,15 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">1.What does made-to-order mean?</div></div>
+<div class="detail">
+<span>Made-to-order means that all of our dresses, whether a standard or custom size, are tailored according to your requirement and standards. They aren't the spot goods. They just made for you and fit you. They are made by our professional tailors"hands.
+</span>
+</div>
+</div>
+<p class="clearBoth"></p>
+</div></div>

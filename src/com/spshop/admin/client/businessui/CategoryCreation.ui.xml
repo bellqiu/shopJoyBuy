@@ -1,0 +1,124 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:rich="urn:import:com.spshop.admin.client.rich"
+	>
+	<ui:style>
+		.imageAnchor {
+			margin: 2px 10px;
+			cursor: pointer;
+		}
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:HorizontalPanel>
+						<g:Button ui:field="button">Save</g:Button>
+						<g:Button ui:field="delete" text="Delete">Save</g:Button>
+					</g:HorizontalPanel>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:InlineLabel text="Name:" />
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox ui:field="name" />
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:InlineLabel text="Display Name:" />
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox ui:field="displayName" />
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="URL:" />
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox ui:field="url" />
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="Page Title:" />
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox ui:field="pageTitle"/>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="Page Description:" />
+				</g:customCell>
+				<g:customCell>
+					<g:TextArea ui:field="description" />
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="Related Keywords:" />
+				</g:customCell>
+				<g:customCell>
+					<g:TextArea ui:field="relatedKeywords" width="261px" height="68px" />
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="SpecialOffer:" />
+				</g:customCell>
+				<g:customCell>
+					<g:CheckBox text="SpecialOffer" ui:field="isSpecialOffer" />
+				</g:customCell>
+			</g:row>
+			
+				<g:row>
+				<g:customCell>
+					<g:Label text="Index:" />
+				</g:customCell>
+				<g:customCell>
+					<g:IntegerBox ui:field="index"/>
+				</g:customCell>
+			</g:row>
+				<g:row>
+				<g:customCell>
+					<g:Label text="Enable" />
+				</g:customCell>
+				<g:customCell>
+					<g:CheckBox text="Enable" ui:field="cEnable" />
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="Market only" />
+				</g:customCell>
+				<g:customCell>
+					<g:CheckBox text="Market only" ui:field="marketOnly" />
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="SpecicalOfferImage:" />
+				</g:customCell>
+				<g:customCell>
+					<g:FlowPanel>
+						<g:Anchor ui:field="specicalOfferImageAnchor" text="Select a image" styleName="{style.imageAnchor}"/>
+						<g:Anchor text="Show Image" ui:field="showImage" styleName="{style.imageAnchor}"/>
+					</g:FlowPanel>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:Label text="MarketContent" />
+				</g:customCell>
+				<g:customCell>
+				<rich:RichText ui:field="marketContent" height="400px" width="800px"></rich:RichText>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:HTMLPanel>
+</ui:UiBinder> 

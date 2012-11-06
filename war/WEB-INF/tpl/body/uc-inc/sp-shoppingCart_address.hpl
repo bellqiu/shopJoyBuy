@@ -1,0 +1,79 @@
+<div class="scart_con">
+<form action="/uc/shoppingCart_address" method="post">
+	<div class="scart_step2"></div>
+	<#assign order = currentOrder!userView.cart.order>
+	<div class="scart_header2">
+		Fill Your Address
+	</div>
+	<div>
+		<div>
+			<div class="box_sub_item_title">Shipping to this address</div>
+			<#assign "addType"='primary'>
+			<#assign "address"= primary!userView.cart.order.primaryAddress >
+			<#assign "showSubmitBtn"=false >
+			<#include "fragments/address.hpl">
+		</div>
+	</div>
+	<div>
+		<div>
+			<#assign "addType"='billing'>
+			<#assign "address"= billing!userView.cart.order.billingAddress >
+			<div class="box_sub_item_title">Billing address</div>
+			<div class="conditon_to_show_box">
+				<input id="billingAddress_check_box" type="checkbox" name="billingSameAsPrimary" ${order.billingSameAsPrimary?string('checked="checked"','')} value="true" ><span>Same as Primary Address</span>
+			</div>
+			<div class="${userView.loginUser.billingSameAsPrimary?string('hidden','')}" id="billingAddress_content">
+				<#assign "showSubmitBtn"=false >
+				<#include "fragments/address.hpl">
+			</div>
+		</div>
+	</div>
+	<div class="scart_header2">
+		Select Shipping Methods
+	</div>
+	<#assign shippingMethod=(order.shippingMethod)!'standard'>
+	<ul class="scart_c">
+       <li class="scart_c_w_l"><input name="shippingMethod" type="radio" value="standard" ${(shippingMethod=='standard')?string('checked="checked"','')}>Standard Shipping</li>
+       <li class="scart_c_w_m">Normally 5 - 8 days</li>
+       <li class="scart_c_w_r red ">${(order.currency)}&nbsp;<span class="order_shipping_standard">0</span></li>
+    </ul>
+    <p class="clearBoth">&nbsp;</p>
+    <ul class="scart_c">
+       <li class="scart_c_w_l"><input name="shippingMethod" type="radio" value="expedited" ${(shippingMethod=='standard')?string('','checked="checked"')}>Expedited Shipping</li>
+       <li class="scart_c_w_m">Normally 2 - 4 days</li>
+       <li class="scart_c_w_r red">${(order.currency)}&nbsp; <span class="order_shipping_expedited">0</span></li>
+    </ul>
+    <script type="text/javascript">
+    	var c = jq("#primarycountry").val();
+    	if(c!='0'){
+    		SP.getShippingPrice("#primarycountry",jq("input[name=shippingMethod]").filter("input[checked=checked]"));
+    	}
+    	
+    	jq("#primarycountry").change(function(){
+    		SP.getShippingPrice("#primarycountry",jq("input[name=shippingMethod]").filter("input[checked=checked]"));
+    	});
+    	
+    	jq("input[name=shippingMethod]").click(function(){
+    		SP.getShippingPrice("#primarycountry",jq(this));
+    	});
+    </script>
+    <p class="clearBoth"></p>
+    <div class="separator"></div>
+    <dl class="scart_summary_list">
+			<dd >Item Sub total:<span class="red">${(order.currency)}&nbsp;${(userView.currencyRate*order.totalPrice)?string(",##0.##")}</span></dd>
+			<dd >Coupon:<span class="red">${(order.currency)}&nbsp;-${(userView.currencyRate*order.couponCutOff)?string(",##0.##")}</span></dd>
+			<dd >Shipping Cost:<span class="red">${(order.currency)}&nbsp;<span class="order_shipping_total">${(userView.currencyRate*order.dePrice)?string(",##0.##")}</span></span></dd>
+			<dd class="separator"><dd>
+			<dd class="red">
+				<b>Grand Total:<span id="GrabdTotal">${(order.currency)}&nbsp;<span class="order_grand_total">${(userView.currencyRate*(order.totalPrice-order.couponCutOff+order.dePrice))?string(",##0.##")}</span></span></b>
+			</dd>
+			<dd class="red">
+			<span>
+				<a href="/uc/shoppingCart">Back >> </a>
+				<input	type="submit" class="button_01" value="Processed to Pay" ></span>
+			</dd>
+		</dl>
+    
+	<p class="clearBoth"></p>
+	</form>
+</div>

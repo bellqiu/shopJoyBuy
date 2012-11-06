@@ -1,0 +1,23 @@
+<div class="breadcrumb">
+	<a href='${siteView.host?string!""}' class="Light_gray2">Home</a>
+	<#list pageView.breadcrumb as bread>
+		<span>&gt;</span>
+		<#if bread.url??>
+			<a title="${bread.displayName}" href='${(siteView.host+"/"+"c"+"/"+bread.name)?string!""}'>
+				${bread.displayName} </a>
+		<#else>
+			<a title='${bread.displayName?string!""}'
+				href='${(siteView.host+bread.url)?string!""}'>
+				${bread.displayName} </a>
+		</#if>
+	</#list>
+<#-- 
+	<#if ${pageForm.pageProperties.productDetail != null}">
+		<span><%=Constants.GREATER %></span>
+		<a title="${pageForm.pageProperties.productDetail.title}"
+				href="<%=Constants.HTTP_PROTOCOL%>${pageForm.site.domain}/${pageForm.pageProperties.productDetail.name}">
+				${pageForm.pageProperties.productDetail.title} </a>
+	</#if>
+-->
+</div>
+<div class="height-10"></div>

@@ -1,0 +1,12 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><div class="detail_title">1.How can I track my package?</div>
+<span>Once your order has shipped out, we will send you a Shipping Confirmation email that includes your tracking number and the express company"s name and its website. Just click on the link and it will take you to UPS, DHL or other website. From there you can use the tracking code to track your package. </span>  
+  </div>
+</div>
+<p class="clearBoth"></p>
+</div></div>

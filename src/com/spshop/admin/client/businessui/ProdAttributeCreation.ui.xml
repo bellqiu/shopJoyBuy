@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Grid>
+			<g:row>
+				<g:customCell>
+					<g:Label text="Name:"/>
+				</g:customCell>
+				<g:customCell>
+					<g:TextBox ui:field="name"/>
+				</g:customCell>
+				<g:customCell>
+					<g:Label text="Value:"/>
+				</g:customCell>
+				<g:customCell>
+					<g:TextArea ui:field="value"/>
+				</g:customCell>
+				<g:customCell>
+					<g:Button text="Delete" ui:field="deleteButton"/>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+	</g:HTMLPanel>
+</ui:UiBinder> 

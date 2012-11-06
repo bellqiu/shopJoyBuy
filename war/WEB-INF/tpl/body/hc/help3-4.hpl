@@ -1,0 +1,19 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti">
+  <div class="detail_title">4.How far in advance should I order my dress?</div></div>
+<div class="detail">
+<!--gai-->
+<span><p>Timing is important when ordering the perfect dress, and we take that as seriously as you do. So you had better place the order 4 weeks in advance before you need to wear the dress if ordering a wedding dress and a minimum of 3 weeks in advance before you need to wear your wedding party or special occasion dress.</p>
+<p>The best way to ensure a stress-free shopping experience is to allow plenty of time for our tailoring and shipping periods, plus additional time to try on the dress and make any necessary alterations once it arrives.
+</p>
+</span>
+<!--gai-->
+</div>
+</div>
+<p class="clearBoth"></p>
+</div></div>

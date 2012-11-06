@@ -1,0 +1,171 @@
+<div class="scart_con">
+	<#if currentOrder ??> <#assign order = currentOrder> <#if
+	order.currency == "USD"> <#assign currencyRate = 1> <#else> <#assign
+	currencyRate = siteView.currencies[order.currency]> </#if>
+	<ul class="scart_c scart_order_header">
+		<li class="scart_order_header_title">Order Number:<span
+			class="red">${order.name}</span>
+		</li>
+		<li class="scart_order_header_w1">&nbsp;</li>
+		<li class="scart_order_header_w2">Item(s)</li>
+		<li class="scart_order_header_w3">Item Price</li>
+		<li class="scart_order_header_w4">Quantity</li>
+		<li class="scart_order_header_w5">Amount</li>
+	</ul>
+	<#list order.items as item>
+	<ul class="scart_c" id="${item.name}">
+		<li class="scart_thumbnail"><a target="_blank"
+			href="${siteView.host}/${item.product.name}"><img
+				src="${siteView.imageHost}${item.product.images[0].smallUrl}"></a>
+		</li>
+		<li class="scart_desc2">
+			<dl>
+				<dt>
+					<a target="_blank" href="${siteView.host}/${item.product.name}">${item.product.title}</a>
+				</dt>
+				<dd class="scart_opt">
+					<ul>
+						<#list item.userOptions as opt> <#switch opt.name> <#case 'Color'>
+						<#assign optTypeRes = (opt.value!'')?matches("(.*?)(##)(.*)")>
+						<#list optTypeRes as moptTypeRes> <#assign optType =
+						moptTypeRes?groups[3] > <#assign optTitle = moptTypeRes?groups[1]
+						> <#assign optType = moptTypeRes?groups[3] > </#list> <#if
+						opt.value == 'The Same As Picture' || (optType!'') == 'ASP'>
+						<li>${opt.name } : The Same As Picture</li> <#else>
+						<li>${opt.name }: &nbsp;&nbsp;<img alt='${optTitle!""}'
+							src='${siteView.imageHost}${optType!""}' title='${optTitle!""}'
+							width="18" height="18"></li> </#if> <#break> <#default>
+						<li>${opt.name } : ${opt.value }</li> </#switch> </#list>
+					</ul>
+					<p class="clearBoth"></p>
+				</dd>
+			</dl>
+		</li>
+		<li class="scart_item_w2"><span class="red">${order.currency}</span>
+			<span>${(currencyRate*(item.finalPrice))?string(",##0.##")}</span></li>
+		<li class="scart_item_2_w3">${item.quantity?string}</li>
+		<li class="scart_item_w4"><span class="red">${order.currency}</span>
+			<span>${(currencyRate*(item.finalPrice*item.quantity))?string(",##0.##")}</span></li>
+		<li class="scart_item_w6">&nbsp;</li>
+	</ul>
+	</#list>
+	<p class="clearBoth"></p>
+
+	<div class="scart_summary">
+		<div class="scart_status_list">
+			<table class="scart_status_list_table">
+				<tbody>
+					<tr>
+						<td class="scart_status_list_table_w1">ORDER NUMBER:</td>
+						<td class="scart_status_list_table_w2">${order.name}</td>
+					<tr>
+
+						<td cl ass="scart_status_list_table_w1">ORDER DATE:</td>
+						<td class="scart_status_list_table_w2">${order.updateDate?string("yyyy-MM-dd
+							HH:mm:ss")}</td>
+					<tr>
+					<tr>
+						<td class="scart_status_list_table_w1">STATUS:</td>
+						<td class="scart_status_list_table_w2"><b class="red">${order.status}</b></td>
+					<tr>
+					<tr>
+						<td class="scart_status_list_table_w1">PAYMENT METHOD:</td>
+						<td class="scart_status_list_table_w2">${order.orderType!'Paypal'}</td>
+					<tr>
+					<tr>
+						<td class="scart_status_list_table_w1">SHIPPING METHOD:</td>
+						<td class="scart_status_list_table_w2">${order.shippingMethod!'Standard'}</td>
+					<tr>
+					<#assign traceInfo=((order.traceInfo)!'')>
+					<#if traceInfo!=''>
+						<tr>
+							<td class="scart_status_list_table_w1">SHIPPING INFO:</td>
+							<td class="scart_status_list_table_w2">${order.traceInfo}</td>
+						<tr>
+					</#if>
+					<#assign "address"= primary!order.primaryAddress >
+					<tr>
+						<td class="scart_status_list_table_w1">SHIPPED TO:</td>
+						<td class="scart_status_list_table_w2">${address.fullName}
+							(${address.address1!''} ${address.city!''},
+							${address.stateProvince!''},
+							${siteView.countryMap[address.country?string].name}, Postal Code:
+							${address.postalCode!''}) Phone:${address.phone!''}</td>
+					<tr>
+					<#if order.billingSameAsPrimary> 
+						<#assign "address"= order.primaryAddress >
+					<#else>
+					 	<#assign "address"= order.billingAddress >
+					 </#if>
+					<tr>
+						<td class="scart_status_list_table_w1">BILLED TO:</td>
+						<td class="scart_status_list_table_w2">${address.fullName}
+							(${address.address1!''} ${address.city!''},
+							${address.stateProvince!''},${siteView.countryMap[address.country?string].name},
+							Postal Code: ${address.postalCode!''}) Phone:${address.phone!''}</td>
+					<tr>
+					<#if order.suitMeasurementComplete >
+					<tr>
+						<td>Suit Measurement</td>
+						<td>
+								height : ${(order.suitMeasurement.height)!''}<br>
+								weight : ${(order.suitMeasurement.weight)!''}<br>
+								age : ${(order.suitMeasurement.age)!''}<br>
+								shoulder : ${(order.suitMeasurement.shoulder)!''}<br>
+								stomach : ${(order.suitMeasurement.stomch)!''}<br>
+								posture : ${(order.suitMeasurement.posture)!''}<br>
+								shirtNeck : ${(order.suitMeasurement.shirtNeck)!''}<br>
+								jacketShirtLenght : ${(order.suitMeasurement.jacketShirtLenght)!''}<br>
+								chestSize : ${(order.suitMeasurement.chestSize)!''}<br>
+								stomachSize : ${(order.suitMeasurement.stomachSize)!''}<br>
+								jacketHips : ${(order.suitMeasurement.jacketHips)!''}<br>
+								shoulderSize : ${(order.suitMeasurement.shoulderSize)!''}<br>
+								sleeveLength : ${(order.suitMeasurement.sleeveLength)!''}<br>
+								bicepSize : ${(order.suitMeasurement.bicepSize)!''}<br>
+								wristSize : ${(order.suitMeasurement.wristSize)!''}<br>
+								pantsLength : ${(order.suitMeasurement.pantsLength)!''}<br>
+								waist : ${(order.suitMeasurement.waist)!''}<br>
+								crotch : ${(order.suitMeasurement.crotch)!''}<br>
+								thighSize : ${(order.suitMeasurement.thighSize)!''}<br>
+								kneeSize : ${(order.suitMeasurement.kneeSize)!''}<br>
+						</td>
+					</tr>
+					</#if>
+				</tbody>
+			</table>
+		</div>
+
+		<dl class="scart_summary_list">
+			<dd>
+				Item Sub total:<span class="red">${(order.currency)}&nbsp;${(currencyRate*order.totalPrice)?string(",##0.##")}</span>
+			</dd>
+			<dd>
+				Coupon:<span class="red">${(order.currency)}&nbsp;-${(currencyRate*order.couponCutOff)?string(",##0.##")}</span>
+			</dd>
+			<dd>
+				Shipping Cost:<span class="red">${(order.currency)}&nbsp;<span
+					class="order_shipping_total">${(currencyRate*order.dePrice)?string(",##0.##")}</span>
+			</dd>
+			<dd class="separator">
+			<dd>
+			<dd class="red">
+				<b>Grand Total:<span id="GrabdTotal">${(order.currency)}&nbsp;<span
+						class="order_grand_total">${(currencyRate*(order.totalPrice-order.couponCutOff+order.dePrice))?string(",##0.##")}</span></span></b>
+			</dd>
+			<#if order.status="PENDING">
+			<dd class="red">
+				<form action="/uc/shoppingCart_payment_2_pay" method="post">
+					<Span><input type="submit" class="button_01" value="Pay this Order>>" id="GO_TO_Fill_Address" ></Span>
+					<input type="hidden" name="id" value="${order.name}">
+					<input type="hidden" name="payType" value="${order.orderType}">
+				</form>
+			</dd>
+			</#if>
+		</dl>
+
+	</div>
+	<#else>
+	<p class="red">No such order</p>
+	</#if>
+	<p class="clearBoth"></p>
+</div>

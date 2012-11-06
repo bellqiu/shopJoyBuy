@@ -1,0 +1,8 @@
+<#assign pageKeywords = "Change Password, Honeybuy.com, Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageDescription = "Change Password : Honeybuy.com - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageTitle = "Change Password: Honeybuy.com">
+
+<#include "/header/top.hpl">
+<#include "/body/body-uc-changePwd.hpl">	
+
+<#include "/footer/bottom.hpl">

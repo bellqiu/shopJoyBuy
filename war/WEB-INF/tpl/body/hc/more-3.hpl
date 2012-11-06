@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+
+<div class="main_box" id="main_box">
+<#include "left.hpl">
+<div id="helpcenter">
+<div class="help_right">
+<div class="help_ti"><h2>Part Three:About the made to custom order</h2>
+</div>
+<div class="help_more"><ul>
+   <li><a href="/uc/helpCenter/help3-1">What does made-to-order mean?</a></li>
+   <li><a href="/uc/helpCenter/help3-2">How to measure my size?</a></li>
+    <li><a href="/uc/helpCenter/help3-3">What is the tailoring time for my made-to-order dress?</a></li>
+    <li><a href="/uc/helpCenter/help3-4">How far in advance should I order my dress?</a></li>
+    <li><a href="/uc/helpCenter/help3-5">Can I modify a dress' design such as style/fabric/length?</a></li>
+    <li><a href="/uc/helpCenter/help3-6">Can I change my size after I placed my order?</a></li>
+    <li><a href="/uc/helpCenter/help3-7">Can I cancel the dress if I change my mind?</a></li>
+    <li><a href="/uc/helpCenter/help3-8">Do you sell fabric swatches or can I buy material directly from you?</a></li>
+    <li><a href="/uc/helpCenter/help3-9">Made-to-Order dresses alteration options & return policy?</a></li></ul>
+  <span><a href="/uc/helpCenter/hcIndex">&lt;&lt;Back</a></span>
+</div>
+</div><p class="clearBoth"></p>
+</div>
+</div>

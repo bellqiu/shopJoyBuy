@@ -1,0 +1,111 @@
+<div id="main_menu" class="main_menu">
+	<ul>
+		<li><span> <a href="http://www.honeybuy.com/" title="Home">Home</a>
+			</span>
+		</li>
+		<#list siteView.categories as catlog>
+			<#if catlog.name!='home'>
+				<li>
+					<span><a href="${siteView.host}/c/${catlog.name}" title="${catlog.displayName}">${catlog.displayName}</a></span>
+						<#if catlog.subCategories??>
+							<div class="sub_menu">
+								<div class="inner_boxA">
+										<#list catlog.subCategories as subcatlog>
+											<#if !subcatlog.specialOffer>
+												<dl>
+													<dt>
+														<a href="${siteView.host}/c/${subcatlog.name}"
+															title="${subcatlog.displayName}">${subcatlog.displayName} </a>
+													</dt>
+													<#if subcatlog.subCategories??>	
+														<#assign subsubcatlogIndex = 0>
+														<#list subcatlog.subCategories as subsubcatlog>
+															<#if !subsubcatlog.specialOffer>
+															<dd>
+																<a href="${siteView.host}/c/${subsubcatlog.name}"
+																	title="${subsubcatlog.displayName}"> ${subsubcatlog.displayName}
+																</a>
+															</dd>
+															<#assign subsubcatlogIndex = (subsubcatlogIndex + 1) >
+															</#if>
+															<#if (subsubcatlogIndex > 5)>
+																<#break>
+															</#if>
+														</#list>
+															<dd>
+																<a href="${siteView.host}/c/${subcatlog.name}"
+																	title="${subcatlog.displayName}"> View all </a>
+															</dd>
+													</#if>
+												</dl>
+											</#if>
+										</#list>
+								</div>
+								<div class="inner_box_along">
+									<dl>
+										<#list catlog.subCategories as subcatlog>
+											<#if subcatlog.specialOffer>
+												<dt>
+													<a href="${siteView.host}/c/${subcatlog.name}"
+														title="${subcatlog.displayName}">${subcatlog.displayName}</a>
+												</dt>
+											</#if>	
+											<#list subcatlog.subCategories as subsubcatlog>
+												<#if subsubcatlog.specialOffer>
+												<dt>
+													<a href="${siteView.host}/c/${subsubcatlog.name}"
+														title="${subsubcatlog.displayName}">${subsubcatlog.displayName}</a>
+												</dt>
+											</#if>	
+											</#list>										
+										</#list>
+									</dl>
+									<div style="clear: both;"></div>
+									<div class="topNavClassAdWrapper">
+										<div class=" SpecialboxShadow topNavAdSpecialOffer">
+											<span class="topNavAdSpecialOffertxt Specialtextshadow ">Special
+												offer</span>
+										</div>
+										<ul class="topNavClassAd">
+											<#assign spExist = false>
+											<#list catlog.subCategories as subcatlog>
+												<#if subcatlog.specialOffer>
+													<#assign url = (subcatlog.specialOfferImage.noChangeUrl)!'' >
+													<#if ((url?length) > 1)>
+														<#assign sp = subcatlog >
+														<#assign spExist = true>
+														<#break>
+													</#if>
+												</#if>	
+											</#list>
+											<#if !spExist>
+												<#list catlog.subCategories as subcatlog>
+													<#list subcatlog.subCategories as sb2>
+														<#assign url = (sb2.specialOfferImage.noChangeUrl)!'' >
+														<#if ((url?length) > 1)>
+															<#assign sp = sb2>
+															<#assign  spExist = true>
+															<#break>
+														</#if>
+													</#list>
+												</#list>
+											</#if>
+											
+											<#if sp ??>
+													<li><a
+															href="${siteView.host}/c/${sp.name}"
+															title="${sp.displayName}"> <img width="174"
+																border="0" height="84"
+																src="http://www.honeybuy.com/${sp.specialOfferImage.noChangeUrl}">
+														</a></li>
+											</#if>
+										</ul>
+									</div>
+								</div>
+						</div>
+					</#if>
+				</li>
+			</#if>
+		</#list>
+	</ul>
+</div>
