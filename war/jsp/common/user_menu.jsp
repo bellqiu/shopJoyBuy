@@ -9,7 +9,7 @@
 				<!-- <a
 					href="#"
 					rel="nofollow" title="Submit a question">Submit a question </a> --> <a
-					href="http://www.honeybuy.com/uc/helpCenter"
+					href="http://184.22.252.66/uc/helpCenter"
 					rel="nofollow" title="Help Center">Help Center</a>
 			</div>
 		</li>

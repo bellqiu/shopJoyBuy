@@ -5,24 +5,24 @@
 		<div class="measure_dashboard">
 		<div class="measure_dashboard_content">
 			<div class="measure_panel" style="display: none;">
-				<a href="http://www.honeybuy.com/c/Pet-Supplies"><img width="972px" height="428px" src="/image/homebanner8.jpg" alt="Pet Supplies" title="Pet Supplies"></a>
+				<a href="http://184.22.252.66/c/Pet-Supplies"><img width="972px" height="428px" src="/image/homebanner8.jpg" alt="Pet Supplies" title="Pet Supplies"></a>
 			</div>
 			<div class="measure_panel" style="position:relative">
-				<a href="http://www.honeybuy.com/c/Prom-Dresses-2013"><img alt="Prom Dresses 2013" title="Prom Dresses 2013" width="972px" height="428px" src="/image/home-banner-1.jpg"></a>
+				<a href="http://184.22.252.66/c/Prom-Dresses-2013"><img alt="Prom Dresses 2013" title="Prom Dresses 2013" width="972px" height="428px" src="/image/home-banner-1.jpg"></a>
 			</div>
 			<div class="measure_panel">
-				<a href="http://www.honeybuy.com/c/Special-Occasion-Dresses"><img alt="Special Occasion Dresses" title="Special Occasion Dresses"  width="972px" height="428px" src="/image/home-dresses.jpg"></a>
+				<a href="http://184.22.252.66/c/Special-Occasion-Dresses"><img alt="Special Occasion Dresses" title="Special Occasion Dresses"  width="972px" height="428px" src="/image/home-dresses.jpg"></a>
 			</div>
 			<div class="measure_panel" style="position:relative">
 				<img alt="Suits" title="Suits"  width="972px" height="428px" src="/image/home-suit.jpg">
-				<div style="position:absolute; top:0; left:0; width:972px"><a href="http://www.honeybuy.com/c/Custom-Jackets" alt="Custom-Jackets" title="Custom-Jackets" style="width:65%; height:428px; display:block; float:left;"></a>
-				<a href="http://www.honeybuy.com/c/Suits" alt="Suits" title="Suits" style="width:35%; height:428px; display:block; float:left;"></a></div>
+				<div style="position:absolute; top:0; left:0; width:972px"><a href="http://184.22.252.66/c/Custom-Jackets" alt="Custom-Jackets" title="Custom-Jackets" style="width:65%; height:428px; display:block; float:left;"></a>
+				<a href="http://184.22.252.66/c/Suits" alt="Suits" title="Suits" style="width:35%; height:428px; display:block; float:left;"></a></div>
 			</div>
 			<div class="measure_panel">
-				<a href="http://www.honeybuy.com/c/Womens-Shoes"><img alt="Womens-Shoes" title="Womens-Shoes"  width="972px" height="428px" src="/image/home-shoe.jpg"></a>
+				<a href="http://184.22.252.66/c/Womens-Shoes"><img alt="Womens-Shoes" title="Womens-Shoes"  width="972px" height="428px" src="/image/home-shoe.jpg"></a>
 			</div>
 			<div class="measure_panel">
-				<a href="http://www.honeybuy.com/c/Ties"><img alt="Ties" title="Ties"  width="972px" height="428px" src="/image/ties-banner.jpg"></a>
+				<a href="http://184.22.252.66/c/Ties"><img alt="Ties" title="Ties"  width="972px" height="428px" src="/image/ties-banner.jpg"></a>
 			</div>
 <p class="clearBoth"></p>
 		</div>

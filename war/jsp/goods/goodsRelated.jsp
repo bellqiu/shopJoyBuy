@@ -16,7 +16,7 @@
 				      			<img style="width: 160px; height: 105; padding-top: ${(105-80)/2}px;" border="0" alt="${pageForm.pageProperties.productDetail.title }" src="<%=Constants.HTTP_PROTOCOL %>${pageForm.site.domain}${pageForm.pageProperties.productDetail.images[0].thumbnailUrl}">
 				      		</c:if>
 				      		<c:if test='${pageForm.pageProperties.productDetail.images[0].strSizeType eq "PRODUCT_NORMAL"}'>
-				      			<img style="width: 160px; height: 105;" border="0" alt="${pageForm.pageProperties.productDetail.title }" src="http://www.honeybuy.com${pageForm.pageProperties.productDetail.images[0].thumbnailUrl}">
+				      			<img style="width: 160px; height: 105;" border="0" alt="${pageForm.pageProperties.productDetail.title }" src="http://184.22.252.66${pageForm.pageProperties.productDetail.images[0].thumbnailUrl}">
 				      		</c:if>
 				      	</a>
 				      </div>
@@ -30,7 +30,7 @@
 				      		<img style="width: 80px; height: 105; padding-top: ${(105-80)/2}px;" border="0" alt="${product.title }" src="<%=Constants.HTTP_PROTOCOL %>${pageForm.site.domain}${product.images[0].thumbnailUrl}">
 				      		</c:if>
 				      		<c:if test='${product.images[0].strSizeType eq "PRODUCT_NORMAL"}'>
-				      		<img style="width: 80px; height: 105;" border="0" alt="${product.title }" src="http://www.honeybuy.com${product.images[0].thumbnailUrl}">
+				      		<img style="width: 80px; height: 105;" border="0" alt="${product.title }" src="http://184.22.252.66${product.images[0].thumbnailUrl}">
 				      		</c:if>
 				      	</a>
 				        <div>

@@ -335,11 +335,11 @@
 							<tr>
 								<td width="135" align="center"><script
 										type="text/javascript"
-										src="https://seal.verisign.com/getseal?host_name=www.honeybuy.com&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script><br />
+										src="https://seal.verisign.com/getseal?host_name=184.22.252.66&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script><br />
 								</td>
 								<td width="180" align="right" style="padding-left: 20px;">
 									<a href="https://www.paypal.com/verified/pal=paypal@honeybuy.com">
-										<img alt="paypal verified" src="http://www.honeybuy.com/image/paypal-verified-logo.jpg">
+										<img alt="paypal verified" src="http://184.22.252.66/image/paypal-verified-logo.jpg">
 									</a>
 								</td>
 							</tr>

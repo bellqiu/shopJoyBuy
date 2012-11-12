@@ -76,7 +76,7 @@
 				<p
 					style="font-size: 13px; color: #666666;; margin-top: 12px; margin-bottom: 26px;">
 					To return to HoneyBuy.com, please <a
-						href="http://www.honeybuy.com/" style="color: #ba0001;">click
+						href="http://184.22.252.66/" style="color: #ba0001;">click
 						here</a>
 				</p>
 			</div>
@@ -90,7 +90,7 @@
 					style="font-size: 13px; padding: 5px 20px 5px 0; color: #666666; padding-top: 20PX;">Once
 					again, thank you for subscribing to the HoneyBuy.com
 					Newsletter!</p>
-				<a href="www.honeybuy.com"
+				<a href="184.22.252.66"
 					title="honeybuy.com"><img border="0"
 					alt="honeybuy.com"
 					src="${site.logo.noChangeUrl}"
