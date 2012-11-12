@@ -204,7 +204,7 @@ public class Constants {
     
     public static final String CURRENCY = "currency";
     public static final String CURRENT_ORDER = "currentOrder";
-    public static final String DEFAULT_CURRENCY = "USD";
+    public static final String DEFAULT_CURRENCY = "GBP";
     
     public static final String BILLING_SAME_AS_PRIMARY = "billingSameAsPrimary";
     
