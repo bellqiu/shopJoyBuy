@@ -1,7 +1,7 @@
 <div class="top_box">
 	<div class="logo_box">
-		<a href="http://184.22.252.66/" title="home">
-			<img alt="" src="http://184.22.252.66/image/4614200824386.jpg">
+		<a href='${(siteView.host)!"http://184.22.252.66/"}' title="home" ref="nofollow">
+			<img alt="" src='${(siteView.site.logo.noChangeUrl)!""}'>
 		</a>
 	</div>
 	<div class="search">
@@ -23,11 +23,11 @@
 		</form>
 	</div>
 	<div class="security">
-		<a href="http://184.22.252.66/" title="home">
-			<img alt="" src="http://184.22.252.66/image/19326069330463.jpg">
+		<a href='${(siteView.site.featuredCatURL)!"http://184.22.252.66/"}' title="home" ref="nofollow">
+			<img alt="" src='${(siteView.site.featuredCat.noChangeUrl)!""}'>
 		</a>
-		<a href="http://184.22.252.66/" title="home">
-			<img alt="" src="http://184.22.252.66/image/20740160421148.jpg">
+		<a href='${(siteView.site.deliveryURL)!"http://184.22.252.66/"}' title="home" ref="nofollow">
+			<img alt="" src='${(siteView.site.delivery.noChangeUrl)!""}'>
 		</a>
 	</div>
 	
