@@ -1,114 +1,76 @@
 <link rel="stylesheet" type="text/css"
 	href="/style/css/helpCenter.css?799">
-<div id="bottom">
-	<div class="jion" style="clear: both">
-		<h2 class="txt">Join Joybuy Community for Coupons, Gifts and
-			Happiness:</h2>
-		<div class="tubiao">
-			&nbsp; <a href="https://www.facebook.com/JoybuyCity"
-				target="_blank" rel="nofollow"><img
-				src="/style/image/pic/facebook_32.png"
-				alt="Like Joybuy on Facebook" title="Like Joybuy on Facebook"
-				height="32" width="32">
-			</a>&nbsp; <a
-				href=""
-				target="_blank" rel="nofollow"><img
-				src="/style/image/pic/gplus-32.png" alt="Joybuy Google+"
-				title="Joybuy Google+" height="32" width="32">
-			</a>&nbsp; <a href=" " target="_blank"
-				rel="nofollow"><img src="/style/image/pic/twitter_32.png"
-				alt="Follow Joybuy on Twitter" title="Follow Joybuy on Twitter"
-				height="32" width="32">
-			</a>&nbsp; <a href="" target="_blank"
-				rel="nofollow"><img src="/style/image/pic/linkedin_32.png"
-				alt="Hoenybuy Linkedin" title="Joybuy Linkedin" height="32"
-				width="32">
-			</a>&nbsp; <a href=""
-				target="_blank" rel="nofollow"><img
-				src="/style/image/pic/youtube-logo.jpg" alt="Joybuy Youtube"
-				title="Joybuy Youtube" height="32" width="32">
-			</a>&nbsp; <a href=" " target="_blank"
-				rel="nofollow"><img src="/style/image/pic/big-p-button.png"
-				alt="Joybuy Pinterest" title="Joybuy Pinterest" height="32"
-				width="32">
-			</a>&nbsp; <a href=" "
-				target="_blank" rel="nofollow"><img
-				src="/style/image/pic/icon_flickr.png" alt="Joybuy Flickr"
-				title="Joybuy Flickr" height="32" width="33">
-			</a>&nbsp; <a href=" " target="_blank"
-				rel="nofollow"><img src="/style/image/pic/icon.png"
-				alt="Joybuy 
-Blogspot" title="Joybuy Blogspot" height="32"
-				width="32">
-			</a>
-		</div>
-	</div>
-
-	<div style="clear:both"></div>
-<div class="pay">
-		<div class="pal">
-			<div class="noth">
-				<a style="float: left; border: 0; margin-left: 5px"
-					title="Click to Verify - This site chose 
-VeriSign SSL for secure e-commerce and confidential 
-communications."><script
-						type="text/javascript"
-						src="https://seal.verisign.com/getseal?host_name=www.Joybuy.co.uk&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script>
-				</a>
-			</div>
-			<div class="zhongjian">
-				<img src="/style/image/pic/84995201997600.jpg.png" height="27"
-					width="616"><img src="/style/image/pic/6199016674013598.jpg"
-					height="30" width="109">
-			</div>
-			<div class="paypal">
-				<a href=""
-					target="blank" rel="nofollow"><img
-					src="/style/image/pic/6197576203911273.jpg" height="70" width="69">
-				</a>
-			</div>
-		</div>
-		<div class="tag-index-banner "
-			style="text-align: center; border: 1px solid #dddddd; border-right: none; border-left: none; line-height: 30px;">
-			Product Tags:&nbsp;&nbsp;&nbsp; <a
-				href="/tags/index/A">A</a>&nbsp;|&nbsp; <a
-				href="/tags/index/B">B</a>&nbsp;|&nbsp; <a
-				href="/tags/index/C">C</a>&nbsp;|&nbsp;<a
-				href="/tags/index/D">D</a>&nbsp;|&nbsp;<a
-				href="/tags/index/E">E</a>&nbsp;|&nbsp;<a
-				href="/tags/index/F">F</a>&nbsp;|&nbsp;<a
-				href="/tags/index/G">G</a>&nbsp;|&nbsp;<a
-				href="/tags/index/H">H</a>&nbsp;|&nbsp;<a
-				href="/tags/index/I">I</a>&nbsp;|&nbsp;<a
-				href="/tags/index/J">J</a>&nbsp;|&nbsp;<a
-				href="/tags/index/K">K</a>&nbsp;|&nbsp;<a
-				href="/tags/index/L">L</a>&nbsp;|&nbsp;<a
-				href="/tags/index/M">M</a>&nbsp;|&nbsp;<a
-				href="/tags/index/N">N</a>&nbsp;|&nbsp;<a
-				href="/tags/index/O">O</a>&nbsp;|&nbsp;<a
-				href="/tags/index/P">P</a>&nbsp;|&nbsp;<a
-				href="/tags/index/Q">Q</a>&nbsp;|&nbsp;<a
-				href="/tags/index/R">R</a>&nbsp;|&nbsp;<a
-				href="/tags/index/S">S</a>&nbsp;|&nbsp;<a
-				href="/tags/index/T">T</a>&nbsp;|&nbsp;<a
-				href="/tags/index/U">U</a>&nbsp;|&nbsp;<a
-				href="/tags/index/V">V</a>&nbsp;|&nbsp;<a
-				href="/tags/index/W">W</a>&nbsp;|&nbsp;<a
-				href="/tags/index/X">X</a>&nbsp;|&nbsp;<a
-				href="/tags/index/Y">Y</a>&nbsp;|&nbsp;<a
-				href="/tags/index/Z">Z</a>&nbsp;|&nbsp;<a
-				href="/tags/index/0_9">0_9</a>
-		</div>
-		<p>
-			Shop the<a href="/"> Joybuy.co.uk Online Store</a>
-			(0086-592-5183012), visit a<a href="/c/Wedding-Dresses"> Dress
-				Retail Store</a>, or find a <a href="/c/wholesaler">wholesaler</a>.
-		</p>
-		<div class="Copyright">
-			Copyright © 2012 Joybuy.co.uk Inc. All rights
-			reserved.&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/c/Terms-Of-Use">Terms
-				of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/c/Privacy-Policy">Privacy
-				Policy</a>
-		</div>
-	</div>
+<div class="jbfooter">
+<div class="row">
+<div class="footerCompany"><div class="footer-center">
+<div class="box-01"><div class="title"><h3>Company Info</h3></div>
+<ul>
+<li><a href="#" rel="nofollow">About Us</a></li>
+<li><a href="#" rel="nofollow">Advertising</a></li>
+<li><a href="#" rel="nofollow">Awards</a></li>
+<li><a href="#" rel="nofollow">Press Releases</a></li>
+<li><a href="#" rel="nofollow">Become an Affiliate</a></li>
+<li><a href="#" rel="nofollow">BuyTV</a></li>
+<li><a href="#" rel="nofollow">Careers</a></li>
+</ul></div>
+<div class="box-01"><div class="title"><h3>Customer Service</h3></div>
+<ul>
+<li><a href="#" rel="nofollow">Help Center</a></li>
+<li><a href="#" rel="nofollow">Order Status</a></li>
+<li><a href="#" rel="nofollow">Return a Product</a></li>
+<li><a href="#" rel="nofollow">Low Price Guarantee</a></li>
+<li><a href="#" rel="nofollow">Forgot Password?</a></li>
+<li><a href="#" rel="nofollow">Contact Us</a></li>
+</ul></div>
+<div class="box-01"><div class="title"><h3>Tools & Resources</h3></div>
+<ul>
+<li><a href="#" rel="nofollow">uy.com Toolbar</a></li>
+<li><a href="#" rel="nofollow">Rakuten Superpoints</a></li>
+<li><a href="#" rel="nofollow">Mobile Apps</a></li>
+<li><a href="#" rel="nofollow">Product Map</a></li>
+<li><a href="#" rel="nofollow">Sell on Buy.com</a></li>
+</ul></div>
+<div class="Subscribe" style="clear:both"><input type="text" value=""  class="subscribeText" name="EmailAddr" id="EmailAddr"><input name="" type="submit" class="buttom" value="Subscribe"/></div>
 </div>
+<div class="box-01"><div class="title"><h3>Rakuten</h3></div>
+<ul>
+<li><a href="#" rel="nofollow">Brazil - Rakuten</a></li>
+<li><a href="#" rel="nofollow">France - PriceMinister</a></li>
+<li><a href="#" rel="nofollow">Germany - Rakuten</a></li>
+<li><a href="#" rel="nofollow">Indonesia - Rakuten</a></li>
+<li><a href="#" rel="nofollow">Malaysia - Rakuten</a></li>
+<li><a href="#" rel="nofollow">Japan - Rakuten</a></li>
+<li><a href="#" rel="nofollow">Rakuten Golf USA</a></li>
+<li><a href="#" rel="nofollow">Taiwan - Rakuten</a></li>
+</ul>
+</div>
+<div class="box-01"><div class="title"><h3>&nbsp;</h3></div>
+<ul>
+<li><a href="#" rel="nofollow">A</a></li>
+<li><a href="#" rel="nofollow">B</a></li>
+<li><a href="#" rel="nofollow">C</a></li>
+<li><a href="#" rel="nofollow">D</a></li>
+<li><a href="#" rel="nofollow">E</a></li>
+<li><a href="#" rel="nofollow">F</a></li>
+<li><a href="#" rel="nofollow">G</a></li>
+</ul></div>
+<div class="box-01"><div class="title"><h3>Feedback</h3></div></div>
+</div>
+<div class="centered-row" style="clear:both;"><span>Currently offering 16,909,722 Total Products Available for immediate shipping!</span></div></div>
+<div class="jbfooter-bottom">
+<div class="copy-txt"><span>Copyright 1997-2012 Buy.com Inc., All rights reserved.
+Buy.com Privacy Policy Terms of Use</span></div>
+<div class="social-icon"><a target="_blank" href="#" rel="nofollow"><img src="http://ak.buy.com/buy_assets/v10/footer/icn_twitter.png" alt="Twitter" title="Twitter" border="0" /></a>
+<a target="_blank" href="#" rel="nofollow"><img title="Facebook" alt="Facebook" src="http://ak.buy.com/buy_assets/v10/footer/icn_facebook.png" border="0;"></a>
+<a target="_blank" href="#" rel="nofollow"><img title="LinkedIn" alt="LinkedIn" src="http://ak.buy.com/buy_assets/v10/footer/icn_linkedin.png" border="0"></a>
+<a target="_blank" href="#" rel="nofollow"><img title="Email" alt="Email" src="http://ak.buy.com/buy_assets/v10/footer/icn_email.png" border="0"></a>
+</div>
+<div style="float:right"><a href="#" rel="nofollow"><img width="93" height="38" alt="BBB" src="http://ak.buy.com/buy_assets/v10/footer/icn_bbb.png" border="0"></a>
+<a class="br-button" rel="nofollow" style="height: 37px; width: 112px; text-decoration: none; cursor: pointer; display: inline-block; -moz-box-sizing: border-box;">
+<img width="112" height="37" border="0" alt="See Buy.com Reviews at Bizrate.com" usemap="#18893_medal" src="http://medals.bizrate.com/medals/dynamic/small/18893_medal.gif" style="height: 37px; 
+
+width: 112px; border: 0px none; -moz-box-sizing: border-box;">
+</a>
+<a href="#" rel="nofollow"><img width="37" height="38" alt="Internet Retailer Top 100" src="http://ak.buy.com/buy_assets/v10/footer/icn_ir100.png" border="0"></a>
+<span><img width="37" height="38" alt="TWICE Top 100 Consumer Electronics Retailer" src="http://ak.buy.com/buy_assets/v10/footer/icn_twice100.png"></span>
+</div></div>

@@ -323,3 +323,21 @@ opacity: 0.5;}
 #suits_size .sizetd-a { background: #ffffff; border-bottom: 2px solid white; color: black; font-family: Arial, Helvetica, sans-serif; height: 20px; text-align: center; font-size: 12px; }
 #suits_size .sizetd-title {background: #a1a1a1; border-bottom: 2px solid white; color: white; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 16px; height: 30px; text-align: left; padding-left: 10px; border-bottom: 2px solid #ffffff; }
 /******** suits-size css end *******/
+
+.jbfooter ul,li{ margin:0; padding:0; list-style:none;}
+.jbfooter{ width:972px; margin:0 auto}
+.jbfooter .row{ background: url("http://ak.buy.com/buy_assets/v10/footer/holiday_footer_final.jpg") no-repeat; height:300px;}
+.jbfooter .centered-row{ width:100%; text-align:center}
+.jbfooter .footer-center{ float:left; width:50%; margin-left:10px;}
+.jbfooter .box-01{ float:left; width:140px; margin:0 0 0 17px; display:inline}
+.jbfooter .box-01 .title{ padding:34px 0 8px 0}
+.jbfooter .box-01 h3{ margin:0; padding:0; font:bold 14px/16px Tahoma, Arial, Helvetica, sans-serif;}
+.jbfooter .box-01 li{font:13px/18px Tahoma, Arial, Helvetica, sans-serif;}
+.jbfooter .box-01 a{ text-decoration:none; color:#333}
+.jbfooter .box-01 a:hover{ text-decoration:underline}
+.jbfooter .centered-row span{ font:bold 20px/24px Arial, Helvetica, sans-serif;}
+.jbfooter .Subscribe{ margin:0 0 10px 17px; padding-top:12px}
+.jbfooter .subscribeText{ border:1px solid #333; padding:5px; width:130px;}
+.jbfooter .buttom{ background:#AA0000; color:#fff; width:76px; margin-left:5px; padding:5px; border:0; cursor:pointer}
+.jbfooter .copy-txt{ float:left; width:33%; font:11px/16px Tahoma, Arial, Helvetica, sans-serif}
+.jbfooter .social-icon{ float:left}
