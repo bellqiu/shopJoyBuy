@@ -2,21 +2,19 @@
 	<div class="measure_dashboard">
 		<div class="measure_dashboard_content">
 			<div class="measure_panel" style="display: none;">
-				<a href=" "><img width="972px" height="428px" src="/image/homebanner8.jpg" alt="Pet Supplies" title="Pet Supplies"></a>
+				<a href=" "><img width="972px" height="428px" src="/image/joybuy-banner1.jpg" alt="Pet Supplies" title="Pet Supplies"></a>
 			</div>
 			<div class="measure_panel" style="position:relative">
-				<a href=" "><img alt="Prom Dresses 2013" title="Prom Dresses 2013" width="972px" height="428px" src="/image/home-banner-1.jpg"></a>
+				<a href=" "><img alt="Prom Dresses 2013" title="Prom Dresses 2013" width="972px" height="428px" src="/image/joybuy-banner2.jpg"></a>
 			</div>
 			<div class="measure_panel">
-				<a href=" "><img alt="Special Occasion Dresses" title="Special Occasion Dresses"  width="972px" height="428px" src="/image/home-dresses.jpg"></a>
+				<a href=" "><img alt="Special Occasion Dresses" title="Special Occasion Dresses"  width="972px" height="428px" src="/image/joybuy-banner3.jpg"></a>
 			</div>
 			<div class="measure_panel" style="position:relative">
-				<img alt="Suits" title="Suits"  width="972px" height="428px" src="/image/home-suit.jpg">
-				<div style="position:absolute; top:0; left:0; width:972px"><a href="http://www.honeybuy.com/c/Custom-Jackets" alt="Custom-Jackets" title="Custom-Jackets" style="width:65%; height:428px; display:block; float:left;"></a>
-				<a href=" " alt="Suits" title="Suits" style="width:35%; height:428px; display:block; float:left;"></a></div>
+				<a href=" "><img alt="Suits" title="Suits"  width="972px" height="428px" src="/image/joybuy-banner4.jpg"></a>	
 			</div>
 			<div class="measure_panel">
-				<a href=""><img alt="Womens-Shoes" title="Womens-Shoes"  width="972px" height="428px" src="/image/home-shoe.jpg"></a>
+				<a href=""><img alt="Womens-Shoes" title="Womens-Shoes"  width="972px" height="428px" src="/image/joybuy-banner5.jpg"></a>
 			</div>
 			<div class="measure_panel">
 				<a href=" "><img alt="Cheap ties in Stock" title="Cheap ties in Stock"  width="972px" height="428px" src="/image/ties-banner.jpg"></a>
