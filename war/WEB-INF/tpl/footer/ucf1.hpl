@@ -1,53 +1,31 @@
 <link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
 <div id="bottom">
-<h2 class="enjoy">Enjoy Shopping Here With Free Shipping.</h2>
-<p class="hottest">2012's hottest goods, buy for honey, pick up now!</p>
-<p class="big">Big big sale. <a href="/c/Promotions-News">offer details</a></p>
 <div class="pic">
-<div class="shang"> 
-<dl><dt><a href="/c/Wedding-Dresses-2012"><img src="/style/image/pic/lo_03.jpg" width="146" height="156" title="Wedding Dresses 2012" alt="Wedding Dresses 2012" /></a></dt>
-  <dd><a href="/c/Wedding-Dresses-2012"><h2>Wedding Dresses 2012 </h2></a></dd>
-  <dd><a href="/c/The-Really-Dress-Look"><h3>The Really Dress Look</h3></a></dd>
-  <dd><a href="/c/Plus-Size-Bridal"><h3>Plus Size Bridal</h3></a></dd>
-  <dd><a href="/c/Dream-in-Color"><h3>Dream in Color</h3></a></dd>
-</dl>
-  <dl><dt><a href="/c/Prom-Dresses-2012"><img src="/style/image/pic/lo_05.jpg" width="146" height="156" title="Prom Dresses 2012" alt="Prom Dresses 2012" /></a></dt>
-  <dd><a href="/c/Prom-Dresses-2012"><h2>Prom Dresses 2012</h2></a></dd>
-  <dd><a href="/c/Designer-Prom-Dresses"><h3>Designer Prom Dresses</h3></a></dd>
-  <dd><a href="/c/Short-Prom-Dresses"><h3>Short Prom Dresses</h3></a></dd>
-  <dd><a href="/c/Plus-Size-Prom-Dresses"><h3>Plus Size Prom Dresses</h3></a></dd>
-  </dl>
-  <dl><dt><a href="/c/Bridesmaid-Dresses-2012"><img src="/style/image/pic/lo_07.jpg" width="146" height="156" title="Bridesmaid Dresses 2012" alt="Bridesmaid Dresses 2012" /></a></dt>
-  <dd><a href="/c/Bridesmaid-Dresses-2012"><h2>Bridesmaid Dresses 2012</h2></a></dd>
-  <dd><a href="/c/Cheap-Bridesmaid-Dresses"><h3>Cheap Bridesmaid Dresses</h3></a></dd>
-  <dd><a href="/c/Designer-Bridesmaid-Dresses"><h3>Designer Bridesmaid Dresses</h3></a></dd>
-  <dd><a href="/c/Modest-Bridesmaid-Dresses"><h3>Modest Bridesmaid Dresses</h3></a></dd>
-  </dl>
-</div>
-<div class="xia"> 
 <dl>
-  <dt><a href="/c/Suits"><img src="/style/image/pic/lo_12.jpg" width="146" height="156" title="Suits" alt="Suits" /></a></dt>
-  <dd><a href="/c/Suits"><h2>Suits</h2></a></dd>
-  <dd><a href="/c/Custom-Business-Suits"><h3>Custom Business Suits </h3></a></dd>
-  <dd><a href="/c/Custom-Groom-Suits"><h3>Custom Groom Suits</h3></a></dd>
-  <dd><a href="/c/Ties"><h3>Ties</h3></a></dd>
+  <dt><a href="#"><img src="/style/image/class_01.jpg" width="85" height="85" border="0" /></a></dt>
+  <dd><a href="#"><h2>Wedding Dresses 2012 </h2></a></dd>
+  <dd><a href="#"><h3>Designer Wedding Dresses</h3></a></dd>
+  <dd><a href="#"><h3>Cheap Wedding Dresses</h3></a></dd>
+  <dd><a href="#"><h3>The Really Dress Look</h3></a></dd>
 </dl>
-  <dl>
-    <dt><a href="/c/Jewelry"><img src="/style/image/pic/lo_13.jpg" width="146" height="156" title="Jewelry" alt="Jewelry" /></a></dt>
-  <dd><a href="/c/Jewelry"><h2>Jewelry</h2> </a></dd>
-  <dd><a href="/c/silver-jewelry"><h3>Silver Jewelry</h3></a></dd>
-  <dd><a href="/c/pearl-jewelry"><h3>pearl jewelry</h3></a></dd>
-  <dd><a href="/c/crystal-jewelry"><h3>crystal jewelry</h3></a></dd>
+  <dl class="dl-5"><dt><a href="#"><img src="/style/image/class_02.jpg" width="85" height="85" border="0" /></a></dt>
+  <dd><a href="#"><h2>Prom Dresses 2012</h2></a></dd>
+  <dd><a href="#"><h3>Designer Prom Dresses</h3></a></dd>
+  <dd><a href="#"><h3>Short Prom Dresses</h3></a></dd>
+  <dd><a href="#"><h3>Plus Size Prom Dresses</h3></a></dd>
   </dl>
-  <dl>
-    <dt><a href="/c/Boots"><img src="/style/image/pic/lo_14.jpg" width="146" height="149" title="Boots" alt="Boots" /></a></dt>
-  <dd><a href="/c/Boots"><h2>Boots</h2></a></dd>
-  <dd><a href="/c/Womens-Shoes"><h3>Women's Shoes</h3></a></dd>
-  <dd><a href="/c/Special-Occasion-Shoes"><h3>Special Occasion Shoes</h3></a></dd>
-  <dd><a href="/c/Mens-Shoes"><h3>Men's Shoes</h3></a></dd>
+  <dl class="dl-5"><dt><a href="#"><img src="/style/image/class_03.jpg" width="85" height="85" border="0" /></a></dt>
+  <dd><a href="#"><h2>Suits</h2></a></dd>
+  <dd><a href="#"><h3>Custom Business Suits</h3></a></dd>
+  <dd><a href="#"><h3>Custom Groom Suits</h3></a></dd>
+  <dd><a href="#"><h3>Ties</h3></a></dd>
   </dl>
-
+   <dl class="dl-5"><dt><a href="#"><img src="/style/image/class_04.jpg" width="85" height="85" border="0" /></a></dt>
+  <dd><a href="#"><h2>Boots</h2></a></dd>
+  <dd><a href="#"><h3>Women's Shoes</h3></a></dd>
+  <dd><a href="#"><h3>Special Occasion Shoes</h3></a></dd>
+  <dd><a href="#"><h3>Men's Shoes</h3></a></dd>
+  </dl>
 </div>
-</div>
-<div class="gao clear"></div>
+<div style="clear:both">&nbsp;</div>
 </div>

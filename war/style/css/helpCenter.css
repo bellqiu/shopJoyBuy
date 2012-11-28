@@ -63,42 +63,7 @@
 #helpcenter .detail ul li a.use8{ background-position:5px -62px}
 #helpcenter .detail .centent{ width:771px; margin:10px auto; text-align:center}
 /******** helpCenter CSS Document END ********/
-/******** bottom css star *******/
-#bottom{ width:972px; margin:20px auto 0 auto;border-top:1px solid #474747;clear:both}
-#bottom img{ border:0; vertical-align:top;}
-#bottom ul,li{ margin:0px; padding:0; list-style:none;}
-#bottom p,h1,h2,h3,dl,dd,dt{ margin:0; padding:0; font-size:12px; font-family: Arial, Helvetica;}
-#bottom h3{ font-weight:normal; font-size:12px}
-#bottom a{ color:#666666; text-decoration:none;}
-#bottom .enjoy{ font-size:38px;color:#bottom;!important; padding-bottom:30px; text-indent:10px}
-#bottom .hottest{ font-size:24px;font-family: 'Helvetica Neue',; font-weight:bold; color:#969696;text-indent:10px}
-#bottom .big{font-family: Arial, Helvetica; font-size:12px; text-indent:10px; color:#666666}
-#bottom .big a{ text-decoration:none; color:#0069ff}
-#bottom .pic{ padding-left:6px}
-#bottom .pic dl{ width:320px; float:left}
-#bottom .pic dl dt{ float:left; width:158px;}
-#bottom .pic dl dd{ float:left; width:160px; line-height:20px; font-size:11px}
-#bottom .pic dl dd a:hover{ color:#cb4634;}
-#bottom .shang{ margin-top:30px; margin-bottom:20px; height:156px}
-#bottom .xia{ margin-bottom:30px; clear:both; height:156px}
-#bottom .jion{ height:64px; border-bottom:2px solid #e0e0e0 ;border-top:2px solid #e0e0e0}
-#bottom .jion .txt{ color:#666666; font-size:16px; line-height:64px; float:left; text-indent:20px}
-#bottom .jion .tubiao{ float:left; padding-top:15px; width:47%;}
-#bottom .tubiao img{ margin-left:18px; float:left}
-#bottom .HoneyBuy dl{ margin-top:20px; float:left; margin-left:90px; display:inline}
-#bottom .HoneyBuy dl dt{ font-weight:bold; font-size:12px; margin-bottom:5px}
-#bottom .HoneyBuy dl dd{ font-size:12px; color:#666666; line-height:18px;font-family: 'Helvetica Neue',;}
-#bottom .HoneyBuy dl dd a{font-size:12px;line-height:18px;font-family: 'Helvetica Neue',; text-decoration:none}
-#bottom .pay{ margin-top:20px; border-top:1px solid #222; clear:both}
-#bottom .pay .pal{ height:90px;}
-#bottom .pay .pal .noth{ width:135px; float:left}
-#bottom .pay .pal .zhongjian{ width:725px; float:left; padding-top:30px; margin-left:5px; }
-#bottom .pay .pal .paypal{ float:left; padding:10px}
-#bottom .pay p{ text-align:center}
-#bottom .pay p a{ text-align:center;color:#0088cc; text-decoration:none;}
-#bottom .Copyright{ margin-top:10px; text-align:center; color:#888888}
-#bottom .Copyright a{ color:#0088cc; text-decoration:none;}
-/*****bottom css end*****/
+
 /*****index-left css star*****/
 #index_left img{ border:0; vertical-align:top;}
 #index_left h2,dl,dd,dt{ margin:0; padding:0; font-size:12px; font-family: Arial, Helvetica;}
@@ -110,8 +75,6 @@
 #index_left dl dd h2{margin-top:10px; font-weight:normal}
 #index_left dl dd h2 a{color:#ff0000; text-decoration:none}
 /*****index-left css end*****/
-
-
 /*****cuxiao css star*****/
 #Promotion-2 html,body,p,ul,li,h2,h3,h4,dl,dd,dt{ margin:0; padding:0; font-size:12px; font-family: Arial, Helvetica;}
 #Promotion-2 ul,li{ margin:0px; padding:0; list-style:none;}
@@ -159,9 +122,6 @@ opacity: 0.5;}
 #Promotion .two  del{ line-height:20px; width:150px; text-align:center; display:block;color:#333}
 #Promotion .two span{ line-height:20px; width:150px; text-align:center; display:block;color:#c84100}
 /*****cuxiao css end*****/
-
-
-
 /*****Company Info css star*****/
 #AboutUs{width:972px;margin:0 auto}
 #AboutUs html,body,p,ul,li,h2,h3,h4{ margin:0; padding:0; font-size:12px; font-family: Arial, Helvetica;}
@@ -323,7 +283,7 @@ opacity: 0.5;}
 #suits_size .sizetd-a { background: #ffffff; border-bottom: 2px solid white; color: black; font-family: Arial, Helvetica, sans-serif; height: 20px; text-align: center; font-size: 12px; }
 #suits_size .sizetd-title {background: #a1a1a1; border-bottom: 2px solid white; color: white; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 16px; height: 30px; text-align: left; padding-left: 10px; border-bottom: 2px solid #ffffff; }
 /******** suits-size css end *******/
-
+/******** bottom css star *******/
 .jbfooter ul,li{ margin:0; padding:0; list-style:none;}
 .jbfooter{ width:972px; margin:0 auto}
 .jbfooter .row{ background: url("http://ak.buy.com/buy_assets/v10/footer/holiday_footer_final.jpg") no-repeat; height:300px;}
@@ -341,3 +301,15 @@ opacity: 0.5;}
 .jbfooter .buttom{ background:#AA0000; color:#fff; width:76px; margin-left:5px; padding:5px; border:0; cursor:pointer}
 .jbfooter .copy-txt{ float:left; width:33%; font:11px/16px Tahoma, Arial, Helvetica, sans-serif}
 .jbfooter .social-icon{ float:left}
+#bottom{width:972px; margin:20px auto; border-top:1px solid #666; }
+#bottom h2,h3,dl,dd,dt{ margin:0; padding:0; font-size:11px; font-family: Arial, Helvetica;}
+#bottom h3{ font-weight:normal; font-size:11px}
+#bottom a{color:#666; text-decoration:none}
+#bottom a:hover{ color:#cb4634;}
+#bottom .pic{ margin-top:10px}
+#bottom .pic dl{ width:239px; height:99px; float:left; background:#ebebeb}
+#bottom .pic dl.dl-5{ margin-left:5px;}
+#bottom .pic dl dt{ float:left; width:85px; margin:7px}
+#bottom .pic dl dd h2{ font-size:12px; margin-top:10px}
+#bottom .pic dl dd{ float:left; width:140px; line-height:20px; font-size:11px}
+/******** bottom css end *******/
