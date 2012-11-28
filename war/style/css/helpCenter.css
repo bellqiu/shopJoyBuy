@@ -286,7 +286,7 @@ opacity: 0.5;}
 /******** bottom css star *******/
 .jbfooter ul,li{ margin:0; padding:0; list-style:none;}
 .jbfooter{ width:972px; margin:0 auto}
-.jbfooter .row{ background: url("http://ak.buy.com/buy_assets/v10/footer/holiday_footer_final.jpg") no-repeat; height:300px;}
+.jbfooter .row{ background: url(/style/image/pic/holiday_footer_final.jpg") no-repeat; height:300px;}
 .jbfooter .centered-row{ width:100%; text-align:center}
 .jbfooter .footer-center{ float:left; width:50%; margin-left:10px;}
 .jbfooter .box-01{ float:left; width:140px; margin:0 0 0 17px; display:inline}
