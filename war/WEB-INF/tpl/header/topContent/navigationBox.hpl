@@ -23,11 +23,11 @@
 		</form>
 	</div>
 	<div class="security">
-		<a href='${(siteView.site.featuredCatURL)!"http://184.22.252.66/"}' title="home" ref="nofollow">
-			<img alt="" src='${(siteView.site.featuredCat.noChangeUrl)!""}'>
+		<a href="http://184.22.252.66" title="home" ref="nofollow">
+			<img alt="Secure Ordering" src="/image/Secure-Ordering.jpg">
 		</a>
-		<a href='${(siteView.site.deliveryURL)!"http://184.22.252.66/"}' title="home" ref="nofollow">
-			<img alt="" src='${(siteView.site.delivery.noChangeUrl)!""}'>
+		<a href="http://184.22.252.66" title="home" ref="nofollow">
+			<img alt="Worldwide Shipping" src="/image/Worldwide-Shipping.jpg">
 		</a>
 	</div>
 	
