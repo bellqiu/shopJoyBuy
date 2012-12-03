@@ -55,7 +55,7 @@ a {
 
 a:hover {
 	color: #FF5A00;
-	text-decoration: underline;
+	text-decoration:none;
 }
 
 a.underline {
@@ -496,15 +496,13 @@ span.icon_RUB {
 
 /***********************************************************************banner top*****************************************************************/
 .main_menu {
-	background: url("/style/image/mainmenu_bg.gif") repeat scroll 0 0
-		transparent;
-	height: 40px;
+	background:#fff;
+	height: 32px;
 	left: 0;
 	position: absolute;
 	top: 90px;
 	width: 972px;
-	border-left: 1px solid #D1D1D1;
-	border-right: 1px solid #D1D1D1;
+	background:url("/style/image/mainmenu_bg.gif") repeat-x scroll 0 0;
 }
 
 .main_menu ul li {
@@ -514,12 +512,12 @@ span.icon_RUB {
 }
 
 .main_menu ul li span a {
-	color: #614F11;
+	color: #333;
 	display: block;
 	font-weight: bold;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
-
+.main_menu ul li span a:hover {color:#FF0000;
+}
 .main_menu
  
 ul
@@ -544,26 +542,25 @@ px
 
 }
 .main_menu ul li span {
-	border-left: 1px solid #D1D1D1;
 	display: block;
 	padding: 0 14.2px;
+border-right:1px solid #000
 }
-
+.main_menu ul li span a{line-height:18px;
+}
 .main_menu ul li.nav_on span {
-	background: url("/style/image/mainmenu_bg_navon.gif") repeat-x scroll 0
-		0 transparent;
-	border-right: 1px solid #D1D1D1;
+	background:#fff
 }
 
 .sub_menu {
 	display: none;
 	background: none repeat scroll 0 0 #FFFFFF;
-	border-color: #FFD531;
+	border-color: #e1680c;
 	border-style: solid;
-	border-width: 8px 3px 3px;
+	border-width: 6px 3px 3px;
 	padding: 10px 18px;
 	position: absolute;
-	top: 40px;
+	top: 26px;
 	width: 565px;
 	box-shadow: 1px 3px 4px #555555;
 }
@@ -1741,7 +1738,7 @@ li.scart_c_w_r {
 
 .products-box {
 	background: none repeat scroll 0 0 #FBF9F7;
-    border: 1px solid #D1D1D1;
+    border: 1px solid #ccc;
 }
 
 .products-box .item {
@@ -1953,24 +1950,29 @@ li.scart_c_w_r {
 }
 
 .promotions-tab {
-	background: url("/css/Promotions_tab.gif") repeat-x scroll 0 0 transparent;
+	border-bottom:1px solid #cccccc;
     height: 39px;
 }
 
 .promotions-tab h3 {
 	border-right: 1px solid #BEB7B0;
-    color: #614F11;
+    color: #fff;
     cursor: pointer;
     float: left;
     font-size: 12px;
     line-height: 39px;
     padding: 0 12px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    
 }
+.promotions-tab h3 a:hover{text-decoration:none;}
 
 .promotions-tab .link-now {
-	background: url("/css/Promotions_tabon.gif") repeat-x scroll 0 0 transparent;
+	background:#eeeeee;
     color: #4A1805;
+    border-bottom:solid 1px #eee
+}
+.promotions-tab .link-now a{
+color: #FF5A00;
 }
 
 .promotions-content {
@@ -2023,14 +2025,14 @@ li.scart_c_w_r {
 }
 
 .dailyMadness-save .save-title {
-    color: #FFBE41;
+    color: #0f9fc9;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: -5px;
 }
 
 .dailyMadness-save .save-num {
-    color: #E50001;
+    color: #007ea3;
     font-size: 28px;
 }
 
@@ -2092,7 +2094,7 @@ li.scart_c_w_r {
 }
 
 .other-progoods dl:hover{ 
-	background:#fff5c0;
+	background:#eeeeee;
 }
 
 .other-progoods dl dt {

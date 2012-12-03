@@ -67,11 +67,11 @@
 /*****index-left css star*****/
 #index_left img{ border:0; vertical-align:top;}
 #index_left h2,dl,dd,dt{ margin:0; padding:0; font-size:12px; font-family: Arial, Helvetica;}
-#index_left{ width:191px; background:#f2f2f2;}
-#index_left dl{ height:70px; border-bottom:1px dotted #a9a9a9}
-#index_left dl:hover{background:#fff5c0;}
-#index_left dl dt{float:left; width:50px; height:50px;margin:13px 8px 0 8px; display:inline}
-#index_left dl dd{float:left; width:122px;font-size:10px; color:#666;}
+#index_left{ width:189px; border-top:solid 1px #cccccc}
+#index_left dl{ height:70px; border:1px solid #cccccc; border-top:0; background:#fff}
+#index_left dl:hover{background:#eeeeee;}
+#index_left dl dt{float:left; width:49px; height:50px;margin:13px 8px 0 8px; display:inline}
+#index_left dl dd{float:left; width:120px;font-size:10px; color:#666;}
 #index_left dl dd h2{margin-top:10px; font-weight:normal}
 #index_left dl dd h2 a{color:#ff0000; text-decoration:none}
 /*****index-left css end*****/
@@ -301,7 +301,7 @@ opacity: 0.5;}
 .jbfooter .buttom{ background:#AA0000; color:#fff; width:76px; margin-left:5px; padding:5px; border:0; cursor:pointer}
 .jbfooter .copy-txt{ float:left; width:33%; font:11px/16px Tahoma, Arial, Helvetica, sans-serif}
 .jbfooter .social-icon{ float:left}
-#bottom{width:972px; margin:20px auto; border-top:1px solid #666; }
+#bottom{width:972px; margin:20px auto; border-top:1px solid #ccc; }
 #bottom h2,h3,dl,dd,dt{ margin:0; padding:0; font-size:11px; font-family: Arial, Helvetica;}
 #bottom h3{ font-weight:normal; font-size:11px}
 #bottom a{color:#666; text-decoration:none}
