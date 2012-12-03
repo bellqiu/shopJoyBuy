@@ -15,7 +15,7 @@
 		</#if>
 	</#list>
 </div>
-<div id="promotions-content" class="promotions-content" style="background: #eeeeee;">
+<div id="promotions-content" class="promotions-content" style="background:#ffffff;">
 	<#list tabData.tabs as tabContent>
 		<#if (tabContent_index = 0)>
 		<div class="daily-madness" style="display: block;">
