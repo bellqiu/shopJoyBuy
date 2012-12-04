@@ -540,12 +540,12 @@ color: #FF5A00;
 .sub_menu {
 	display: none;
 	background: none repeat scroll 0 0 #FFFFFF;
-	border-color: #e1680c;
+	border-color: #111111;
 	border-style: solid;
-	border-width: 6px 3px 3px;
+	border-width: 4px 3px 3px;
 	padding: 10px 18px;
 	position: absolute;
-	top: 26px;
+	top: 28px;
 	width: 565px;
 	box-shadow: 1px 3px 4px #555555;
 }
@@ -598,8 +598,7 @@ color: #FF5A00;
 }
 
 .SpecialboxShadow {
-	background-color: #D80000;
-	box-shadow: 1px 1px 1px #ADADAD;
+	background:url("/style/image/sub_menu-background.png") no-repeat scroll transparent;
 }
 
 .topNavAdSpecialOffer {
@@ -616,15 +615,14 @@ color: #FF5A00;
 }
 
 .main_menu .topNavAdSpecialOffer span.Specialtextshadow {
-	background: none repeat scroll 0 0 white;
-	color: #D80000;
+	background:none;
+	color: #0061b2;
 	float: left;
 	line-height: 10px;
 	text-shadow: 1px 1px 1px #ADADAD;
 	font-size: 14px;
 	font-weight: bold;
 	height: 12px;
-	margin-left: 27px;
 }
 /******************************************************************catalog****************************************************************************/
 .main_box {
