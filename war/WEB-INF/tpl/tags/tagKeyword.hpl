@@ -1,6 +1,6 @@
-<#assign pageKeywords = "${currentKeyword2!''}, cheap ${currentKeyword2!''}, wholesale ${currentKeyword2!''}">
-<#assign pageDescription = "Buy ${currentKeyword2!''} on big discount from Joybuy.co.uk! New fashion ${currentKeyword2!''} are on hot sale! Quality Guaranteed! Buy Now! - page ${currentIndexKeyPage}">
-<#assign pageTitle = "Buy ${currentKeyword2!''} online | Joybuy.co.uk - page ${currentIndexKeyPage}">
+<#assign pageKeywords = "${currentKeyword2!''}, cheap ${currentKeyword2!''}, ${currentKeyword2!''} UK">
+<#assign pageDescription = Wanna to have the latest ${currentKeyword2!''} UK? JoyBuy.co.uk provides a great selection of ${currentKeyword2!''} UK on sale. Choose from over 10K items now! - page ${currentIndexKeyPage}">
+<#assign pageTitle = "Buy ${currentKeyword2!''} UK Online | Joybuy.co.uk - page ${currentIndexKeyPage}">
 
 <#include "/header/top.hpl">
 
