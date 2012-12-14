@@ -7,8 +7,8 @@
       <table width="700" cellspacing="0" cellpadding="0" border="0" align="center">
         <tbody>
         <tr>
-         <td> <img board="0" title="honeybuy.com" alt="honeybuy.com" 
-src="https://www.honeybuy.com/image/4614200824386.jpg"> </td>
+         <td> <img board="0" title="Joybuy.co.uk" alt="Joybuy.co.uk" 
+src="https://www.Joybuy.co.uk/image/4614200824386.jpg"> </td>
           <td align="right" style="FONT-SIZE: 14pt">Shipment 
         Notification</td> </tr> </tbody> </table>
       <table width="700" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center" style="BORDER-
@@ -84,7 +84,7 @@ order.customerName??> ${order.customerName}</#if>,</strong></p>
                     <td width="15"> </td>
                       <td width="80" align="left"> <strong style="COLOR: #000">Tracking</strong> </td>
 						<td width="170" align="left">
-                      <strong><a href="http://www.honeybuy.com/uc/orderDetails?id=${order.name}">My Order</a></strong>
+                      <strong><a href="http://www.Joybuy.co.uk/uc/orderDetails?id=${order.name}">My Order</a></strong>
                     </td></tr> </tbody> </table> </td></tr>
               <tr>
                 <td height="15"> </td> </tr> </tbody> </table>  
@@ -114,7 +114,7 @@ HEIGHT: 18px">
                       <td height="6"> </td> </tr>
                     <tr align="left">
                       <td width="22"> </td>
-                      <td width="594"> <a href="http://www.honeybuy.com/${item.product.name}" 
+                      <td width="594"> <a href="http://www.Joybuy.co.uk/${item.product.name}" 
 
 style="color:#1E4E8E;text-decoration:none;text-underline:none">${item.product.title}</a></td>
                       <td width="82" align="center">${item.quantity}</td> </tr>
@@ -160,7 +160,7 @@ package?</strong> </p>
 
 above and in your <a 
 
-href="http://www.honeybuy.com/uc/orderDetails?id=${order.name}" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
+href="http://www.Joybuy.co.uk/uc/orderDetails?id=${order.name}" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
 
 target="_blank">My Order</a>. Some carriers may not provide tracking 
                   information. If you ordered multiple items, you may receive 
@@ -168,7 +168,7 @@ target="_blank">My Order</a>. Some carriers may not provide tracking
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">For details 
                   regarding processing and delivery times, please see <a 
 
-href="http://www.honeybuy.com/uc/helpCenter/more-2" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
+href="http://www.Joybuy.co.uk/uc/helpCenter/more-2" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
 
 target="_blank">Shipping Information</a>.</p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">If you are not 
@@ -176,18 +176,18 @@ target="_blank">Shipping Information</a>.</p>
                   your item(s) by contacting Customer Service within 7 days of 
                   receiving your package. For more information, visit our <a 
 
-href="http://www.honeybuy.com/uc/helpCenter/more-4" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
+href="http://www.Joybuy.co.uk/uc/helpCenter/more-4" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
 
 target="_blank">Return Exchange</a> policy.</p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">For all other 
-                  questions, visit our <a href="http://www.honeybuy.com/uc/helpCenter/hcIndex" style="COLOR: #1e4e8e; 
+                  questions, visit our <a href="http://www.Joybuy.co.uk/uc/helpCenter/hcIndex" style="COLOR: #1e4e8e; 
 
 TEXT-DECORATION: 
 
 none" target="_blank">FAQ</a>.</p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px"> <strong style="COLOR: #444">Do I have to pay import 
 or customs duties?</strong> </p>
-                  <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">Honeybuy.com 
+                  <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">Joybuy.co.uk 
                   doesn't charge any taxes for its purchases, so now you are 
                   paid in full. However, since your order is shipping from 
                   China, it may be subject to customs or import duties charged 
@@ -205,7 +205,7 @@ damaged during  delivery?</strong> </p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px"> <strong style="COLOR: #444">How can I contact 
 customer  service?</strong> </p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">For help with 
-                  any order, just log in to <a href="http://www.honeybuy.com/uc/orderDetails?id=${order.name}" 
+                  any order, just log in to <a href="http://www.Joybuy.co.uk/uc/orderDetails?id=${order.name}" 
 style="COLOR: #1e4e8e; TEXT-DECORATION: none" target="_blank">My Order</a> and click on the order you need help 
 with.Through the 
                   order details page, you can easily check order status and 
@@ -213,7 +213,7 @@ with.Through the
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">Please note: 
                   Our Online Sales Chat representatives do not have access to 
                   any order information. <br>For all other questions, please send Email to: 
-<em>service@honeybuy.com</em>.</p> </td>
+<em>service@Joybuy.co.uk</em>.</p> </td>
                 <td width="22"> </td> </tr>
               <tr>
                 <td height="22"></td> 
@@ -227,7 +227,7 @@ with.Through the
 Coupons.</strony></td></tr>
 </table>
 <table width="100%" cellspacing="0" cellpadding="0" border="0" style="COLOR: #222; FONT-SIZE: 12px; padding:10px">
- <tr><td>All customers who have purchased with HoneyBuy.com. (No additional purchases necessary.)
+ <tr><td>All customers who have purchased with Joybuy.co.uk. (No additional purchases necessary.)
 <br>Submit a review for any previously purchased product.<br> </br> 
 1: Submit your review on honeybuy Facebook page. Then a $10 coupons will be sent to you.<br> </br>
 2: Submit your review videos on youtube.com, and share the videos on Honeybuy Facebook page.  Then a $20 coupon will be 
@@ -251,31 +251,31 @@ Like Honeybuy on Facebook</td>
 <table width="500" border="0" cellspacing="0" cellpadding="0" align="center" style="padding-bottom:8px">
 <tr>
 <td><a href="http://www.facebook.com/HoneyBuyCity" target="_blank"><img title="Like Honeybuy on Facebook" alt="Like 
-Honeybuy on Facebook" src="http://www.honeybuy.com/style/image/pic/facebook_32.png" border="0" /></a></td>
+Honeybuy on Facebook" src="http://www.Joybuy.co.uk/style/image/pic/facebook_32.png" border="0" /></a></td>
 <td><a href="http://plus.google.com/109978880912693970020/posts?prsr=3" target="_blank"><img width="32" height="32" 
-title="Honeybuy Google+" alt="Honeybuy Google+" src="http://www.honeybuy.com/style/image/pic/gplus-32.png" border="0" 
+title="Honeybuy Google+" alt="Honeybuy Google+" src="http://www.Joybuy.co.uk/style/image/pic/gplus-32.png" border="0" 
 /></a></td>
 <td><a href="http://twitter.com/HoneyBuy" target="_blank"><img width="32" height="32" title="Follow Honeybuy on 
-Twitter" alt="Follow Honeybuy on Twitter" src="http://www.honeybuy.com/style/image/pic/twitter_32.png" 
+Twitter" alt="Follow Honeybuy on Twitter" src="http://www.Joybuy.co.uk/style/image/pic/twitter_32.png" 
 border="0"/></a></td>
 <td><a rel="nofollow" target="_blank" href="http://www.linkedin.com/in/honeybuy"><img width="32" height="32" 
-title="Honeybuy Linkedin" alt="Hoenybuy Linkedin" src="http://www.honeybuy.com/style/image/pic/linkedin_32.png" 
+title="Honeybuy Linkedin" alt="Hoenybuy Linkedin" src="http://www.Joybuy.co.uk/style/image/pic/linkedin_32.png" 
 border="0"></a></td>
 <td><a rel="nofollow" target="_blank" href="http://www.youtube.com/user/honeybuyshow"><img width="32" height="32" 
-title="Honeybuy Youtube" alt="Honeybuy Youtube" src="http://www.honeybuy.com/style/image/pic/youtube-logo.jpg" 
+title="Honeybuy Youtube" alt="Honeybuy Youtube" src="http://www.Joybuy.co.uk/style/image/pic/youtube-logo.jpg" 
 border="0"/></a></td>
 <td><a rel="nofollow" target="_blank" href="http://pinterest.com/honeybuy/"><img width="32" height="32" 
-title="Honeybuy Pinterest" alt="Honeybuy Pinterest" src="http://www.honeybuy.com/style/image/pic/big-p-button.png" 
+title="Honeybuy Pinterest" alt="Honeybuy Pinterest" src="http://www.Joybuy.co.uk/style/image/pic/big-p-button.png" 
 
 border="0"></a></td>
     <td><a rel="nofollow" target="_blank" href="http://www.flickr.com/photos/honey-buy"><img width="33" height="32" 
 
-title="Honeybuy Flickr" alt="Honeybuy Flickr" src="http://www.honeybuy.com/style/image/pic/icon_flickr.png" 
+title="Honeybuy Flickr" alt="Honeybuy Flickr" src="http://www.Joybuy.co.uk/style/image/pic/icon_flickr.png" 
 
 border="0"></a></td>
    <td><a rel="nofollow" target="_blank" href="http://honeybuy.blogspot.com/"><img width="32" height="32" 
 
-title="Honeybuy Blogspot" alt="Honeybuy Blogspot" src="http://www.honeybuy.com/style/image/pic/icon.png" 
+title="Honeybuy Blogspot" alt="Honeybuy Blogspot" src="http://www.Joybuy.co.uk/style/image/pic/icon.png" 
 
 border="0"></a></td>
   </tr>
@@ -290,17 +290,17 @@ border="0"></a></td>
           <td height="50" style="COLOR: #646464; FONT-SIZE: 12px"> <strong>PLEASE 
             DO NOT REPLY to this email.</strong> This email message was sent 
             from a notification-only email address that cannot accept incoming 
-            email. If you have any questions, please send Email to: <em>service@honeybuy.com</em>. Thank you for your 
+            email. If you have any questions, please send Email to: <em>service@Joybuy.co.uk</em>. Thank you for your 
 
 cooperation!</td>
            </tr>
         <tr>
           <td width="22"> </td>
-          <td height="20" align="center" style="COLOR: #646464; FONT-SIZE: 12px">Copyright&copy; 2012 HoneyBuy.com; 
+          <td height="20" align="center" style="COLOR: #646464; FONT-SIZE: 12px">Copyright&copy; 2012 Joybuy.co.uk; 
 
-Inc. All Rights Reserved. | <a href="http://www.honeybuy.com/c/Terms-Of-Use">Terms of Use </a>| <a 
+Inc. All Rights Reserved. | <a href="http://www.Joybuy.co.uk/c/Terms-Of-Use">Terms of Use </a>| <a 
 
-href="http://www.honeybuy.com/c/Privacy-Policy">Privacy Policy </td>
+href="http://www.Joybuy.co.uk/c/Privacy-Policy">Privacy Policy </td>
           <td width="22"> </td> </tr>
         <tr>
           </tr></tbody></table></td></tr></tbody></table>
