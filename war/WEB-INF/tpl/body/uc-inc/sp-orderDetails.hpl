@@ -1,3 +1,7 @@
+<#if tradeInfo ??>
+<h1 style="color:red;text-align: center;">Payment status: ${tradeInfo!''}</h1>
+</#if>
+<form action="/uc/shoppingCart_payment" method="post">
 <div class="scart_con">
 	<#if currentOrder ??> <#assign order = currentOrder> <#if
 	order.currency == "USD"> <#assign currencyRate = 1> <#else> <#assign
@@ -26,16 +30,28 @@
 				<dd class="scart_opt">
 					<ul>
 						<#list item.userOptions as opt> <#switch opt.name> <#case 'Color'>
-						<#assign optTypeRes = (opt.value!'')?matches("(.*?)(##)(.*)")>
-						<#list optTypeRes as moptTypeRes> <#assign optType =
-						moptTypeRes?groups[3] > <#assign optTitle = moptTypeRes?groups[1]
-						> <#assign optType = moptTypeRes?groups[3] > </#list> <#if
-						opt.value == 'The Same As Picture' || (optType!'') == 'ASP'>
-						<li>${opt.name } : The Same As Picture</li> <#else>
-						<li>${opt.name }: &nbsp;&nbsp;<img alt='${optTitle!""}'
-							src='${siteView.imageHost}${optType!""}' title='${optTitle!""}'
-							width="18" height="18"></li> </#if> <#break> <#default>
-						<li>${opt.name } : ${opt.value }</li> </#switch> </#list>
+						
+							<#assign optTypeRes = (opt.value!'')?matches("(.*?)(##)(.*)")>
+							
+							<#list optTypeRes as moptTypeRes>
+								<#assign optType = moptTypeRes?groups[3]  >
+								<#assign optTitle = moptTypeRes?groups[1]  >
+								<#assign optSpliter = moptTypeRes?groups[2] >
+							</#list>
+							<#if optTypeRes?size ==0 && opt.value != 'The Same As Picture' && (optType!'') != 'ASP'>
+								<li>${opt.name } : ${opt.value}</li>
+							<#elseif opt.value == 'The Same As Picture' || (optType!'') == 'ASP'>
+								<li>${opt.name } : The Same As Picture</li> 
+							<#else>
+								<li>${opt.name }: &nbsp;&nbsp;<img alt='${optTitle!""}'
+									src='${siteView.imageHost}${optType!""}' title='${optTitle!""}'
+									width="18" height="18"></li> 
+							</#if> 
+								<#break> 
+							<#default>
+								<li>${opt.name } : ${opt.value }</li> 
+							</#switch> 
+						</#list>
 					</ul>
 					<p class="clearBoth"></p>
 				</dd>
@@ -154,11 +170,9 @@
 			</dd>
 			<#if order.status="PENDING">
 			<dd class="red">
-				<form action="/uc/shoppingCart_payment_2_pay" method="post">
 					<Span><input type="submit" class="button_01" value="Pay this Order>>" id="GO_TO_Fill_Address" ></Span>
 					<input type="hidden" name="id" value="${order.name}">
 					<input type="hidden" name="payType" value="${order.orderType}">
-				</form>
 			</dd>
 			</#if>
 		</dl>
@@ -169,3 +183,4 @@
 	</#if>
 	<p class="clearBoth"></p>
 </div>
+</form>

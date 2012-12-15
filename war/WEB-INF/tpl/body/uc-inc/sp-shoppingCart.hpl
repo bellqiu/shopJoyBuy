@@ -42,10 +42,11 @@
 										<#list optTypeRes as moptTypeRes>
 											<#assign optType = moptTypeRes?groups[3]  >
 											<#assign optTitle = moptTypeRes?groups[1]  >
-											<#assign optType = moptTypeRes?groups[3]  >
+											<#assign optSpliter = moptTypeRes?groups[2] >
 										</#list>
-										
-										<#if opt.value == 'The Same As Picture' || (optType!'') == 'ASP'>
+										<#if optTypeRes?size ==0 && opt.value != 'The Same As Picture' && (optType!'') != 'ASP'>
+											<li>${opt.name } : ${opt.value}</li>
+										<#elseif opt.value == 'The Same As Picture' || (optType!'') == 'ASP'>
 											<li>${opt.name } : The Same As Picture</li>
 										<#else>
 											<li>${opt.name }: &nbsp;&nbsp;<img alt='${optTitle!""}' src='${siteView.imageHost}${optType!""}' title='${optTitle!""}' width="18" height="18"></li>
@@ -83,7 +84,7 @@
 	<#if isCartEmpty == ''>
 	<div class="scart_summary">
 		<div class="scart_summary_coupon_code">
-				<div class="box_sub_item_title">Have a Coupon Code? Add it here</div>
+				<div class="box_sub_item_title">Have a <a href="https://www.facebook.com/HoneyBuyCity/app_208195102528120" target="_blank">Coupon Code?</a> Add it here</div>
 				<div>
 					<p>Enter code (if applicable) then click "Apply":</p>
 					<div class="form_error red" id="coupon_code_noti"></div>
