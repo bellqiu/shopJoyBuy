@@ -401,7 +401,7 @@ span.icon_RUB {
 
 /*****************************************************************overlay cart***********************************************************************/
 .top_box {
-	height: 130px;
+	height: 100px;
 	margin: 27px auto 5px;
 	position: relative;
 	width: 972px;
@@ -427,7 +427,7 @@ span.icon_RUB {
 	position: absolute;
 	right: 0;
 	top: 20px;
-	width: 370px;
+	width: 380px;
 	height: 50px;
 }
 
@@ -436,8 +436,6 @@ span.icon_RUB {
 }
 
 .security a img {
-	width: 166px;
-	height: 50px;
 	margin: 0px 0px 0px 17px;
 	border: none;
 }
@@ -449,8 +447,7 @@ span.icon_RUB {
 }
 
 .logo_box img {
-	height: 75px;
-	width: 210px;
+	width: 180px;
 }
 
 .search {
@@ -504,7 +501,7 @@ span.icon_RUB {
 	height: 32px;
 	left: 0;
 	position: absolute;
-	top: 90px;
+	top: 70px;
 	width: 972px;
 	background: url("/style/image/mainmenu_bg.gif") repeat-x scroll 0 0;
 }

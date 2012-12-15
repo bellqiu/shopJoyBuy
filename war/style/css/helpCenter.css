@@ -71,8 +71,8 @@
 #index_left ul,li{ list-style:none; padding:0; margin:0;}
 #index_left .left_menu{border:1px solid #ccc; height:185px;}
 #index_left .left_menu .left_title{ background:url(/style/image/pic/left-title.jpg) repeat-x scroll; height:33px; line-height:33px; font-size:20px; text-indent:10px; font-weight:bold; color:#0060c5}
-#index_left .left_menu li{ background:url(/style/image/pic/sanjiao.png) no-repeat 5px 9px scroll; line-height:25px; text-indent:8px; color:#333; text-indent:15px;}
-#index_left .left_menu li a{ color:#333; text-decoration:none;}
+#index_left .left_menu li{ background:url(/style/image/pic/jiantou.png) no-repeat 8px 10px scroll; line-height:25px; text-indent:8px; color:#333; text-indent:15px;}
+#index_left .left_menu li a{ color:#222; text-decoration:none; font-size:12px;}
 #index_left .product_1{ border:1px solid #ccc}
 #index_left dl{ height:135px; border-bottom:1px dotted #a9a9a9;}
 #index_left dl:hover{ background:#eee}
@@ -316,7 +316,7 @@ opacity: 0.5;}
 .jbfooter .box-01 .ico_block16{background:url("/style/image/pic/b.png") no-repeat scroll -353px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
 .jbfooter .box-01 .ico_block17{background:url("/style/image/pic/b.png") no-repeat scroll -403px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
 .jbfooter .box-01 h3{ margin:0; padding:0; font:bold 14px/16px Tahoma, Arial, Helvetica, sans-serif;}
-.jbfooter .box-01 li{font:13px/18px Tahoma, Arial, Helvetica, sans-serif; background:url("/style/image/pic/sanjiao.png") no-repeat scroll 0 6px transparent; text-indent:8px;}
+.jbfooter .box-01 li{font:13px/18px Tahoma, Arial, Helvetica, sans-serif; background:url("/style/image/pic/jiantou.png") no-repeat scroll 0 8px transparent; text-indent:8px;}
 .jbfooter .box-01 a{ text-decoration:none; color:#222;text-shadow:1px 1px #fff}
 .jbfooter .box-01 a:hover{ text-decoration:underline}
 .jbfooter .centered-row span{ font:bold 20px/24px Arial, Helvetica, sans-serif;}
