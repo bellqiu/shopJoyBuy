@@ -35,49 +35,7 @@
 		<div class="separator_margin"></div>
 		<div class="scart_header2">Make payment via</div>
 		<ul class="scart_m">
-			<li>
-				<div class="shipping_title">
-					<input name="payType" type="radio" value="paypal" checked="checked">
-					<span>Paypal<img
-						src="${siteView.host}/style/image/home_97.gif">The safer,
-						easier way to pay.
-					</span>
-				</div>
-				<div class="shipping_desc">
-					<p>How to pay by PayPal?</p>
-					<p>If you have PayPal account, please pay your order by PayPal
-						account directly. If you do not have PayPal account, it does not
-						matter. You can make the payment via PayPal with your credit card
-						or your debit card. HoneyBuy's PayPal account is:
-						payment@honeybuy.com</p>
-					<img src="${siteView.host}/style/image/horizontal_solution_PP.gif">
-					<img src="${siteView.host}/style/image/PaypalVerify.gif"> <br />
-					<input type="submit" class="button_01" value="Processed to Pay">
-				</div>
-			</li>
-			<li>
-				<div class="shipping_title">
-					<input name="payType" type="radio" value="Paypal"> <span>Credit
-						Card <img width="30" height="20"
-						src="${siteView.host}/style/image/home_103.gif"> <img
-						width="29" height="20" src="${siteView.host}/style/image/--.jpg">
-						<img width="31" height="20"
-						src="${siteView.host}/style/image/amex.jpg"> <img width="33"
-						height="20" src="${siteView.host}/style/image/dse.jpg">
-					</span>
-				</div>
-				<div class="shipping_desc">
-					<p>How to pay by a Credit Card.</p>
-					<p>You can pay via paypal with your credit card or debit card.
-						Payment with this way is traceable, immediate and convenient, and
-						the payment is deposited directly into HoneyBuy's account.
-						Moreover, credit card companies typically provide some level of
-						identity and purchase protection. Please do not block any pop-up
-						windows when going through the paying process.</p>
-					<br /> <input type="submit" class="button_01"
-						value="Processed to Pay">
-				</div>
-			</li>
+			
 			<li>
 				<div class="shipping_title" style="display: none;">
 					<input name="payType" type="radio" value="YoursPay"> <span>Yours
