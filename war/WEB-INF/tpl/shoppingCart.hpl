@@ -1,6 +1,6 @@
-<#assign pageKeywords = "Shopping Cart on Honeybuy.com, Fashion Dress, Apparel, Suits With Free Shipping">
-<#assign pageDescription = "Shopping Cart on Honeybuy.com - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
-<#assign pageTitle = "My Shopping Cart on Honeybuy.com: Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageKeywords = "Shopping Cart on joybuy.co.uk, Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageDescription = "Shopping Cart on joybuy.co.uk - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageTitle = "My Shopping Cart on joybuy.co.uk: Fashion Dress, Apparel, Suits With Free Shipping">
 
 
 <#include "/header/top.hpl">

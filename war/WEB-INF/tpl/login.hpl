@@ -1,6 +1,6 @@
-<#assign pageKeywords = "Login, Honeybuy.com, Fashion Dress, Apparel, Suits With Free Shipping">
-<#assign pageDescription = "Login to my account : Honeybuy.com - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
-<#assign pageTitle = "Login to my account : Honeybuy.com">
+<#assign pageKeywords = "Login, joybuy.co.uk, Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageDescription = "Login to my account : joybuy.co.uk - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageTitle = "Login to my account : joybuy.co.uk">
 
 <#include "/header/top.hpl">
 <#include "/body/body-uc-login.hpl">	

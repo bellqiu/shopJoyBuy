@@ -55,7 +55,7 @@
 			<div>
 				<p style="font-size: 26px; color: #ba0001; margin-top: 16px;">
 				<img style="height:20px;" src="/css/ico_small.jpg">
-					<strong>Thank you for subscribing to the HoneyBuy.com
+					<strong>Thank you for subscribing to the joybuy.co.uk
 						Newsletter!</strong>
 				</p>
 
@@ -75,7 +75,7 @@
 
 				<p
 					style="font-size: 13px; color: #666666;; margin-top: 12px; margin-bottom: 26px;">
-					To return to HoneyBuy.com, please <a
+					To return to joybuy.co.uk, please <a
 						href="http://184.22.252.66/" style="color: #ba0001;">click
 						here</a>
 				</p>
@@ -88,11 +88,11 @@
 			<div>
 				<p
 					style="font-size: 13px; padding: 5px 20px 5px 0; color: #666666; padding-top: 20PX;">Once
-					again, thank you for subscribing to the HoneyBuy.com
+					again, thank you for subscribing to the joybuy.co.uk
 					Newsletter!</p>
 				<a href="184.22.252.66"
-					title="honeybuy.com"><img border="0"
-					alt="honeybuy.com"
+					title="joybuy.co.uk"><img border="0"
+					alt="joybuy.co.uk"
 					src="${site.logo.noChangeUrl}"
 					style="float: right; margin-top: 20px; margin-right: 16px;">
 				</a>
@@ -100,7 +100,7 @@
 				<p
 					style="font-size: 13px; padding: 5px 16px 5px 0; color: #666666; padding-top: 16PX;">Sincerely,</p>
 
-				<p style="font-size: 13px;; color: #666666;">HoneyBuy.com</p>
+				<p style="font-size: 13px;; color: #666666;">joybuy.co.uk</p>
 			</div>
 		</div>
 		<div class="hei10"></div>

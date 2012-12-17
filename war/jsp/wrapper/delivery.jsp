@@ -157,7 +157,7 @@
 										<td>&nbsp;</td>
 										<td valign="top" style="font-size: 10px;" class="W260">We
 											ask for your phone number just incase we need to reach you
-											for any reason regarding your order with honeybuy.com. We do
+											for any reason regarding your order with joybuy.co.uk. We do
 											not rent, share, or sell your personal information. Ever.</td>
 									</tr>
 								</tbody>
@@ -338,7 +338,7 @@
 										src="https://seal.verisign.com/getseal?host_name=184.22.252.66&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script><br />
 								</td>
 								<td width="180" align="right" style="padding-left: 20px;">
-									<a href="https://www.paypal.com/verified/pal=paypal@honeybuy.com">
+									<a href="https://www.paypal.com/verified/pal=paypal@joybuy.co.uk">
 										<img alt="paypal verified" src="http://184.22.252.66/image/paypal-verified-logo.jpg">
 									</a>
 								</td>

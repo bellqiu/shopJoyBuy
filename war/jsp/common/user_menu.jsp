@@ -77,7 +77,7 @@
 						</div>
 					</form>
 					<div class="indexlogin">
-						<p class="lineheight15 font_size11">Register Now for $5 in HoneyBuy.com!</p>
+						<p class="lineheight15 font_size11">Register Now for $5 in joybuy.co.uk!</p>
 						<div class="hei5"></div>
 						<input type="button" value="CREATE AN ACCOUNT" class="button_01"
 							onclick="window.location.href='/uc/createAccount';">

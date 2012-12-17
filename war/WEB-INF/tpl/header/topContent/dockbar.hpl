@@ -127,7 +127,7 @@
 							</form>
 							<div class="indexlogin">
 								<p class="lineheight15 font_size11">Register Now for $5 in
-									HoneyBuy.com!</p>
+									joybuy.co.uk!</p>
 								<div class="hei5"></div>
 								<input type="button"
 									onclick="window.location.href='/uc/createAccount';"

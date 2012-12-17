@@ -276,7 +276,7 @@ intro_func('style1');
 							<div class="ItemSpecificationBottom"></div>
 						</div>
 						<div class="needtoknow">
-							<h5>Shopping from honeybuy.com, you might need to know those
+							<h5>Shopping from joybuy.co.uk, you might need to know those
 								points as follows:</h5>
 							<div class="howtouse">
 								<img
@@ -314,7 +314,7 @@ intro_func('style1');
 									photographs.</li>
 								<li>We recommend back of the dress be made into the style
 									of corset or bandage if there is no picture available to
-									display on honeybuy.com.</li>
+									display on joybuy.co.uk.</li>
 							</ul>
 						</div>
 						<div class="sp_content">
@@ -1940,7 +1940,7 @@ if(a2||a3)
 					<div class="item_reviews_reply">
 						<div class="item_reviews_reply_box">
 							<div class="item_reviews_reply_user">
-								<span><strong>Reply</strong> by honeybuy.com</span> 2011-7-21
+								<span><strong>Reply</strong> by joybuy.co.uk</span> 2011-7-21
 								22:54:45
 							</div>
 							<div class="item_reviews_reply_content">
@@ -1980,7 +1980,7 @@ if(a2||a3)
 					<div class="item_reviews_reply">
 						<div class="item_reviews_reply_box">
 							<div class="item_reviews_reply_user">
-								<span><strong>Reply</strong> by honeybuy.com</span> 2011-7-12
+								<span><strong>Reply</strong> by joybuy.co.uk</span> 2011-7-12
 								13:43:41
 							</div>
 							<div class="item_reviews_reply_content">
@@ -2020,7 +2020,7 @@ if(a2||a3)
 					<div class="item_reviews_reply">
 						<div class="item_reviews_reply_box">
 							<div class="item_reviews_reply_user">
-								<span><strong>Reply</strong> by honeybuy.com</span> 2011-7-12
+								<span><strong>Reply</strong> by joybuy.co.uk</span> 2011-7-12
 								13:37:45
 							</div>
 							<div class="item_reviews_reply_content">
@@ -2062,7 +2062,7 @@ if(a2||a3)
 					<div class="item_reviews_reply">
 						<div class="item_reviews_reply_box">
 							<div class="item_reviews_reply_user">
-								<span><strong>Reply</strong> by honeybuy.com</span> 2011-7-4
+								<span><strong>Reply</strong> by joybuy.co.uk</span> 2011-7-4
 								22:35:09
 							</div>
 							<div class="item_reviews_reply_content">
@@ -2094,10 +2094,10 @@ if(a2||a3)
 	{
 		if (style=='style1')
 		{
-			str_info = "&lt;p&gt;honeybuy.com is a professional apparel online retailer, having our own factory with 5 years of apparel production experience, and focusing on providing the best price items for the customer. Want to take a look of honeybuy.com Wedding Factory and more details? &lt;a href='#' onclick='window.showModalDialog(\"http://184.22.252.66/image/endefault/mobantupian/wedding_production/wedding_production.htm\",\"_blank\",\"center:no;dialogTop:0;dialogLeft:0;dialogWidth:990px;dialogHeight:600px;scroll:yes;\")'&gt;Click Here&lt;/a&gt; →&lt;/p&gt;";
+			str_info = "&lt;p&gt;joybuy.co.uk is a professional apparel online retailer, having our own factory with 5 years of apparel production experience, and focusing on providing the best price items for the customer. Want to take a look of joybuy.co.uk Wedding Factory and more details? &lt;a href='#' onclick='window.showModalDialog(\"http://184.22.252.66/image/endefault/mobantupian/wedding_production/wedding_production.htm\",\"_blank\",\"center:no;dialogTop:0;dialogLeft:0;dialogWidth:990px;dialogHeight:600px;scroll:yes;\")'&gt;Click Here&lt;/a&gt; →&lt;/p&gt;";
 		}else if(style=='style2')
 		{
-			str_info = "&lt;p&gt;honeybuy.com is a professional apparel online retailer, having our own factory with 5 years of apparel production experience, and focusing on providing the best price items for the customer. Want to take a look of honeybuy.com Wedding Factory and more details? &lt;a href='#' onclick='window.showModalDialog(\"http://184.22.252.66/image/endefault/mobantupian/wedding_production/wedding_production.htm\",\"_blank\",\"center:no;dialogTop:0;dialogLeft:0;dialogWidth:990px;dialogHeight:600px;scroll:yes;\")'&gt;Click Here&lt;/a&gt; →&lt;/p&gt;";
+			str_info = "&lt;p&gt;joybuy.co.uk is a professional apparel online retailer, having our own factory with 5 years of apparel production experience, and focusing on providing the best price items for the customer. Want to take a look of joybuy.co.uk Wedding Factory and more details? &lt;a href='#' onclick='window.showModalDialog(\"http://184.22.252.66/image/endefault/mobantupian/wedding_production/wedding_production.htm\",\"_blank\",\"center:no;dialogTop:0;dialogLeft:0;dialogWidth:990px;dialogHeight:600px;scroll:yes;\")'&gt;Click Here&lt;/a&gt; →&lt;/p&gt;";
 		}
 		if(str_info &amp;&amp; $('intro'))$('intro').innerHTML=str_info;
 		return;

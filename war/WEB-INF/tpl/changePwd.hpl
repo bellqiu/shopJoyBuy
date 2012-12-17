@@ -1,6 +1,6 @@
-<#assign pageKeywords = "Change Password, Honeybuy.com, Fashion Dress, Apparel, Suits With Free Shipping">
-<#assign pageDescription = "Change Password : Honeybuy.com - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
-<#assign pageTitle = "Change Password: Honeybuy.com">
+<#assign pageKeywords = "Change Password, joybuy.co.uk, Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageDescription = "Change Password : joybuy.co.uk - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
+<#assign pageTitle = "Change Password: joybuy.co.uk">
 
 <#include "/header/top.hpl">
 <#include "/body/body-uc-changePwd.hpl">	

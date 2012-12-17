@@ -60,7 +60,7 @@
 		<div style="width: 240px; float: left; margin: 10px" class="box_item">
 			<div class="box_title">Recent Activity</div>
 			<div class="box_item_content">
-				<div class="fb-activity" data-site="www.honeybuy.com"
+				<div class="fb-activity" data-site="www.joybuy.co.uk"
 					data-width="240" data-header="false" data-linktarget="_blank"
 					data-recommendations="true" data-border-color="#fff"></div>
 			</div>
@@ -85,7 +85,7 @@
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post"
 						id="paypaysubmitForm">
 						<input type="hidden" name="cmd" value="_xclick"> <input
-							type="hidden" name="business" value="paypal@honeybuy.com">
+							type="hidden" name="business" value="paypal@joybuy.co.uk">
 						<input type="hidden" name="item_name"
 							value="${defaultOrder.name }"> <input type="hidden"
 							name="amount"
@@ -93,9 +93,9 @@
 						<input type="hidden" name="currency_code" value="${currency}">
 						<input type="hidden" name="lc" value="US"> <input
 							type="hidden" name="notify_url"
-							value="http://www.honeybuy.com/checkorder"> <input
+							value="http://www.joybuy.co.uk/checkorder"> <input
 							type="hidden" name="return"
-							value="http://www.honeybuy.com/orders?id=${defaultOrder.name }">
+							value="http://www.joybuy.co.uk/orders?id=${defaultOrder.name }">
 						<%-- 
 			<input type="button" id="paypaysubmit" style="background-image: url(https://www.paypal.com/en_US/i/btn/x-click-but23.gif);width: 72px;height: 27px"
 			border="0" alt="Make payments with PayPal - it's fast, free and secure!" >--%>
@@ -110,7 +110,7 @@
 			<div class="box_title">Notification</div>
 			<div class="box_item_content">
 				<p style="padding: 5px">You will receive an email confirmation
-					of your purchase at Sales@honeybuy.com. Any additional account
+					of your purchase at Sales@joybuy.co.uk. Any additional account
 					notices will also be sent to this email address.</p>
 			</div>
 		</div>

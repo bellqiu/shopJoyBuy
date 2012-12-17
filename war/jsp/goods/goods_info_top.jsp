@@ -121,7 +121,7 @@
 					// Define UserAction onject
 					var ua = new gigya.services.socialize.UserAction(); 
 					ua.setLinkBack("<%=Constants.HTTP_PROTOCOL %>${pageForm.site.domain}/${pageForm.pageProperties.productDetail.name}"); 
-					ua.setTitle("Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping - HoneyBuy.com");
+					ua.setTitle("Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping - joybuy.co.uk");
 					
 					ua.addMediaItem( { type: "image", src: "<%=Constants.HTTP_PROTOCOL %>${pageForm.site.domain}${pageForm.pageProperties.productDetail.images[0].largerUrl}", href: "<%=Constants.HTTP_PROTOCOL %>${pageForm.site.domain}/${pageForm.pageProperties.productDetail.name}" });
 					// Define Share Bar plugin's Parameters	

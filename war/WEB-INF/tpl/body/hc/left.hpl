@@ -1,6 +1,6 @@
 <script>
 	jq("#helpcenter").ready(function(){
-		imgSite = "${siteView.imageHost!"http://www.honeybuy.com"}";
+		imgSite = "${siteView.imageHost!"http://www.joybuy.co.uk"}";
 		jq('img[id^="collapse"]').click(function(){
 			var ulId = this.id+"_content";
 			if(this.src == imgSite + "/style/image/pic/sanjiao.png"){

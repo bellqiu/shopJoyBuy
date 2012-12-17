@@ -1,7 +1,7 @@
 <%@ include file="../include.jsp"%>
 <div id="container">
 	<button class="button_orange left" type="button"
-		onclick="location.href='http://www.honeybuy.com/'">Continue
+		onclick="location.href='http://www.joybuy.co.uk/'">Continue
 		Shopping</button>
 	<div id="right_column">
 		<p id="order_title">Let me pay it now!</p>
@@ -35,7 +35,7 @@
 		</div>
 	</div>
 	<div id="left_column">
-		<form action="http://www.honeybuy.com/shop/Cart.html" method="post"
+		<form action="http://www.joybuy.co.uk/shop/Cart.html" method="post"
 			id="cart_form">
 			<input name="act" id="act" type="hidden" value="edit">
 			<div class="cart_box">

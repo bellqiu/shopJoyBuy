@@ -62,9 +62,9 @@
 							<h1>Password Recovery</h1>
 						</div>
 						<div class="explain_box">Notice:Please enter the email
-							address you registered in honeybuy.com, the information of your
+							address you registered in joybuy.co.uk, the information of your
 							original password will be sent to your email. If password still
-							has not been recovered, please send email to service@honeybuy.com</div>
+							has not been recovered, please send email to service@joybuy.co.uk</div>
 						<div style="margin: 30px 0 0px 330px;">
 							<span>E-mail address: </span> <input name="recoveryEmail"
 								type="text" id="recoveryEmail" class="input_1" size="35" />
