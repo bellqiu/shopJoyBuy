@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 	
@@ -76,7 +74,7 @@
 				</p>
 				<p>&nbsp;</p>
 				<h4>.2. How do I check my order status?</h4>
-				<p>Honeybuy has a very easy way for users to keep track of their
+				<p>Joybuy has a very easy way for users to keep track of their
 					account.</p>
 				<p>
 					• 1. <a href="#">Log into your account</a> and click on My Orders

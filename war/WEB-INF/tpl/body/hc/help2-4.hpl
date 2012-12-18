@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 <div id="helpcenter">

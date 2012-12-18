@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 <div id="helpcenter">
@@ -8,11 +6,11 @@
   <div class="detail_title">2.	I forgot my password</div></div>
 <div class="detail">
 <!--gai-->
-<span><p>If you' ve forgotten your password, click on ¡°Click Here¡± just above the login button.</p></span>
-<img src="/style/image/pic/login2.jpg" width="769" height="148" />
+<span><p>If you' ve forgotten your password, click on ï¿½ï¿½Click Hereï¿½ï¿½ just above the login button.</p></span>
+<img src="/style/image/pic/login2.jpg" width="769" />
 <span><p>We' ll ask you to enter your email account and then the online system will send you the password immediately to your registed email. You can login your email for more details then. We recommend you go to your user center to change your password.</p></span>
-<img src="/style/image/pic/login.jpg" width="768" height="430" />
-<img src="/style/image/pic/xiugai.jpg" width="769" height="316" />
+<img src="/style/image/pic/login.jpg" width="768" />
+<img src="/style/image/pic/xiugai.jpg" width="769" />
 </div>
 </div><p class="clearBoth"></p>
 </div></div>

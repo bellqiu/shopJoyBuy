@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 <div id="helpcenter">
@@ -10,7 +8,7 @@
 <!--gai-->
 <span><p>When you' ve chosen your items and are ready to checkout, you'll first go to the Shopping Cart page. </p>
 <p>Before clicking <img src="/style/image/pic/pay.jpg" width="115" height="24" /> , you can use fill your coupon code in the blank of the code, and then click "Apply"  There is a message online system will inform you that if the code is successful or invalid just above the code.</p></span>
-<img src="/style/image/pic/code.jpg" width="769" height="525" />
+<img src="/style/image/pic/code.jpg" width="769" />
 <span><p>Please contact Customer Service through our customer service if you encounter any problems when using your coupon.</p></span>
 <!--gai-->
 </div>

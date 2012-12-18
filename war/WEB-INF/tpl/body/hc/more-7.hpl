@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 <div id="helpcenter">
@@ -11,7 +9,7 @@
     <li><a href="/uc/helpCenter/help7-2">PayPal Isn't Available in My Country?</a></li>
     <li><a href="/uc/helpCenter/help7-3">How Does Paypal Work?</a></li>
     <li><a href="/uc/helpCenter/help7-4">Paying by Credit Card?</a></li>
-    <li><a href="/uc/helpCenter/help7-5">What is Honeybuy's PayPal account?</a></li>
+    <li><a href="/uc/helpCenter/help7-5">What is Joybuy's PayPal account?</a></li>
     <li><a href="/uc/helpCenter/help7-6">Can I pay by Western Union?</a></li>
     <li><a href="/uc/helpCenter/help7-7">I originally chose Western Union, can I change to PayPal?</a></li>
     <li><a href="/uc/helpCenter/help7-8">Viewing Prices in Different Currencies?</a></li>

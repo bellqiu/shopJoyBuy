@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 
 <#include "left.hpl">
@@ -8,7 +6,7 @@
 <div class="help_ti"><div class="detail_title">5.What countries or regions do you ship to?</div></div>
 <div class="detail">
 <!--gai-->
-<span>Honeybuy deliver the goods worldwide to nearly every country across the globe, covering North and South America, Europe, Asia, Africa, Oceania, and more. We employ the services of major, trusted international carriers to ensure your package arrives to your destination safely and securely. Please refer to the chart below to check if we can ship to your country. Please kindly notice that the customers from the South America or Africa would have to bear a part of the shipping cost.
+<span>Joybuy deliver the goods worldwide to nearly every country across the globe, covering North and South America, Europe, Asia, Africa, Oceania, and more. We employ the services of major, trusted international carriers to ensure your package arrives to your destination safely and securely. Please refer to the chart below to check if we can ship to your country. Please kindly notice that the customers from the South America or Africa would have to bear a part of the shipping cost.
 </span>
 <img src="/style/image/pic/guojia.jpg" width="734" height="627" />
 <img src="/style/image/pic/guojia2.jpg" width="734" height="627" />

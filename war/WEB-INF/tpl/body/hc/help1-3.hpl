@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <div id="blablabla">
 <#include "left.hpl">
@@ -16,7 +14,7 @@ Once an order has been shipped, it can no longer be cancelled.
   </div>
 <div class="detail">
 <!--gai-->
-<table width="769">
+<table width="769" style=" margin-top:15px;">
   <tr>
     <th width="50%" height="26"><strong>Within  24 hours of payment confirmation*</strong></th>
     <th width="50%"><strong>24-72  hours after payment confirmation*</strong></th>

@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 <div id="helpcenter">
@@ -12,7 +10,7 @@
 <p>If you' ve already placed an order but your payment hasn' t been confirmed yet, changing payment methods is extremely easy and convenient through the My Orders page.</p>
 </span>
 <h2>1. Shipping & Delivery Estimates</h2>
-<p>Our "shipping estimate" is an estimate of how long it will take to prepare your item for shipment and the date it will leave our warehouse. We calculate estimated shipping dates once payment for an order has been confirmed and we begin processing the order. You will see a shipping estimate for your order in the payment confirmation we sent to you via email.This will also appear in your honeybuy account once your payment has been confirmed.</p><br>
+<p>Our "shipping estimate" is an estimate of how long it will take to prepare your item for shipment and the date it will leave our warehouse. We calculate estimated shipping dates once payment for an order has been confirmed and we begin processing the order. You will see a shipping estimate for your order in the payment confirmation we sent to you via email.This will also appear in your joybuy account once your payment has been confirmed.</p><br>
 <p> We also provide the average shipping times for our different products so that you can calculate approximately when your items will reach their destination.</p>
 <span><h2>1)How are shipping estimates calculated?</h2>
 <p>Our shipping estimates are based on how quickly we can process and package items for shipment �C also known as "processing time". Processing time includes selecting items, quality checks, and packaging. Please note that large orders with multiple items may take longer to process and package.</p>

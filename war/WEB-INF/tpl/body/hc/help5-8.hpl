@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 <div id="helpcenter">
@@ -8,7 +6,7 @@
   <div class="detail_title">8.How do you calculate currency rates?</div></div>
 <div class="detail">
 <!--gai-->
-<span>As an international internet retailer, Honeybuy does its best to accommodate a wide range of global currencies. We updates our exchange rates twice monthly based on the global currency markets. </span>
+<span>As an international internet retailer, Joybuy does its best to accommodate a wide range of global currencies. We updates our exchange rates twice monthly based on the global currency markets. </span>
 </div>
 </div><p class="clearBoth"></p>
 </div>

@@ -1,11 +1,9 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 <div id="helpcenter">
 <div class="help_right">
 <div class="help_ti">
-  <div class="detail_title">5.What is Honeybuy's PayPal account?</div></div>
+  <div class="detail_title">5.What is Joybuy's PayPal account?</div></div>
 <div class="detail">
 <!--gai-->
 <span>

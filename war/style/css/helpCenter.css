@@ -21,7 +21,7 @@
 /******** helpCenter CSS right**/
 #helpcenter .help_right{ float:right; width:771px}
 #helpcenter .help_right .help_ti{ margin-bottom:10px}
-#helpcenter .help_ti span a{color:#ff5a00}
+#helpcenter .help_ti span a{color:#186BD0}
 #helpcenter .help_ti .help_title{ text-align:center; line-height:30px;font-family: Arial, Helvetica;font-size:20px; font-weight: bold;}
 #helpcenter .help_ti span{ line-height:18px;font-family: Arial, Helvetica;font-size:13px;}
 #helpcenter .help_right .help_Problem{}
@@ -36,18 +36,18 @@
 #helpcenter .help_more span{ display:block; margin:15px 10px;font-family: Arial, Helvetica;}
 /******** helpCenter CSS detail**/
 #helpcenter .help_ti .detail_title{ line-height:30px;font-family: Arial, Helvetica;font-size:20px; font-weight: bold;}
-#helpcenter .detail span a{color:#ff5a00}
+#helpcenter .detail span a{color:#186bd0}
 #helpcenter .help_ti span p{font-family: Arial, Helvetica; line-height:20px}
 #helpcenter .help_right .detail{}
-#helpcenter .detail table{ border-collapse:collapse; border:1px solid #666666;border-spacing:0; margin-bottom:10px}
+#helpcenter .detail table{ border-collapse:collapse; border:1px solid #666666;border-spacing:0; margin-bottom:10px;}
 #helpcenter .detail td{ text-align:center}
 #helpcenter .detail td,th{ border:1px solid #666666; line-height:20px; padding:5px 0 5px 5px}
 #helpcenter .detail .detail_font a{ color:#ff5a00}
 #helpcenter .detail .detail_font p{font-family: Arial, Helvetica; line-height:20px}
-#helpcenter .detail span p{font-family: Arial, Helvetica; line-height:20px}
+#helpcenter .detail span p{font-family: Arial, Helvetica; line-height:20px; font-size:12px;}
 #helpcenter .help_right .detail_font p{font-family: Arial, Helvetica; line-height:20px}
 #helpcenter .detail .detail_font h4{font-family: Arial, Helvetica; line-height:20px}
-#helpcenter .detail span{ margin:10px 0 10px 0; display:block}
+#helpcenter .detail span{ margin:10px 0 10px 0; display:block; font-size:12px;}
 #helpcenter .detail h2{ margin:10px 0 10px 0;display:block;font-family: Arial, Helvetica; font-weight:bold; font-size:14px;}
 #helpcenter .detail ul{ width:180px; background:#7f7b72}
 #helpcenter .detail li{ line-height:20px; height:20px;}

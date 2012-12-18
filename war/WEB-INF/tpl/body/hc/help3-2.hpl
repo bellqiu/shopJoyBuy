@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 <div id="helpcenter">
@@ -7,7 +5,7 @@
 <div class="help_ti">
   <div class="detail_title">2. How to measure my size?</div></div>
 <div class="detail">
-<span>A perfect-fitting dress starts with perfect measurements. Before ordering a made-to-order dress from honeybuy online store, we strongly encourage you to find a professional local tailor to help you measure your size accurately. Measuring yourself at home is harder than you think! View the photos below for more information on how to properly take your measurements.
+<span>A perfect-fitting dress starts with perfect measurements. Before ordering a made-to-order dress from joybuy online store, we strongly encourage you to find a professional local tailor to help you measure your size accurately. Measuring yourself at home is harder than you think! View the photos below for more information on how to properly take your measurements.
 </span>
 <span>Standard Dresses</span>
 <img src="/style/image/pic/hengl.png" width="548" height="369" />

@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-
 <div class="main_box" id="main_box">
 <#include "left.hpl">
 <div id="helpcenter">
@@ -8,7 +6,7 @@
   <div class="detail_title">1.	Why should I create an account?</div></div>
 <div class="detail">
 <!--gai-->
-<span><p>A Honeybuy account makes shopping at our site much easier, allowing you to:</p>
+<span><p>A Joybuy account makes shopping at our site much easier, allowing you to:</p>
 <p>Check the status of your current order and keep track of previous orders</p>
 <p>Store your shipping and payment information to make checking out a snap</p>
 <p>Ask a question in the message box about a product. </p>
