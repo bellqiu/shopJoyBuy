@@ -87,7 +87,7 @@
 			<script type='text/javascript'>
 				var conf = {}
 				var params ={
-				categoryID: 'HoneyBuy',
+				categoryID: 'JoyBuy',
 				streamID: '${pageForm.pageProperties.productDetail.name}',
 				containerID: 'commentsDiv',
 				cid:'',
