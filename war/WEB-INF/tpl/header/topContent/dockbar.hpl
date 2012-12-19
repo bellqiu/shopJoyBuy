@@ -126,8 +126,8 @@
 								</div>
 							</form>
 							<div class="indexlogin">
-								<p class="lineheight15 font_size11">Register Now for $5 in
-									joybuy.co.uk!</p>
+								<p class="lineheight15 font_size11">Register Now for £5 in
+									JoyBuy.co.uk!</p>
 								<div class="hei5"></div>
 								<input type="button"
 									onclick="window.location.href='/uc/createAccount';"
