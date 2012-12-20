@@ -35,8 +35,6 @@ public class HomeFilter implements Filter{
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
 		
-		try{
-		
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
 		
@@ -55,10 +53,8 @@ public class HomeFilter implements Filter{
 			 return;
 		 }
 		
+		 chain.doFilter(request, response);
 		
-		}finally{
-			chain.doFilter(request, response);
-		}
 	}
 
 	@Override
