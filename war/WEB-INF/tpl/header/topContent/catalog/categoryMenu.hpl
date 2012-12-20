@@ -1,6 +1,6 @@
 <div id="main_menu" class="main_menu">
 	<ul>
-		<li><span> <a href="http://184.22.252.66/" title="Home">Home</a>
+		<li><span> <a href="http://joybuy.co.uk/" title="Home">Home</a>
 			</span>
 		</li>
 		<#list siteView.categories as catlog>
@@ -96,7 +96,7 @@
 															href="${siteView.host}/c/${sp.name}"
 															title="${sp.displayName}"> <img width="174"
 																border="0" height="84"
-																src="http://184.22.252.66/${sp.specialOfferImage.noChangeUrl}">
+																src="http://joybuy.co.uk/${sp.specialOfferImage.noChangeUrl}">
 														</a></li>
 											</#if>
 										</ul>

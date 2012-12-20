@@ -1,7 +1,7 @@
 <div class="top_box">
 	<div class="logo_box">
-		<a href='${(siteView.host)!"http://184.22.252.66/"}' title="home" ref="nofollow">
-			<img alt="logo" src="http://184.22.252.66/image/2496802064581883.jpg">
+		<a href='${(siteView.host)!"http://joybuy.co.uk/"}' title="home" ref="nofollow">
+			<img alt="logo" src="http://joybuy.co.uk/image/2496802064581883.jpg">
 		</a>
 	</div>
 	<div class="search">
@@ -23,13 +23,13 @@
 		</form>
 	</div>
 	<div class="security">
-	<a href="http://184.22.252.66" title="home" ref="nofollow">
+	<a href="http://joybuy.co.uk" title="home" ref="nofollow">
 			<img alt="Secure Ordering" src="/image/horizontal_solution.jpg">
 		</a>
-		<a href="http://184.22.252.66" title="home" ref="nofollow">
+		<a href="http://joybuy.co.uk" title="home" ref="nofollow">
 			<img alt="Secure Ordering" src="/image/Secure-Ordering.jpg">
 		</a>
-		<a href="http://184.22.252.66" title="home" ref="nofollow">
+		<a href="http://joybuy.co.uk" title="home" ref="nofollow">
 			<img alt="Worldwide Shipping" src="/image/Worldwide-Shipping.jpg">
 		</a>
 	</div>

@@ -17,7 +17,7 @@
 		</c:if>
 	</c:forEach>
 <!-- 		<h3 aim="Promotions_con&gt;.Spotlight"> -->
-<!-- 			<a href="http://184.22.252.66/promotions/spotlight.html" -->
+<!-- 			<a href="http://joybuy.co.uk/promotions/spotlight.html" -->
 <!-- 			   style="display: block">Spotlight</a> -->
 <!-- 		</h3> -->
 	</div>

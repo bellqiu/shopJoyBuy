@@ -38,7 +38,7 @@
 .notice_content ul li {
 	list-style: none;
 	background:
-		url(http://184.22.252.66/image/endefault/mobantupian/images/cirle.jpg)
+		url(http://joybuy.co.uk/image/endefault/mobantupian/images/cirle.jpg)
 		no-repeat left 7px;
 	padding-left: 12px;
 }

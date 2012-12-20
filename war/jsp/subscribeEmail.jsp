@@ -76,7 +76,7 @@
 				<p
 					style="font-size: 13px; color: #666666;; margin-top: 12px; margin-bottom: 26px;">
 					To return to joybuy.co.uk, please <a
-						href="http://184.22.252.66/" style="color: #ba0001;">click
+						href="http://joybuy.co.uk/" style="color: #ba0001;">click
 						here</a>
 				</p>
 			</div>
@@ -90,7 +90,7 @@
 					style="font-size: 13px; padding: 5px 20px 5px 0; color: #666666; padding-top: 20PX;">Once
 					again, thank you for subscribing to the joybuy.co.uk
 					Newsletter!</p>
-				<a href="184.22.252.66"
+				<a href="joybuy.co.uk"
 					title="joybuy.co.uk"><img border="0"
 					alt="joybuy.co.uk"
 					src="${site.logo.noChangeUrl}"

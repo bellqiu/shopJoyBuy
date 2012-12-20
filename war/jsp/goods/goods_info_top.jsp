@@ -553,7 +553,7 @@ Please DO NOT use "the same as picture" option.</p>
 							<tr>
 								<td width="135" align="center" valign="top"><script
 										type="text/javascript"
-										src="https://seal.verisign.com/getseal?host_name=184.22.252.66&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script><br />
+										src="https://seal.verisign.com/getseal?host_name=joybuy.co.uk&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script><br />
 								</td>
 							</tr>
 						</table>
