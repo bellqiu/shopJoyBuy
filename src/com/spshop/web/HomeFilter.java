@@ -15,12 +15,16 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 /**
  * 
  * @author <link href="wan-shan.zhu@hp.com">Spark Zhu</link>
  * @version 1.0
  */
 public class HomeFilter implements Filter{
+	
+	private static final Logger LOGGER = Logger.getLogger(HomeFilter.class);
 
 	@Override
 	public void destroy() {
@@ -37,18 +41,20 @@ public class HomeFilter implements Filter{
 		response.setCharacterEncoding("utf-8");
 		
 		HttpServletRequest httpReq = (HttpServletRequest) request;
+		HttpServletResponse httpResp = (HttpServletResponse) response;
 		
-		String serverName = httpReq.getServerName();
+		 String url = httpReq.getRequestURL().toString();
+		 LOGGER.info("Accessing: "+ url);
+		 if(url.matches("(?i)(^http://[^w]{3}.*)(.*)")){
+			 url = url.replaceAll("(?i)(^http://)", "http://www.");
+			 if(null != httpReq.getQueryString()){
+				 url = url + "?" + httpReq.getQueryString();
+			 }
+			 LOGGER.info("Redirecting : "+ url);
+			 httpResp.sendRedirect(url);
+			 return;
+		 }
 		
-		if(!serverName.matches("www\\.\\w+.*") 
-				&& !serverName.matches("\\d+\\.\\d+.*")
-				&& !serverName.matches("localhost.*")){
-			HttpServletResponse httpResp = (HttpServletResponse) response;
-			String queryString = httpReq.getQueryString();
-			String requestUri = httpReq.getRequestURI();
-			httpResp.sendRedirect(request.getScheme()+":www."+request.getServerName() + "/" + (requestUri.equals("/")?"":requestUri) + ((null == queryString) ? "" : "?"+queryString));
-			return;
-		}
 		
 		}finally{
 			chain.doFilter(request, response);
@@ -59,6 +65,10 @@ public class HomeFilter implements Filter{
 	public void init(FilterConfig arg0) throws ServletException {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("http://joybuy.co.uk/".replaceAll("(?i)(^http://)", "http://www."));
 	}
 
 }
