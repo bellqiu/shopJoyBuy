@@ -44,7 +44,9 @@ public class HomeFilter implements Filter{
 				&& !serverName.matches("\\d+\\.\\d+.*")
 				&& !serverName.matches("localhost.*")){
 			HttpServletResponse httpResp = (HttpServletResponse) response;
-			httpResp.sendRedirect(request.getScheme()+":www."+request.getServerName());
+			String queryString = httpReq.getQueryString();
+			String requestUri = httpReq.getRequestURI();
+			httpResp.sendRedirect(request.getScheme()+":www."+request.getServerName() + "/" + (requestUri.equals("/")?"":requestUri) + ((null == queryString) ? "" : "?"+queryString));
 			return;
 		}
 		
