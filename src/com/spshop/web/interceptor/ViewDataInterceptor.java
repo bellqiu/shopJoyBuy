@@ -151,7 +151,7 @@ public class ViewDataInterceptor extends HandlerInterceptorAdapter{
 		siteView.setSite(site);
 		siteView.setCurrencies(this.currencies);
 		siteView.setCategories(categories);
-		siteView.setImageHost("http://184.22.252.66");
+		siteView.setImageHost("http://joybuy.co.uk");
 		
 		List<Country> countries = ServiceFactory.getService(CountryService.class).getAllCountries();
 		
