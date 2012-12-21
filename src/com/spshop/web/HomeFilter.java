@@ -43,7 +43,7 @@ public class HomeFilter implements Filter{
 		
 		 String url = httpReq.getRequestURL().toString();
 		 LOGGER.info("Accessing: "+ url);
-		 if(url.matches("(?i)(^http://[^w]{3}.*)(.*)")){
+		 if(url.matches("(?i)(^http://[^w]{3}.*)(.*)") && !url.matches("(?i)(^http://[\\d]{1,3}.*)(.*)")  ){
 			 url = url.replaceAll("(?i)(^http://)", "http://www.");
 			 if(null != httpReq.getQueryString()){
 				 url = url + "?" + httpReq.getQueryString();
