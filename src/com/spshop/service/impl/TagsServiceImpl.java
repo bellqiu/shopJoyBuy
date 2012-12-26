@@ -61,7 +61,7 @@ public class TagsServiceImpl implements TagsService {
 	public List<String> getTags(String key, int page, int size) {
 		
 		List<String> keys = new ArrayList<String>();
-		int count = getKeyworkCount(key);
+		int count = getKeywordCount(key);
 		if(count > 0){
 			String[] kyArray = indexsAll.get(key);
 			if((page-1)*size + size <= kyArray.length){
@@ -74,18 +74,10 @@ public class TagsServiceImpl implements TagsService {
 		return keys;
 	}
 	
-	public int getKeyworkCount(String key){
-		
-		int count = 0;
-		
+	public int getKeywordCount(String key){
 		String[] keys = indexsAll.get(key);
 		
-		if(null != keys){
-			return keys.length%TagsController.KEYWORD_PER_PAGE==0?keys.length/TagsController.KEYWORD_PER_PAGE:keys.length/TagsController.KEYWORD_PER_PAGE+1;
-		}
-		
-		
-		return count;
+		return keys.length;
 	}
 	
 

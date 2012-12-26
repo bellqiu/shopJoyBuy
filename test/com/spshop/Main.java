@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -11,6 +12,7 @@ import magick.MagickException;
 
 import com.spshop.model.Coupon;
 import com.spshop.model.Order;
+import com.spshop.model.User;
 import com.spshop.service.factory.ServiceFactory;
 import com.spshop.service.intf.CouponService;
 import com.spshop.service.intf.OrderService;
@@ -64,7 +66,7 @@ public class Main {
 			
 		//}
 		
-		Coupon coupon = new Coupon();
+	/*	Coupon coupon = new Coupon();
 		coupon.setCode("sadas");
 		coupon.setName("test");
 		coupon.setComponentStatus(0);
@@ -75,7 +77,18 @@ public class Main {
 		coupon.setStartDate(new Date());
 		coupon.setUpdateDate(new Date());
 		coupon.setUsedCount(11);
-		coupon.setValue(.90f);
-		ServiceFactory.getService(CouponService.class).save(coupon);
+		coupon.setValue(.90f);*/
+		//ServiceFactory.getService(CouponService.class).save(coupon);
+		
+		String s = "";
+		
+		for (char i = 'A'; i < 'Z'; i++) {
+			for(int j=0; j < 20 ; j++){
+			s = s+ ","+ (char)i+ new Random().nextInt(1000);
+			}
+		}
+		
+		System.out.println(s);
+		
 	}
 }

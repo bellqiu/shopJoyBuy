@@ -1,0 +1,25 @@
+<#assign startIdx = startIndex!1>
+<#assign endIdx = endIndex!1>
+<#assign indexList = pageIndex!>
+<#assign pageNO = pageNum!1>
+
+<div class="pagination">
+	<div class="paginator">
+			<#if (startIdx > 1)>
+				<a href='${(siteView.host + "/tags/k/" + ck + "/" + (pageNO - 1))?string!""}'>Prev</a>
+			</#if>
+			<#if firstPageIdx??>
+				<a href='${(siteView.host + "/tags/k/" + ck + "/")?string!"" + firstPageIdx}'><span class="page-index">${firstPageIdx}</span></a>....
+			</#if>
+			<#list indexList as pageIdx>
+				<a href='${(siteView.host + "/tags/k/" + ck + "/" + pageIdx)?string!""}'><span class="page-index">${pageIdx}</span></a>
+			</#list>
+			<#if maxPageNum??>
+				....<a href='${(siteView.host + "/tags/k/" + ck + "/" + maxPageNum)?string!""}'><span class="page-index">${maxPageNum}</span></a>
+			</#if>
+			<#if (endIdx < productsCount)>
+				<a href='${(siteView.host + "/tags/k/" + ck + "/" + (pageNO + 1))?string!""}'>Next</a>
+			</#if>
+	</div>
+	<div class="height-5"></div>
+</div>

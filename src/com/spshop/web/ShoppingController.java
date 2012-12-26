@@ -49,6 +49,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import jxl.write.NumberFormat;
+
 import net.sf.json.JSONObject;
 
 import org.apache.commons.collections.CollectionUtils;
@@ -563,26 +565,50 @@ public class ShoppingController extends BaseController{
 			
 			//付款总金额
 
-			//String total_fee = new String(request.getParameter("total_fee").getBytes("ISO-8859-1"),"UTF-8");
+			String total_fee = request.getParameter("total_fee");
 
 			//币种
 
-			//String currency = new String(request.getParameter("currency").getBytes("ISO-8859-1"),"UTF-8");
+			String currency = request.getParameter("currency");
 
 			//外币金额
-			//String forex_total_fee = new String(request.getParameter("forex_total_fee").getBytes("ISO-8859-1"),"UTF-8");
-
+			String forex_total_fee = request.getParameter("forex_total_fee");
+			
+			float fee = 0f;
+			
+			try {
+				fee = Float.valueOf(total_fee);
+			} catch (Exception e) {
+				logger.warn("total_fee:" + total_fee);
+			}
+			
+			if(fee < 1){
+				try {
+					fee = Float.valueOf(forex_total_fee);
+				} catch (Exception e) {
+					logger.warn("forex_total_fee:" + forex_total_fee);
+				}
+			}
+			
+			Float currencyRate = getSiteView().getCurrencies().get(currency);
+			
 			//获取支付宝的通知返回参数，可参考技术文档中页面跳转同步通知参数列表(以上仅供参考)//
 			
 			//计算得出通知验证结果
 			boolean verify_result = AlipayNotify.verify(params);
 			
 			if(verify_result){//验证成功
-				
+				logger.info("out_trade_no="+out_trade_no+",currency="+currency+",fee="+fee+", currencyRate="+currencyRate+"###########");
 				Order order = ServiceFactory.getService(OrderService.class).getOrderById(out_trade_no);
-				
-				ServiceFactory.getService(OrderService.class).saveOrder(order, OrderStatus.PAID.toString());
-				
+				if(order != null 
+						&& order.getCurrency().equals(currency)
+						&& null != currencyRate
+						&& currencyRate*fee + 1 > order.getTotalPrice() + order.getDePrice() - order.getCouponCutOff()
+						){
+					ServiceFactory.getService(OrderService.class).saveOrder(order, OrderStatus.PAID.toString());
+					
+					logger.info("out_trade_no:"+ out_trade_no + "is paid");
+				}
 				//////////////////////////////////////////////////////////////////////////////////////////
 				//请在这里加上商户的业务逻辑程序代码
 				//——请根据您的业务逻辑来编写程序（以下代码仅作参考）——
@@ -643,6 +669,37 @@ public class ShoppingController extends BaseController{
 			String out_trade_no = new String(request.getParameter("out_trade_no").getBytes("ISO-8859-1"),"UTF-8");
 			
 			logger.info("out_trade_no:" + out_trade_no);
+			
+
+			//付款总金额
+
+			String total_fee = request.getParameter("total_fee");
+
+			//币种
+
+			String currency = request.getParameter("currency");
+
+			//外币金额
+			String forex_total_fee = request.getParameter("forex_total_fee");
+			
+			float fee = 0f;
+			
+			try {
+				fee = Float.valueOf(total_fee);
+			} catch (Exception e) {
+				logger.warn("total_fee:" + total_fee);
+			}
+			
+			if(fee < 1){
+				try {
+					fee = Float.valueOf(forex_total_fee);
+				} catch (Exception e) {
+					logger.warn("forex_total_fee:" + forex_total_fee);
+				}
+			}
+			
+			Float currencyRate = getSiteView().getCurrencies().get(currency);
+			
 
 			//付款总金额
 
@@ -666,11 +723,21 @@ public class ShoppingController extends BaseController{
 				//判断是否在商户网站中已经做过了这次通知返回的处理
 					//如果没有做过处理，那么执行商户的业务程序
 					//如果有做过处理，那么不执行商户的业务程序
-				
+				logger.info("out_trade_no="+out_trade_no+",currency="+currency+",fee="+fee+", currencyRate="+currencyRate+"###########");
 				Order order = ServiceFactory.getService(OrderService.class).getOrderById(out_trade_no);
-				
-				ServiceFactory.getService(OrderService.class).saveOrder(order, OrderStatus.PAID.toString());
+				if(order != null 
+						&& order.getCurrency().equals(currency)
+						&& null != currencyRate
+						&& currencyRate*fee + 1 > order.getTotalPrice() + order.getDePrice() - order.getCouponCutOff()
+						){
+					ServiceFactory.getService(OrderService.class).saveOrder(order, OrderStatus.PAID.toString());
 					
+					logger.info("out_trade_no:"+ out_trade_no + "is paid");
+					
+				};
+					
+				
+				
 				out.println("success");	//请不要修改或删除
 
 				//——请根据您的业务逻辑来编写程序（以上代码仅作参考）——
@@ -685,6 +752,69 @@ public class ShoppingController extends BaseController{
 		}
 		
 		return null;
+	}
+	
+	@RequestMapping("globebillPayRs")
+	public String globebillPayRs(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException{
+		/*
+		cardNo String
+		【支付卡号】
+		411111**********1111
+		orderStatus String
+		【交易状态】 返回数字：-2/-1/0/1 -2: 待确认 -1: 待处理 0: 失败 1: 成功
+		orderInfo
+		String 【交易结果信息】 Code+具体信息。
+		authTypeStatus String
+		【是否预授权】 返回数字：0/1 0: 未授权 1: 已授权 功能具体描述请见 4.预授权
+		signInfo String
+		【签名数据】 返回数据为大写.各语言加密方式不同, 详见附录 5.4 sha256加密方式。 明文加密结构：merNo + gatewayNo + tradeNo
+		+ orderNo + orderCurrency + orderAmount +
+		orderStatus + orderInfo + signkey
+		riskInfo String
+		【风控信息】 返回顺序格式（都是MaxMind返回）： |未过风控 |已过风控 |累加总分数 |设置总 分数 |MAXMIND返回分数 |发卡行 |发卡行国 家 |国家间隔距离 |持卡人IP |持卡人IP所 在国家 |
+
+		*/
+		
+		
+		String orderAmount = request.getParameter("orderAmount");
+		String orderStatus = request.getParameter("orderStatus");
+		String orderNo = request.getParameter("orderNo");
+		String currency = request.getParameter("orderCurrency");
+		
+		String orderInfo = request.getParameter("orderInfo");
+		
+		Order order = ServiceFactory.getService(OrderService.class).getOrderById(orderNo);
+		
+		
+		
+		logger.info(String.format(">>>>>>>>>>>>>>>>Recive Money orderNo=%1$2s, orderStatus = %2$2s, orderAmount=%3$2s, currency=%4$2s", orderNo, orderStatus, orderAmount, currency));
+		
+		float orderRealAmount = Float.parseFloat(new NumberFormat("##0.##").getNumberFormat().format(
+									getSiteView().getCurrencies().get(order.getCurrency())*
+									(order.getTotalPrice() + order.getDePrice() - order.getCouponCutOff())))
+									- 1;
+
+		if(orderRealAmount <= Float.parseFloat(orderAmount)
+				&&order.getCurrency().equals(currency)
+				&&orderStatus.equalsIgnoreCase("1")){
+			try{
+				Coupon coupon = ServiceFactory.getService(CouponService.class).getCouponByCode(order.getCouponCode());
+				coupon.setUsedCount(coupon.getUsedCount()+1);
+				ServiceFactory.getService(CouponService.class).saveCoupon(coupon);
+				orderInfo = "Successful";
+			}catch(Exception e){
+				logger.info(e.getMessage(),e);
+			}
+			
+			ServiceFactory.getService(OrderService.class).saveOrder(order, OrderStatus.PAID.getValue());
+		}else{
+			orderInfo = "Failed";	
+			logger.info(">>>>>>>>>>>>>>>>>>>NOT enough mony>>>>>>>>>>>>>>>>>>>>>>");
+		}
+		logger.info("order.getAddressType():"+order.getAddressType());
+		
+		
+		return "redirect:/uc/orderDetails?id="+orderNo+"&tradeInfo=" + URLEncoder.encode(orderInfo, "UTF-8");
 	}
 	
 	@RequestMapping(value="/yoursPayResults")
@@ -802,8 +932,4 @@ public class ShoppingController extends BaseController{
 		
 		return rs;
 	}
-	
-	
-	
-	
 }

@@ -1,62 +1,29 @@
-<#assign calculateImageSize =
-"com.spshop.web.function.CalculateImage"?new()> <#assign imageSize =
-imageSize > <#assign hAndPadding =
-calculateImageSize(imageSize[0]?string, imageSize[1]?string,
-imageSize[2]?string, "225")>
+<#assign calculateImageSize = "com.spshop.web.function.CalculateImage"?new()> 
+<#assign imageSize = imageSize >
+<#assign hAndPadding = calculateImageSize(imageSize[0]?string, imageSize[1]?string, imageSize[2]?string, "225")>
+<#assign ck=currentKeyword2?trim?replace(" ", "-")>
 <div class="main_box" id="main_box">
 	<#include "include.hpl">
 
 	<div class="left-region">
 		<div class="height-10"></div>
 
-		<#assign topSellingProduct=topSellingTabProduct.products > <#include
-		"/body/uc-inc/fragments/top-selling.hpl">
+		<#assign topSellingProduct=topSellingTabProduct.products > 
+		<#include "/body/uc-inc/fragments/top-selling.hpl">
 	</div>
 
 	<div class="right-region">
 		<div class="height-10"></div>
 		<div class="products-box">
 			<ul>
-				<#list tagedProducts as product> <#include
-				"/body/uc-inc/fragments/product-item.hpl"> </#list>
+				<#list tagedProducts as product>
+					<#include "/body/uc-inc/fragments/product-item.hpl">
+				</#list>
 				<p class="clearBoth"></p>
 			</ul>
 			<div class="height-20"></div>
 		</div>
-		<#if (currentIndexKeyPageCount > 1)> <#assign ck=
-		currentKeyword2?trim?replace(" ", "-")>
-		<div class="tag-index-pager" style="margin-right: 5px">
-			<a title="1" href='${siteView.host}/tags/index/${ck}/1'>&lt;&lt;</a>&nbsp;
-			<#if (currentIndexKeyPage > 1) > <a
-				title='${(currentIndexKeyPage-1)?string("0")}'
-				href='${siteView.host}/tags/k/${ck}/${(currentIndexKeyPage-1)?string("0")}'>&lt;</a>&nbsp;
-			</#if> <a title='${(currentIndexKeyPage)?string("0")}'
-				href='${siteView.host}/tags/k/${ck}/${(currentIndexKeyPage)?string("0")}'
-				style="color: red">${(currentIndexKeyPage)?string("0")}</a>&nbsp;
-
-			<#if (currentIndexKeyPage < (currentIndexKeyPageCount - 1)) > <a
-				title='${(currentIndexKeyPage + 1)?string("0")}'
-				href='${siteView.host}/tags/k/${ck}/${(currentIndexKeyPage + 1)?string("0")}'>${(currentIndexKeyPage
-				+ 1)?string("0")}</a>&nbsp; </#if> <#if (currentIndexKeyPage <
-			(currentIndexKeyPageCount - 2)) > <a
-				title='${(currentIndexKeyPage + 2)?string("0")}'
-				href='${siteView.host}/tags/k/${ck}/${(currentIndexKeyPage + 2)?string("0")}'>${(currentIndexKeyPage
-				+ 2)?string("0")}</a>&nbsp; </#if> <#if (currentIndexKeyPage <
-			(currentIndexKeyPageCount - 3)) > <a
-				title='${(currentIndexKeyPage + 3)?string("0")}'
-				href='${siteView.host}/tags/k/${ck}/${(currentIndexKeyPage + 3)?string("0")}'>${(currentIndexKeyPage
-				+ 3)?string("0")}</a>&nbsp; </#if> <#if (currentIndexKeyPage <
-			(currentIndexKeyPageCount - 4)) > <a
-				title='${(currentIndexKeyPage + 4)?string("0")}'
-				href='${siteView.host}/tags/k/${ck}/${(currentIndexKeyPage + 4)?string("0")}'>${(currentIndexKeyPage
-				+ 4)?string("0")}</a>&nbsp; </#if> <#if (currentIndexKeyPage <
-			(currentIndexKeyPageCount - 1)) > <a
-				title='${(currentIndexKeyPage + 1)?string("0")}'
-				href='${siteView.host}/tags/k/${ck}/${(currentIndexKeyPage + 1)?string("0")}'>&gt</a>&nbsp;
-			</#if> <a title='${currentIndexKeyPageCount?string("0")}'
-				href='${siteView.host}/tags/k/${ck}/${currentIndexKeyPageCount?string("0")}'>&gt;&gt;</a>&nbsp;
-		</div>
-		</#if>
+		<#include "fragments/tag-products-pagination.hpl">
 	</div>
 	<p class="clearBoth"></p>
 </div>

@@ -1,6 +1,14 @@
 package com.spshop.web.interceptor;
 
-import static com.spshop.utils.Constants.*;
+import static com.spshop.utils.Constants.CURRENCY;
+import static com.spshop.utils.Constants.CURRENT_PRODUCT_ID;
+import static com.spshop.utils.Constants.DEFAULT_CURRENCY;
+import static com.spshop.utils.Constants.LOGIN_LANDING_PAGE_PARAM;
+import static com.spshop.utils.Constants.LOGIN_PAGE;
+import static com.spshop.utils.Constants.LOGOUT_ACTION;
+import static com.spshop.utils.Constants.REG_PAGE;
+import static com.spshop.utils.Constants.SHOPPINGCART;
+import static com.spshop.utils.Constants.USER_VIEW;
 
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -176,8 +184,10 @@ public class ViewDataInterceptor extends HandlerInterceptorAdapter{
 			ModelAndView modelAndView) throws Exception {
 		if(null!=modelAndView && !Boolean.TRUE.toString().equals(modelAndView.getModel().get(LOGOUT_ACTION))){
 			UserView userView = (UserView) modelAndView.getModel().get(USER_VIEW);
-			request.getSession().setAttribute(SHOPPINGCART, userView.getCart());
-			request.getSession().setAttribute(CURRENCY, userView.getCurrencyCode());
+			if(null != userView){
+				request.getSession().setAttribute(SHOPPINGCART, userView.getCart());
+				request.getSession().setAttribute(CURRENCY, userView.getCurrencyCode());
+			}
 		}
 	}
 	

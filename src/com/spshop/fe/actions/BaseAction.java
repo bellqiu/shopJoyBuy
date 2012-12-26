@@ -336,7 +336,7 @@ public abstract class BaseAction extends Action {
 	 
 	 private boolean dealURL( HttpServletRequest request, HttpServletResponse response, String domain) throws IOException{
 		 String url = request.getRequestURL().toString();
-		 if(url.matches("(?i)(^http://[^w]{3}.*)(.*)")){
+		 if(url.matches("(?i)(^http://[^w]{3}.*)(.*)") && !url.matches("(?i)(^http://[\\d]{1,3}.*)(.*)")  ){
 			 url = url.replaceAll("(?i)(^http://)", "http://www.");
 			 if(null != request.getQueryString()){
 				 url = url + "?" + request.getQueryString();

@@ -12,10 +12,10 @@
    <tbody><tr><td colspan="2" style="padding:0in 0in 0in 0in;height:10.5pt"></td></tr>
    <tr>
     <td style="padding:0in 0in 0in 0in">
-    <p><span><img src="https://www.Joybuy.co.uk/image/4614200824386.jpg"></span></p>
+    <p><span><img src="https://www.honeybuy.com/image/4614200824386.jpg"></span></p>
     </td>
     <td style="padding:0in 0in 0in 0in">
-    <p style="font-size:12.0pt; text-align:right">Welcome to Joybuy.co.uk, Password Recovery</p>
+    <p style="font-size:12.0pt; text-align:right">Welcome to Honeybuy.com, Password Recovery</p>
     </td>
    </tr>
   </tbody></table>
@@ -44,14 +44,14 @@ style="width:525.0pt;background:white;border:solid #C9C9CA 1.0pt;
 	  Congratulations! Your password is found, details as follows:
 	  <p>Account: ${user.name}</p>
 	  <p>Password is: ${user.password}</p>
-	  <p>As a Joybuy.co.uk new customer, you get a <span style="color:red; font-weight:bold">$5</span> Coupon: 
+	  <p>As a HoneyBuy.com new customer, you get a <span style="color:red; font-weight:bold">$5</span> Coupon: 
 
 <B>HONEYBUY-5Q8Y9N</B> </p>
 	  <P>You can apply it when you Check out your orders! </p>
-	  <p>If any question, please contact us: <a href="mailto:service@Joybuy.co.uk">service@Joybuy.co.uk.</a></p>
+	  <p>If any question, please contact us: <a href="mailto:service@honeybuy.com">service@honeybuy.com.</a></p>
 	  <p>Thank you and best regards!</p>
 	  <p>Customer Service.</p>
-	  <p><a href="http://www.Joybuy.co.uk">www.Joybuy.co.uk <br></a></span></p>
+	  <p><a href="http://www.honeybuy.com">www.honeybuy.com <br></a></span></p>
 	  </br>
       </td>
      </tr>
@@ -70,40 +70,40 @@ Like Honeybuy on Facebook</td>
   <tr>
     <td><a href="http://www.facebook.com/HoneyBuyCity" target="_blank"><img title="Like Honeybuy on Facebook" alt="Like 
 
-Honeybuy on Facebook" src="http://www.Joybuy.co.uk/style/image/pic/facebook_32.png" border="0" /></a></td>
+Honeybuy on Facebook" src="http://www.honeybuy.com/style/image/pic/facebook_32.png" border="0" /></a></td>
     <td><a href="http://plus.google.com/109978880912693970020/posts?prsr=3" target="_blank"><img width="32" height="32" 
 
-title="Honeybuy Google+" alt="Honeybuy Google+" src="http://www.Joybuy.co.uk/style/image/pic/gplus-32.png" border="0" 
+title="Honeybuy Google+" alt="Honeybuy Google+" src="http://www.honeybuy.com/style/image/pic/gplus-32.png" border="0" 
 
 /></a></td>
   <td><a href="http://twitter.com/HoneyBuy" target="_blank"><img width="32" height="32" title="Follow Honeybuy on 
 
-Twitter" alt="Follow Honeybuy on Twitter" src="http://www.Joybuy.co.uk/style/image/pic/twitter_32.png" 
+Twitter" alt="Follow Honeybuy on Twitter" src="http://www.honeybuy.com/style/image/pic/twitter_32.png" 
 
 border="0"/></a></td>
   <td><a rel="nofollow" target="_blank" href="http://www.linkedin.com/in/honeybuy"><img width="32" height="32" 
 
-title="Honeybuy Linkedin" alt="Hoenybuy Linkedin" src="http://www.Joybuy.co.uk/style/image/pic/linkedin_32.png" 
+title="Honeybuy Linkedin" alt="Hoenybuy Linkedin" src="http://www.honeybuy.com/style/image/pic/linkedin_32.png" 
 
 border="0"></a></td>
 <td><a rel="nofollow" target="_blank" href="http://www.youtube.com/user/honeybuyshow"><img width="32" height="32" 
 
-title="Honeybuy Youtube" alt="Honeybuy Youtube" src="http://www.Joybuy.co.uk/style/image/pic/youtube-logo.jpg" 
+title="Honeybuy Youtube" alt="Honeybuy Youtube" src="http://www.honeybuy.com/style/image/pic/youtube-logo.jpg" 
 
 border="0"/></a></td>
     <td><a rel="nofollow" target="_blank" href="http://pinterest.com/honeybuy/"><img width="32" height="32" 
 
-title="Honeybuy Pinterest" alt="Honeybuy Pinterest" src="http://www.Joybuy.co.uk/style/image/pic/big-p-button.png" 
+title="Honeybuy Pinterest" alt="Honeybuy Pinterest" src="http://www.honeybuy.com/style/image/pic/big-p-button.png" 
 
 border="0"></a></td>
     <td><a rel="nofollow" target="_blank" href="http://www.flickr.com/photos/honey-buy"><img width="33" height="32" 
 
-title="Honeybuy Flickr" alt="Honeybuy Flickr" src="http://www.Joybuy.co.uk/style/image/pic/icon_flickr.png" 
+title="Honeybuy Flickr" alt="Honeybuy Flickr" src="http://www.honeybuy.com/style/image/pic/icon_flickr.png" 
 
 border="0"></a></td>
    <td><a rel="nofollow" target="_blank" href="http://honeybuy.blogspot.com/"><img width="32" height="32" 
 
-title="Honeybuy Blogspot" alt="Honeybuy Blogspot" src="http://www.Joybuy.co.uk/style/image/pic/icon.png" 
+title="Honeybuy Blogspot" alt="Honeybuy Blogspot" src="http://www.honeybuy.com/style/image/pic/icon.png" 
 
 border="0"></a></td>
   </tr>
@@ -125,7 +125,7 @@ border="0"></a></td>
     <p align="center" style="margin:0in;text-align:center"><span style="font-size:9.0pt;color:#646464">
     <strong>PLEASE DO NOT REPLY to this email! If you have any question, Please <a 
 
-href="mailto:service@Joybuy.co.uk">Contact Us</a></strong>.</span></p>
+href="mailto:service@honeybuy.com">Contact Us</a></strong>.</span></p>
     </td>
    </tr>
    <tr>
@@ -133,9 +133,9 @@ href="mailto:service@Joybuy.co.uk">Contact Us</a></strong>.</span></p>
     <td style="padding:0in 0in 0in 0in">
     <p align="center" style="margin:0in;text-align:center"><span style="font-size:9.0pt;color:#646464">Copyright&copy; 
 
-2012 Joybuy.co.uk; Inc. All Rights Reserved. | 
-	<a href="http://www.Joybuy.co.uk/c/Terms-Of-Use">Terms of Use </a>| 
-	<a href="http://www.Joybuy.co.uk/c/Privacy-Policy">Privacy Policy </a></span></p>
+2012 HoneyBuy.com; Inc. All Rights Reserved. | 
+	<a href="http://www.honeybuy.com/c/Terms-Of-Use">Terms of Use </a>| 
+	<a href="http://www.honeybuy.com/c/Privacy-Policy">Privacy Policy </a></span></p>
     </td>
    </tr>
  </tbody></table>

@@ -260,7 +260,7 @@ public class Constants {
     
     public static final String CURRENT_INDEX_KEY_PAGE_COUNT = "currentIndexKeyPageCount";
     
-    public static final int TAGS_PRODUCT_PER_PAGE = 20;
+    public static final int TAGS_PRODUCT_PER_PAGE = 21;
     
     public static final String TOP_SELLING_TAB_PRODUCT = "topSellingTabProduct";
     

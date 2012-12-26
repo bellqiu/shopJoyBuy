@@ -51,6 +51,7 @@ import static com.spshop.utils.Constants.WRONG_PWD;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -90,8 +91,10 @@ import com.spshop.service.intf.CountryService;
 import com.spshop.service.intf.MessageService;
 import com.spshop.service.intf.OrderService;
 import com.spshop.service.intf.UserService;
+import com.spshop.utils.Constants;
 import com.spshop.utils.EmailTools;
 import com.spshop.utils.Encrypt;
+import com.spshop.utils.EncryptUtil;
 import com.spshop.utils.Utils;
 import com.spshop.web.view.SiteView;
 
@@ -116,7 +119,7 @@ public class UserCenterController extends BaseController {
 		if (null != user && !user.getPassword().equals(oldPWD)) {
 			getUserView().getErr().put(WRONG_PWD, "Original password is wrong");
 		}
-
+		
 		if (pwd1 == null || pwd1.length() < 6) {
 			getUserView().getErr().put(REG_PWD_RE_ERR, "Invalid password");
 		} else if (!pwd1.equals(pwd2)) {
@@ -272,7 +275,19 @@ public class UserCenterController extends BaseController {
 	}
 
 	@RequestMapping("/shoppingCart_payment")
-	public String shoppingCartPayment(Model model) {
+	public String shoppingCartPayment(HttpServletRequest request, Model model) {
+		
+		Order order = null;
+		String orderId = request.getParameter("id");
+		if(StringUtils.isNotBlank(orderId)){
+			order = ServiceFactory.getService(OrderService.class).getOrderById(orderId);
+			model.addAttribute(Constants.CURRENT_ORDER, order);
+			model.addAttribute("id", orderId);
+		}else{
+			order = getUserView().getCart().getOrder();
+			ServiceFactory.getService(OrderService.class).saveOrder(order, OrderStatus.ONSHOPPING.toString());
+		}
+		
 		return "shoppingCart_payment";
 	}
 
@@ -344,19 +359,21 @@ public class UserCenterController extends BaseController {
 
 			root.put("currencyRate", currencyRate);
 			root.put(SITE_VIEW, siteView);
-			new Thread() {
-				public void run() {
-					try {
-						EmailTools
-								.sendMail(
-										"paid",
-										"Order Received, Awaiting Payment Confirmation",
-										root, o.getUser().getEmail());
-					} catch (Exception e) {
-						logger.debug(e);
-					}
-				};
-			}.start();
+			if(StringUtils.isBlank(orderId)){
+				new Thread() {
+					public void run() {
+						try {
+							EmailTools
+									.sendMail(
+											"paid",
+											"Order Received, Awaiting Payment Confirmation",
+											root, o.getUser().getEmail());
+						} catch (Exception e) {
+							logger.debug(e);
+						}
+					};
+				}.start();
+			}
 
 			if ("YoursPay".equals(payType)) {
 				/** 订单信息 **/
@@ -697,6 +714,11 @@ public class UserCenterController extends BaseController {
 				//out.println(sHtmlText);
 				
 				return "alipay";
+			}else if ("Globebill".equals(payType)){
+				
+				globebillPay(order,model);
+				
+				return "Globebill";
 			}
 
 			return "paypal";
@@ -705,6 +727,65 @@ public class UserCenterController extends BaseController {
 		return "shoppingCart_payment";
 	}
 
+	private void globebillPay(Order order, Model model) {
+		String merNo = "10246";
+		String gatewayNo = "10246001";
+		String signKeyNo = "04d6x2r8";
+		String orderNumber = order.getName();//订单号
+		//订单金额, 两位小数
+	    String amount = new NumberFormat("##0.##").getNumberFormat().format(getSiteView().getCurrencies().get(order.getCurrency())*(order.getTotalPrice() + order.getDePrice() - order.getCouponCutOff()));
+
+	    String returnUrl = getSiteView().getHost() + "/uc/globebillPayRs";
+	    
+	    
+	    /**
+	     *
+	     * 	merNo + gatewayNo +
+			orderNo + orderCurrency+ orderAmount +
+			eturnUrl+ signkey
+
+	     */
+	    StringBuffer signInfo  = new StringBuffer(merNo).append(gatewayNo)
+	    						.append(orderNumber).append(order.getCurrency()).append(amount).append(returnUrl)
+	    						.append(signKeyNo);
+	    
+	   logger.info("signInfo:" + signInfo);
+	  
+	    String signString = new EncryptUtil().getSHA256Encrypt(signInfo.toString());
+	    
+	    String firstName = "";
+	    String lastName = "N/A";
+	    
+	    String username = order.getCustomerName();
+	    
+	    String cc = "";
+	    
+	   long ccId = order.getCountry();
+	    
+	   if(ccId >0){
+		   cc = getSiteView().getCountryMap().get(String.valueOf(ccId)).getAbbrCode();
+	   }
+	   
+	   if(username != null){
+		   username = username.trim();
+		   int last = username.lastIndexOf(' ');
+		   if(last > 0){
+			   firstName = username.substring(0, last);
+			   lastName = username.substring(last);
+		   }else{
+			   firstName = username;
+		   }
+	   }
+	    
+	    model.addAttribute("signInfo", signString);
+	    model.addAttribute("amount", amount);
+	    model.addAttribute("returnUrl", returnUrl);
+	    model.addAttribute("firstName", firstName);
+	    model.addAttribute("lastName", lastName);
+	    model.addAttribute("cc", cc);
+	    
+	}
+	
 	@RequestMapping(value = "/shoppingCart_address", method = RequestMethod.POST)
 	public String submitAddressInfo(Model model, HttpServletRequest request,
 			HttpServletResponse response) {
@@ -903,12 +984,15 @@ public class UserCenterController extends BaseController {
 
 	@RequestMapping("/orderDetails")
 	public String orderDetails(Model model, HttpServletRequest request,
-			@RequestParam("id") String orderId) {
+			@RequestParam("id") String orderId) throws UnsupportedEncodingException {
 
 		Order order = ServiceFactory.getService(OrderService.class)
 				.getOrderById(orderId);
 
 		model.addAttribute(CURRENT_ORDER, order);
+		if(request.getParameter("tradeInfo")!=null){
+			model.addAttribute("tradeInfo", URLDecoder.decode(request.getParameter("tradeInfo"),"UTF-8"));
+		}
 
 		return "orderDetails";
 	}

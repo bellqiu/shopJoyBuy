@@ -14,7 +14,7 @@
    </tr>
    <tr style="mso-yfti-irow:2;mso-yfti-lastrow:yes">
     <td style="padding:0in 0in 0in 0in">
-    <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><img border="0" id="_x0000_i1026" src="https://www.joybuy.co.uk.com/image/4614200824386.jpg"><o:p></o:p></span></p>
+    <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><img border="0" id="_x0000_i1026" src="https://www.honeybuy.com/image/4614200824386.jpg"><o:p></o:p></span></p>
     </td>
     <td style="padding:0in 0in 0in 0in">
     <p align="right" class="MsoNormal" style="margin:0in;margin-bottom:.0001pt;
@@ -74,13 +74,13 @@
 	  ,</span></strong><span style="font-size:9.0pt"><o:p></o:p></span></p>
       <p style="margin-top:7.5pt;margin-right:0in;margin-bottom:7.5pt;
       margin-left:0in;line-height:13.5pt;paading: 0"><span style="font-size:
-      11.0pt">Thank you for ordering from Joybuy.co.uk.com! We have received your
+      11.0pt">Thank you for ordering from HoneyBuy.com! We have received your
       order and are awaiting payment confirmation.<o:p></o:p></span></p>
       <p style="margin-top:7.5pt;margin-right:0in;margin-bottom:7.5pt;
       margin-left:0in;line-height:13.5pt;paading: 0"><span style="font-size:
       11.0pt">If you have already completed your payment, you should receive a
       "Payment Confirmation" email within 1 working day and at that
-      time, we will begin to process <a href="http://www.Joybuy.co.uk/orders?id=${order.name}">your order</a>.<o:p></o:p></span></p>
+      time, we will begin to process <a href="http://www.honeybuy.com/orders?id=${order.name}">your order</a>.<o:p></o:p></span></p>
      </td>
       <td width="22" valign="top" style="width:16.5pt;border:none;padding:0in 0in 0in 0in"></td>
      </tr>
@@ -263,7 +263,7 @@
        <tr style="mso-yfti-irow:1">
         <td width="21" style="width:15.75pt;padding:0in 0in 0in 0in"></td>
         <td width="399" style="width:299.25pt;padding:0in 0in 0in 0in">
-        <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:9.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="http://www.Joybuy.co.uk/${item.product.name}"><span style="color:#1E4E8E;text-decoration:none;text-underline:none">
+        <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:9.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="http://www.honeybuy.com/${item.product.name}"><span style="color:#1E4E8E;text-decoration:none;text-underline:none">
 		${item.product.title}
 		</span></a><br><o:p></o:p></span></p>
         </td>
@@ -429,7 +429,7 @@
       <td style="border:none;padding:0in 0in 0in 0in">
       <p align="center" class="MsoNormal" style="margin:0in;margin-bottom:.0001pt;
       text-align:center"><span style="font-size:9.0pt;mso-fareast-font-family:
-      &quot;Times New Roman&quot;"><a href="http://www.Joybuy.co.uk"><span style="text-decoration:none;text-underline:none"><img border="0" id="_x0000_i1027" src="http://cloud.lbox.me/images/wholesale/201102/24159/en_01.jpg"></span></a><o:p></o:p></span></p>
+      &quot;Times New Roman&quot;"><a href="http://www.honeybuy.com"><span style="text-decoration:none;text-underline:none"><img border="0" id="_x0000_i1027" src="http://cloud.lbox.me/images/wholesale/201102/24159/en_01.jpg"></span></a><o:p></o:p></span></p>
       </td>
       <td style="border:none;padding:0in 0in 0in 0in">
       <p align="center" class="MsoNormal" style="margin:0in;margin-bottom:.0001pt;
@@ -439,7 +439,7 @@
      </tr>
      <tr style="mso-yfti-irow:2">
       <td style="border:none;padding:7.5pt 16.5pt 7.5pt 16.5pt">
-      <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:9.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="http://www.Joybuy.co.uk">Subscribe To Our Newsletter &amp; Win Amazing Prizes&gt;&gt;</a> <o:p></o:p></span></p>
+      <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:9.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="http://www.honeybuy.com">Subscribe To Our Newsletter &amp; Win Amazing Prizes&gt;&gt;</a> <o:p></o:p></span></p>
       </td>
       <td style="border:none;padding:7.5pt 16.5pt 7.5pt 16.5pt">
       <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:9.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="http://www.facebook.com/honeybuy">Join Us On Facebook For Coupons, Games, &amp; More! &gt;&gt;</a> <o:p></o:p></span></p>
@@ -466,7 +466,7 @@
     text-align:center"><span style="font-size:9.0pt;mso-fareast-font-family:
     &quot;Times New Roman&quot;;color:#646464"><br>
     <strong>PLEASE DO NOT REPLY to this email! If you have any question, Please
-    <a href="mailto:service@Joybuy.co.uk">Contact Us </a>here</strong>. <o:p></o:p></span></p>
+    <a href="mailto:service@honeybuy.com">Contact Us </a>here</strong>. <o:p></o:p></span></p>
     </td>
     <td width="22" style="width:16.5pt;padding:0in 0in 0in 0in;height:37.5pt"></td>
    </tr>
@@ -475,9 +475,9 @@
     <td style="padding:0in 0in 0in 0in;height:15.0pt">
     <p align="center" class="MsoNormal" style="margin:0in;margin-bottom:.0001pt;
     text-align:center"><span style="font-size:9.0pt;mso-fareast-font-family:
-    &quot;Times New Roman&quot;;color:#646464">Copyright&copy; 2012 Joybuy.co.uk; Inc. All
-    Rights Reserved. | <a href="http://www.Joybuy.co.uk/c/Terms-Of-Use">Terms
-    of Use </a>| <a href="http://www.Joybuy.co.uk/c/Privacy-Policy">Privacy
+    &quot;Times New Roman&quot;;color:#646464">Copyright&copy; 2012 HoneyBuy.com; Inc. All
+    Rights Reserved. | <a href="http://www.honeybuy.com/c/Terms-Of-Use">Terms
+    of Use </a>| <a href="http://www.honeybuy.com/c/Privacy-Policy">Privacy
     Policy </a><o:p></o:p></span></p>
     </td>
     <td width="22" style="width:16.5pt;padding:0in 0in 0in 0in;height:15.0pt"></td>

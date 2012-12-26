@@ -1,3 +1,17 @@
 		<#include "includes/f1.hpl">
+		
+		<script type="text/javascript">
+			if( top!=this || (self && self.frameElement && self.frameElement.tagName=="IFRAME")){
+				try{
+					jq(window.parent.document).find("#main_box").html(jq(window.parent.frames[0].document).find("#main_box"))
+					jq(window.document).scrollTop(0);
+				}catch(e){
+					console.log("##########");
+				}
+			}
+			
+			
+
+		</script>
 	</body>
 </html>

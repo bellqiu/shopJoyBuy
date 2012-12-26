@@ -12,7 +12,7 @@
    </tr>
    <tr style="mso-yfti-irow:2;mso-yfti-lastrow:yes">
 <td style="padding:0in 0in 0in 0in">
-    <p style="margin:0in;margin-bottom:.0001pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><img border="0" id="_x0000_i1026" src="https://www.Joybuy.co.uk/image/4614200824386.jpg"><o:p></o:p></span></p>
+    <p style="margin:0in;margin-bottom:.0001pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><img border="0" id="_x0000_i1026" src="https://www.honeybuy.com/image/4614200824386.jpg"><o:p></o:p></span></p>
     </td>
     <td style="padding:0in 0in 0in 0in">
     <td style="padding:0in 0in 0in 0in">
@@ -73,13 +73,13 @@
 	  ,</span></strong><span style="font-size:9.0pt"><o:p></o:p></span></p>
       <p style="margin-top:7.5pt;margin-right:0in;margin-bottom:7.5pt;
       margin-left:0in;line-height:13.5pt;paading: 0"><span style="font-size:
-      11.0pt">Thank you for ordering from Joybuy.co.uk! We have received your
+      11.0pt">Thank you for ordering from HoneyBuy.com! We have received your
       order and are awaiting payment confirmation.<o:p></o:p></span></p>
       <p style="margin-top:7.5pt;margin-right:0in;margin-bottom:7.5pt;
       margin-left:0in;line-height:13.5pt;paading: 0"><span style="font-size:
       11.0pt">If you have already completed your payment, you should receive a
       "Payment Confirmation" email within 1 working day and at that
-      time, we will begin to process <a href="http://www.Joybuy.co.uk/orders?id=${order.name}">your order</a>.<o:p></o:p></span></p>
+      time, we will begin to process <a href="http://www.honeybuy.com/orders?id=${order.name}">your order</a>.<o:p></o:p></span></p>
    </td>
       <td width="22" valign="top" style="width:16.5pt;border:none;padding:0in 0in 0in 0in"></td>
      </tr>
@@ -262,7 +262,7 @@
        <tr style="mso-yfti-irow:1">
         <td width="21" style="width:15.75pt;padding:0in 0in 0in 0in"></td>
         <td width="399" style="width:299.25pt;padding:0in 0in 0in 0in">
-        <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:9.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="http://www.Joybuy.co.uk/${item.product.name}"><span style="color:#1E4E8E;text-decoration:none;text-underline:none">
+        <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:9.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="http://www.honeybuy.com/${item.product.name}"><span style="color:#1E4E8E;text-decoration:none;text-underline:none">
 		${item.product.title}
 		</span></a><br><o:p></o:p></span></p>
         </td>
@@ -389,14 +389,14 @@ Like Honeybuy on Facebook</td>
 </table>
     <table width="500" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><a href="http://www.facebook.com/HoneyBuyCity" target="_blank"><img title="Like Honeybuy on Facebook" alt="Like Honeybuy on Facebook" src="http://www.Joybuy.co.uk/style/image/pic/facebook_32.png" border="0" /></a></td>
-    <td><a href="http://plus.google.com/109978880912693970020/posts?prsr=3" target="_blank"><img width="32" height="32" title="Honeybuy Google+" alt="Honeybuy Google+" src="http://www.Joybuy.co.uk/style/image/pic/gplus-32.png" border="0" /></a></td>
-  <td><a href="http://twitter.com/HoneyBuy" target="_blank"><img width="32" height="32" title="Follow Honeybuy on Twitter" alt="Follow Honeybuy on Twitter" src="http://www.Joybuy.co.uk/style/image/pic/twitter_32.png" border="0"/></a></td>
-  <td><a rel="nofollow" target="_blank" href="http://www.linkedin.com/in/honeybuy"><img width="32" height="32" title="Honeybuy Linkedin" alt="Hoenybuy Linkedin" src="http://www.Joybuy.co.uk/style/image/pic/linkedin_32.png" border="0"></a></td>
-<td><a rel="nofollow" target="_blank" href="http://www.youtube.com/user/honeybuyshow"><img width="32" height="32" title="Honeybuy Youtube" alt="Honeybuy Youtube" src="http://www.Joybuy.co.uk/style/image/pic/youtube-logo.jpg" border="0"/></a></td>
-    <td><a rel="nofollow" target="_blank" href="http://pinterest.com/honeybuy/"><img width="32" height="32" title="Honeybuy Pinterest" alt="Honeybuy Pinterest" src="http://www.Joybuy.co.uk/style/image/pic/big-p-button.png" border="0"></a></td>
-    <td><a rel="nofollow" target="_blank" href="http://www.flickr.com/photos/honey-buy"><img width="33" height="32" title="Honeybuy Flickr" alt="Honeybuy Flickr" src="http://www.Joybuy.co.uk/style/image/pic/icon_flickr.png" border="0"></a></td>
-   <td><a rel="nofollow" target="_blank" href="http://honeybuy.blogspot.com/"><img width="32" height="32" title="Honeybuy Blogspot" alt="Honeybuy Blogspot" src="http://www.Joybuy.co.uk/style/image/pic/icon.png" border="0"></a></td>
+    <td><a href="http://www.facebook.com/HoneyBuyCity" target="_blank"><img title="Like Honeybuy on Facebook" alt="Like Honeybuy on Facebook" src="http://www.honeybuy.com/style/image/pic/facebook_32.png" border="0" /></a></td>
+    <td><a href="http://plus.google.com/109978880912693970020/posts?prsr=3" target="_blank"><img width="32" height="32" title="Honeybuy Google+" alt="Honeybuy Google+" src="http://www.honeybuy.com/style/image/pic/gplus-32.png" border="0" /></a></td>
+  <td><a href="http://twitter.com/HoneyBuy" target="_blank"><img width="32" height="32" title="Follow Honeybuy on Twitter" alt="Follow Honeybuy on Twitter" src="http://www.honeybuy.com/style/image/pic/twitter_32.png" border="0"/></a></td>
+  <td><a rel="nofollow" target="_blank" href="http://www.linkedin.com/in/honeybuy"><img width="32" height="32" title="Honeybuy Linkedin" alt="Hoenybuy Linkedin" src="http://www.honeybuy.com/style/image/pic/linkedin_32.png" border="0"></a></td>
+<td><a rel="nofollow" target="_blank" href="http://www.youtube.com/user/honeybuyshow"><img width="32" height="32" title="Honeybuy Youtube" alt="Honeybuy Youtube" src="http://www.honeybuy.com/style/image/pic/youtube-logo.jpg" border="0"/></a></td>
+    <td><a rel="nofollow" target="_blank" href="http://pinterest.com/honeybuy/"><img width="32" height="32" title="Honeybuy Pinterest" alt="Honeybuy Pinterest" src="http://www.honeybuy.com/style/image/pic/big-p-button.png" border="0"></a></td>
+    <td><a rel="nofollow" target="_blank" href="http://www.flickr.com/photos/honey-buy"><img width="33" height="32" title="Honeybuy Flickr" alt="Honeybuy Flickr" src="http://www.honeybuy.com/style/image/pic/icon_flickr.png" border="0"></a></td>
+   <td><a rel="nofollow" target="_blank" href="http://honeybuy.blogspot.com/"><img width="32" height="32" title="Honeybuy Blogspot" alt="Honeybuy Blogspot" src="http://www.honeybuy.com/style/image/pic/icon.png" border="0"></a></td>
   </tr>
 </table>
 </div>
@@ -411,7 +411,7 @@ Like Honeybuy on Facebook</td>
     text-align:center"><span style="font-size:9.0pt;mso-fareast-font-family:
     &quot;Times New Roman&quot;;color:#646464"><br>
     <strong>PLEASE DO NOT REPLY to this email! If you have any question, Please
-    <a href="mailto:service@Joybuy.co.uk">Contact Us </a>here</strong>. <o:p></o:p></span></p>
+    <a href="mailto:service@honeybuy.com">Contact Us </a>here</strong>. <o:p></o:p></span></p>
     </td>
     <td width="22" style="width:16.5pt;padding:0in 0in 0in 0in;height:37.5pt"></td>
    </tr>
@@ -420,9 +420,9 @@ Like Honeybuy on Facebook</td>
     <td style="padding:0in 0in 0in 0in;height:15.0pt">
     <p align="center" class="MsoNormal" style="margin:0in;margin-bottom:.0001pt;
     text-align:center"><span style="font-size:9.0pt;mso-fareast-font-family:
-    &quot;Times New Roman&quot;;color:#646464">Copyright&copy; 2012 Joybuy.co.uk; Inc. All
-    Rights Reserved. | <a href="http://www.Joybuy.co.uk/c/Terms-Of-Use">Terms
-    of Use </a>| <a href="http://www.Joybuy.co.uk/c/Privacy-Policy">Privacy
+    &quot;Times New Roman&quot;;color:#646464">Copyright&copy; 2012 HoneyBuy.com; Inc. All
+    Rights Reserved. | <a href="http://www.honeybuy.com/c/Terms-Of-Use">Terms
+    of Use </a>| <a href="http://www.honeybuy.com/c/Privacy-Policy">Privacy
     Policy </a><o:p></o:p></span></p>
     </td>
     <td width="22" style="width:16.5pt;padding:0in 0in 0in 0in;height:15.0pt"></td>
