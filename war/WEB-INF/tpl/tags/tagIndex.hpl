@@ -1,6 +1,6 @@
 <#assign pageKeywords = " ${currentKeyword!''}, Wholesale with Tag ${currentKeyword!''} UK, JoyBuy.co.uk ">
-<#assign pageDescription = "Global online shopping with tag ${currentKeyword!''} with big discount from JoyBuy.co.uk! Quality Guaranteed! Free Shipping! - page ${currentIndexKeyPage}">
-<#assign pageTitle = "${currentKeyword!''}, Shop by Tag List ${currentKeyword!''} UK from JoyBuy.co.uk - page ${currentIndexKeyPage}">
+<#assign pageDescription = "Global online shopping with tag ${currentKeyword!''} with big discount from JoyBuy.co.uk! Quality Guaranteed! Free Shipping! - page ${pageNum}">
+<#assign pageTitle = "${currentKeyword!''}, Shop by Tag List ${currentKeyword!''} UK from JoyBuy.co.uk - page ${pageNum}">
 
 <#include "/header/top.hpl">
 
