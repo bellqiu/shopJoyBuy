@@ -84,7 +84,7 @@ public class ProductCreation extends Composite{
 		setProduct(product);
 		TabProduct tp= new TabProduct();
 		relatedProduct.setComponent(tp);
-		relatedProduct.setShowName(false);
+		relatedProduct.setShowName(true);
 		relatedProduct.setShowButton(false);
 		relatedProduct.setShowPicker(false);
 		
