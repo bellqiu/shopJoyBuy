@@ -6,7 +6,7 @@
 <div class="item_goods_info_box_top">
 	<div class="item_box_left_normal">
 		<c:if test="${pageForm.pageProperties.productDetail.categories[0].name ne 'Wedding-Accessories' && 
-						(ancester eq 'Wedding-Apparel' || ancester eq 'Special-Occasion-Dresses')}">
+						(ancester eq 'Wedding-Apparel' || ancester eq 'Special-Occasion-Dresses' || ancester eq 'Wedding-Outfits-UK')}">
 		<jsp:include page="customize_dress.jsp"></jsp:include>
 		</c:if>
 		<c:if test="${(pageForm.pageProperties.productDetail.categories[0].name eq 'Business-Pants') || 
