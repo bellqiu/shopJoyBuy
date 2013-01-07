@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import com.spshop.utils.Constants;
+
 public class Order extends Component{
 
 	/**
@@ -818,7 +820,7 @@ public class Order extends Component{
 	}
 	
 	protected String getOrderId(){
-		String id = "";
+		String id = Constants.ORDER_PREFIX;
 		Date today = new Date();
 		int y= today.getYear()%100;
 		int m = today.getMonth() + 1;

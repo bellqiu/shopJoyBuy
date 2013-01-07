@@ -269,4 +269,6 @@ public class Constants {
     public static final String ADDITIONAL_PRODUCTS_IMAGE_SIZE_INFO = "restProductsImageSizeInfo";
     
     public static final String TAB_PRODUCTS_IMAGE_SIZE_INFO = "tabImageInfo";
+    
+    public static final String ORDER_PREFIX = "JY";
 }

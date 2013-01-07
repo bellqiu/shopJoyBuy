@@ -15,7 +15,6 @@ import org.apache.log4j.Logger;
 
 import com.spshop.service.factory.ServiceFactory;
 import com.spshop.service.intf.TagsService;
-import com.spshop.web.TagsController;
 
 public class TagsServiceImpl implements TagsService {
 	
