@@ -138,7 +138,7 @@
 				<span><label><b>Processing Time: </b>8-12 days for custom-made items, 1-3 Days for other</br><b>Shipping Time: </b>3-5 business days.
 				<a href="<%=Constants.HTTP_PROTOCOL %>${pageForm.site.domain}/c/Shipping-Information">See Details...</a></label></span>
 				<a href="${crossSales[crossSaleLink]}"> 
-					<img style="width: 100%;" alt="Click and buy the this!" src="${crossSales[crossSaleImg]}">
+					<img style="width: 100%;" alt="Click and buy on joybuy.co.uk!" src="${crossSales[crossSaleImg]}">
 				</a>
 		</div>
 
