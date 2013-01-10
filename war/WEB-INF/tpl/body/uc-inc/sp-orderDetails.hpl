@@ -1,5 +1,6 @@
 <#if tradeInfo ??>
-<p style="color:red;text-align: center;color: red;border: 1px dotted red;margin: 0 240px;font-size: 20px;padding: 30px;">
+<#if tradInfo=='Failed'>
+<p style="color:red;color: red;border: 1px dotted red;font-size: 20px;padding: 30px;">
 Notice: Your payment has been processing, please go to your bank account to check if you've been charged after 24 hours.
 We will send you an Order Received and Payment Confirmation email when we receive your payment.
 If you haven't been charged, please try again or contact your bank.
@@ -7,6 +8,11 @@ If you haven't been charged, please try again or contact your bank.
 If you have any questions, please contact us (mailto: service@hoenybuy.com). We will be honored to serve you.
 Thanks again for shopping on honeybuy.com
 </p>
+<#else>
+	<H1 style="color:red;text-align: center;color: red;border: 1px dotted red;margin: 0 240px;font-size: 20px;padding: 30px;">
+		Payment Status: Successful
+	</H1>
+</#if>
 </#if>
 <form action="/uc/shoppingCart_payment" method="post">
 <div class="scart_con">
