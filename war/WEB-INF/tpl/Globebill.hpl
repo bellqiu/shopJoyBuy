@@ -2,7 +2,7 @@
 <#assign pageDescription = "Pay by Globebill"> 
 <#assign pageTitle = "Pay by Globebill">
 <#include "/header/top_clean.hpl">
-<p><img alt="Loading" src="${siteView.host}/css/loading_img_s.gif"></p>
+<p><img style="margin-left: 300px;margin-top: 160px" alt="Loading" src="/css/loading_img_s.gif"></p>
 <div>
 	<#assign defaultOrder = currentOrder>
 	<!-- 
@@ -12,7 +12,7 @@
 	 -->
 	 
 	<form name="payForm"
-		action="https://payment.secure-checkoutserver.com/Interface"
+		action="https://pay.securesslgateway.com/Interface"
 		method="post" id="paypaysubmitForm">
 		<input type="hidden" name="merNo" value="10246" />
 		 <input type="hidden" name="gatewayNo" value="10246001" /> 

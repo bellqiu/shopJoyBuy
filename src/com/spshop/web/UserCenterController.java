@@ -324,7 +324,10 @@ public class UserCenterController extends BaseController {
 			order = ServiceFactory.getService(OrderService.class).getOrderById(orderId);
 		}
 		
+		boolean isRePay = true;
+		
 		if(null == order){
+			isRePay = false;
 			order = getUserView().getCart().getOrder();
 			getUserView().getCart().setOrder(new Order());
 		}
@@ -359,7 +362,7 @@ public class UserCenterController extends BaseController {
 
 			root.put("currencyRate", currencyRate);
 			root.put(SITE_VIEW, siteView);
-			if(StringUtils.isBlank(null)){
+			if(!isRePay){
 				new Thread() {
 					public void run() {
 						try {
@@ -376,61 +379,61 @@ public class UserCenterController extends BaseController {
 			}
 
 			if ("YoursPay".equals(payType)) {
-				/** è®¢å�•ä¿¡æ�¯ **/
+				/** 订单信息 **/
 
 				String MerNo = "1624";
-				/** <å¿…å¡«>--å•†æˆ·å�·. **/
+				/** <必填>--商户号. **/
 
 				String BillNo = order.getName();
-				/** <å¿…å¡«>--è®¢å�•å�·. ä¸€ä¸ªç½‘åº—å�ªèƒ½äº§ç”Ÿå”¯ä¸€çš„è®¢å�•å�·,ä¸�èƒ½å‡ºçŽ°é‡�å¤�,å�¯ä»¥æ˜¯å­—æ¯�å’Œæ•°å­—çš„ç»„å�ˆ. **/
+				/** <必填>--订单号. 一个网店只能产生唯一的订单号,不能出现重复,可以是字母和数字的组合. **/
 
 				String MD5key = "YNWNUrlJ";
-				/** <å¿…å¡«>--å¯†é’¥. å�¯ä»¥åœ¨YourSpayå•†æˆ·å�Žå�°æŸ¥è¯¢å’Œä¿®æ”¹,ä¸ºäº†æ”¯ä»˜å®‰å…¨,å»ºè®®ä¸€æ®µæ—¶é—´æ›´æ�¢ä¸€æ¬¡. **/
+				/** <必填>--密钥. 可以在YourSpay商户后台查询和修改,为了支付安全,建议一段时间更换一次. **/
 
 				String Amount = new NumberFormat("##0.##").getNumberFormat()
 						.format((order.getTotalPrice() - order
 								.getCouponCutOff()) * currencyRate);
-				/** <å¿…å¡«>--è®¢å�•æ€»é‡‘é¢�.åŒ…æ‹¬è¿�è´¹åœ¨å†…. å¿…é¡»å�ªèƒ½ä¸ºæ•°å­—,å¹¶ä¸”å¤§äºŽ0,æœ€å¤šä¸ºå°�æ•°ç‚¹ä¸¤ä½�. **/
+				/** <必填>--订单总金额.包括运费在内. 必须只能为数字,并且大于0,最多为小数点两位. **/
 
 				String Freight = new NumberFormat("##0.##").getNumberFormat()
 						.format((order.getDePrice()) * currencyRate);
-				/** <å¿…å¡«>--è¿�è´¹. å¿…é¡»å�ªèƒ½ä¸ºæ•°å­—,æœ€å¤šä¸ºå°�æ•°ç‚¹ä¸¤ä½�,å¦‚æžœæ— è¿�è´¹,å�¯ä»¥ä¸ºè®¾ä¸º0. **/
+				/** <必填>--运费. 必须只能为数字,最多为小数点两位,如果无运费,可以为设为0. **/
 
 				String CurrencyCode = order.getCurrency();
-				/** <å¿…å¡«>--å¸�ç§�. ç¾Žå…ƒ:USD,è‹±é•‘:GBP,æ¬§å…ƒ:EUR,åŠ å…ƒ:CAD,æ¾³å…ƒ:AUD,æ—¥å…ƒ:JPY. **/
+				/** <必填>--币种. 美元:USD,英镑:GBP,欧元:EUR,加元:CAD,澳元:AUD,日元:JPY. **/
 
 				/*
-				 * ä»¥ä¸‹ä¸ºè´¦å�•ä¿¡æ�¯.ä¸ºäº†è®©å®¢æˆ·åœ¨æ”¯ä»˜é¡µé�¢æ— éœ€é‡�å¤�å¡«å†™è´¦å�•ä¿¡æ�¯,å»ºè®®è´¦å�•ä¿¡æ�¯å°½å�¯èƒ½èŽ·å�–,å¦‚æžœç½‘åº—ç³»ç»Ÿæ— è´¦å�•ä¿¡æ�¯,å»ºè®®ç”¨æ”¶è´§ä¿¡æ�¯ä»£æ›¿
+				 * 以下为账单信息.为了让客户在支付页面无需重复填写账单信息,建议账单信息尽可能获取,如果网店系统无账单信息,建议用收货信息代替
 				 * .
 				 */
 
 				String BFirstName = order.getUser().getFirstName() == null ? ""
 						: order.getUser().getFirstName();
-				/** <å�¯é€‰>--æŒ�å�¡äººå§“. å¦‚æžœç½‘åº—å�ªæœ‰ä¸€ä¸ªå…¨å��,å»ºè®®æŠŠå…¨å��å¯¹å§“å’Œå��å�„èµ‹å€¼ä¸€ä»½. **/
+				/** <可选>--持卡人姓. 如果网店只有一个全名,建议把全名对姓和名各赋值一份. **/
 
 				String BLastName = order.getUser().getLastName() == null ? ""
 						: order.getUser().getLastName();
-				/** <å�¯é€‰>--æŒ�å�¡äººå��. å¦‚æžœç½‘åº—å�ªæœ‰ä¸€ä¸ªå…¨å��,å»ºè®®æŠŠå…¨å��å¯¹å§“å’Œå��å�„èµ‹å€¼ä¸€ä»½. **/
+				/** <可选>--持卡人名. 如果网店只有一个全名,建议把全名对姓和名各赋值一份. **/
 
 				String Email = order.getUser().getEmail();
-				/** <å¿…å¡«>--æŒ�å�¡äººé‚®ç®±. ç”¨äºŽæ”¯ä»˜æˆ�åŠŸæˆ–è€…å¤±è´¥,å�‘å®¢æˆ·å�‘é€�æ”¯ä»˜æˆ�åŠŸ/å¤±è´¥æ��ç¤ºé‚®ä»¶. **/
+				/** <必填>--持卡人邮箱. 用于支付成功或者失败,向客户发送支付成功/失败提示邮件. **/
 
 				String Phone = order.getUser().getBillingAddress().getPhone();
-				/** <å�¯é€‰>--æŒ�å�¡äººç”µè¯�. **/
+				/** <可选>--持卡人电话. **/
 
 				String BillAddress = order.getUser().getBillingAddress()
 						.getAddress1() == null ? "" : order.getUser()
 						.getBillingAddress().getAddress1();
-				/** <å�¯é€‰>--è¯¦ç»†åœ°å�€. **/
+				/** <可选>--详细地址. **/
 
 				String BillCity = order.getUser().getBillingAddress().getCity() == null ? ""
 						: order.getUser().getBillingAddress().getCity();
-				/** <å�¯é€‰>--åŸŽå¸‚. **/
+				/** <可选>--城市. **/
 
 				String BillState = order.getUser().getBillingAddress()
 						.getStateProvince() == null ? "" : order.getUser()
 						.getBillingAddress().getStateProvince();
-				/** <å�¯é€‰>--çœ�ä»½/å·ž. **/
+				/** <可选>--省份/州. **/
 
 				String BillCountry = order.getUser().getBillingAddress()
 						.getCountry() == 0 ? "" : ServiceFactory
@@ -438,30 +441,30 @@ public class UserCenterController extends BaseController {
 						.getCountryById(
 								order.getUser().getBillingAddress()
 										.getCountry()).getAbbrCode();
-				/** <å�¯é€‰>--å›½å®¶. å›½å®¶å��ç§°æœ€å¥½ç”¨å¤§å†™,è€Œä¸”æ˜¯å›½å®¶ç®€ç§°. **/
+				/** <可选>--国家. 国家名称最好用大写,而且是国家简称. **/
 
 				String BillZip = order.getUser().getBillingAddress()
 						.getPostalCode() == null ? "" : order.getUser()
 						.getBillingAddress().getPostalCode();
-				/** <å�¯é€‰>--é‚®ç¼–. **/
+				/** <可选>--邮编. **/
 
 				if (order.getUser().isBillingSameAsPrimary()) {
 					Phone = order.getUser().getPrimaryAddress().getPhone();
-					/** <å�¯é€‰>--æŒ�å�¡äººç”µè¯�. **/
+					/** <可选>--持卡人电话. **/
 
 					BillAddress = order.getUser().getPrimaryAddress()
 							.getAddress1() == null ? "" : order.getUser()
 							.getPrimaryAddress().getAddress1();
-					/** <å�¯é€‰>--è¯¦ç»†åœ°å�€. **/
+					/** <可选>--详细地址. **/
 
 					BillCity = order.getUser().getPrimaryAddress().getCity() == null ? ""
 							: order.getUser().getPrimaryAddress().getCity();
-					/** <å�¯é€‰>--åŸŽå¸‚. **/
+					/** <可选>--城市. **/
 
 					BillState = order.getUser().getPrimaryAddress()
 							.getStateProvince() == null ? "" : order.getUser()
 							.getPrimaryAddress().getStateProvince();
-					/** <å�¯é€‰>--çœ�ä»½/å·ž. **/
+					/** <可选>--省份/州. **/
 
 					BillCountry = order.getUser().getPrimaryAddress()
 							.getCountry() == 0 ? "" : ServiceFactory
@@ -469,65 +472,65 @@ public class UserCenterController extends BaseController {
 							.getCountryById(
 									order.getUser().getPrimaryAddress()
 											.getCountry()).getAbbrCode();
-					/** <å�¯é€‰>--å›½å®¶. å›½å®¶å��ç§°æœ€å¥½ç”¨å¤§å†™,è€Œä¸”æ˜¯å›½å®¶ç®€ç§°. **/
+					/** <可选>--国家. 国家名称最好用大写,而且是国家简称. **/
 
 					BillZip = order.getUser().getPrimaryAddress()
 							.getPostalCode() == null ? "" : order.getUser()
 							.getPrimaryAddress().getPostalCode();
 				}
 
-				/** æ”¶è´§äººä¿¡æ�¯ **/
+				/** 收货人信息 **/
 
 				String SFirstName = BFirstName;
-				/** <å¿…å¡«>--æ”¶è´§äººå§“. å¦‚æžœç½‘åº—å�ªæœ‰ä¸€ä¸ªå…¨å��,å»ºè®®æŠŠå…¨å��å¯¹å§“å’Œå��å�„èµ‹å€¼ä¸€ä»½. **/
+				/** <必填>--收货人姓. 如果网店只有一个全名,建议把全名对姓和名各赋值一份. **/
 
 				String SLastName = BLastName;
-				/** <å¿…å¡«>--æ”¶è´§äººå��. å¦‚æžœç½‘åº—å�ªæœ‰ä¸€ä¸ªå…¨å��,å»ºè®®æŠŠå…¨å��å¯¹å§“å’Œå��å�„èµ‹å€¼ä¸€ä»½. **/
+				/** <必填>--收货人名. 如果网店只有一个全名,建议把全名对姓和名各赋值一份. **/
 
 				String ShipAddress = "00000";
-				/** <å¿…å¡«>--è¯¦ç»†åœ°å�€. **/
+				/** <必填>--详细地址. **/
 
 				String ShipCity = "00000";
-				/** <å¿…å¡«>--åŸŽå¸‚. **/
+				/** <必填>--城市. **/
 
 				String ShipState = "00000";
-				/** <å�¯é€‰>--çœ�ä»½/å·ž. **/
+				/** <可选>--省份/州. **/
 
 				String ShipCountry = "00000";
-				/** <å¿…å¡«>--å›½å®¶. å›½å®¶å��ç§°æœ€å¥½ç”¨å¤§å†™,è€Œä¸”æ˜¯å›½å®¶ç®€ç§°. **/
+				/** <必填>--国家. 国家名称最好用大写,而且是国家简称. **/
 
 				String ShipZip = "00000";
-				/** <å¿…å¡«>--é‚®ç¼–. **/
+				/** <必填>--邮编. **/
 
 				String ShipEmail = order.getUser().getEmail();
-				/** <å�¯é€‰>--é‚®ç®±. **/
+				/** <可选>--邮箱. **/
 
 				String ShipPhone = order.getUser().getPrimaryAddress()
 						.getPhone();
-				/** <å�¯é€‰>--ç”µè¯�. **/
+				/** <可选>--电话. **/
 
-				/** é€šé�“ä¿¡æ�¯ **/
+				/** 通道信息 **/
 				String Language = "2";
-				/** <å¿…å¡«>--é€šé�“å�‚æ•°,é�žè¯­è¨€,å�ªèƒ½ä¸ºå›ºå®šå€¼:2. **/
+				/** <必填>--通道参数,非语言,只能为固定值:2. **/
 
 				String LangCode = "en";
-				/** <å�¯é€‰>--æ”¯ä»˜é¡µé�¢è¯­è¨€. è‹±æ–‡:en,æ³•è¯­:fr,æ„�å¤§åˆ©è¯­:it,å¾·è¯­:de,æ—¥è¯­:ja,é»˜è®¤ä¸ºè‹±æ–‡(en). **/
+				/** <可选>--支付页面语言. 英文:en,法语:fr,意大利语:it,德语:de,日语:ja,默认为英文(en). **/
 
 				String Currency = "15";
-				/** <å¿…å¡«>--é€šé�“å�‚æ•°.é�žå¸�ç§�,å�ªèƒ½ä¸ºå›ºå®šå€¼:15. **/
+				/** <必填>--通道参数.非币种,只能为固定值:15. **/
 
 				String ReturnURL = "http://www.honeybuy.com//uc/yoursPayResults";
-				/** <å¿…å¡«>--è¿”å›žé¡µé�¢. æ”¯ä»˜å®Œæˆ�å�Ž,å°†è¿”å›žåˆ°æ­¤é¡µé�¢,æ��ç¤ºæ”¯ ä»˜çš„ç»“æžœ(æˆ�åŠŸ/å¤±è´¥). **/
+				/** <必填>--返回页面. 支付完成后,将返回到此页面,提示支 付的结果(成功/失败). **/
 
 				String Remark = "";
-				/** <å�¯é€‰>--å¤‡æ³¨. ç½‘åº—ä¸­å®¢æˆ·å¡«å†™çš„å¤‡æ³¨. **/
+				/** <可选>--备注. 网店中客户填写的备注. **/
 
 				/**
-				 * <å¿…å¡«>--è´§ç‰©ä¿¡æ�¯.å¦‚æžœè´­ç‰©å¤šä¸ª,é€šè¿‡å¾ªçŽ¯é��åŽ†,æŠŠæ‰€éœ€çš„æ¯�ä¸ªå•†å“�çš„å��ç§°(GoodsName),æ•°é‡�(Qty)å�•ä»·(
-				 * Price)è¿›è¡Œè¿žç»“
+				 * <必填>--货物信息.如果购物多个,通过循环遍历,把所需的每个商品的名称(GoodsName),数量(Qty)单价(
+				 * Price)进行连结
 				 **/
 				/**
-				 * æ¯”å¦‚ï¼š<Goods><GoodsName>å•†å“�å��</GoodsName><Qty>æ•°é‡�</Qty><Price>å�•ä»·</
+				 * 比如：<Goods><GoodsName>商品名</GoodsName><Qty>数量</Qty><Price>单价</
 				 * Price></Goods>
 				 **/
 				StringBuilder GoodsListInfo = new StringBuilder();
@@ -540,15 +543,15 @@ public class UserCenterController extends BaseController {
 						.append("</Qty><Price>").append("20")
 						.append("</Price></Goods>");
 
-				/** å�‚æ•°ç»„å�ˆ, é¡ºåº�ä¸�èƒ½é¢ å€’ **/
+				/** 参数组合, 顺序不能颠倒 **/
 				StringBuilder md5src = new StringBuilder();
 				md5src = md5src.append(MerNo).append(BillNo).append(Freight)
 						.append(Amount).append(CurrencyCode).append(ReturnURL)
 						.append(Email).append(MD5key);
-				/** å¯¹å�‚æ•°ç»„å�ˆå­—ç¬¦ä¸²è¿›è¡Œmd5åŠ å¯†,å¹¶ä¸”è½¬æ�¢ä¸ºå¤§å†™ **/
+				/** 对参数组合字符串进行md5加密,并且转换为大写 **/
 				String MD5info = Encrypt.MD5(md5src.toString()).toUpperCase();
 
-				/** æŠŠå�‚æ•°ç”¨xmlç»„å�ˆæˆ�å­—ç¬¦ä¸² **/
+				/** 把参数用xml组合成字符串 **/
 				StringBuilder basexml = new StringBuilder();
 				basexml = basexml
 						.append("<?xml version='1.0' encoding='UTF-8' ?><Order>");
@@ -619,32 +622,32 @@ public class UserCenterController extends BaseController {
 				return "yoursPay";
 			} else if ("alipay".equals(payType)) {
 
-				// //////////////////////////////////è¯·æ±‚å�‚æ•°//////////////////////////////////////
+				// //////////////////////////////////请求参数//////////////////////////////////////
 
-				// æœ�åŠ¡å™¨å¼‚æ­¥é€šçŸ¥é¡µé�¢è·¯å¾„
+				// 服务器异步通知页面路径
 				String notify_url = getSiteView().getHost()+"/uc/aliPayAsyncResults";
-				// éœ€http://æ ¼å¼�çš„å®Œæ•´è·¯å¾„ï¼Œä¸�å…�è®¸åŠ ?id=123è¿™ç±»è‡ªå®šä¹‰å�‚æ•°
+				// 需http://格式的完整路径，不允许加?id=123这类自定义参数
 
-				// é¡µé�¢è·³è½¬å�Œæ­¥é€šçŸ¥é¡µé�¢è·¯å¾„
+				// 页面跳转同步通知页面路径
 				String return_url = getSiteView().getHost()+"/uc/aliPaySyncResults";
-				// éœ€http://æ ¼å¼�çš„å®Œæ•´è·¯å¾„ï¼Œä¸�å…�è®¸åŠ ?id=123è¿™ç±»è‡ªå®šä¹‰å�‚æ•°
+				// 需http://格式的完整路径，不允许加?id=123这类自定义参数
 
-				// å•†æˆ·è®¢å�•å�·
+				// 商户订单号
 				String out_trade_no = order.getName();
-				// å¿…å¡«
+				// 必填
 
-				// è®¢å�•å��ç§°
+				// 订单名称
 				String subject = order.getName();
-				// å¿…å¡«
+				// 必填
 
 				if(null == cardType){
 					cardType = "boc-visa";
 				}
-				// é»˜è®¤ç½‘é“¶
+				// 默认网银
 				String default_bank = cardType/*request.getParameter("default_bank")*/;
-				// å¿…å¡«ï¼Œå¦‚æžœè¦�ä½¿ç”¨å¤–å�¡æ”¯ä»˜åŠŸèƒ½ï¼Œæœ¬å�‚æ•°éœ€èµ‹å€¼ä¸ºâ€œ12.5 é“¶è¡Œåˆ—è¡¨â€�ä¸­çš„å€¼
+				// 必填，如果要使用外卡支付功能，本参数需赋值为“12.5 银行列表”中的值
 				
-				// å…¬ç”¨ä¸šåŠ¡æ‰©å±•å�‚æ•°
+				// 公用业务扩展参数
 				
 				Country customerCountry = ServiceFactory.getService(CountryService.class).getCountryByName(order.getCustomerCountry());
 				
@@ -662,31 +665,31 @@ public class UserCenterController extends BaseController {
 										+"|registration_name^"+order.getUser().getEmail()
 										+"|registration_email^"+order.getUser().getEmail()
 										+"|registration_phone^"+order.getCustomerTelephone();
-				// å¿…å¡«ï¼Œç”¨äºŽå•†æˆ·çš„ç‰¹å®šä¸šåŠ¡ä¿¡æ�¯çš„ä¼ é€’
+				// 必填，用于商户的特定业务信息的传递
 
-				// å�–å®¶æ”¯ä»˜å®�è´¦å�·
+				// 卖家支付宝账号
 				String seller_logon_id = "honeybuy@foxmail.com";
-				// å¿…å¡«
+				// 必填
 
-				// ä»˜æ¬¾é‡‘é¢�
+				// 付款金额
 				String total_fee =  new NumberFormat("##0.##").getNumberFormat().format(order.getTotalPrice() + order.getDePrice());
-				// å¿…å¡«
+				// 必填
 
-				// è®¢å�•æ��è¿°
+				// 订单描述
 
 				String body = "";
 				
-				// å•†å“�å±•ç¤ºåœ°å�€
+				// 商品展示地址
 				String show_url = "www.honeybuy.com/uc/orderDetails?id="+order.getName();
-				// ç©ºå€¼
+				// 空值
 
-				// å¸�ç§�
+				// 币种
 				String currency = /*order.getCurrency()*/"USD";
-				// å¿…å¡«ï¼Œdefault_bankä¸ºboc-visaæˆ–boc-masteræ—¶ï¼Œæ”¯æŒ�USDï¼Œä¸ºboc-jcbæ—¶ï¼Œä¸�æ”¯æŒ�currencyå�‚æ•°ï¼Œå�³é»˜è®¤æ”¯æŒ�RMB
+				// 必填，default_bank为boc-visa或boc-master时，支持USD，为boc-jcb时，不支持currency参数，即默认支持RMB
 
 				// ////////////////////////////////////////////////////////////////////////////////
 
-				// æŠŠè¯·æ±‚å�‚æ•°æ‰“åŒ…æˆ�æ•°ç»„
+				// 把请求参数打包成数组
 				Map<String, String> sParaTemp = new HashMap<String, String>();
 				sParaTemp.put("service", "alipay.trade.direct.forcard.pay");
 				sParaTemp.put("partner", AlipayConfig.partner);
@@ -705,7 +708,7 @@ public class UserCenterController extends BaseController {
 				sParaTemp.put("show_url", show_url);
 				sParaTemp.put("currency", currency);
 
-				// å»ºç«‹è¯·æ±‚
+				// 建立请求
 				String sHtmlText = AlipaySubmit.buildRequest(sParaTemp, "get",
 						"Submit");
 				
@@ -731,8 +734,8 @@ public class UserCenterController extends BaseController {
 		String merNo = "10246";
 		String gatewayNo = "10246001";
 		String signKeyNo = "04d6x2r8";
-		String orderNumber = order.getName();//è®¢å�•å�·
-		//è®¢å�•é‡‘é¢�, ä¸¤ä½�å°�æ•°
+		String orderNumber = order.getName();//订单号
+		//订单金额, 两位小数
 	    String amount = new NumberFormat("##0.##").getNumberFormat().format(getSiteView().getCurrencies().get(order.getCurrency())*(order.getTotalPrice() + order.getDePrice() - order.getCouponCutOff()));
 
 	    String returnUrl = getSiteView().getHost() + "/uc/globebillPayRs";

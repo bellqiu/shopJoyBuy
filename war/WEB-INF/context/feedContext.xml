@@ -12,25 +12,16 @@
 	http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
 	http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
-
 	<aop:aspectj-autoproxy />
-	<bean class="com.spshop.web.interceptor.ModelAttributeAndLoginCheckInjecter"></bean>
+
+	<bean class="com.spshop.web.FeedController"></bean>
+	
 	<bean id="handlerMapping"
 		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
-		<property name="interceptors" ref="viewDataInterceptor"></property>
+		<property name="interceptors">
+			<list>
+				<ref bean="viewDataInterceptor"/>
+			</list>
+		</property>
 	</bean>
-
-	<bean id="viewDataInterceptor" class="com.spshop.web.interceptor.ViewDataInterceptor"></bean>
-
-	<bean id="viewResolver"
-		class="com.spshop.web.view.CustomFreeMarkerViewResolver">
-		<property name="suffix" value=".hpl" />
-	</bean>
-	<bean id="freemarkerConfig"
-		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
-		<property name="templateLoaderPath" value="/WEB-INF/tpl/" />
-		<property name="defaultEncoding" value="UTF-8"></property>
-	</bean>
-
-
 </beans>

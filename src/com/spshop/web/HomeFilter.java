@@ -15,6 +15,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
 /**
@@ -25,9 +26,30 @@ import org.apache.log4j.Logger;
 public class HomeFilter implements Filter{
 	
 	private static final Logger LOGGER = Logger.getLogger(HomeFilter.class);
+	
+	private static final String ENSURE_SCURE_URLS = "securedUrls";
+	
+	private String[] securedURLs = new String[]{};
+	
 
 	@Override
 	public void destroy() {
+		
+	}
+	
+	@Override
+	public void init(FilterConfig config) throws ServletException {
+		
+		String securedUrls = config.getInitParameter(ENSURE_SCURE_URLS);
+		
+		if(StringUtils.isNotBlank(securedUrls)){
+			securedURLs = securedUrls.trim().split(",");
+		}
+		
+		for (int i = 0 ; i<securedURLs.length; i++) {
+			String url = securedURLs[i].trim();
+			securedURLs[i] = url;
+		}
 		
 	}
 
@@ -42,29 +64,49 @@ public class HomeFilter implements Filter{
 		HttpServletResponse httpResp = (HttpServletResponse) response;
 		
 		 String url = httpReq.getRequestURL().toString();
-		 LOGGER.info("Accessing: "+ url);
-		 if(url.matches("(?i)(^http://[^w]{3}.*)(.*)") && !url.matches("(?i)(^http://[\\d]{1,3}.*)(.*)")  ){
-			 url = url.replaceAll("(?i)(^http://)", "http://www.");
-			 if(null != httpReq.getQueryString()){
-				 url = url + "?" + httpReq.getQueryString();
-			 }
-			 LOGGER.info("Redirecting : "+ url);
+		 if(null != httpReq.getQueryString()){
+			 url = url + "?" + httpReq.getQueryString();
+		 }
+		 
+		 //LOGGER.info("Accessing: "+ url);
+		 if(url.matches("(?i)(^http[s]{0,1}://[^w]{3}.*)(.*)") && !url.matches("(?i)(^https]{0,1}://[\\d]{1,3}.*)(.*)")){
+			 
+			 
+			 
+			 url = url.replaceAll("(?i)(^http[s]{0,1}://)", "http://www.");
+			 //LOGGER.info("Redirecting : "+ url);
 			 httpResp.sendRedirect(url);
 			 return;
 		 }
-		
+		 
+		 secureURL(httpReq, httpResp, url);
+		 
 		 chain.doFilter(request, response);
 		
 	}
-
-	@Override
-	public void init(FilterConfig arg0) throws ServletException {
-		// TODO Auto-generated method stub
-		
+	
+	private void secureURL(HttpServletRequest httpReq, HttpServletResponse httpResp, String url) throws IOException{
+		 if(null != securedURLs){
+			 for (String securedURL : securedURLs) {
+				if(url.matches(securedURL)){
+					url = url.replaceAll("(?i)(^http)", "https");
+					httpResp.sendRedirect(url);
+					return ;
+				}
+			}
+		 }
+		 
+/*		 if(!alreadySecured && url.matches("(?i)(^https:.*)")){
+			 url = url.replaceAll("(?i)(^https)", "http");
+			 httpResp.sendRedirect(url);
+			 return ;
+		 }*/
 	}
+
+	
 	
 	public static void main(String[] args) {
-		System.out.println("http://joybuy.co.uk/".replaceAll("(?i)(^http://)", "http://www."));
+		System.out.println("https://www.honeybuy.com/uc/orderDetails".matches("(?i)(^https:.*)"));
 	}
 
 }

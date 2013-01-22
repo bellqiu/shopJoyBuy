@@ -300,7 +300,7 @@ public class Utils {
 	     *            The category name
 	     * @return Searching result
 	     */
-	    private static Category searchCategory(List<Category> categories, String catName) {
+	    public static Category searchCategory(List<Category> categories, String catName) {
 	        Category result = null;
 	        
 	        for (Category category : categories) {

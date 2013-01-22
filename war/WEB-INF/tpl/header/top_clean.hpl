@@ -7,19 +7,35 @@
 		<meta http-equiv="Cache-Control" content="no-cache" />
 		<meta content="${pageKeywords!''}" name="keywords">
 		<meta content="${pageDescription!''} <#if (pageSuf != "")>${" - page " + pageSuf}</#if>" name="description">
+		
+		<#assign pageBaseURL=(RawRequest.scheme+"://"+RawRequest.serverName)>
+		
 		<base href="${pageBaseURL!''}" />
 		
 		<title>${pageTitle!''}<#if (pageSuf != "")>${" - page " + pageSuf}</#if></title>
-		<link rel="stylesheet" type="text/css" href="/style/css/main.css?799">
-		<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
-		<script src="/script/js/jquery-1.7.1.js" type="text/javascript">
+		<link rel="stylesheet" type="text/css" href="${pageBaseURL}/style/css/main.css?799">
+		<link rel="stylesheet" type="text/css" href="${pageBaseURL}/style/css/remain.css?799">
+		<link href="${pageBaseURL}/style/css/helpCenter.css?799" type="text/css" rel="stylesheet">
+		<script src="${pageBaseURL}/script/js/jquery-1.7.1.js" type="text/javascript">
 		</script>
 		<script type="text/javascript">
 			var jq = jQuery.noConflict();
 		</script>
-		<script src="/script/js/common.js?799" type="text/javascript"></script>
-		<script src="/script/js/jquery.validation.js?799" type="text/javascript"></script>
-		
+		<script src="${pageBaseURL}/script/js/common.js?799" type="text/javascript"></script>
+		<script src="${pageBaseURL}/script/js/remain.js?799" type="text/javascript"></script>
+		<script src="${pageBaseURL}/script/js/jquery.validation.js?799" type="text/javascript"></script>
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27926805-1']);
+		  _gaq.push(['_setDomainName', 'honeybuy.com']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+		<script src='${pageBaseURL}/script/js/languageSelector.js'></script>
 		<!-- Additional Importing Start -->
 		<script src="http://cdn.gigya.com/js/socialize.js?apiKey=3_gGObGZB96M9EJm8iSReWnC3GSUBsHggOVGoAkPobuADEsMzwI-Hw8h4daBJpiQ8Y"></script>
 		<!-- Additional Importing End -->

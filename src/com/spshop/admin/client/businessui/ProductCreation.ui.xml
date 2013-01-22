@@ -30,13 +30,29 @@
 								</g:customCell>
 							</g:row>
 							<g:row>
-								<g:customCell>
+							<g:customCell>
 									<g:Label text="Title:" />
 								</g:customCell>
 								<g:customCell>
 									<g:TextBox width="236px" ui:field="title" />
 								</g:customCell>
 							</g:row>
+							<g:row>
+							<g:customCell>
+								<g:Label text="Price:"/>
+							</g:customCell>
+							<g:customCell>
+								<g:DoubleBox ui:field="prodPrice"/>
+							</g:customCell>
+						</g:row>
+						<g:row>
+							<g:customCell>
+								<g:Label text="Actual Price"/>
+							</g:customCell>
+							<g:customCell>
+								<g:DoubleBox ui:field="prodActualPrice"/>
+							</g:customCell>
+						</g:row>
 							<g:row>
 								<g:customCell>
 									<g:Label text="Tags" />
@@ -134,22 +150,6 @@
 			<g:ScrollPanel styleName="{style.scrollContent}">
 				<g:HTMLPanel width="100%">
 					<g:Grid>
-						<g:row>
-							<g:customCell>
-								<g:Label text="Price:"/>
-							</g:customCell>
-							<g:customCell>
-								<g:DoubleBox ui:field="prodPrice"/>
-							</g:customCell>
-						</g:row>
-						<g:row>
-							<g:customCell>
-								<g:Label text="Actual Price"/>
-							</g:customCell>
-							<g:customCell>
-								<g:DoubleBox ui:field="prodActualPrice"/>
-							</g:customCell>
-						</g:row>
 						<g:row>
 							<g:customCell>
 								<g:Label text="Show Comments:"/>

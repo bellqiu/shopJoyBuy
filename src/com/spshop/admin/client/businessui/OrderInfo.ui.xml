@@ -165,6 +165,14 @@
 							<g:Label ui:field="customerMsg"/>
 						</g:customCell>
 					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:Label text="Paid by" styleName="{style.items}"/>
+						</g:customCell>
+						<g:customCell>
+							<g:Label ui:field="paymentMethod"/>
+						</g:customCell>
+					</g:row>
 				</g:Grid>
 				</g:VerticalPanel>
 			</g:north>

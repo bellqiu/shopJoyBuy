@@ -54,6 +54,7 @@ public class OrderInfo extends Composite {
     @UiField Label shippingType;
     @UiField TextArea txtTraceInfo;
     @UiField Button btnSaveTrace;
+    @UiField Label paymentMethod;
     private void populateOrderInfo(){
         DateTimeFormat dateTimeFormat = DateTimeFormat.getFormat("yyyy-MM-dd HH:mm:ss");
         this.orderId.setText(this.order.getName());
@@ -72,6 +73,11 @@ public class OrderInfo extends Composite {
             this.billingAddr.setText(populateAddressString(this.order.getPrimaryAddress()));
         } else {
             this.billingAddr.setText(populateAddressString(this.order.getBillingAddress()));
+        }
+        if (this.order.getOrderType() == null || "".equals(this.order.getOrderType().trim())) {
+            this.paymentMethod.setText("Paypal");
+        } else {
+            this.paymentMethod.setText(order.getOrderType());
         }
     }
     
@@ -176,7 +182,7 @@ public class OrderInfo extends Composite {
         } else {
             String[] colorArr = userOption.getValue().split("##");
             if (colorArr != null && colorArr.length != 0) {
-                return colorArr[0] + ": " + "<img alt='" +colorArr[0]+ "' src='" + "http://www.joybuy.co.uk" + colorArr[1] + "' title='" + colorArr[0] + "' width='18' height='18'>";
+                return colorArr[0] + ": " + "<img alt='" +colorArr[0]+ "' src='" + "http://www.honeybuy.com" + colorArr[1] + "' title='" + colorArr[0] + "' width='18' height='18'>";
             } else {
                 return "";
             }

@@ -201,16 +201,4 @@
 		<property name="indexFile" value="${index.dir}"></property>
 	</bean>
 	
-	<bean id="com.spshop.service.intf.MailService" class="com.spshop.service.impl.MailServiceImpl">
-		<property name="host" value="smtpout.europe.secureserver.net" />
-		<property name="port" value="25" />
-		<property name="javaMailProperties">
-			<props>
-				<prop key="mail.smtp.auth">true</prop>
-				<!-- <prop key="mail.smtp.timeout">25000</prop> -->
-			</props>
-		</property>
-	</bean>
-	
-	
 </beans>

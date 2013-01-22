@@ -1,7 +1,7 @@
 <div class="scart_con">
 	<#assign order = currentOrder!userView.cart.order> <#if
 	((order.items?size)> 0) >
-	<form action="/uc/shoppingCart_payment_2_pay" id="payForm" method="post">
+	<form action="https://${RawRequest.serverName}/uc/shoppingCart_payment_2_pay" id="payForm" method="post">
 
 		<div class="scart_step3"></div>
 		<div class="sc_order">
@@ -36,33 +36,33 @@
 					 <a href="/uc/shoppingCart_address">Back >> </a> 
 					</#if>
 					
-				<input
-					type="submit" class="button_01" value="Processed to Pay">
-				</span>
+				<!--<input
+					type="submit" class="button_02" value="Processed to Pay">
+				</span>-->
 			</dd>
 		</dl>
 		<p class="clearBoth"></p>
 		<div class="separator_margin"></div>
 		<div class="scart_header2">Make payment via</div>
 		<ul class="scart_m">
-			<li>
-				<div class="shipping_title" style="display: none;">
-					<input name="payType" type="radio" value="paypal"  id="paypalPay">
+			<li style="display: none;">
+				<div class="shipping_title"  style="display: none;">
+					<input name="payType" type="radio" value="paypal" checked="checked" id="paypalPay">
 					<span>Paypal<img
-						src="${siteView.host}/style/image/home_97.gif">The safer,
+						src="/style/image/home_97.gif">The safer,
 						easier way to pay.
 					</span>
 				</div>
-				<div class="shipping_desc">
+				<div class="shipping_desc" style="display: none;">
 					<p>How to pay by PayPal?</p>
 					<p>If you have PayPal account, please pay your order by PayPal
 						account directly. If you do not have PayPal account, it does not
 						matter. You can make the payment via PayPal with your credit card
 						or your debit card. HoneyBuy's PayPal account is:
 						payment@honeybuy.com</p>
-					<img src="${siteView.host}/style/image/horizontal_solution_PP.gif">
-					<img src="${siteView.host}/style/image/PaypalVerify.gif"> <br />
-					<input type="submit" class="button_01" value="Processed to Pay">
+					<img src="/style/image/horizontal_solution_PP.gif">
+					<img src="/style/image/PaypalVerify.gif"> <br />
+					<input type="submit" class="button_02" value="Processed to Pay">
 					
 					<script type="text/javascript">
 							jq("#paypalPay").click(function(){
@@ -74,16 +74,18 @@
 			<li>
 				<div class="shipping_title">
 					<input name="payType" type="radio" value="Globebill" id="GlobebillPay"> <span>Credit
-						Card <img width="30" height="20"
-						src="${siteView.host}/style/image/home_103.gif"> <img
-						width="29" height="20" src="${siteView.host}/style/image/--.jpg">
-						We Accept VisaCard, MasterCard
-						<img alt="Loading" src="${siteView.host}/css/loading_img_s.gif" style="display:none">
+						Card 
+						<img width="32" src="/style/image/visa.png">
+						<img width="32" src="/style/image/mastercard.png">
+						We accept VisaCard, MasterCard. Note: For security purpose, we will not save any of your credit card data.
+						<img alt="Loading" src="/css/loading_img_s.gif" style="display:none">
 					</span>
 					
 				</div>
-				<div class="shipping_desc" id="GlobebillPayFrameDiv" style="display: block;width: 800px;overflow: hidden;margin-left: 0px;">
-					<iframe name="GlobebillPayFrame" style="border: 0px;width: 850px;overflow: hidden;height: 550px;display: block;">
+				
+				<div class="shipping_desc" id="GlobebillPayFrameDiv" style="display: block;width: 800px;height:340px;overflow: hidden;margin-left: 0px;">
+					
+					<iframe name="GlobebillPayFrame" border="no" scroll="no" style="border: 0px;width:850px;overflow: hidden;height: 999px;display: block;margin-left: 60px">
 					</iframe>
 					
 						<script type="text/javascript">
@@ -107,22 +109,22 @@
 				<div class="shipping_title" style="display: none;">
 					<input name="payType" type="radio" value="YoursPay"> <span>Yours
 						Pay<img width="30" height="20"
-						src="${siteView.host}/style/image/home_103.gif"> <img
-						width="29" height="20" src="${siteView.host}/style/image/--.jpg">
+						src="/style/image/home_103.gif"> <img
+						width="29" height="20" src="/style/image/--.jpg">
 						<img width="31" height="20"
-						src="${siteView.host}/style/image/amex.jpg"> <img width="33"
-						height="20" src="${siteView.host}/style/image/dse.jpg">
+						src="/style/image/amex.jpg"> <img width="33"
+						height="20" src="/style/image/dse.jpg">
 					</span>
 				</div>
 				<div class="shipping_desc" style="display: none;">
 					<p>How to pay by a Credit Card.</p>
 					<p>Visa Only! You can pay direct with your visa card. Payment
 						with this way is traceable, immediate and convenient, and the
-						payment is deposited directly into HoneyBuy’s account. Moreover,
+						payment is deposited directly into HoneyBuyï¿½s account. Moreover,
 						credit card companies typically provide some level of identity and
 						purchase protection. Please do not block any pop-up windows when
 						going through the paying process</p>
-					<br /> <input type="submit" class="button_01"
+					<br /> <input type="submit" class="button_02"
 						value="Processed to Pay">
 				</div>
 			</li>
@@ -130,7 +132,7 @@
 				<div class="shipping_title" style="display: none;"> 
 					<input name="payType" type="radio" value="alipay^boc-visa" id="ali-visa"> <span>VISA
 					<img  height="20"
-						src="${siteView.host}/style/image/visa.png">
+						src="/style/image/visa.png">
 					</span>
 				</div>
 				<div class="shipping_desc" style="display: none;" >
@@ -138,7 +140,7 @@
 					<input type="hidden" value="boc-visa" name="default_bank" checked="checked" id="ali-default_bank">Visa
 					<!-- <input type="radio" value="" name="default_bank">Master card -->
 					
-					<br /> <input type="submit" class="button_01"
+					<br /> <input type="submit" class="button_02"
 						value="Processed to Pay">
 				</div>
 			</li>
@@ -147,7 +149,7 @@
 				<div class="shipping_title" style="display: none;"> 
 					<input name="payType" type="radio" value="alipay^boc-master" id="ali-master-card"> <span>MASTER CARD
 					<img height="20"
-						src="${siteView.host}/style/image/mastercard.png">
+						src="/style/image/mastercard.png">
 					</span>
 				</div>
 				<div class="shipping_desc" style="display: none;">

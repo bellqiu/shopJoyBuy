@@ -37,9 +37,16 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 	public Product saveProduct(Product product) {
 		String name = product.getName();
 		if(null!=name){
+			name = name.trim();
 			name = name.replaceAll("\\s+", "-");
 			product.setName(name);
 		}
+		String title = product.getTitle();
+		
+		if(null != title){
+			product.setTitle(title.trim());
+		}
+		
 		if(null!=product.getTags()){
 			name = name.replaceAll("\\s+", "-");
 			product.setTags(product.getTags().replaceAll("\\s+", " "));
