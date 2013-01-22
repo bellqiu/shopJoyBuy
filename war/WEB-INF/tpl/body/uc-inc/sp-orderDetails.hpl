@@ -13,7 +13,7 @@
     <h1 style="color: black; border: 1px solid red;font-size: 24px;padding: 60px;"> Payment Status: Successful ! <br> Thank You ! </h1>
 	</#if>
 </#if>
-<form action="https://${RawRequest.serverName}/uc/shoppingCart_payment" method="post">
+<form action="http://${RawRequest.serverName}/uc/shoppingCart_payment" method="post">
 <div class="scart_con">
 	<#if currentOrder ??> <#assign order = currentOrder> <#if
 	order.currency == "USD"> <#assign currencyRate = 1> <#else> <#assign

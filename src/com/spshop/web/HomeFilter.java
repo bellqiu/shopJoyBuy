@@ -79,7 +79,7 @@ public class HomeFilter implements Filter{
 			 return;
 		 }
 		 
-		 secureURL(httpReq, httpResp, url);
+		// secureURL(httpReq, httpResp, url);
 		 
 		 chain.doFilter(request, response);
 		
