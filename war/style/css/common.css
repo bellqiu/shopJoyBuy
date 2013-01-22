@@ -37,6 +37,19 @@ img {
 	color: #dcedff;
 }
 
+.button_02 {
+	background: url("/style/image/button02_bg.jpg") no-repeat scroll 0 0
+		transparent !important;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: bold;
+	height: 35px;
+	width:183px;
+	overflow: visible;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+	border:0;
+}
+
 input,select {
 	font-size: 12px;
 	line-height: 1.5em;
