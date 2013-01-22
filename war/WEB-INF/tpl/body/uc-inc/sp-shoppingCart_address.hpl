@@ -1,5 +1,5 @@
 <div class="scart_con">
-<form action="https://${RawRequest.serverName}/uc/shoppingCart_address" method="post">
+<form action="http://${RawRequest.serverName}/uc/shoppingCart_address" method="post">
 	<div class="scart_step2"></div>
 	<#assign order = currentOrder!userView.cart.order>
 	<div class="scart_header2">

@@ -45,7 +45,7 @@
 		<div class="separator_margin"></div>
 		<div class="scart_header2">Make payment via</div>
 		<ul class="scart_m">
-			<li style="display: none;">
+			<li>
 				<div class="shipping_title" >
 					<input name="payType" type="radio" value="paypal" checked="checked" id="paypalPay">
 					<span>Paypal<img
