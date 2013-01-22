@@ -787,7 +787,7 @@ public class ShoppingController extends BaseController{
 		
 		
 		
-		logger.info(String.format(">>>>>>>>>>>>>>>>Recive Money orderNo=%1$2s, orderStatus = %2$2s, orderAmount=%3$2s, currency=%4$2s", orderNo, orderStatus, orderAmount, currency));
+		logger.info(String.format(">>>>>>>>>>>>>>>>Recive Money orderNo=%1$2s, orderStatus = %2$2s, orderAmount=%3$2s, currency=%4$2s, orderInfo=currency=%5$2s", orderNo, orderStatus, orderAmount, currency, orderInfo));
 		
 		float orderRealAmount = Float.parseFloat(new NumberFormat("##0.##").getNumberFormat().format(
 									getSiteView().getCurrencies().get(order.getCurrency())*
