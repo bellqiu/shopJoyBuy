@@ -36,9 +36,9 @@
 					 <a href="/uc/shoppingCart_address">Back >> </a> 
 					</#if>
 					
-				<!--<input
+				<input
 					type="submit" class="button_02" value="Processed to Pay">
-				</span>-->
+				</span>
 			</dd>
 		</dl>
 		<p class="clearBoth"></p>
