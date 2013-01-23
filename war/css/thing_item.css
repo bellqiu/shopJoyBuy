@@ -113,7 +113,7 @@ li.sel{border:1px solid #f90;}
 .item_propertyAlert{background:#FFDDD6; color:#CC0201; height:25px; line-height:25px; text-align:center; font-size:10px; margin-top:10px; font-weight:bold; visibility:hidden; }
 .item_funHelp{font-style:italic;color:#797979;text-decoration:underline;float:right;margin:5px 0;}
 .item_help,.item_funHelp{background:url(goods-bt.png) -370px -153px no-repeat;padding:2px 0 2px 20px;}
-input.item_addBag{background:url(goods-bt.png) -1px -12px no-repeat; width:188px; height:52px; padding-left:42px; border:none; line-height:52px; font-size:16px; font-weight:bold;cursor:pointer; color:#B52F07;text-transform:uppercase;}
+input.item_addBag{background:url(goods-bt.png) -1px -12px no-repeat; width:188px; height:52px; padding-left:42px; border:none; line-height:52px; font-size:16px; font-weight:bold;cursor:pointer; color:#fff;text-transform:uppercase;}
 input.item_addBag:hover{background:url(goods-bt.png) -202px -12px no-repeat;}
 input.item_emailtome{background:url(goods-bt.png) -1px -210px no-repeat; width:188px; height:52px; padding-left:42px; border:none; line-height:52px; font-size:16px; font-weight:bold;cursor:pointer; color:#B52F07;text-transform:uppercase;}
 input.item_emailtome:hover{background:url(goods-bt.png) -202px -210px no-repeat;}

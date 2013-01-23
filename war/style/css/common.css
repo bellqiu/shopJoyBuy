@@ -34,7 +34,8 @@ img {
 	height: 25px;
 	overflow: visible;
 	padding: 0 8px;
-	color: #dcedff;
+	color: #fff;
+	text-shadow: 1px 1px 0 #004085;
 }
 
 .button_02 {
@@ -46,8 +47,9 @@ img {
 	height: 35px;
 	width:183px;
 	overflow: visible;
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+	text-shadow: 1px 1px 0 #004085;
 	border:0;
+	color:#fff
 }
 
 input,select {
