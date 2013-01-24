@@ -51,7 +51,7 @@ img {
 	border:0;
 	color:#fff
 }
-
+input.button_02:hover{background: url("/style/image/button02_bg2.jpg") no-repeat scroll 0 0 transparent;}
 input,select {
 	font-size: 12px;
 	line-height: 1.5em;

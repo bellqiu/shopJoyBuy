@@ -43,7 +43,37 @@
 		</dl>
 		<p class="clearBoth"></p>
 		<div class="separator_margin"></div>
-		<div class="scart_header2">Make payment via</div>
+		
+		<#assign order = currentOrder!userView.cart.order> <#assign "address"=
+		primary!order.primaryAddress >
+		<div class="scart_header2">Address Details</div>
+		<div style="padding: 15px; line-height: 20px; border-bottom: 1px dashed #7E7F7F;">Please make sure the billing address you enter below matches the name and address associated with the credit card you are using for this purchase. Please note your billing address and shipping address country must be the same.</div>
+		<ul class="address_l">
+			<li class="l1">Shipping to this address:</li>
+			<li class="l2">${(address.fullName)!''}</li>
+			<li>${address.address1!''}</li>
+			<li>${address.address2!''}</li>
+			<li>${address.city!''}, ${address.stateProvince!''},
+				${siteView.countryMap[address.country?string].name}</li>
+			<li>Postal code: ${address.postalCode!''}</li>
+			<li>Phone Number: ${address.phone!''}</li>
+		</ul>
+		<#if order.billingSameAsPrimary> <#assign "address"=
+		order.primaryAddress!userView.cart.order.primaryAddress > <#else> <#assign
+		"address"= order.billingAddress!userView.cart.order.billingAddress > </#if>
+		<ul class="address_r">
+			<li class="l1">Billing to this address:</li>
+			<li class="l2">${(address.fullName)!''}</li>
+			<li>${address.address1!''}</li>
+			<li>${address.address2!''}</li>
+			<li>${address.city!''}, ${address.stateProvince!''},
+				${(siteView.countryMap[address.country?string].name)!''}</li>
+			<li>Postal code: ${address.postalCode!''}</li>
+			<li>Phone Number: ${address.phone!''}</li>
+		</ul>
+		<p class="clearBoth"></p>
+		
+		<div class="scart_header2">Payment Method</div>
 		<ul class="scart_m">
 			<li>
 				<div class="shipping_title" >
@@ -159,33 +189,7 @@
 				</div>
 			</li>
 		</ul>
-		<#assign order = currentOrder!userView.cart.order> <#assign "address"=
-		primary!order.primaryAddress >
-		<div class="scart_header2">Address Details</div>
-		<ul class="address_l">
-			<li class="l1">Shipping to this address:</li>
-			<li class="l2">${(address.fullName)!''}</li>
-			<li>${address.address1!''}</li>
-			<li>${address.address2!''}</li>
-			<li>${address.city!''}, ${address.stateProvince!''},
-				${siteView.countryMap[address.country?string].name}</li>
-			<li>Postal code: ${address.postalCode!''}</li>
-			<li>Phone Number: ${address.phone!''}</li>
-		</ul>
-		<#if order.billingSameAsPrimary> <#assign "address"=
-		order.primaryAddress!userView.cart.order.primaryAddress > <#else> <#assign
-		"address"= order.billingAddress!userView.cart.order.billingAddress > </#if>
-		<ul class="address_r">
-			<li class="l1">Billing to this address:</li>
-			<li class="l2">${(address.fullName)!''}</li>
-			<li>${address.address1!''}</li>
-			<li>${address.address2!''}</li>
-			<li>${address.city!''}, ${address.stateProvince!''},
-				${(siteView.countryMap[address.country?string].name)!''}</li>
-			<li>Postal code: ${address.postalCode!''}</li>
-			<li>Phone Number: ${address.phone!''}</li>
-		</ul>
-		<p class="clearBoth"></p>
+		
 	</form>
 	<#else>
 	<p class="red">No items</p>
