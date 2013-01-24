@@ -1130,11 +1130,12 @@ textarea.order_msg {
 }
 
 .scart_header2 {
-	background-color: #FAA003;
+	background-color:url(/style/image/title_background.jpg) repeat-x;
 	padding: 3px 10px;
 	height: 25px;
 	line-height: 25px;
 	font-weight: bolder;
+	color:#fff;
 }
 
 .scart_c li.scart_c_w_l,.scart_c li.scart_c_w_m,.scart_c li.scart_c_w_r

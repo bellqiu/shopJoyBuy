@@ -92,7 +92,7 @@
 						pay@joybuy.co.uk</p>
 					<img src="/style/image/horizontal_solution_PP.gif">
 					<img src="/style/image/PaypalVerify.gif"> <br />
-					<input type="submit" class="button_02" value="Processed to Pay">
+					<input type="submit" class="button_02" value="Proceed to Pay">
 					
 					<script type="text/javascript">
 							jq("#paypalPay").click(function(){
@@ -169,12 +169,10 @@
 					Only support USD. If the currency is not USD, we will convert it to USD.
 					<input type="hidden" value="boc-visa" name="default_bank" checked="checked" id="ali-default_bank">Visa
 					<!-- <input type="radio" value="" name="default_bank">Master card -->
-					
 					<br /> <input type="submit" class="button_02"
-						value="Proceed to Checkout">
+						value="Proceed to Checkout" display="none">
 				</div>
 			</li>
-			
 			<li>
 				<div class="shipping_title" style="display: none;"> 
 					<input name="payType" type="radio" value="alipay^boc-master" id="ali-master-card"> <span>MASTER CARD
