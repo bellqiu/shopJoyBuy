@@ -271,4 +271,6 @@ public class Constants {
     public static final String TAB_PRODUCTS_IMAGE_SIZE_INFO = "tabImageInfo";
     
     public static final String ORDER_PREFIX = "JY";
+
+	public static final String CATEGORIE_VIEW_IN_REQUEST = "CATEGORIE_VIEW_IN_REQUEST";
 }

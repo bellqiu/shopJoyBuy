@@ -27,13 +27,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.spshop.cache.SCacheFacade;
 import com.spshop.model.Category;
 import com.spshop.model.Product;
-import com.spshop.utils.EmailTools;
 import com.spshop.utils.Utils;
 
 @Controller
 public class FeedController extends BaseController {
     private final static Properties feedConfig = new Properties();
-    private static Logger logger = Logger.getLogger(EmailTools.class);
+    private static Logger logger = Logger.getLogger(FeedController.class);
     static {
         try {
             feedConfig.load(FeedController.class.getResourceAsStream("/feedConfig.properties"));

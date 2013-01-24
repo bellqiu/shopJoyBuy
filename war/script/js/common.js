@@ -365,6 +365,58 @@ var SP = new Object();
 				jq(".jquery_addmask").remove();
 			}
 		});
+		
+		jq.fn.checkableGroup = function(){
+			var el = jq(this);
+			var group = el.attr("checkableGroup");
+			var value = el.attr("value");
+			var target = el.attr("target");
+			
+			if(target.val == el.attr("value")){
+				if(el.next("h3").length > 0){
+					jq("[checkableGroup="+group+"]").next("h3").removeClass("current");
+					el.next("h3").addClass("current");
+				}else{
+					jq("[checkableGroup="+group+"]").removeClass("current");
+					el.addClass("current");
+				}
+			}
+			
+			el.mouseover(function(){
+					if(jq("[checkableGroup="+group+"]").next("h3").length > 0){
+						jq("[checkableGroup="+group+"]").next("h3").removeClass("active");
+					}else{
+						jq("[checkableGroup="+group+"]").removeClass("active");
+					}
+					
+					if(el.next("h3").length > 0){
+						jq("[checkableGroup="+group+"]").next("h3").removeClass("active");
+						el.next("h3").addClass("active");
+					}else{
+						el.removeClass("active");
+						el.addClass("active");
+					}
+			});
+			
+			el.mouseout(function(){
+				if(el.next("h3").length > 0){
+					jq("[checkableGroup="+group+"]").next("h3").removeClass("active");
+				}else{
+					el.removeClass("active");
+				}
+			});
+			
+			el.click(function(){
+				jq("#"+target).val(value);
+				if(el.next("h3").length > 0){
+					jq("[checkableGroup="+group+"]").next("h3").removeClass("current");
+					el.next("h3").addClass("current");
+				}else{
+					jq("[checkableGroup="+group+"]").removeClass("current");
+					el.addClass("current");
+				}
+			});
+		}
 	}
 )(jq);
 
@@ -511,6 +563,293 @@ jq("#promotions-tab").ready(function() {
 	
 });
 
+(function($){
+	$.fn.tanCeng = function(action,method,outDocument_id,background){
+		if(method=='show')
+		{			
+			this.bind(action,function(){dod();});					
+		}
+		if(method=='absolute')
+		{			
+			dod();				
+		}
+		function dod(){
+				var z_index=900;							 
+				if(background!==1)$("#musicwhp_backgroundDiv").css({"opacity":"0.5","height":$(document).height(),"width":"100%","z-index":z_index,"background-color":"#333333","position":"absolute","top":"0px" , "left":"0px"}).show();
+				var windowWidth = jq(window).width();
+				var windowHeight = jq(window).height();
+				var divWidth = jq("#Customfloat").width();
+				var divHeight = jq("#Customfloat").height();			
+				var divLeft = windowWidth/2-divWidth/2;			 
+				var divTop = divHeight>windowHeight?50+jq(window).scrollTop():windowHeight/2-divHeight/2+jq(window).scrollTop();	
+				divLeft = divLeft-200; 
+				divTop = divTop -200;		
+				jq(outDocument_id).css({"position":"absolute","z-index":++z_index,"top":divTop,"left":divLeft}).show();				
+		}		
+		if(method=='hide'){ this.bind(action,function(){ if($(outDocument_id).get(0).style.display!='none')$(outDocument_id+",#musicwhp_backgroundDiv").hide();});}				
+		return this;
+	}
+	
+	$.fn.bgiframe=($.browser.msie&&/msie 6\.0/i.test(navigator.userAgent)? function(s) {
+		s=$.extend({
+			top:'auto',
+			left:'auto',
+			width:'auto',
+			height:'auto',
+			opacity:true,
+			src:'javascript:false;'
+		},s);
+		var a='<iframe class="bgiframe"frameborder="0"tabindex="-1"src="'+s.src+'"'+'style="display:block;position:absolute;z-index:-1;'+(s.opacity!==false?'filter:Alpha(Opacity=\'0\');':'')+'top:'+(s.top=='auto'?'expression(((parseInt(this.parentNode.currentStyle.borderTopWidth)||0)*-1)+\'px\')':prop(s.top))+';'+'left:'+(s.left=='auto'?'expression(((parseInt(this.parentNode.currentStyle.borderLeftWidth)||0)*-1)+\'px\')':prop(s.left))+';'+'width:'+(s.width=='auto'?'expression(this.parentNode.offsetWidth+\'px\')':prop(s.width))+';'+'height:'+(s.height=='auto'?'expression(this.parentNode.offsetHeight+\'px\')':prop(s.height))+';'+'"/>';
+		return this.each( function() {
+			if($(this).children('iframe.bgiframe').length===0)
+				this.insertBefore(document.createElement(a),this.firstChild)
+		})
+	}: function() {
+		return this
+	});
+$.fn.bgIframe=$.fn.bgiframe;
+})(jQuery);
+
+jq(function(){
+	jq("a[rel=thing_item_pics]").fancybox({
+		'overlayColor'		: '#000',
+		'overlayOpacity'	: 0.2,
+		'speedIn'			: 400,
+		'speedOut'			: 100,
+		'transitionIn'		: 'elastic',
+		'transitionOut'		: 'fade',
+		'titlePosition' 	: 'inside',
+		'titleShow'			:false
+	});
+	jq("a[rel=wholesale_pics]").fancybox({
+		'overlayColor'		: '#000',
+		'overlayOpacity'	: 0.2,
+		'speedIn'			: 400,
+		'speedOut'			: 100,
+		'transitionIn'		: 'elastic',
+		'transitionOut'		: 'fade',
+		'titlePosition' 	: 'inside',
+		'titleShow'			:false
+	});
+		var href;
+		href = jq("#imageNormalBox").attr("val");
+		//alert(href);
+		jq("#linkNormalBox").attr("href",href);
+		jq('.smallPic').click(function(){
+		var imgSrc;
+		var sNum;
+			imgSrc = jq(this).attr("val");
+			jq("#imageNormalBox").attr("src",imgSrc).parent("a").attr("href",imgSrc);
+			sNum = jq(".smallPic").index(jq(this));
+			jq(".noneBox").attr("rel","thing_item_pics")
+			jq(".noneBox:eq("+sNum+")").removeAttr("rel");
+		})
+})
+
+jq("#suitOpts").ready(function(){
+	jq(this).find("[checkableGroup]").each(function(index,el){
+		jq(el).checkableGroup();
+	});
+});
+
+jq(".product-relates").ready(function(){
+	
+	jq("ul.related-products li input[type='checkbox']").each(function(index,el){
+		
+		jq(el).click(function(){
+			
+			var cc = jq(this).parent().prev().html().trim().split(" ")[0]
+			var m = parseFloat(jq(this).parent().prev().html().trim().split(" ")[1]);
+			
+			var total = parseFloat(jq("#related_product_sum_total_price").html().trim().split(" ")[1]); 
+			
+			if(jq(this).attr("checked")){
+				jq(this).parent().parent().addClass("selected").removeClass("unselected");
+				jq("#related_product_sum_total_price").html(cc +" " + parseInt((total+m)*100)/100)
+			}else{
+				jq(this).parent().parent().addClass("unselected").removeClass("selected");
+				jq("#related_product_sum_total_price").html(cc +" " + parseInt((total-m)*100)/100)
+			}
+			
+		});
+		
+	});
+	
+	
+});
+
+(function( $ ) {
+
+	// START DefaultValue
+	// Default Value for input or textarea
+	jQuery.fn.defaultValue = function() {
+		
+		this.each(function( i, o ) {
+			var obj = $( o );
+			
+			if( /^(textarea|input)$/i.test( obj.attr( 'tagName' ) ) && !obj.data( 'tipsObj' ) ) {
+				// Add a element
+				var tips = document.createElement( 'div' );
+				tips.innerHTML = obj.val();
+				
+				obj.after( tips );
+					
+				var objTips = $( tips );
+				
+				// Set style
+				objTips.css({
+					'color'		: '#999',
+					'padding'	: '6px',
+					'position'	: 'absolute',
+					'font-size'	: '11px',
+					'z-index'	: 1,
+					'left'		: obj.position().left,
+					'top'		: obj.position().top,
+					'width'		: obj.outerWidth() - 6,
+					'height'	: obj.outerHeight() - 6
+				});
+				
+				// Clear the input/textarea value
+				obj.val( '' );
+				
+				// Add data
+				obj.data( 'tips', objTips );
+				objTips.data( 'obj', obj ) 
+				
+				// Bind the events
+				objTips.mousedown(function() {
+					$( this ).fadeOut( 200, function(){
+						objTips.data( 'obj' ).focus();
+					});
+				});
+				
+				obj.focus(function() {
+					var self = this;
+					objTips.fadeOut( 200, function(){
+						self.focus();
+					});
+				});
+				
+				obj.blur(function() {
+					if( $.trim( $( this ).val() ) != '' ) return;
+					
+					if( $( this ).data( 'tips' ).is(':hidden') ) {
+						
+						$( this ).data( 'tips' ).css({
+							'left'	: obj.position().left,
+							'top'	: obj.position().top
+						});
+						
+						$( this ).data( 'tips' ).fadeIn( 200 );
+					}
+				});
+			}
+			
+		});
+	};
+	// END DefaultValue
 
 
+})( jQuery );
 
+jQuery( ".product-shopping" ).ready(function() {
+	jQuery("#CustomizedHidden").attr("name","");
+	jQuery("#alert_thing_box_customizedsize").hide();
+	
+	jQuery( '.jq_default_value' ).defaultValue();
+	
+	jQuery( "select[name^='text@Size']" ).change(function(){
+		if("Customized"==jQuery(this).val()){
+			jQuery("#alert_thing_box_customizedsize").show("normal");
+		}else{
+			jQuery("#CustomizedSizeDesp").html("");
+			jQuery("#CustomizedHidden").attr("name","");
+			jQuery("#CustomizedHidden").val("");
+		}
+	});
+	
+	jQuery( '#alert_thing_box_customizedsize_submit' ).click(function(){
+		
+		var customizes = jQuery("input[id^='Customszie'], textarea[id^='Customszie']");
+		
+		var sizes = new Array();
+		var unit = jQuery("#customizeUnit").val();
+		
+		for(var index =0 ; index< customizes.length ; index++){
+			var value = jQuery(customizes[index]).val();
+			if(parseInt(value) || "CustomszieSpecial"==jQuery(customizes[index]).attr("id")){
+				sizes[index] = new Object();
+				sizes[index].key = jQuery(customizes[index]).attr("name");
+				sizes[index].value = value;
+				jQuery(customizes[index]).siblings("span[id^='cussize']").hide();
+			}else{
+				jQuery(customizes[index]).siblings("span[id^='cussize']").show();
+				return;
+			}
+		}
+		
+		
+		
+		var html = createCustomized(sizes,unit);
+		
+		jQuery("#CustomizedSizeDesp").html(html);
+		jQuery("#CustomizedHidden").attr("name","text@Customized Size");
+		jQuery("#CustomizedHidden").val(html);
+		jQuery("#CustomizedSizeDesp").show();
+		
+		jQuery("#alert_thing_box_customizedsize").hide();
+	});
+	
+	jQuery( '#alert_thing_box_customizedsize_cancel' ).click(function(){
+		jQuery("#alert_thing_box_customizedsize").hide();
+	});
+	
+});
+
+
+function createCustomized(sizes, unit){
+	if(!sizes || sizes.length < 1){
+		return null;
+	}
+	var template = "<table><tbody>"
+	for(var i = 0; i<sizes.length ; i++){
+		var u = "";
+		if(parseInt(sizes[i].value)){
+			u = unit;
+		}
+		template = template + "<tr><td>"+sizes[i].key+"</td>"+"<td><span>"+sizes[i].value+"</span></td>"
+				+"<td><span>"+u+"</span></td>"
+				+"</tr>"
+	}
+	template = template + "</tbody></table>";
+	
+	return template;
+}
+
+function checkItem(){
+	
+	var color = jQuery("input[name^='color@Color']").val();
+	
+	if((null==color || color.length < 1)&&jQuery("#productColorSelector").length>0){
+		alert("Please select a Color");
+		return false;
+	}
+	
+	var count = jQuery( "select[name^='text@']" ).length;
+	
+	if(count > 0){
+		for(var i = 0 ;i < count ; i++){
+			var name = jQuery(jQuery( "select[name^='text@']" )[i]).attr("name");
+			var value = jQuery(jQuery( "select[name^='text@']" )[i]).val();
+			if(name.split("@").length > 1){
+				name = name.split("@")[1];
+			}
+			if(null==value || value.length < 1){
+				alert("Please select an item from " + name);
+				return false;
+			}
+		}
+	}
+	
+	return true;
+}

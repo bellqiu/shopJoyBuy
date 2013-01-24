@@ -31,7 +31,6 @@ public class PageController extends BaseController {
     //private static ThreadLocal<PageView> pageViewThreadLocal = new ThreadLocal<PageView>();
     private static final String MARKET_ONLY_UI = "market";
     private static final String CATEGORIES_UI = "categories";
-    private static final String CATEGORIE_VIEW_IN_REQUEST = "CATEGORIE_VIEW_IN_REQUEST";
     private static final int MAX_PAGE_INDEXES_DISPLAY = 5;
     
     
@@ -139,12 +138,12 @@ public class PageController extends BaseController {
    
     
     public void setPageView(PageView pageView) {
-    	 ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().setAttribute(CATEGORIE_VIEW_IN_REQUEST, pageView);
+    	 ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().setAttribute(Constants.CATEGORIE_VIEW_IN_REQUEST, pageView);
         /*this.pageViewThreadLocal.set(pageView);*/
     }
 
     public PageView getPageView() {
-    	return (PageView) ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().getAttribute(CATEGORIE_VIEW_IN_REQUEST);
+    	return (PageView) ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().getAttribute(Constants.CATEGORIE_VIEW_IN_REQUEST);
 //        return pageViewThreadLocal.get();
     }
 }

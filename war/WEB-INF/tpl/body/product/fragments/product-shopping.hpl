@@ -1,0 +1,360 @@
+<#assign popupType = popupType!>
+<div class="product-shopping">
+	<#if (popupType="dress")>
+		<#include "customize-dress.hpl">
+	</#if>
+	<#if (popupType="pants")>
+		<#include "customize-pants.hpl">
+	</#if>
+	<#if (popupType="vests")>
+		<#include "customize-vests.hpl">
+	</#if>
+	<#if (popupType="suits")>
+		<#include "customize-suits.hpl">
+	</#if>
+	<div class="product-properties">
+	<div class="product-original-price">
+		<s>${currency} ${productInfo.price * userView.currencyRate}</s>
+	</div>
+	<div style="z-index: 2;" class="product-current-price">
+		<span class="product-price-currency">
+			${currency }
+			<a id="currencyAll" href="javascript:void(0);">
+				<img src="/css/arrow-select.gif">
+			</a> 
+		</span>
+		
+		<span class="product-current-price-num">
+			<span id="money">
+				${productInfo.actualPrice * userView.currencyRate}
+			</span>
+		</span>
+		
+		<div class="currency-all">
+			<#list siteView.currencies?keys as currencyKey>
+				<a rel="nofollow" class="link_now" href="/${productInfo.name}?currency=${currencyKey}">${currencyKey}</a>
+			</#list>
+		</div>
+	</div>
+	
+	<div class="product-options">
+		<#list productInfo.options as pOption>
+			<#if (pOption.strSelectType="COLOR_SINGLE" && pOption.items?exists)>
+			<div class="color-box">
+			<div class="color-box-title">
+			<span>${pOption.name}:</span><br>
+			<p style="color: #999">If more than one color style, Please DO NOT use "the same as picture" option.</p>
+			</div>
+			<input type="hidden" name="color@${pOption.name}" id="goodColor" value="">
+			<select id="productColorSelector">
+				<option value="">Please select...</option>
+				<option value="The Same As Picture##asp">The Same As Picture</option>
+				<option value="other">Select Other</option>
+			</select>
+			
+			<div class="colorSelectWindow" style="display: none;">
+				<img alt="" src="/css/button.png" style="width: 0px; height: 0px">
+				<div class="color-selector-window">
+					<#list pOption.items as item>
+					<#if (item_index=0)>
+						<img alt='${item.name!""}' src='${siteView.imageHost + item.value!""}'>
+					</#if>
+					</#list>
+					<table align="center" width="90%">
+						<tr align="center">
+							<td align="center">
+								<span id="colorWindow-largeDESC" style="height: 20px"></span><br>
+							</td>
+						</tr>
+						<tr align="center">
+							<td>
+								<button type="button" op="ok" style="background: url('/css/button.png') no-repeat scroll 0 0 transparent;" title="OK">OK</button>
+								<button type="button" op="close" style="background: url('/css/button.png') no-repeat scroll 0 0 transparent;" title="Close">Close</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+				<div class="color-window-list">
+				<#list pOption.items as item>
+					<#if item.value?ends_with(".jpg")>
+						<img alt="${item.name}" src="${siteView.imageHost + item.value}" title="${item.name}">
+					</#if>
+				</#list>
+				</div>
+			
+				<script type="text/javascript">
+				jq("#goodColor").val("");
+				jq("#productColorSelector").change(function(){
+					if(jq("#productColorSelector").val()=="other"){
+						jq(".colorSelectWindow").show();
+					}else{
+						var templete = "<table><tr><td>Color: "+name+"</td></tr><tr><td>The Same As Picture</td></tr></table>";
+						jq("#CustomizedColorDesp").html(templete);
+						jq("#CustomizedColorDesp").show();
+						jq("#goodColor").val("The Same As Picture##ASP");
+					}
+				});
+				
+				jq(".colorSelectWindow .color-window-list img").each(function(index, item){
+					jq(item).click(function(){
+						jq(".colorSelectWindow .color-window-list img").removeClass("color-selected");
+						jq(this).addClass("color-selected");
+						jq(".colorSelectWindow .color-selector-window img").attr("src",jq(this).attr("src"));
+						jq(".colorSelectWindow .color-selector-window img").attr("title",jq(this).attr("title"));
+						jq(".colorSelectWindow .color-selector-window img").attr("alt",jq(this).attr("alt"));
+						jq("#colorWindow-largeDESC").html(jq(this).attr("title"));
+						
+					});
+				});
+				
+				jq(".colorSelectWindow .color-selector-window button[op='ok']").click(function(){
+					
+					var selectedImg = jq(".colorSelectWindow .color-window-list .color-selected");
+					
+					var value = selectedImg.attr("src");
+					var name = selectedImg.attr("title");
+					
+					if(value && name){
+						jq("#goodColor").val(name+"##"+value);
+						var templete = "<table><tr><td>Color: "+name+"</td></tr><tr><td><img style='width:36px;height:36px' alt='' src='"+value+"'></td></tr></table>";
+						jq("#CustomizedColorDesp").html(templete);
+						jq("#CustomizedColorDesp").show();
+					}else{
+						window.alert("Please choose a color!");
+					}
+					
+					jq(".colorSelectWindow").hide();
+				});
+				
+				jq(".colorSelectWindow .color-selector-window button[op='close']").click(function(){
+					jq(".colorSelectWindow").hide();
+				});
+				</script>
+				</div>
+			</div>
+			</#if>
+		</#list>
+		
+		<#list productInfo.options as pOption>
+			<#if (pOption.strSelectType = "INPUT_TEXT")>
+				<#if (pOption.name!="Qty")>
+					<div class="noFlow">
+					<input type="text" name="text@${pOption.name}" id='${pOption.id}'
+							value='${pOption.defaultValue!""}' size="5"
+							maxlength="4" class="input_1">
+					<div class="item_funTotal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					</div>
+				</#if>
+			</#if>
+			<#if (pOption.strSelectType="SINGLE_LIST")>
+				<div class="size-box">
+					<div>
+						<span>${pOption.name}:</span>
+					</div>
+					<select name="text@${pOption.name}" id="Size0">
+						<option value="">Please select</option>
+						<#list pOption.items as item>
+							<option value="${item.value}"
+								<#if (pOption.defaultValue?exists && (item.value=pOption.defaultValue))>selected="selected"</#if>>${item.name}</option>
+						</#list>
+					</select>
+				</div>
+			</#if>
+			<#if (pOption.strSelectType="MULTI_LIST")>
+				<div class="size-box">
+					<div>
+						<span>${pOption.name}:</span><a
+							onclick="tab_click(2);"
+							href="javascript:jq.goDiv('#tab_middle');"
+							class="item_funLink size_chart">Size Chart</a>
+					</div>
+					<select name="texts@${pOption.name}"
+						id="Size0" MULTIPLE>
+						<option value="please">Please select</option>
+						<#list pOption.items as item>
+							<option value="${item.value}"
+								<#if item.value?contains(pOption.defaultValue)>selected="selected"</#if>>${item.value}</option>
+						</#list>
+					</select>
+				</div>
+			</#if>
+		</#list>
+		<#list productInfo.options as pOption>
+			<#if (pOption.name="Qty")>
+				<div class="noFlow">
+					${pOption.name!"Qty"}: 
+					<input type="text" name="qty" id="num"
+						value='${pOption.defaultValue!"1" }' size="5" maxlength="4" class="input_1"
+						onblur="javascript:if(!Boolean(this.value))  this.value=1;if(parseInt(this.value)===0)this.value=1;this.value=parseInt(this.value,10);if(this.value>9999)this.value=9999;"
+						onkeyup="value=value.replace(/[^\d]/g,'');ChangePrice();">
+					<div class="total-price" href="javascript:void(0);">
+						<input type="hidden" id="product_inputText_price" name="qty" value="${productInfo.actualPrice * userView.currencyRate}" />
+						<label id="AmountPrice3">Total: <span>${currency}
+						${productInfo.actualPrice * userView.currencyRate}
+						</span></label>
+					</div>
+					</div>
+			</#if>
+		</#list>
+		<input type="hidden" value="${productInfo.name}" name="ProductId">
+		<input type="hidden" id="CustomizedHidden">
+		<input type="hidden" name="operation" value="addItem">
+		<div style="color: #F33">
+			<i id="StocksInfo"></i>
+		</div>
+	</div>
+	
+	<script>
+		var iscustom='';
+		var toutaoPrice =0; 
+		var xiaoshu=1; 
+		jq("select").change( function() {
+			ChangePrice();	
+		});
+		jq(".colorLink").click(function(){
+				jq("#"+jq(this).attr('dataName')).val(jq(this).attr('data'));
+				var dataName = jq(this).attr('dataName');
+				jq(".colorLink[dataName='"+dataName+"']").css("border","1px solid #717171");
+				jq(".colorLink[dataName='"+dataName+"'] div").removeClass('selectImg');
+				jq(this).find("div:first").addClass('selectImg');
+				jq(this).css("border","1px solid #8b2104"); 
+				$('goodColor').value = jq(this).attr('value');
+		});
+		jq(".item_colorBox").each(function(){ if(jq(this).find(".colorLink").size()==1){jq(this).find(".colorLink:first").click();}});
+		function ChangePrice(){
+			if(jq('num').value!=0&&jq('num').value!=""){
+				ProductsPrice = jq('product_inputText_price').value;
+						if(iscustom=='custom'){
+					ProductsPrice =parseFloat(ProductsPrice)+parseFloat(CustomPrices);
+				}
+				
+				ProductsPrice =parseFloat(ProductsPrice)+parseFloat(toutaoPrice);
+						
+				jq('money').innerHTML=(parseFloat(ProductsPrice)).toFixed(xiaoshu);
+				jq('AmountPrice3').innerHTML="Total: <span>${currency} <span>"+((parseFloat(ProductsPrice)).toFixed(xiaoshu)*jq('num').value).toFixed(xiaoshu)+"</span></span>";
+			}	
+		}
+	</script>
+	<div id="CustomizedSizeDesp" style="display: none;padding: 4px;"> </div>
+	<div id="CustomizedColorDesp" style="display: none;padding: 4px;"> </div>
+	<ul style="display: none;" id="choosePro" class="choosePro"> </ul>
+	
+	</div>
+	<div class="addtocart">
+		<#if (productInfo.optType<1)>
+			<input type="submit" style="display: none;" id="sub" value="ADD TO MY BAG" class="addtocart-btn"> 
+			<input type="submit" id="nosubitem_addBag" value="ADD TO MY BAG" class="addtocart-btn">
+			<script type="text/javascript">
+				jq("#nosubitem_addBag").click(function(){
+					//jq("#nosubitem_addBag").attr("disabled","disabled");
+					jq("#cusform").submit();
+					
+				});
+			</script>
+		</#if>
+		<#if (productInfo.optType=1)>
+			<#include "suits-opt.hpl">
+		
+			<input type="submit" style="display: none;" id="sub" value="ADD TO MY BAG" class="addtocart-btn">
+			<input type="submit" id="nosubitem_addBag_customize" value="Customize" class="addtocart-btn">
+			<script type="text/javascript">
+				jq("#nosubitem_addBag_customize").click(function(){
+					//jq.documentMask(); 
+					jq.documentMask({ 
+					'opacity': 0.6, 
+					'bgcolor': '#000000', 
+					'z': 301 
+					}); 
+					jq(".measure_dashboard").slider();
+					return false;
+					//jq("#nosubitem_addBag").attr("disabled","disabled");
+					//jq("#cusform").submit();
+					
+				});
+			</script>
+		</#if>
+		<#if (productInfo.optType=2)>
+			<#include "pants-opt.hpl">
+			
+			<input type="submit" style="display: none;" id="sub" value="ADD TO MY BAG" class="addtocart-btn">
+			<input type="submit" id="nosubitem_addBag_customize" value="Customize" class="addtocart-btn">
+			<script type="text/javascript">
+				jq("#nosubitem_addBag_customize").click(function(){
+					//jq.documentMask(); 
+					jq.documentMask({ 
+					'opacity': 0.6, 
+					'bgcolor': '#000000', 
+					'z': 301 
+					}); 
+					jq(".measure_dashboard").slider();
+					return false;
+					//jq("#nosubitem_addBag").attr("disabled","disabled");
+					//jq("#cusform").submit();
+					
+				});
+			</script>
+		</#if>
+		<#if (productInfo.optType=3)>
+			<#include "vest-opt.hpl">
+			
+			<input type="submit" style="display: none;" id="sub" value="ADD TO MY BAG" class="addtocart-btn">
+			<input type="submit" id="nosubitem_addBag_customize" value="Customize" class="addtocart-btn">
+			<script type="text/javascript">
+				jq("#nosubitem_addBag_customize").click(function(){
+					//jq.documentMask(); 
+					jq.documentMask({ 
+					'opacity': 0.6, 
+					'bgcolor': '#000000', 
+					'z': 301 
+					}); 
+					jq(".measure_dashboard").slider();
+					return false;
+					//jq("#nosubitem_addBag").attr("disabled","disabled");
+					//jq("#cusform").submit();
+					
+				});
+			</script>
+		</#if>
+		<#if (productInfo.optType=4)>
+			<#include "dress-opt.hpl">
+		
+			<input type="submit" style="display: none;" id="sub" value="ADD TO MY BAG" class="addtocart-btn">
+			<input type="submit" id="nosubitem_addBag_customize" value="Customize" class="addtocart-btn">
+			<script type="text/javascript">
+				jq("#nosubitem_addBag_customize").click(function(){
+					//jq.documentMask(); 
+					jq.documentMask({ 
+					'opacity': 0.6, 
+					'bgcolor': '#000000', 
+					'z': 301 
+					}); 
+					jq(".measure_dashboard").slider();
+					return false;
+					//jq("#nosubitem_addBag").attr("disabled","disabled");
+					//jq("#cusform").submit();
+					
+				});
+			</script>
+		</#if>
+	</div>
+	
+	<div style="text-align: center;">
+		<div style="margin-left:25px">
+			<table width="135" border="0" cellpadding="2" cellspacing="0"
+				title="Click to Verify - This site chose VeriSign Trust Seal to promote trust online with consumers.">
+				<tr>
+					<td width="135" align="center" valign="top">'
+						<script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.honeybuy.com&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script><br />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<h3 style="background-image: url('/css/guarantee-seal.png');" class="linkHead">
+			<a href='${siteView.host+"/c/Guarantee"}'><em>QUALITY GUARANTEE</em></a>
+		</h3>
+		<h3 style="background-image: url('/css/returnPolicy.png');" class="linkHead">
+			<a href='${siteView.host+"/uc/helpCenter/more-4"}'><em>RETURN POLICY</em></a>
+		</h3>
+	</div>
+</div>

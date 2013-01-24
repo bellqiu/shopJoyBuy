@@ -1,0 +1,5 @@
+<div class="product-details">
+	<#include "fragments/product-gallery.hpl">
+	<#include "fragments/product-info.hpl">
+	<#include "fragments/product-shopping.hpl">
+</div>

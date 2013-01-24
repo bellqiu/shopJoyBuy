@@ -1,0 +1,50 @@
+<div class="product-gallery">
+	<div class="gallery-item">
+		<#list productInfo.images as image>
+			<#if (image_index=0)>
+			<div class="item-normal-pic">
+				<a class="bighref" id="linkNormalBox" href='${(siteView.imageHost + image.noChangeUrl)!""}' rel="thing_item_pics"> 
+					<img src="/style/image/zoom_in.png" id="zoomIcon"> 
+					<#if (image.strSizeType="PRODUCT_SQUARE")>
+						<img style="width:277px; padding-top:${(370-277)/2}px;" val='${(siteView.imageHost + image.noChangeUrl)!""}'
+							 alt='${productInfo.title!""}'
+							 src='${(siteView.imageHost + image.largerUrl)!""}' id="imageNormalBox">
+					</#if>
+					<#if (image.strSizeType="PRODUCT_NORMAL")>
+						<img style="width:277px;" val='${(siteView.imageHost + image.noChangeUrl)!""}'
+							 alt='${productInfo.title!""}'
+							 src='${(siteView.imageHost + image.largerUrl)!""}' id="imageNormalBox">
+					</#if>
+				</a>
+			</div>
+			</#if>
+			<div style="display: none">
+				<#if (image_index=0)>
+					<a href='${(siteView.imageHost + image.noChangeUrl)!""}'></a>
+				</#if>
+				<#if (image_index>0)>
+					<a href='${(siteView.imageHost + image.noChangeUrl)!""}' rel="thing_item_pics"></a>
+				</#if>
+			</div>
+		</#list>
+		
+		<div class="item-normal-scollbar">
+			<ul>
+				<#list productInfo.images as image>
+				<li dis="${image_index}" class="smallPic"
+					val='${(siteView.imageHost + image.largerUrl)!""}'>
+					<#if (image.strSizeType="PRODUCT_SQUARE")>
+					<img style="width:46px; padding-top:${(63-46)/2}px;" alt='${productInfo.title!""}'
+						 src='${(siteView.imageHost + image.iconUrl)!""}'>
+					</#if>
+					<#if (image.strSizeType="PRODUCT_NORMAL")>
+					<img style="width:46px;" alt='${productInfo.title!""}'
+						 src='${(siteView.imageHost + image.iconUrl)!""}'>
+					</#if>
+				</li>
+				</#list>
+			</ul>
+		</div>
+	</div>
+	<link rel="stylesheet" type="text/css" href="/style/image/fancybox/jquery.fancybox-1.3.4.css?799">
+</div>

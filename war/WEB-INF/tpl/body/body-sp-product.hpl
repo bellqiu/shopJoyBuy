@@ -1,0 +1,17 @@
+<#assign pageCategories = pageView.category.subCategories>
+<#assign productInfo = pageView.pageProperties.productDetail!>
+<div class="main_box" id="main_box">
+<form name="cusform" method="post" action="/uc/shoppingCart" onsubmit="return checkItem()">
+	<#include "uc-inc/fragments/breadcrumb.hpl">
+	<#include "product/product-correlation.hpl">
+	<div class="height-10"></div>
+	<#include "product/product-details.hpl">
+	<div class="height-10"></div>
+	<#include "product/product-relates.hpl">
+	<div class="height-10"></div>
+	<#include "product/product-description.hpl">
+	<div class="height-10"></div>
+	<#include "product/product-comments.hpl">
+	<p class="clearBoth"></p>
+</form>
+</div>

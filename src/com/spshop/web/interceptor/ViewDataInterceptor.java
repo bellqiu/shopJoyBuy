@@ -16,6 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.TreeMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,9 +43,10 @@ public class ViewDataInterceptor extends HandlerInterceptorAdapter{
 	
 	private Logger logger = Logger.getLogger(ViewDataInterceptor.class);
 	protected Map<String, Float> currencies;
-	
+	protected Map<String, String> crossSales = new TreeMap<String, String>();
 	public ViewDataInterceptor() {
 		Properties cp = new Properties();
+		Properties crossSale = new Properties();
 		try {
 			currencies = new HashMap<String, Float>();
 			cp.load(ViewDataInterceptor.class.getResourceAsStream("/currency.properties"));
@@ -56,6 +58,12 @@ public class ViewDataInterceptor extends HandlerInterceptorAdapter{
 					logger.error(e.getMessage(), e);
 				}
 			}
+			
+			crossSale.load(this.getClass().getResourceAsStream("/crossSales.properties"));
+            for (Object crossSaleKey : crossSale.keySet()) {
+                String res = new String(crossSale.getProperty(String.valueOf(crossSaleKey)));
+                crossSales.put(crossSaleKey.toString(), res);
+            }
 		}catch(Exception e){
 			logger.error(e.getMessage(), e);
 			throw new RuntimeException(e);
@@ -159,7 +167,8 @@ public class ViewDataInterceptor extends HandlerInterceptorAdapter{
 		siteView.setSite(site);
 		siteView.setCurrencies(this.currencies);
 		siteView.setCategories(categories);
-		siteView.setImageHost(host);
+		siteView.setImageHost("http://www.joybuy.co.uk");
+		siteView.setCrossSales(this.crossSales);
 		
 		List<Country> countries = ServiceFactory.getService(CountryService.class).getAllCountries();
 		

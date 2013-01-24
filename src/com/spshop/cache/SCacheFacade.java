@@ -186,7 +186,7 @@ public class SCacheFacade{
 	}
 	
 	
-	public static List<String> getTabProductNames(int tabProductId){
+	public static List<String> getTabProductNames(long tabProductId){
 		List<String> names = (List<String>) getTabProductNameCache().get(""+tabProductId);
 		if(null==names){
 			names = ServiceFactory.getService(TabProductService.class).getProductNames(tabProductId);

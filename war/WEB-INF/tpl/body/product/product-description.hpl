@@ -1,0 +1,45 @@
+<#assign retrieveHTML = "com.spshop.web.function.HTMLRetriever"?new()>
+
+<div class="product-description">
+	<div class="item-tabs">
+		<div class="item-tabs-menu">
+			<ul class="item-tab">
+				<li id="size_title1" class="select">Description</li>
+				<#if productInfo.manualKey??>
+					<#assign htmls = retrieveHTML(productInfo.manualKey)>
+					<#list htmls as html>
+						<li id="size_title${html_index+2 }">
+							${html.name }
+						</li>
+					</#list>
+				</#if>
+			</ul>
+		</div>
+		
+		<div class="item-tabs-content">
+			<ul class="item-content">
+				<div id="size_tab1">
+				${productInfo.detail}
+				</div>
+				<#if productInfo.manualKey??>
+					<#assign htmls = retrieveHTML(productInfo.manualKey)>
+					<#list htmls as html>
+						<div id="size_tab${html_index+2 }" style="display: none;">
+							${html.content }
+						</div>
+					</#list>
+				</#if>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+	jq("li[id^=size_title]").each(function(idx,el){
+		jq(el).click(function(){
+			jq("li[id^=size_title]").removeClass("select");
+			jq(this).addClass("select");
+			jq("div[id^=size_tab]").hide();
+			jq(jq("div[id^=size_tab]")[idx]).show();
+		});
+	});
+</script>
+</div>

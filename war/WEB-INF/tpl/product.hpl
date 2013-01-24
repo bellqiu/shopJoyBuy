@@ -1,0 +1,9 @@
+<#assign pageKeywords = '${pageView.pageProperties.productDetail.keywords!""}'>
+<#assign pageDescription = '${pageView.pageProperties.productDetail.title!""}'>
+<#assign pageTitle = '${pageView.pageProperties.productDetail.title!""}'>
+<#assign pageBaseURL = '${siteView.host+"/"}'>
+
+<#include "/header/top.hpl">
+<#include "/body/body-sp-product.hpl">	
+<#include "/footer/ucf1.hpl">
+<#include "/footer/bottom.hpl">

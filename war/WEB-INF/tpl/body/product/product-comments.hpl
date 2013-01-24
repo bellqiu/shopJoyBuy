@@ -1,0 +1,17 @@
+<div class="product-comments">
+	<#if productInfo.showComments>
+		<h3 style="float: left;">Comments</h3>
+		<div id='commentsDiv' style=" clear: left;"></div>
+		<script type='text/javascript'>
+			var conf = {}
+			var params ={
+				categoryID: 'HoneyBuy',
+				streamID: '${productInfo.name}',
+				containerID: 'commentsDiv',
+				cid:'',
+				width: '100%'
+			}
+			gigya.services.socialize.showCommentsUI(conf,params);
+		</script>
+	</#if>
+</div>

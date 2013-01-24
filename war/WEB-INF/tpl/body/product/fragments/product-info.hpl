@@ -1,0 +1,44 @@
+<#assign crossSales = siteView.crossSales!>
+<#assign crossSaleImg = (ancester+".image")>
+<#assign crossSaleLink = (ancester+".link")>
+<div class="product-info">
+	<h1>${productInfo.title!""}</h1>
+	
+	<div class="product-shopping-code">Item Code:${productInfo.id!""}</div>
+	
+	<div class="product-shopping-info">
+		<table>
+			<tbody>
+				<#list productInfo.properties as property>
+					<tr>
+						<td width="104px">${property.name!""} :</td>
+						<td>${property.value!""}</td>
+					</tr>
+				</#list>
+			</tbody>
+		</table>
+		<div class="item-description">
+			${productInfo.abstractText!""}
+		</div>
+		
+		<#-- Gigya -->
+		<div id="divButtons"></div>
+		<script>
+			// Define UserAction object
+
+		</script>
+		<#-- Gigya -->
+		
+		<div class="height-10"></div>
+		
+		<span>
+			<label>
+				<b>Processing Time: </b>8-12 days for custom-made items, 1-3 Days for other</br><b>Shipping Time: </b>3-5 business days. <a href='${(siteView.host + "/c/Shipping-Information")!""}'>See Details...</a>
+			</label>
+		</span>
+		<a href='${crossSales[crossSaleLink]!""}'> 
+			<img style="width: 100%;" alt="Click and buy the this!" src='${crossSales[crossSaleImg]!""}'>
+		</a>
+		
+	</div>
+</div>

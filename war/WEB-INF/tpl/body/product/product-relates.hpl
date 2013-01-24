@@ -1,0 +1,63 @@
+<div class="product-relates">
+	<div class="related-buy">
+		<h3>Customers Who Bought This Item Also Bought</h3>
+		
+		<ul class="related-products">
+			<li class="current-product"> 
+				<a title="${productInfo.title }" href='${(siteView.host + "/" + productInfo.name)?string!""}'>
+				<#if (productInfo.images[0].strSizeType = "PRODUCT_SQUARE")>
+					<img style="width: 160px; height: 105; padding-top: ${(105-80)/2}px; padding-bottom: ${(105-80)/2}px;" border="0" alt="${productInfo.title }" src='${(siteView.imageHost + productInfo.images[0].thumbnailUrl)?string!""}'>
+				</#if>
+				<#if (productInfo.images[0].strSizeType = "PRODUCT_NORMAL")>
+					<img style="width: 160px; height: 105;" border="0" alt="${productInfo.title }" src='${(siteView.imageHost + productInfo.images[0].thumbnailUrl)?string!""}'>
+				</#if>
+				</a>
+			</li>
+			
+			<#list relatedProducts as relProduct>
+			<li class="unselected"> 
+				<a title="${relProduct.title }" href='${(siteView.host + "/" + relProduct.name)?string!""}'>
+					<#if (relProduct.images[0].strSizeType = "PRODUCT_SQUARE")>
+						<img style="width: 80px; height: 105; padding-top: ${(105-80)/2}px; padding-bottom: ${(105-80)/2}px;" border="0" alt="${relProduct.title }" src='${(siteView.imageHost + relProduct.images[0].thumbnailUrl)?string!""}'>
+					</#if>
+					<#if (relProduct.images[0].strSizeType = "PRODUCT_NORMAL")>
+						<img style="width: 80px; height: 105;" border="0" alt="${relProduct.title }" src='${(siteView.imageHost + relProduct.images[0].thumbnailUrl)?string!""}'>
+					</#if>
+				</a>
+				<div>
+					${currency} ${relProduct.actualPrice * userView.currencyRate}
+				</div>
+				<div>
+					<input type="checkbox" name="relatedProduct" value="${relProduct.name}" />				        	
+				</div>
+			</li>
+			</#list>
+		</ul>
+		
+		<div class="related-products-sum">
+			<ul>
+				<li>
+					<span> Total Price:</span>
+					<span id="related_product_sum_total_price"> 
+						${currency} ${productInfo.actualPrice * userView.currencyRate}
+					</span>
+				</li>
+				<li>
+					<input type="button"  value="Buy Together" id="related_product_sum_total_price_submit" class="button_01">
+				</li>
+			</ul>
+			<script type="text/javascript">
+			 	
+			 	jq("#related_product_sum_total_price_submit").click(function(){
+			 		if(jq("#nosubitem_addBag_customize").length>0){
+			 			jq("#nosubitem_addBag_customize").click();
+			 		}else{
+			 			jq("#nosubitem_addBag").click();
+			 		}
+			 	});
+			</script>
+		</div>
+		
+		
+	</div>
+</div>

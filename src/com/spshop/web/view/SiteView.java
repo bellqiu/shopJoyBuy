@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import com.spshop.model.Category;
 import com.spshop.model.Country;
@@ -19,6 +20,7 @@ public class SiteView {
 	private Map<String,Float> currencies;
 	private List<Country> countries = new ArrayList<Country>();
 	private Map<String,Country> countryMap = new HashMap<String,Country>();
+	private Map<String, String> crossSales = new TreeMap<String, String>();
 	
 	public Site getSite() {
 		return site;
@@ -68,5 +70,11 @@ public class SiteView {
 	public void setCountryMap(Map<String,Country> countryMap) {
 		this.countryMap = countryMap;
 	}
+    public void setCrossSales(Map<String, String> crossSales) {
+        this.crossSales = crossSales;
+    }
+    public Map<String, String> getCrossSales() {
+        return crossSales;
+    }
 	
 }

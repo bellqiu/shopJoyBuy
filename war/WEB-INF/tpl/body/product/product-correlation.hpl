@@ -1,0 +1,10 @@
+<div class="correlation-products">
+	<div class="list-products">
+		<#list correlations as product>
+			<a href='${(siteView.host + "/" + product.name)?string!""}'>
+				<img alt='${product.title!""}' src='${(siteView.imageHost + product.images[0].smallUrl)?string!""}'>
+				<b>${currency} ${product.actualPrice * userView.currencyRate}</b>
+			</a> 
+		</#list>
+	</div>
+</div>

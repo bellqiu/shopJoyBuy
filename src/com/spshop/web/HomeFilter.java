@@ -78,6 +78,12 @@ public class HomeFilter implements Filter{
 		 
 		 secureURL(httpReq, httpResp, url);
 		 
+        String reqUri = httpReq.getRequestURI().toString();
+        if (reqUri.matches("^(/)([^/]+)")) {
+            httpReq.getRequestDispatcher("/p" + reqUri).forward(httpReq, httpResp);
+            return;
+        }
+		 
 		 chain.doFilter(request, response);
 		
 	}
