@@ -88,7 +88,7 @@
 					<p>If you have PayPal account, please pay your order by PayPal
 						account directly. If you do not have PayPal account, it does not
 						matter. You can make the payment via PayPal with your credit card
-						or your debit card. HoneyBuy's PayPal account is:
+						or your debit card. Our PayPal account is:
 						pay@joybuy.co.uk</p>
 					<img src="/style/image/horizontal_solution_PP.gif">
 					<img src="/style/image/PaypalVerify.gif"> <br />
@@ -150,12 +150,12 @@
 					<p>How to pay by a Credit Card.</p>
 					<p>Visa Only! You can pay direct with your visa card. Payment
 						with this way is traceable, immediate and convenient, and the
-						payment is deposited directly into HoneyBuy�s account. Moreover,
+						payment is deposited directly into our account. Moreover,
 						credit card companies typically provide some level of identity and
 						purchase protection. Please do not block any pop-up windows when
 						going through the paying process</p>
 					<br /> <input type="submit" class="button_02"
-						value="Processed to Pay">
+						value="Proceed to Checkout">
 				</div>
 			</li>
 			<li>
