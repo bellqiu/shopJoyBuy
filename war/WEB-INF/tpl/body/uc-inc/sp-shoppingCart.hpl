@@ -113,7 +113,7 @@
 			<dd class="red">
 			<span>
 				<a href="${siteView.host}">Continue shopping>> </a>
-				<input	type="button" class="button_02" value="Processed to Pay" id="GO_TO_Fill_Address" onclick="SP.goToAddress(jq('#order_msg').val())"></span>
+				<input	type="button" class="button_02" value="Proceed to Checkout" id="GO_TO_Fill_Address" onclick="SP.goToAddress(jq('#order_msg').val())"></span>
 			</dd>
 		</dl>
 

@@ -37,7 +37,7 @@
 					</#if>
 					
 				<input
-					type="submit" class="button_02" value="Processed to Pay">
+					type="submit" class="button_02" value="Proceed to Checkout">
 				</span>
 			</dd>
 		</dl>
@@ -171,7 +171,7 @@
 					<!-- <input type="radio" value="" name="default_bank">Master card -->
 					
 					<br /> <input type="submit" class="button_02"
-						value="Processed to Pay">
+						value="Proceed to Checkout">
 				</div>
 			</li>
 			

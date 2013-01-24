@@ -70,7 +70,7 @@
 			<dd class="red">
 			<span>
 				<a href="/uc/shoppingCart">Back >> </a>
-				<input	type="submit" class="button_02" value="Processed to Pay" ></span>
+				<input	type="submit" class="button_02" value="Continue" ></span>
 			</dd>
 		</dl>
     

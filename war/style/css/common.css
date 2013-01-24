@@ -49,9 +49,10 @@ img {
 	overflow: visible;
 	text-shadow: 1px 1px 0 #004085;
 	border:0;
-	color:#fff
+	color:#fff;
+	text-indent:20px;
 }
-input.button_02:hover{background: url("/style/image/button02_bg2.jpg") no-repeat scroll 0 0 transparent;}
+input.button_02:hover{background: url("/style/image/button02_bg2.jpg") no-repeat scroll 0 0 transparent; !important;}
 input,select {
 	font-size: 12px;
 	line-height: 1.5em;
