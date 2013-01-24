@@ -69,17 +69,14 @@ public class HomeFilter implements Filter{
 		 }
 		 
 		 //LOGGER.info("Accessing: "+ url);
-		 if(url.matches("(?i)(^http[s]{0,1}://[^w]{3}.*)(.*)") && !url.matches("(?i)(^https]{0,1}://[\\d]{1,3}.*)(.*)")){
-			 
-			 
-			 
+		 if(url.matches("(?i)(^http[s]{0,1}://[^w]{3}.*)(.*)") && !url.matches("(?i)(^http[s]{0,1}://[\\d]{1,3}.*)(.*)")){
 			 url = url.replaceAll("(?i)(^http[s]{0,1}://)", "http://www.");
 			 //LOGGER.info("Redirecting : "+ url);
 			 httpResp.sendRedirect(url);
 			 return;
 		 }
 		 
-		// secureURL(httpReq, httpResp, url);
+		 secureURL(httpReq, httpResp, url);
 		 
 		 chain.doFilter(request, response);
 		

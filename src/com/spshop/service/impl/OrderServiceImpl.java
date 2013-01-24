@@ -204,7 +204,7 @@ public class OrderServiceImpl extends AbstractService<Order,OrderDAO, Long> impl
 	}
 	
 	protected String getOrderId(){
-		String id = "";
+		String id = Constants.ORDER_PREFIX;
 		Date today = new Date();
 		int y= today.getYear()%100;
 		int m = today.getMonth() + 1;

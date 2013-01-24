@@ -290,7 +290,7 @@ public abstract class BaseAction extends Action {
 
 	
 	protected String getOrderId(){
-		String id = "";
+		String id = Constants.ORDER_PREFIX;
 		Date today = new Date();
 		int y= today.getYear()%100;
 		int m = today.getMonth();
