@@ -344,8 +344,9 @@
 			<table width="135" border="0" cellpadding="2" cellspacing="0"
 				title="Click to Verify - This site chose VeriSign Trust Seal to promote trust online with consumers.">
 				<tr>
-					<td width="135" align="center" valign="top">'
-						<script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.honeybuy.com&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script><br />
+					<td width="135" align="center" valign="top"><script
+							type="text/javascript"
+							src="https://seal.verisign.com/getseal?host_name=joybuy.co.uk&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script><br />
 					</td>
 				</tr>
 			</table>

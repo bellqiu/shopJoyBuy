@@ -25,7 +25,7 @@
 					<#assign htmls = retrieveHTML(productInfo.manualKey)>
 					<#list htmls as html>
 						<div id="size_tab${html_index+2 }" style="display: none;">
-							${html.content }
+							${html.content!"" }
 						</div>
 					</#list>
 				</#if>

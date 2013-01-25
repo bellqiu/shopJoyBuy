@@ -24,8 +24,21 @@
 		<#-- Gigya -->
 		<div id="divButtons"></div>
 		<script>
-			// Define UserAction object
-
+			// Define UserAction onject
+			var ua = new gigya.services.socialize.UserAction(); 
+			ua.setLinkBack('${(siteView.host + "/" + productInfo.name)?string!""}'); 
+			ua.setTitle("Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping - joybuy.co.uk");
+			
+			ua.addMediaItem( { type: "image", src: '${(siteView.imageHost + productInfo.images[0].largerUrl)?string!""}', href: '${(siteView.host + "/" + productInfo.name)?string!""}' });
+			// Define Share Bar plugin's Parameters	
+			var shareBarParams ={ 
+				userAction:ua,
+				shareButtons: "facebook-like,share,stumbleupon,twitter-tweet,google-plusone,email",
+				containerID: 'divButtons', // location of the Share Bar plugin
+				showCounts: 'top'
+			}
+			// Load Share Bar plugin
+			gigya.services.socialize.showShareBarUI({},shareBarParams);
 		</script>
 		<#-- Gigya -->
 		

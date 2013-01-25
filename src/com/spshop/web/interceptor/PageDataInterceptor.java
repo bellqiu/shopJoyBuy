@@ -88,7 +88,7 @@ public class PageDataInterceptor extends HandlerInterceptorAdapter{
     }
     
     void populateBreadcrumbForPage(Category category, List<Category> breadcrumb) {
-        while (category.getParent() != null) {
+        while (category != null && category.getParent() != null) {
             populateBreadcrumbForPage(category.getParent(), breadcrumb);
             break;
         }
