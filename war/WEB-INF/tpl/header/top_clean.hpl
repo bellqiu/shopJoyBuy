@@ -8,7 +8,7 @@
 		<meta content="${pageKeywords!''}" name="keywords">
 		<meta content="${pageDescription!''} <#if (pageSuf != "")>${" - page " + pageSuf}</#if>" name="description">
 		
-		<#assign pageBaseURL=(RawRequest.scheme+"://"+RawRequest.serverName+":8888")>
+		<#assign pageBaseURL=(RawRequest.scheme+"://"+RawRequest.serverName)>
 		
 		<base href="${pageBaseURL!''}" />
 		
