@@ -3,7 +3,7 @@
 <#assign pageTitle = "Pay by Paypal">
 
 <#include "/header/top_clean.hpl">
-<p>redirecting to Paypal site</p>
+<img alt="Loading" src="/css/loading_img_s.gif">
 <div>
 	<#assign defaultOrder = currentOrder>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post"
