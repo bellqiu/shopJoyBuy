@@ -7,7 +7,7 @@
 	  <filter-class>com.spshop.web.HomeFilter</filter-class>
 	  <init-param>
 	  	<param-name>securedUrls</param-name>
-	  	<param-value>http://[^/]+/uc/orderDetails[^/]*,http://[^/]+/uc/shoppingCart_payment[^/]*</param-value>
+	  	<param-value>http://[^/]+/uc/orderDetails_____________________________!!!!!!!!!!!!!!!!!![^/]*,http://[^/]+/uc/shoppingCart_payment_____________________________!!!!!!!!!!!!!!!!!![^/]*</param-value>
 	  </init-param>
 	</filter>
 
