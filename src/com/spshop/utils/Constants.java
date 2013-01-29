@@ -78,7 +78,7 @@ public class Constants {
     public static final String MAIL_HOST_NAME = ".host.name";
     public static final String MAIL_FROM_ACCOUNT = ".from.account";
     public static final String MAIL_FROM_PASSWORD = ".from.password";
-    public static final String MAIL_FROM_NAME = "HoneyBuy";
+    public static final String MAIL_FROM_NAME = "JoyBuy";
     
     //Gender
     public static final String GENDER_MALE = "male";
