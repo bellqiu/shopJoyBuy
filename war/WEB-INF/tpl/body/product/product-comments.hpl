@@ -5,7 +5,7 @@
 		<script type='text/javascript'>
 			var conf = {}
 			var params ={
-				categoryID: 'HoneyBuy',
+				categoryID: 'JoyBuy',
 				streamID: '${productInfo.name}',
 				containerID: 'commentsDiv',
 				cid:'',
