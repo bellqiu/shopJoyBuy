@@ -4,7 +4,7 @@
 <div class="product-info">
 	<h1>${productInfo.title!""}</h1>
 	
-	<div class="product-shopping-code">Item Code:${(productInfo.id!"")?string}</div>
+	<div class="product-shopping-code">Item Code:${productInfo.id?string!""}</div>
 	
 	<div class="product-shopping-info">
 		<table>
