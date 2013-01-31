@@ -4,10 +4,11 @@
 		</div>
 		<#assign regSucInfo = (userView.msg.accountSuc)!'no'>
 		<#if regSucInfo!='no'>
-			<div class="form_error blue">${userView.msg.accountSuc}</div>
-			<div class="form_error blue">
-				<a class="blue" onclick="window.location.href=decodeURI('${userView.requestPage!siteView.host}');">>>Continue</a><br>
-				<a class="blue" href="/uc/userProfile">>>Complete my profile</a><br>
+			<div class="form_error blue"><p style="float:left"><img width="100" src="/style/image/smile-gif.gif"></p>
+			<p style="float: left; line-height: 100px; text-indent: 15px; font-size: 16px;">${userView.msg.accountSuc}</p></div>
+			<div style="clear:both; padding-top:30px" class="form_error blue">
+				<a style="display:block; line-height:25px; width:130px; float:left" class="button_01" onclick="window.location.href=decodeURI('${userView.requestPage!siteView.host}');">Continue Shopping>></a><br>
+				<a style="display:block;  line-height:25px; width:130px;float:left; margin-left:20px" class="button_01" href="/uc/userProfile">Complete my profile>></a><br>
 			</div>
 		</#if>
 		<#if regSucInfo=='no'>
