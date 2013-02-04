@@ -6,7 +6,13 @@
 		<#list siteView.categories as catlog>
 			<#if catlog.name!='home'>
 				<li>
-					<span><a href="${siteView.host}/c/${catlog.name}" title="${catlog.displayName}">${catlog.displayName}</a></span>
+					<span>
+					<#if catlog.url?trim != "">
+						<a href='${(catlog.url?trim)}' title="${catlog.displayName}">${catlog.displayName}</a></span>
+					<#else>
+						<a href='${(siteView.host+"/c/"+catlog.name)!""}' title="${catlog.displayName}">${catlog.displayName}</a></span>
+					</#if>
+					
 						<#if catlog.subCategories??>
 							<div class="sub_menu">
 								<div class="inner_boxA">
@@ -14,17 +20,28 @@
 											<#if !subcatlog.specialOffer>
 												<dl>
 													<dt>
-														<a href="${siteView.host}/c/${subcatlog.name}"
+													<#if subcatlog.url?trim != "">
+														<a href="${(subcatlog.url?trim)}"
 															title="${subcatlog.displayName}">${subcatlog.displayName} </a>
+													<#else>
+														<a href="${(siteView.host+"/c/"+subcatlog.name)}"
+															title="${subcatlog.displayName}">${subcatlog.displayName} </a>
+													</#if>
 													</dt>
 													<#if subcatlog.subCategories??>	
 														<#assign subsubcatlogIndex = 0>
 														<#list subcatlog.subCategories as subsubcatlog>
 															<#if !subsubcatlog.specialOffer>
 															<dd>
-																<a href="${siteView.host}/c/${subsubcatlog.name}"
+															<#if subsubcatlog.url?trim != "">
+																<a href="${(subsubcatlog.url?trim)}"
 																	title="${subsubcatlog.displayName}"> ${subsubcatlog.displayName}
 																</a>
+															<#else>
+																<a href="${(siteView.host+"/c/"+subsubcatlog.name)}"
+																	title="${subsubcatlog.displayName}"> ${subsubcatlog.displayName}
+																</a>
+															</#if>
 															</dd>
 															<#assign subsubcatlogIndex = (subsubcatlogIndex + 1) >
 															</#if>
@@ -33,8 +50,13 @@
 															</#if>
 														</#list>
 															<dd>
-																<a href="${siteView.host}/c/${subcatlog.name}"
-																	title="${subcatlog.displayName}"> View all </a>
+																<#if subcatlog.url?trim != "">
+																	<a href="${(subcatlog.url?trim)}"
+																		title="${subcatlog.displayName}"> View all </a>
+																<#else>
+																	<a href="${(siteView.host+"/c/"+subcatlog.name)}"
+																		title="${subcatlog.displayName}"> View all </a>
+																</#if>
 															</dd>
 													</#if>
 												</dl>
@@ -46,15 +68,27 @@
 										<#list catlog.subCategories as subcatlog>
 											<#if subcatlog.specialOffer>
 												<dt>
-													<a href="${siteView.host}/c/${subcatlog.name}"
-														title="${subcatlog.displayName}">${subcatlog.displayName}</a>
+													<#if subcatlog.url?trim != "">
+														<a href="${(subcatlog.url?trim)}"
+															title="${subcatlog.displayName}">${subcatlog.displayName}</a>
+													<#else>
+														<a href="${(siteView.host+"/c/"+subcatlog.name)}"
+															title="${subcatlog.displayName}">${subcatlog.displayName}</a>
+													</#if>
 												</dt>
 											</#if>	
 											<#list subcatlog.subCategories as subsubcatlog>
 												<#if subsubcatlog.specialOffer>
 												<dt>
-													<a href="${siteView.host}/c/${subsubcatlog.name}"
-														title="${subsubcatlog.displayName}">${subsubcatlog.displayName}</a>
+													<#if subsubcatlog.url?trim != "">
+														<a href="${(subsubcatlog.url?trim)}"
+															title="${subsubcatlog.displayName}"> ${subsubcatlog.displayName}
+														</a>
+													<#else>
+														<a href="${(siteView.host+"/c/"+subsubcatlog.name)}"
+															title="${subsubcatlog.displayName}"> ${subsubcatlog.displayName}
+														</a>
+													</#if>
 												</dt>
 											</#if>	
 											</#list>										
@@ -63,8 +97,7 @@
 									<div style="clear: both;"></div>
 									<div class="topNavClassAdWrapper">
 										<div class=" SpecialboxShadow topNavAdSpecialOffer">
-											<span class="topNavAdSpecialOffertxt Specialtextshadow ">Special
-												offer</span>
+											<span class="topNavAdSpecialOffertxt Specialtextshadow ">Special offer</span>
 										</div>
 										<ul class="topNavClassAd">
 											<#assign spExist = false>
@@ -92,8 +125,7 @@
 											</#if>
 											
 											<#if sp ??>
-													<li><a
-															href="${siteView.host}/c/${sp.name}"
+													<li><a href="${siteView.host}/c/${sp.name}"
 															title="${sp.displayName}"> <img width="174"
 																border="0" height="84"
 																src="http://joybuy.co.uk/${sp.specialOfferImage.noChangeUrl}">

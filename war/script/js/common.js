@@ -439,7 +439,7 @@ jq("#main_menu").ready(function() {
 		var width = jq(data).width();
 		var leftMargin = jq("#main_menu").offset().left;
 		if((left - leftMargin)  > 516){
-			jq(data).children(".sub_menu").offset({ top: 40, left: - (516 - width + 90) });
+			jq(data).children(".sub_menu").offset({ left: - (516 - width + 90) });
 			
 		}else if((left - leftMargin)  > 456){
 			jq(data).children(".sub_menu").offset({ top: 40, left: - (456 - width + 90) });
