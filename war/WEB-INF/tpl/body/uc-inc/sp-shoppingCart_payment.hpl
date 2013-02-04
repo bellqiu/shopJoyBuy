@@ -102,7 +102,7 @@
 				</div>
 			</li>
 			<li>
-				<div class="shipping_title">
+				<div class="shipping_title" style="display:none">
 					<input name="payType" type="radio" value="Globebill" id="GlobebillPay"> <span>Credit
 						Card 
 						<img width="32" src="/style/image/visa.png">
