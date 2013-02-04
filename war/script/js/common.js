@@ -442,7 +442,7 @@ jq("#main_menu").ready(function() {
 			jq(data).children(".sub_menu").offset({ left: - (516 - width + 90) });
 			
 		}else if((left - leftMargin)  > 456){
-			jq(data).children(".sub_menu").offset({ top: 40, left: - (456 - width + 90) });
+			jq(data).children(".sub_menu").offset({ left: - (456 - width + 90) });
 		}
 		
 	});
