@@ -182,7 +182,7 @@ public class OrderInfo extends Composite {
         } else {
             String[] colorArr = userOption.getValue().split("##");
             if (colorArr != null && colorArr.length != 0) {
-                return colorArr[0] + ": " + "<img alt='" +colorArr[0]+ "' src='" + "http://www.honeybuy.com" + colorArr[1] + "' title='" + colorArr[0] + "' width='18' height='18'>";
+                return colorArr[0] + ": " + "<img alt='" +colorArr[0]+ "' src='" + "http://www.joybuy.co.uk" + colorArr[1] + "' title='" + colorArr[0] + "' width='18' height='18'>";
             } else {
                 return "";
             }
