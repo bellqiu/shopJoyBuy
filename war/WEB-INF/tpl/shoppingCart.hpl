@@ -13,28 +13,26 @@
 
 <#include "/body/body-sp-shoppingCart.hpl">	
 
-<!-- Google Code for /uc/shoppingCart Conversion Page -->
+<!-- Google Code for ShoppingCart Conversion Page -->
 <script type="text/javascript">
 /* <![CDATA[ */
-var google_conversion_id = 1010858884;
+var google_conversion_id = 992693616;
 var google_conversion_language = "en";
 var google_conversion_format = "3";
 var google_conversion_color = "ffffff";
-var google_conversion_label = "2Zn4CMzl5gIQhPeB4gM";
-var google_conversion_value = 0;
-if (1) {
-  google_conversion_value = 1;
-}
+var google_conversion_label = "it1RCMCnqAQQ8Jqt2QM";
+var google_conversion_value = 10;
 /* ]]> */
 </script>
 <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
 <div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1010858884/?value=1&amp;label=2Zn4CMzl5gIQhPeB4gM&amp;guid=ON&amp;script=0"/>
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/992693616/?value=10&amp;label=it1RCMCnqAQQ8Jqt2QM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
-<!-- Google Code for /uc/shoppingCart Conversion Page end-->
+<!-- Google Code for ShoppingCart Conversion Page End-->
+
 
 
 <#include "/footer/bottom.hpl">

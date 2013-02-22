@@ -12,31 +12,25 @@
 	
 <#include "/footer/ucf1.hpl">
 
-<!-- Google Code for /uc/createAccount Conversion Page -->
+<!-- Google Code for register Conversion Page -->
 <script type="text/javascript">
 /* <![CDATA[ */
-var google_conversion_id = 1010858884;
+var google_conversion_id = 992693616;
 var google_conversion_language = "en";
 var google_conversion_format = "3";
 var google_conversion_color = "ffffff";
-var google_conversion_label = "_ylaCMSRvgIQhPeB4gM";
-var google_conversion_value = 0;
-if (1) {
-  google_conversion_value = 1;
-}
+var google_conversion_label = "FKgCCLCpqAQQ8Jqt2QM";
+var google_conversion_value = 10;
 /* ]]> */
 </script>
 <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
 <div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1010858884/?value=1&amp;label=_ylaCMSRvgIQhPeB4gM&amp;guid=ON&amp;script=0"/>
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/992693616/?value=10&amp;label=FKgCCLCpqAQQ8Jqt2QM&amp;guid=ON&amp;script=0"/>
 </div>
 </noscript>
-<!-- Google Code for /uc/createAccount Conversion Page end-->
+<!-- Google Code for register Conversion Page End-->
 
-<!-- Bing trace code start -->
-<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/b9398ab5-d7dc-4ef0-92b6-8f6e583ac2b2/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1582462",type:"1",nonadvertisingcost:"",revenue:"",actionid:"53625"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/b9398ab5-d7dc-4ef0-92b6-8f6e583ac2b2/analytics.html?dedup=1&domainId=1582462&type=1&nonadvertisingcost=&revenue=&actionid=53625" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
 
-<!-- Bing trace code end -->
 <#include "/footer/bottom.hpl">
