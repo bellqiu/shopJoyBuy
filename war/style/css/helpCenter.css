@@ -171,3 +171,11 @@
 #bottom .pic dl dd h2{ font-size:12px; margin-top:10px}
 #bottom .pic dl dd{ float:left; width:140px; line-height:20px; font-size:11px}
 /******** bottom css end *******/
+ .joybuy_menu001{ width:972px;}
+.joybuy_menu001 h2{ margin:0; padding:0; font-size:13px; font-family:Arial;}
+.joybuy_menu001 dl{ margin:0; padding:0; width:200px; border-right:1px solid #CCC; margin-left:28px; padding-right:28px; float:left}
+.joybuy_menu001 dd{ margin:0; padding:0;}
+.joybuy_menu001 ul{ margin:0; padding:0; list-style:none}
+.joybuy_menu001 li{ margin:0; padding:0; list-style:none; line-height:18px;}
+.joybuy_menu001 h3{ margin:0; padding:0; font-size:12px; font-family:Arial; font-weight:normal}
+.joybuy_menu001 h3 a{ display:block; padding:3px 0 0 12px; background:url(/style/image/list-right-arrow.gif) no-repeat 3px 10px}
