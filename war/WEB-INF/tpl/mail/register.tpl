@@ -40,8 +40,8 @@
 	  Thanks for registering at <strong>www.Joybuy.co.uk</strong>! Your information is as follows:
 	  <p>Account: ${user.name}</p>
 	  <p>Password is: ${user.password}</p>
-	  <p>As a Joybuy.co.uk new customer, you get a <span style="color:red; font-weight:bold">$30</span> Coupon: <B>HoneyXmas</B> </p>
-	  <P>You can apply it when you Check out your orders,the orders should more than $150.</p>
+	  <p>As a Joybuy.co.uk new customer, you get a <span style="color:red; font-weight:bold">&pound 5</span> Coupon: <B>JOYBUY5P</B> </p>
+	  <P>You can apply it when you Check out your orders.</p>
 <p>If any question, please contact us: <a href="mailto:service@Joybuy.co.uk">service@Joybuy.co.uk.</a></p>
 	  <p>Thank you and best regards!</p>
 	  <p>Customer Service.</p>
@@ -53,27 +53,7 @@
     </div>
    <div align="center">
  <div align="center">
- <table width="728" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td style="padding:8px; padding-bottom:none">Join Joybuy Community for Coupons, Gifts and Happiness:
-Like Joybuy on Facebook</td>
-  </tr>
-   <tr><td>&nbsp;</td>
-  </tr>
-</table>
-    <table width="500" border="0" cellspacing="0" cellpadding="0" style="padding-bottom:8px;">
-  <tr>
-    <td><a href="http://www.facebook.com/HoneyBuyCity" target="_blank"><img title="Like Joybuy on Facebook" alt="Like Joybuy on Facebook" src="http://www.Joybuy.co.uk/style/image/pic/facebook_32.png" border="0" /></a></td>
-    <td><a href="http://plus.google.com/109978880912693970020/posts?prsr=3" target="_blank"><img width="32" height="32" title="Joybuy Google+" alt="Joybuy Google+" src="http://www.Joybuy.co.uk/style/image/pic/gplus-32.png" border="0" /></a></td>
-  <td><a href="http://twitter.com/HoneyBuy" target="_blank"><img width="32" height="32" title="Follow Joybuy on Twitter" alt="Follow Joybuy on Twitter" src="http://www.Joybuy.co.uk/style/image/pic/twitter_32.png" border="0"/></a></td>
-  <td><a rel="nofollow" target="_blank" href="http://www.linkedin.com/in/honeybuy"><img width="32" height="32" title="Joybuy Linkedin" alt="Hoenybuy Linkedin" src="http://www.Joybuy.co.uk/style/image/pic/linkedin_32.png" border="0"></a></td>
-<td><a rel="nofollow" target="_blank" href="http://www.youtube.com/user/honeybuyshow"><img width="32" height="32" title="Joybuy Youtube" alt="Joybuy Youtube" src="http://www.Joybuy.co.uk/style/image/pic/youtube-logo.jpg" border="0"/></a></td>
-    <td><a rel="nofollow" target="_blank" href="http://pinterest.com/honeybuy/"><img width="32" height="32" title="Joybuy Pinterest" alt="Joybuy Pinterest" src="http://www.Joybuy.co.uk/style/image/pic/big-p-button.png" border="0"></a></td>
-    <td><a rel="nofollow" target="_blank" href="http://www.flickr.com/photos/honey-buy"><img width="33" height="32" title="Joybuy Flickr" alt="Joybuy Flickr" src="http://www.Joybuy.co.uk/style/image/pic/icon_flickr.png" border="0"></a></td>
-   <td><a rel="nofollow" target="_blank" href="http://honeybuy.blogspot.com/"><img width="32" height="32" title="Joybuy Blogspot" alt="Joybuy Blogspot" src="http://www.Joybuy.co.uk/style/image/pic/icon.png" border="0"></a></td>
-  </tr>
-</table>
-    </div>
+     </div>
     </td>
    </tr>
   </tbody></table></a></td>

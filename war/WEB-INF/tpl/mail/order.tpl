@@ -142,7 +142,7 @@ class="MsoNormal">&nbsp;</p></td>
         <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><strong><span style="font-size:10.0pt;mso-
 
 fareast-font-family:&quot;Times New Roman&quot;;
-        color:black">Bill to</span></strong><span style="font-size:9.0pt;
+        color:black">Ship to</span></strong><span style="font-size:9.0pt;
         mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
         </td>
         <td width="10" valign="top" style="width:7.5pt;padding:.75pt .75pt .75pt .75pt"></td>
@@ -182,7 +182,13 @@ fareast-font-family:&quot;Times New Roman&quot;;
         <td valign="top" style="padding:.75pt .75pt .75pt .75pt">
         <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:10.0pt;mso-fareast-font-
 
-family:&quot;Times New Roman&quot;">Paypal<o:p></o:p></span></p>
+family:&quot;Times New Roman&quot;"><#if ((order.orderType!'')=="Globebill")>
+		Credit or Debit Card
+<#elseif ((order.orderType!'')=="Paypal")>
+	Paypal
+<#else>
+	Other
+</#if></span></p>
         </td>
        </tr>
       </tbody></table>
@@ -197,7 +203,7 @@ family:&quot;Times New Roman&quot;">Paypal<o:p></o:p></span></p>
         <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><strong><span style="font-size:10.0pt;mso-
 
 fareast-font-family:&quot;Times New Roman&quot;;
-        color:black">Ship to</span></strong><span style="font-size:9.0pt;
+        color:black">Bill to</span></strong><span style="font-size:9.0pt;
         mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
         </td>
         <td width="10" valign="top" style="width:7.5pt;padding:.75pt .75pt .75pt .75pt"></td>
@@ -505,56 +511,8 @@ Roman&quot;;display:none;mso-hide:
     all"><o:p>&nbsp;</o:p></span></p>
 <!-- FAQ eof -->
     <div align="center">
-     <table width="728" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px">
-  <tr>
-    <td>Join Joybuy Community for Coupons, Gifts and Happiness: Like Joybuy on Facebook</td>
-  </tr>
-   <tr><td>&nbsp;</td>
-  </tr>
-</table>
-    <table width="500" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:20px">
-  <tr>
-    <td>&nbsp;</td>
-  <td><a href="https://www.facebook.com/HoneyBuyCity" target="_blank"><img title="Like Joybuy on Facebook" alt="Like 
-
-Joybuy on Facebook" src="http://www.Joybuy.co.uk/style/image/pic/facebook_32.png" border="0" /></a></td>
-    <td><a href="https://plus.google.com/109978880912693970020/posts?prsr=3" target="_blank"><img width="32" 
-
-height="32" title="Joybuy Google+" alt="Joybuy Google+" src="http://www.Joybuy.co.uk/style/image/pic/gplus-32.png" 
-
-border="0" /></a></td>
-  <td><a href="https://twitter.com/HoneyBuy" target="_blank"><img width="32" height="32" title="Follow Joybuy on 
-
-Twitter" alt="Follow Joybuy on Twitter" src="http://www.Joybuy.co.uk/style/image/pic/twitter_32.png" 
-
-border="0"/></a></td>
-  <td><a rel="nofollow" target="_blank" href="http://www.linkedin.com/in/honeybuy"><img width="32" height="32" 
-
-title="Joybuy Linkedin" alt="Hoenybuy Linkedin" src="http://www.Joybuy.co.uk/style/image/pic/linkedin_32.png" 
-
-border="0"></a></td>
-<td><a rel="nofollow" target="_blank" href="http://www.youtube.com/user/honeybuyshow"><img width="32" height="32" 
-
-title="Joybuy Youtube" alt="Joybuy Youtube" src="http://www.Joybuy.co.uk/style/image/pic/youtube-logo.jpg" 
-
-border="0"/></a></td>
-    <td><a rel="nofollow" target="_blank" href="http://pinterest.com/honeybuy/"><img width="32" height="32" 
-
-title="Joybuy Pinterest" alt="Joybuy Pinterest" src="http://www.Joybuy.co.uk/style/image/pic/big-p-button.png" 
-
-border="0"></a></td>
-    <td><a rel="nofollow" target="_blank" href="http://www.flickr.com/photos/honey-buy"><img width="33" height="32" 
-
-title="Joybuy Flickr" alt="Joybuy Flickr" src="http://www.Joybuy.co.uk/style/image/pic/icon_flickr.png" 
-
-border="0"></a></td>
-   <td><a rel="nofollow" target="_blank" href="http://honeybuy.blogspot.com/"><img width="32" height="32" 
-
-title="Joybuy Blogspot" alt="Joybuy Blogspot" src="http://www.Joybuy.co.uk/style/image/pic/icon.png" 
-
-border="0"></a></td>
-  </tr>
-</table>
+     
+   
     </div>
     </td>
    </tr>

@@ -56,16 +56,15 @@ order.customerName??> ${order.customerName}</#if>,</strong></p>
                         to</strong> </td>
                       <td width="170" align="left">
 					  				  
-					  <#if order.billingSameAsPrimary> 
-						<#assign "address"= order.primaryAddress >
-					<#else>
-					 	<#assign "address"= order.billingAddress >
-					 </#if>
-        ${address.fullName}
-       	 <br/>
-					 (${address.address1!''} ${address.city!''},
+					          <#assign "address"= primary!order.primaryAddress >
+        
+		${address.fullName}
+		<br>
+        (${address.address1!''} ${address.city!''},
 							${address.stateProvince!''},
-							${primaryAddCountry!''}, Postal Code:
+							${siteView.countryMap[address.country?string].name}, Postal 
+
+Code:
 							${address.postalCode!''}) Phone:${address.phone!''}
 					  </td> </tr>
                     <tr>
@@ -221,65 +220,8 @@ with.Through the
 
 
 
-<table width="100%" cellspacing="0" cellpadding="0" border="0" style="COLOR: #fff; FONT-SIZE: 12px">
- <tr align="center"><td width="100%" height="26" bgcolor="#3cb8ff" colspan="6"><strong>Share Your Experiences to Win 
 
-Coupons.</strony></td></tr>
-</table>
-<table width="100%" cellspacing="0" cellpadding="0" border="0" style="COLOR: #222; FONT-SIZE: 12px; padding:10px">
- <tr><td>All customers who have purchased with Joybuy.co.uk. (No additional purchases necessary.)
-<br>Submit a review for any previously purchased product.<br> </br> 
-1: Submit your review on Joybuy Facebook page. Then a $10 coupons will be sent to you.<br> </br>
-2: Submit your review videos on youtube.com, and share the videos on Joybuy Facebook page.  Then a $20 coupon will be 
-
-sent to you.
-</td></tr>
-</table>
-
-
-
-
-            <table width="700" cellspacing="0" cellpadding="0" border="0" align="center" style="FONT-SIZE: 12px; 
-BORDER-TOP: #c9c9ca 1px solid" align="center">
-  <tr>
-    <td align="center" style="padding-top:8px">Join Joybuy Community for Coupons, Gifts and Happiness:
-Like Joybuy on Facebook</td>
-  </tr>
-   <tr><td>&nbsp;</td>
-  </tr>
-</table>
-<table width="500" border="0" cellspacing="0" cellpadding="0" align="center" style="padding-bottom:8px">
-<tr>
-<td><a href="http://www.facebook.com/JoybuyCity" target="_blank"><img title="Like Joybuy on Facebook" alt="Like 
-Joybuy on Facebook" src="http://www.Joybuy.co.uk/style/image/pic/facebook_32.png" border="0" /></a></td>
-<td><a href="http://plus.google.com/109978880912693970020/posts?prsr=3" target="_blank"><img width="32" height="32" 
-title="Joybuy Google+" alt="Joybuy Google+" src="http://www.Joybuy.co.uk/style/image/pic/gplus-32.png" border="0" 
-/></a></td>
-<td><a href="http://twitter.com/Joybuy" target="_blank"><img width="32" height="32" title="Follow Joybuy on 
-Twitter" alt="Follow Joybuy on Twitter" src="http://www.Joybuy.co.uk/style/image/pic/twitter_32.png" 
-border="0"/></a></td>
-<td><a rel="nofollow" target="_blank" href="http://www.linkedin.com/in/Joybuy"><img width="32" height="32" 
-title="Joybuy Linkedin" alt="Hoenybuy Linkedin" src="http://www.Joybuy.co.uk/style/image/pic/linkedin_32.png" 
-border="0"></a></td>
-<td><a rel="nofollow" target="_blank" href="http://www.youtube.com/user/Joybuyshow"><img width="32" height="32" 
-title="Joybuy Youtube" alt="Joybuy Youtube" src="http://www.Joybuy.co.uk/style/image/pic/youtube-logo.jpg" 
-border="0"/></a></td>
-<td><a rel="nofollow" target="_blank" href="http://pinterest.com/Joybuy/"><img width="32" height="32" 
-title="Joybuy Pinterest" alt="Joybuy Pinterest" src="http://www.Joybuy.co.uk/style/image/pic/big-p-button.png" 
-
-border="0"></a></td>
-    <td><a rel="nofollow" target="_blank" href="http://www.flickr.com/photos/honey-buy"><img width="33" height="32" 
-
-title="Joybuy Flickr" alt="Joybuy Flickr" src="http://www.Joybuy.co.uk/style/image/pic/icon_flickr.png" 
-
-border="0"></a></td>
-   <td><a rel="nofollow" target="_blank" href="http://Joybuy.blogspot.com/"><img width="32" height="32" 
-
-title="Joybuy Blogspot" alt="Joybuy Blogspot" src="http://www.Joybuy.co.uk/style/image/pic/icon.png" 
-
-border="0"></a></td>
-  </tr>
-</table>
+ 
 </td> </tr> </tbody> </table> 
       <table width="700" cellspacing="0" cellpadding="0" border="0" align="center">
         <tbody>
