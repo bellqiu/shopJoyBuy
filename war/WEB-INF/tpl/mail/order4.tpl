@@ -181,7 +181,7 @@ fareast-font-family:&quot;Times New Roman&quot;;
         <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:10.0pt;">
         <#if ((order.orderType!'')=="Globebill")>
 								Credit or Debit Card
-							<#elseif ((order.orderType!'')=="Paypal")>
+							<#elseif ((order.orderType!'')=="paypal")>
 								Paypal
 							<#else>
 								Other
