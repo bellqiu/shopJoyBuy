@@ -135,7 +135,7 @@ public class OrderServiceImpl extends AbstractService<Order,OrderDAO, Long> impl
 				new Thread(){
 					public void run() {
 						try{
-							EmailTools.sendMail("shipping", "Shipping notification - HoneyBuy", root,o.getUser().getEmail());
+							EmailTools.sendMail("shipping", "Shipping notification - "+ Constants.MAIL_FROM_NAME, root,o.getUser().getEmail());
 						}catch(Exception e){
 							
 						}
