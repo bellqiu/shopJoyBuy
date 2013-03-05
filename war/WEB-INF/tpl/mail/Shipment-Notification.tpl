@@ -7,8 +7,8 @@
       <table width="700" cellspacing="0" cellpadding="0" border="0" align="center">
         <tbody>
         <tr>
-         <td> <img board="0" title="Joybuy.co.uk" alt="Joybuy.co.uk" 
-src="http://joybuy.co.uk/image/2496802064581883.jpg"> </td>
+         <td> <img board="0" title="joybuy.co.uk" alt="joybuy.co.uk" 
+src="https://www.joybuy.co.uk/image/2496802064581883.jpg"> </td>
           <td align="right" style="FONT-SIZE: 14pt">Shipment 
         Notification</td> </tr> </tbody> </table>
       <table width="700" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center" style="BORDER-
@@ -52,20 +52,18 @@ order.customerName??> ${order.customerName}</#if>,</strong></p>
                     <tbody>
                     <tr valign="top">
                       <td width="15"> </td>
-                      <td width="80" align="left"> <strong style="COLOR: #000">Ship 
-                        to</strong> </td>
+                      <td width="80" align="left"> <strong style="COLOR: #000">Ship to</strong> </td>
                       <td width="170" align="left">
 					  				  
-					          <#assign "address"= primary!order.primaryAddress >
+					  <#assign "address"= primary!order.primaryAddress >
         
 		${address.fullName}
 		<br>
         (${address.address1!''} ${address.city!''},
 							${address.stateProvince!''},
-							${siteView.countryMap[address.country?string].name}, Postal 
-
-Code:
+							${primaryAddCountry!''}, Postal Code:
 							${address.postalCode!''}) Phone:${address.phone!''}
+							
 					  </td> </tr>
                     <tr>
                       <td height="15"> </td> </tr> </tbody> </table> </td> 
@@ -83,7 +81,7 @@ Code:
                     <td width="15"> </td>
                       <td width="80" align="left"> <strong style="COLOR: #000">Tracking</strong> </td>
 						<td width="170" align="left">
-                      <strong><a href="http://www.Joybuy.co.uk/uc/orderDetails?id=${order.name}">My Order</a></strong>
+                      <strong><a href="http://www.joybuy.co.uk/uc/orderDetails?id=${order.name}">My Order</a></strong>
                     </td></tr> </tbody> </table> </td></tr>
               <tr>
                 <td height="15"> </td> </tr> </tbody> </table>  
@@ -113,7 +111,7 @@ HEIGHT: 18px">
                       <td height="6"> </td> </tr>
                     <tr align="left">
                       <td width="22"> </td>
-                      <td width="594"> <a href="http://www.Joybuy.co.uk/${item.product.name}" 
+                      <td width="594"> <a href="http://www.joybuy.co.uk/${item.product.name}" 
 
 style="color:#1E4E8E;text-decoration:none;text-underline:none">${item.product.title}</a></td>
                       <td width="82" align="center">${item.quantity}</td> </tr>
@@ -159,7 +157,7 @@ package?</strong> </p>
 
 above and in your <a 
 
-href="http://www.Joybuy.co.uk/uc/orderDetails?id=${order.name}" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
+href="http://www.joybuy.co.uk/uc/orderDetails?id=${order.name}" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
 
 target="_blank">My Order</a>. Some carriers may not provide tracking 
                   information. If you ordered multiple items, you may receive 
@@ -167,7 +165,7 @@ target="_blank">My Order</a>. Some carriers may not provide tracking
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">For details 
                   regarding processing and delivery times, please see <a 
 
-href="http://www.Joybuy.co.uk/uc/helpCenter/more-2" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
+href="http://www.joybuy.co.uk/uc/helpCenter/more-2" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
 
 target="_blank">Shipping Information</a>.</p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">If you are not 
@@ -175,18 +173,18 @@ target="_blank">Shipping Information</a>.</p>
                   your item(s) by contacting Customer Service within 7 days of 
                   receiving your package. For more information, visit our <a 
 
-href="http://www.Joybuy.co.uk/uc/helpCenter/more-4" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
+href="http://www.joybuy.co.uk/uc/helpCenter/more-4" style="COLOR: #1e4e8e; TEXT-DECORATION: none" 
 
 target="_blank">Return Exchange</a> policy.</p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">For all other 
-                  questions, visit our <a href="http://www.Joybuy.co.uk/uc/helpCenter/hcIndex" style="COLOR: #1e4e8e; 
+                  questions, visit our <a href="http://www.joybuy.co.uk/uc/helpCenter/hcIndex" style="COLOR: #1e4e8e; 
 
 TEXT-DECORATION: 
 
 none" target="_blank">FAQ</a>.</p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px"> <strong style="COLOR: #444">Do I have to pay import 
 or customs duties?</strong> </p>
-                  <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">Joybuy.co.uk 
+                  <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">joybuy.co.uk 
                   doesn't charge any taxes for its purchases, so now you are 
                   paid in full. However, since your order is shipping from 
                   China, it may be subject to customs or import duties charged 
@@ -204,7 +202,7 @@ damaged during  delivery?</strong> </p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px"> <strong style="COLOR: #444">How can I contact 
 customer  service?</strong> </p>
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">For help with 
-                  any order, just log in to <a href="http://www.Joybuy.co.uk/uc/orderDetails?id=${order.name}" 
+                  any order, just log in to <a href="http://www.joybuy.co.uk/uc/orderDetails?id=${order.name}" 
 style="COLOR: #1e4e8e; TEXT-DECORATION: none" target="_blank">My Order</a> and click on the order you need help 
 with.Through the 
                   order details page, you can easily check order status and 
@@ -212,7 +210,7 @@ with.Through the
                   <p style="LINE-HEIGHT: 14px; MARGIN: 10px 0px">Please note: 
                   Our Online Sales Chat representatives do not have access to 
                   any order information. <br>For all other questions, please send Email to: 
-<em>service@Joybuy.co.uk</em>.</p> </td>
+<em>service@joybuy.co.uk</em>.</p> </td>
                 <td width="22"> </td> </tr>
               <tr>
                 <td height="22"></td> 
@@ -221,7 +219,6 @@ with.Through the
 
 
 
- 
 </td> </tr> </tbody> </table> 
       <table width="700" cellspacing="0" cellpadding="0" border="0" align="center">
         <tbody>
@@ -232,17 +229,17 @@ with.Through the
           <td height="50" style="COLOR: #646464; FONT-SIZE: 12px"> <strong>PLEASE 
             DO NOT REPLY to this email.</strong> This email message was sent 
             from a notification-only email address that cannot accept incoming 
-            email. If you have any questions, please send Email to: <em>service@Joybuy.co.uk</em>. Thank you for your 
+            email. If you have any questions, please send Email to: <em>service@joybuy.co.uk</em>. Thank you for your 
 
 cooperation!</td>
            </tr>
         <tr>
           <td width="22"> </td>
-          <td height="20" align="center" style="COLOR: #646464; FONT-SIZE: 12px">Copyright&copy; 2012 Joybuy.co.uk; 
+          <td height="20" align="center" style="COLOR: #646464; FONT-SIZE: 12px">Copyright&copy; 2012 joybuy.co.uk; 
 
-Inc. All Rights Reserved. | <a href="http://www.Joybuy.co.uk/c/Terms-Of-Use">Terms of Use </a>| <a 
+Inc. All Rights Reserved. | <a href="http://www.joybuy.co.uk/c/Terms-Of-Use">Terms of Use </a>| <a 
 
-href="http://www.Joybuy.co.uk/c/Privacy-Policy">Privacy Policy </td>
+href="http://www.joybuy.co.uk/c/Privacy-Policy">Privacy Policy </td>
           <td width="22"> </td> </tr>
         <tr>
           </tr></tbody></table></td></tr></tbody></table>
