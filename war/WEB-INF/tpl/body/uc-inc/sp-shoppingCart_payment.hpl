@@ -5,10 +5,10 @@
 
 		<div class="scart_step3"></div>
 		<div class="sc_order">
-			Your order has been placed successfully. <span class="red">Order
-				NO. ${order.name} </span><br> Now, you can make the payment for your
-			order.
+			<span style="font-size: 16px; color: red" >Order Number:   ${order.name} </span><br> 
+				Please proceed to checkout now, every order you place with us is safe and secure.
 		</div>
+				
 		<div class="separator"></div>
 		<dl class="scart_summary_list">
 			<dd>
@@ -107,7 +107,8 @@
 						Card 
 						<img width="32" src="/style/image/visa.png">
 						<img width="32" src="/style/image/mastercard.png">
-						We accept VisaCard, MasterCard. Note: For security purpose, we will not save any of your credit card data.
+						We accept VisaCard, MasterCard.  Note: For security purpose, we will not save any of your credit card data.<br>
+						Please make sure the billing address matches the name and address associated with the credit card you are using for this purchase. 
 						<img alt="Loading" src="/css/loading_img_s.gif" style="display:none">
 					</span>
 					
