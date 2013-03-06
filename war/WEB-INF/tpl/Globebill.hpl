@@ -12,10 +12,10 @@
 	 -->
 	 
 	<form name="payForm"
-		action="https://pay.securesslgateway.com/Interface"
+		action="https://payment.secure-checkoutserver.com/Interface"
 		method="post" id="paypaysubmitForm">
-		<input type="hidden" name="merNo" value="10246" />
-		 <input type="hidden" name="gatewayNo" value="10246001" /> 
+		<input type="hidden" name="merNo" value="10309" />
+		 <input type="hidden" name="gatewayNo" value="10309001" /> 
 		 <input type="hidden" name="orderNo" value="${defaultOrder.name}" />
 		 <input type="hidden" name="orderCurrency" value="${defaultOrder.currency}" />
 		 <input type="hidden" name="orderAmount" value="${amount}" /> 

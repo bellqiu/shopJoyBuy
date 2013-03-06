@@ -731,9 +731,9 @@ public class UserCenterController extends BaseController {
 	}
 
 	private void globebillPay(Order order, Model model) {
-		String merNo = "10246";
-		String gatewayNo = "10246001";
-		String signKeyNo = "04d6x2r8";
+		String merNo = "10309";
+		String gatewayNo = "10309001";
+		String signKeyNo = "2066v826";
 		String orderNumber = order.getName();//订单号
 		//订单金额, 两位小数
 	    String amount = new NumberFormat("##0.##").getNumberFormat().format(getSiteView().getCurrencies().get(order.getCurrency())*(order.getTotalPrice() + order.getDePrice() - order.getCouponCutOff()));
