@@ -340,16 +340,9 @@
 	</div>
 	
 	<div style="text-align: center;">
-		<div style="margin-left:25px">
-			<table width="135" border="0" cellpadding="2" cellspacing="0"
-				title="Click to Verify - This site chose VeriSign Trust Seal to promote trust online with consumers.">
-				<tr>
-					<td width="135" align="center" valign="top"><script
-							type="text/javascript"
-							src="https://seal.verisign.com/getseal?host_name=joybuy.co.uk&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script><br />
-					</td>
-				</tr>
-			</table>
+		<div>
+			<a style="float: left; border: 0; margin-left: 5px" title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications.">
+				<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a>
 		</div>
 		<h3 style="background-image: url('/css/guarantee-seal.png');" class="linkHead">
 			<a href='${siteView.host+"/c/Guarantee"}'><em>QUALITY GUARANTEE</em></a>
@@ -357,5 +350,6 @@
 		<h3 style="background-image: url('/css/returnPolicy.png');" class="linkHead">
 			<a href='${siteView.host+"/uc/helpCenter/more-4"}'><em>RETURN POLICY</em></a>
 		</h3>
+		
 	</div>
 </div>
