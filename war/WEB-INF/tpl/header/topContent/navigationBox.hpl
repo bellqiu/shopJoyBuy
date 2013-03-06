@@ -1,7 +1,7 @@
 <div class="top_box">
 	<div class="logo_box">
 		<a href='${(siteView.host)!"${pageBaseURL}/"}' title="home" ref="nofollow">
-			<img alt="logo" src="${pageBaseURL}/image/2496802064581883.jpg">
+			<img alt="logo" src="/image/2496802064581883.jpg">
 		</a>
 	</div>
 	<div class="search">
@@ -23,15 +23,15 @@
 		</form>
 	</div>
 	<div class="security">
-	<a href="${pageBaseURL}" title="home" ref="nofollow">
+	 	<a style="float: left; border: 0; margin-left: 5px" title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications.">
+		<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a>
+		<a href="${pageBaseURL}" title="Secure Ordering" ref="nofollow">
 			<img alt="Secure Ordering" src="/image/horizontal_solution.jpg">
 		</a>
-		<a href="${pageBaseURL}" title="home" ref="nofollow">
+		<a href="${pageBaseURL}" title="Secure Ordering" ref="nofollow">
 			<img alt="Secure Ordering" src="/image/Secure-Ordering.jpg">
 		</a>
-		<a href="${pageBaseURL}" title="home" ref="nofollow">
-			<img alt="Worldwide Shipping" src="/image/Worldwide-Shipping.jpg">
-		</a>
+		
 	</div>
 	
 	<#include "catalog/categoryMenu.hpl">
