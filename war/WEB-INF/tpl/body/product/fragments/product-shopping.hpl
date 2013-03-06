@@ -339,17 +339,9 @@
 		</#if>
 	</div>
 	
-	<div style="text-align: center;">
-		<div>
-			<a style="float: left; border: 0; margin-left: 5px" title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications.">
-				<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a>
-		</div>
-		<h3 style="background-image: url('/css/guarantee-seal.png');" class="linkHead">
-			<a href='${siteView.host+"/c/Guarantee"}'><em>QUALITY GUARANTEE</em></a>
-		</h3>
-		<h3 style="background-image: url('/css/returnPolicy.png');" class="linkHead">
-			<a href='${siteView.host+"/uc/helpCenter/more-4"}'><em>RETURN POLICY</em></a>
-		</h3>
-		
+	<div style="text-align: center; padding: 36px 0px;">
+		<a title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+		<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a>
 	</div>
+	
 </div>
