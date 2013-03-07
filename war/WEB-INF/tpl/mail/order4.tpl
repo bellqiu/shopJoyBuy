@@ -19,9 +19,9 @@ cellspacing:0in;mso-yfti-tbllook:1184;mso-padding-alt:
     <td style="padding:0in 0in 0in 0in">
     <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="mso-fareast-font-family:&quot;Times New 
 
-Roman&quot;"><img border="0" id="_x0000_i1026" 
+Roman&quot;"><img board="0" title="Joybuy.co.uk Logo" alt="Joybuy.co.uk logo" 
 
-src="http://joybuy.co.uk/image/2496802064581883.jpg"><o:p></o:p></span></p>
+src="https://www.joybuy.co.uk/image/2496802064581883.jpg"><o:p></o:p></span></p>
     </td>
     <td style="padding:0in 0in 0in 0in">
     <p align="right" class="MsoNormal" style="margin:0in;margin-bottom:.0001pt;

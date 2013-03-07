@@ -7,8 +7,9 @@
       <table width="700" cellspacing="0" cellpadding="0" border="0" align="center">
         <tbody>
         <tr>
-         <td> <img board="0" title="joybuy.co.uk" alt="joybuy.co.uk" 
-src="https://www.joybuy.co.uk/image/2496802064581883.jpg"> </td>
+         <td> <img board="0" title="Joybuy.co.uk Logo" alt="Joybuy.co.uk logo" 
+
+src="https://www.joybuy.co.uk/image/2496802064581883.jpg" > </td>
           <td align="right" style="FONT-SIZE: 14pt">Shipment 
         Notification</td> </tr> </tbody> </table>
       <table width="700" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center" style="BORDER-
