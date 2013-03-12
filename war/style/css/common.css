@@ -2577,6 +2577,10 @@ li.scart_c_w_r {
     text-align: right;
 }
 
+#commentsDiv textarea {
+	width:100%;
+}
+
 .customize-window{
 	background: url("/style/image/alert_thing_bg.gif") repeat scroll left top transparent;
     padding: 10px;
