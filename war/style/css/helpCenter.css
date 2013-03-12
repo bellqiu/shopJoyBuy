@@ -126,28 +126,12 @@
 /******** bottom css star *******/
 .jbfooter ul,li{ margin:0; padding:0; list-style:none;}
 .jbfooter{ width:972px; margin:0 auto}
-.jbfooter .row{ background: url("/style/image/pic/holiday_footer_final.jpg") no-repeat; height:160px; padding-top:34px;}
+.jbfooter .row{height:160px; padding-top:34px;}
 .jbfooter .centered-row{ width:100%; text-align:center}
 .jbfooter .footer-center{ float:left; width:52%; margin-left:10px;}
 .jbfooter .box-01{ float:left; width:150px; margin:0 0 0 17px; display:inline; border-right:1px dotted #666;}
 .jbfooter .box-01 .title{ padding:0 0 8px 0}
-.jbfooter .box-01 .ico_block{background:url("/style/image/pic/b.png") no-repeat scroll 0 -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block1{background:url("/style/image/pic/b.png") no-repeat scroll -50px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block2{background:url("/style/image/pic/b.png") no-repeat scroll -101px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block3{background:url("/style/image/pic/b.png") no-repeat scroll -151px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block4{background:url("/style/image/pic/b.png") no-repeat scroll -202px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block5{background:url("/style/image/pic/b.png") no-repeat scroll -252px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block6{background:url("/style/image/pic/b.png") no-repeat scroll -302px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block7{background:url("/style/image/pic/b.png") no-repeat scroll 0 -37px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block8{background:url("/style/image/pic/b.png") no-repeat scroll -50px -37px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block9{background:url("/style/image/pic/b.png") no-repeat scroll -101px -37px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block10{background:url("/style/image/pic/b.png") no-repeat scroll -151px -37px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block11{background:url("/style/image/pic/b.png") no-repeat scroll -202px -37px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block12{background:url("/style/image/pic/b.png") no-repeat scroll -252px -38px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block13{background:url("/style/image/pic/b.png") no-repeat scroll -302px -37px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block14{background:url("/style/image/pic/b.png") no-repeat scroll -353px -37px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block15{background:url("/style/image/pic/b.png") no-repeat scroll -403px -37px transparent; width:40px; height:24px; float:left; margin-right:8px;}
-.jbfooter .box-01 .ico_block16{background:url("/style/image/pic/b.png") no-repeat scroll -353px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
+
 .jbfooter .box-01 .ico_block17{background:url("/style/image/pic/b.png") no-repeat scroll -403px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
 .jbfooter .box-01 h3{ margin:0; padding:0; font:bold 14px/16px Tahoma, Arial, Helvetica, sans-serif;}
 .jbfooter .box-01 li{font:13px/18px Tahoma, Arial, Helvetica, sans-serif; background:url("/style/image/pic/jiantou.png") no-repeat scroll 0 8px transparent; text-indent:8px;}
@@ -157,7 +141,7 @@
 .jbfooter .Subscribe{ margin:0 0 10px 17px; padding-top:12px}
 .jbfooter .subscribeText{ border:1px solid #333; padding:5px; width:130px;}
 .jbfooter .buttom{ background:#AA0000; color:#fff; width:76px; margin-left:5px; padding:5px; border:0; cursor:pointer}
-.jbfooter .copy-txt{ float:left; width:50%; font:11px/16px Tahoma, Arial, Helvetica, sans-serif}
+.jbfooter .copy-txt{ font:13px/20px Tahoma, Arial, Helvetica, sans-serif; text-align:center;}
 .jbfooter .social-icon{ float:left}
 #bottom{width:972px; margin:20px auto 0 auto; border-top:1px solid #ccc; }
 #bottom h2,h3,dl,dd,dt{ margin:0; padding:0; font-size:11px; font-family: Arial, Helvetica;}
