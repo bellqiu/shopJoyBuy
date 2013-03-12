@@ -170,6 +170,17 @@
 #bottom .pic dl dt{ float:left; width:83px; margin:7px}
 #bottom .pic dl dd h2{ font-size:12px; margin-top:10px}
 #bottom .pic dl dd{ float:left; width:140px; line-height:20px; font-size:11px}
+ 
+ .Promise{ width:972px;font-family:Arial; margin:0 auto}
+.Promise ul{margin:0; padding:0;}
+.Promise li{position:relative;list-style:none; margin:0 15px 0 0; padding:0; display:block; float:left; width:177px; height:120px; border:1px solid #D1D1D1}
+.Promise li h2{margin:10px; padding:0; font-size:14px;}
+.Promise li p{margin:0 0 0 10px; padding:0; font-size:12px; line-height:20px;}
+.Promise .img_position{position:absolute;bottom:-18px; right:-7px; background:url("http://www.joybuy.co.uk/style/image/qw.png")}
+.Promise .img01{width:52px; height:51px; background-position:-163px -18px}
+.Promise .img02{width:49px; height:69px; background-position:-215px 0}
+.Promise .img03{width:83px; height:52px; background-position:-264px -17px}
+.Promise .img04{width:74px; height:63px; background-position:-86px -3px}
 /******** bottom css end *******/
  .joybuy_menu001{ width:972px;}
 .joybuy_menu001 h2{ margin:0; padding:0; font-size:13px; font-family:Arial;}
