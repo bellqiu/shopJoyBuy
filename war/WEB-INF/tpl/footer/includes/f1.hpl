@@ -45,10 +45,19 @@
 <div class="box-01" style="width:290px; border:0;"><div class="title"><h3>Joybuy.co.uk Worldwide Shipping
 </h3></div>
 <ul>
-<li><a style="border: 0px none; float: left; margin-left: -10px; margin-top: -10px;" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
-		<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a>
-		</li>
-</ul></div>
+<li>
+<div>
+<div style="float:left"><a style="border: 0px none; float: left; margin-left: -10px; margin-top: -10px;" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+		<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a></div>
+<div style="flaot:left"><img src="/style/image/pic/6199016674013598.jpg"></div></div>
+</li>
+<li style="clear:both">
+<div>
+<div style="float:left"><img src="/style/image/pic/icn_bbb.png"></div>
+<div style="float:left"><img src="/style/image/pic/baa.jpg"></div></div>
+</li>
+</ul>
+</div>
 </div>
 <div style="clear:both; height:45px;"></div>
 <div style="text-align:center; border:1px solid 
