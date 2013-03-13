@@ -61,13 +61,14 @@
 <a style="border: 0px none; float: left; margin-left: -10px; margin-top: -10px;" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
 		<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a>
 </div>
-<div style="float: left; margin:10px 10px 0 10px"><img border="0" src="/style/image/paypal.gif"></div>
+<div style="float: left; margin:15px 10px 0 10px"><img width="442" border="0" src="/style/image/paypal.gif"></div>
 <div style="float: left; margin-top:15px">
 <img src="/style/image/hsbc.gif" style="margin-right:3px">
 <img src="/style/image/western.gif" style="margin-right:3px">
 <img src="/style/image/ems.gif" style="margin-right:3px">
 <img src="/style/image/dhl.gif" style="margin-right:3px">
-<img src="/style/image/tnt.gif">
+<img src="/style/image/tnt.gif" style="margin-right:3px">
+<img src="/style/image/ups.gif">
 </div>
 </div>
 <div style="text-align:center; border:1px solid 
