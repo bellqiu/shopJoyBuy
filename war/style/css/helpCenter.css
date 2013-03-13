@@ -131,8 +131,12 @@
 .jbfooter .footer-center{ float:left; width:52%; margin-left:10px;}
 .jbfooter .box-01{ float:left; width:150px; margin:0 0 0 17px; display:inline; border-right:1px dotted #666;}
 .jbfooter .box-01 .title{ padding:0 0 8px 0}
-
-.jbfooter .box-01 .ico_block17{background:url("/style/image/pic/b.png") no-repeat scroll -403px -9px transparent; width:40px; height:24px; float:left; margin-right:8px;}
+.jbfooter .box-01 .title p{font-size:10px; color:#888; margin-top:10px}
+.jbfooter .search_bottom{margin-top:10px;}
+.jbfooter .search_bottom{margin-top:10px;}
+.jbfooter .search_bottom #txt_Emails{color:#333; height:20px; width:150px}
+ .jbfooter .search_bottom img{ margin-left:3px;}
+ 
 .jbfooter .box-01 h3{ margin:0; padding:0; font:bold 14px/16px Tahoma, Arial, Helvetica, sans-serif;}
 .jbfooter .box-01 li{font:13px/18px Tahoma, Arial, Helvetica, sans-serif; background:url("/style/image/pic/jiantou.png") no-repeat scroll 0 8px transparent; text-indent:8px;}
 .jbfooter .box-01 a{ text-decoration:none; color:#222;text-shadow:1px 1px #fff}
