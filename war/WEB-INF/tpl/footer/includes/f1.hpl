@@ -1,5 +1,4 @@
-<link rel="stylesheet" type="text/css"
-	href="/style/css/helpCenter.css?799">
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
 <div class="jbfooter">
 <div class="row">
 <div class="footerCompany"><div class="footer-center">
@@ -35,10 +34,12 @@
 </div>
 <div class="box-01" style="width:125px;"><div class="title"><h3>FOLLOW US</h3></div>
 <ul>
-<li><a href="https://www.facebook.com/HoneyBuyCity" alt="Facebook" title="Facebook" rel="nofollow">Facebook</a></li>
-<li><a href="https://twitter.com/HoneyBuy" alt="Twitter" title="Twitter" rel="nofollow">Twitter</a></li>
-<li><a href="http://pinterest.com/honeybuy" alt="Pinterest" title="Pinterest" rel="nofollow">Pinterest</a></li>
-<li><a href="http://www.youtube.com/user/honeybuyshow" alt="YouTub" title="YouTub" rel="nofollow">YouTube</a></li>
+<li><a href="href="https://plus.google.com/100066114457703852702" rel="publisher" title="Google+" >Google+</a></li>
+<li><a href="https://www.facebook.com/HoneyBuyCity" title="Facebook" rel="nofollow">Facebook</a></li>
+<li><a href="https://twitter.com/HoneyBuy"   title="Twitter" rel="nofollow">Twitter</a></li>
+<li><a href="http://pinterest.com/honeybuy"   title="Pinterest" rel="nofollow">Pinterest</a></li>
+<li><a href="http://www.youtube.com/user/honeybuyshow"  title="YouTub" rel="nofollow">YouTube</a></li>
+
 <p>&nbsp;</p>
 </ul>
 </div>
@@ -56,6 +57,9 @@
 </div>
 </div>
 </div>
+</div>
+</div>
+
 <div style="clear:both; height:20px;"></div>
 <div style="line-height:30px; height: 55px; "><div style="float: left;">
 <a style="border: 0px none; float: left; margin-left: -10px; margin-top: -10px;" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
