@@ -13,7 +13,6 @@
 				<input type="button" class="search_button" name=""
 					onclick="formss1.submit();">
 			</div>
-
 			<div id="top_search_box_rs_div" class="ep_qsearch"
 				style="display: none;">
 				<ul id="top_search_box_rs">
