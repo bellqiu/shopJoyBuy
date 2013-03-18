@@ -1,0 +1,32 @@
+<div class="search_box">
+	<input type="hidden" value="0" name="class"> <input type="text"
+		autocomplete="off" class="search_text font_size11 Light_gray" id="top_search_box" value=""
+		id="textfield0" name="textfield"> <input type="button" name="" class="search_button">
+</div>
+
+<div style="display: none;" class="ep_qsearch" id="top_search_box_rs_div">
+<ul id="top_search_box_rs">
+	<li><a href="javascript:void(0);"><b>A</b>katsuki</a></li>
+</ul>
+</div>
+
+<script>
+	jq("#top_search_box").keyup(function(){
+		jq.post("/q/cmd/search", {key:jq("#top_search_box").val()} ,function(rs){
+			data = jq.parseJSON(arguments[2].responseText).d;
+			//alert(data);
+			if(data.length>0){
+				var li = "";
+				for(i=0; i< data.length; i++){
+					li += "<li style='margin-top:3px'><a href='" + "/"+data[i][1] +"'>" + data[i][0]+"</a></li>" 
+				}
+				jq("#top_search_box_rs").html(li);
+				jq("#top_search_box_rs_div").show();
+			}
+		});	
+	});
+	
+	jq(document).click(function(){
+		jq("#top_search_box_rs_div").hide();
+	});
+</script>

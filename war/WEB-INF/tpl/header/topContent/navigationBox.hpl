@@ -6,12 +6,8 @@
 	</div>
 	<div class="search">
 		<form action="" method="get" name="formss" id="formss" onsubmit="">
-			<div class="search_box">
-				<input type="hidden" name="class" value="0"> <input
-					type="text" name="textfield" value="" id="top_search_box"
-					class="search_text font_size11 Light_gray" autocomplete="off">
-				<input type="button" class="search_button" name=""
-					onclick="formss1.submit();">
+			<div class="search_box" style="top:-20px;">
+				<#include "searchBox.hpl">
 			</div>
 			<div id="top_search_box_rs_div" class="ep_qsearch"
 				style="display: none;">

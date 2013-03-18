@@ -2950,3 +2950,20 @@ img.current{
 /**************************************************End Measurement **************************************/
 
 /******************************************product page end***********************************************/
+
+.ep_qsearch {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #B1B1B1;
+    left: 0;
+    padding: 8px;
+    position: absolute;
+    top: 31px;
+    width: 600px;
+}
+.ep_qsearch  li{
+	margin-top: 5px;
+}
+
+.ep_qsearch b{
+	color:red;
+}
