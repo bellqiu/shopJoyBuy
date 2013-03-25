@@ -15,7 +15,7 @@ public class ProductDAOImpl extends AbstractBaseDAO<Product, Long>  implements P
 	@Override
 	public List<String> queryProdNameByCategory(Category category, int start,
 			int end) {
-		return getSession().createQuery("select p.name from Product as p where p.deleted = false join p.categories as ps where ps.id = ? order by p.id desc")
+		return getSession().createQuery("select p.name from Product as p join p.categories as ps where ps.id = ? and p.deleted = false order by p.id desc")
 		.setParameter(0, category.getId()).setFirstResult(start).setMaxResults(end-start).list();
 	}
 

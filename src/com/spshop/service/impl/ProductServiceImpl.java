@@ -65,7 +65,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 	@Override
 	public List<Product> queryByCategory(Category category, int start, int end) {
 		
-		String hql = "select p from Product as p where p.deleted=false join p.categories as ps where ps.id = " +category.getId() +" order by p.id desc";
+		String hql = "select p from Product as p join p.categories as ps where p.deleted = false and ps.id = " +category.getId() +" order by p.id desc";
 		
 		@SuppressWarnings("unchecked")
 		List<Product> ps = getDao().queryByHQL(hql,start-1,end);
@@ -80,7 +80,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 	@SuppressWarnings("rawtypes")
 	@Override
 	public Long queryCountByCategory(Category category) {
-	    String hql = "select count(p) from Product as p where p.deleted=false join p.categories as ps where ps.id = " +category.getId() +" order by p.id desc";
+	    String hql = "select count(p) from Product as p join p.categories as ps where p.deleted = false and ps.id = " +category.getId() +" order by p.id desc";
 	    
 	    List count = (List)getDao().queryByHQL(hql);
 	    
