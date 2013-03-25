@@ -4,7 +4,7 @@
 			</span>
 		</li>
 		<#list siteView.categories as catlog>
-			<#if catlog.name!='home'>
+			<#if (catlog.name!='home' && catlog.enable)>
 				<li>
 					<span>
 					<#if catlog.url?trim != "">
@@ -17,7 +17,7 @@
 							<div class="sub_menu">
 								<div class="inner_boxA">
 										<#list catlog.subCategories as subcatlog>
-											<#if !subcatlog.specialOffer>
+											<#if (!subcatlog.specialOffer && subcatlog.enable)>
 												<dl>
 													<dt>
 													<#if subcatlog.url?trim != "">
@@ -31,7 +31,7 @@
 													<#if subcatlog.subCategories??>	
 														<#assign subsubcatlogIndex = 0>
 														<#list subcatlog.subCategories as subsubcatlog>
-															<#if !subsubcatlog.specialOffer>
+															<#if (!subsubcatlog.specialOffer && subsubcatlog.enable)>
 															<dd>
 															<#if subsubcatlog.url?trim != "">
 																<a href="${(subsubcatlog.url?trim)}"
@@ -66,7 +66,7 @@
 								<div class="inner_box_along">
 									<dl>
 										<#list catlog.subCategories as subcatlog>
-											<#if subcatlog.specialOffer>
+											<#if (subcatlog.specialOffer && subcatlog.enable)>
 												<dt>
 													<#if subcatlog.url?trim != "">
 														<a href="${(subcatlog.url?trim)}"
@@ -78,7 +78,7 @@
 												</dt>
 											</#if>	
 											<#list subcatlog.subCategories as subsubcatlog>
-												<#if subsubcatlog.specialOffer>
+												<#if (subsubcatlog.specialOffer && subsubcatlog.enable)>
 												<dt>
 													<#if subsubcatlog.url?trim != "">
 														<a href="${(subsubcatlog.url?trim)}"
@@ -102,7 +102,7 @@
 										<ul class="topNavClassAd">
 											<#assign spExist = false>
 											<#list catlog.subCategories as subcatlog>
-												<#if subcatlog.specialOffer>
+												<#if (subcatlog.specialOffer && subcatlog.enable)>
 													<#assign url = (subcatlog.specialOfferImage.noChangeUrl)!'' >
 													<#if ((url?length) > 1)>
 														<#assign sp = subcatlog >
