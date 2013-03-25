@@ -15,6 +15,7 @@ public class Product extends Component{
 	private String keywords;
 	private int hit;
 	private int priority;
+	private boolean deleted;
 	private int rate;
 	private int commentsTotal;
 	private String abstractText;
@@ -215,6 +216,7 @@ public class Product extends Component{
 		obj.showlikeButton = this.showlikeButton;
 		obj.manualKey = this.manualKey;
 		obj.optType = this.optType;
+		obj.deleted = this.deleted;
 
 		if (this.abstractText != null) {
 			/* Does not have a clone() method */
@@ -343,6 +345,12 @@ public class Product extends Component{
 	}
 	public void setTags(String tags) {
 		this.tags = tags;
+	}
+	public boolean isDeleted() {
+		return deleted;
+	}
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
 	}
 	
 	

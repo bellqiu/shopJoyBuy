@@ -26,6 +26,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 		criteria.setType(Product.class.getName());
 		criteria.setStartIndex(0);
 		criteria.setMaxResult(20);
+		criteria.addProperty("deleted", false);
 		criteria.setKey(name);
 		criteria.setOrderBy("id");
 		criteria.setAsc(true);
@@ -64,7 +65,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 	@Override
 	public List<Product> queryByCategory(Category category, int start, int end) {
 		
-		String hql = "select p from Product as p join p.categories as ps where ps.id = " +category.getId() +" order by p.id desc";
+		String hql = "select p from Product as p where p.deleted=false join p.categories as ps where ps.id = " +category.getId() +" order by p.id desc";
 		
 		@SuppressWarnings("unchecked")
 		List<Product> ps = getDao().queryByHQL(hql,start-1,end);
@@ -79,7 +80,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 	@SuppressWarnings("rawtypes")
 	@Override
 	public Long queryCountByCategory(Category category) {
-	    String hql = "select count(p) from Product as p join p.categories as ps where ps.id = " +category.getId() +" order by p.id desc";
+	    String hql = "select count(p) from Product as p where p.deleted=false join p.categories as ps where ps.id = " +category.getId() +" order by p.id desc";
 	    
 	    List count = (List)getDao().queryByHQL(hql);
 	    
@@ -104,7 +105,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 
 	@Override
 	public void loadAllProduct() {
-		String hql = "from Product";
+		String hql = "from Product where deleted = false";
 		List products = getDao().queryByHQL(hql, 0, 1000);
 		SCache sCache = SCacheFacade.getProductCache();
 		for (Object object : products) {
@@ -116,7 +117,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 
 	@Override
 	public List<Product> loadAllProduct(int count) {
-	    String hql = "from Product";
+	    String hql = "from Product where deleted = false";
         List productSource = getDao().queryByHQL(hql, 0, count);
         List products = new ArrayList<Product>();
         for (Object object : productSource) {
@@ -136,7 +137,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 	@Override
 	public int getProductCountByTag(String tag) {
 		
-		String hql = "select count(id) From Product where tags like ? order by createDate desc"; 
+		String hql = "select count(id) From Product where deleted = false and tags like ? order by createDate desc"; 
 		
 		List<Object> count= (List<Object>) getDao().queryByHQL(hql,0,9999,"%"+tag+"%");
 		
@@ -147,7 +148,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 	@Override
 	public List<Product> getProductsByTag(String tag, int start, int max) {
 		
-		String hql = "From Product where tags like ? order by createDate desc"; 
+		String hql = "From Product where deleted = false and tags like ? order by createDate desc"; 
 		
 		List<Product> products= (List<Product>) getDao().queryByHQL(hql, start, max,"%"+tag+"%");
 		
@@ -163,7 +164,7 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 	@Override
 	public List<String> getTags() {
 		
-		String hql = "select tags from Product";
+		String hql = "select tags from Product where deleted = false";
 		
 		List<String>  rs =  (List<String>) getDao().queryByHQL(hql);
 		

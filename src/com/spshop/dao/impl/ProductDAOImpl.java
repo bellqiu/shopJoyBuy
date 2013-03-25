@@ -15,18 +15,18 @@ public class ProductDAOImpl extends AbstractBaseDAO<Product, Long>  implements P
 	@Override
 	public List<String> queryProdNameByCategory(Category category, int start,
 			int end) {
-		return getSession().createQuery("select p.name from Product as p join p.categories as ps where ps.id = ? order by p.id desc")
+		return getSession().createQuery("select p.name from Product as p where p.deleted = false join p.categories as ps where ps.id = ? order by p.id desc")
 		.setParameter(0, category.getId()).setFirstResult(start).setMaxResults(end-start).list();
 	}
 
 	@Override
 	public Product getProductByName(String name) {
-		return (Product) getSession().createQuery("From Product where name = ? ").setParameter(0, name).uniqueResult();
+		return (Product) getSession().createQuery("From Product where deleted = false and name = ? ").setParameter(0, name).uniqueResult();
 	}
 
 	@Override
 	public Map<String, String> search(String keyword, int start, int end) {
- 		String hql = "select title, name from Product where title like ? or id = ? order by name asc";
+ 		String hql = "select title, name from Product where deleted = false and title like ? or id = ? order by name asc";
 		
  		long id = -1;
  		try{

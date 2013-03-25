@@ -314,6 +314,7 @@
 		<property name="rateCount"></property>
 		<property name="rate"></property>
 		<property name="title" length="200"></property>
+		<property name="deleted" ></property>
 		<property name="detail" length="8000"></property>
 		<property name="commentsTotal"></property>
 		<property name="priority"></property>
