@@ -13,8 +13,9 @@
 				</#if>
 				</a>
 			</li>
-			
+			<#if relatedProducts ??> 
 			<#list relatedProducts as relProduct>
+			<#if relProduct ??> 
 			<li class="unselected"> 
 				<a title="${relProduct.title }" href='${(siteView.host + "/" + relProduct.name)?string!""}'>
 					<#if (relProduct.images[0].strSizeType = "PRODUCT_SQUARE")>
@@ -31,7 +32,9 @@
 					<input type="checkbox" name="relatedProduct" value="${relProduct.name}" />				        	
 				</div>
 			</li>
+			</#if>
 			</#list>
+			</#if>
 		</ul>
 		
 		<div class="related-products-sum">
