@@ -1,4 +1,4 @@
-<#assign pageKeywords = "Paypal, Honeybuy.com">
+<#assign pageKeywords = "Paypal, Joybuy.co.uk">
 <#assign pageDescription = "Pay by Paypal">
 <#assign pageTitle = "Pay by Paypal">
 
@@ -16,41 +16,14 @@
 		<input type="hidden" name="currency_code"
 			value="${defaultOrder.currency}"> <input type="hidden"
 			name="lc" value="US"> <input type="hidden" name="notify_url"
-			value="http://www.honeybuy.com/checkorder"> <input
+			value="http://www.joybuy.co.uk/checkorder"> <input
 			type="hidden" name="return"
-			value="http://www.honeybuy.com/orders?id=${defaultOrder.name }">
+			value="http://www.joybuy.co.uk/orders?id=${defaultOrder.name }">
 	</form>
 	<script type="text/javascript">
 		jq("#paypaysubmitForm").submit();
 	</script>
 </div>
 
-<!-- Google Code for /uc/shoppingCart_payment_2_pay Conversion Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 1010858884;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "2ci0CLTo5gIQhPeB4gM";
-var google_conversion_value = 0;
-if (3) {
-  google_conversion_value = 3;
-}
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1010858884/?value=3&amp;label=2ci0CLTo5gIQhPeB4gM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-
-<!-- Google Code for /uc/shoppingCart_payment_2_pay Conversion Page end -->
-	
-<!-- Bing trace code start -->
-<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="//flex.atdmt.com/mstag/site/b9398ab5-d7dc-4ef0-92b6-8f6e583ac2b2/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"1582462",type:"1",nonadvertisingcost:"",revenue:"",actionid:"53624"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/b9398ab5-d7dc-4ef0-92b6-8f6e583ac2b2/analytics.html?dedup=1&domainId=1582462&type=1&nonadvertisingcost=&revenue=&actionid=53624" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
-<!-- Bing trace code end -->
 	
 <#include "/footer/bottom_clean.hpl">
