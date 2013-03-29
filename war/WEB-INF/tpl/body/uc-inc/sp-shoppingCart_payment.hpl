@@ -78,8 +78,8 @@
 		
 		<div class="scart_header2">Payment Method</div>
 		<ul class="scart_m">
-			<li style="display: none;">
-				<div class="shipping_title"  style="display: none;">
+			<li>
+				<div class="shipping_title" >
 					<input name="payType" type="radio" value="paypal" checked="checked" id="paypalPay">
 					<span>Paypal<img src="/style/image/home_97.gif">The safer,easier way to pay.
 					</span>

@@ -177,7 +177,7 @@
 			<div class="measure_panel" style="display: none">
 				<div class="measure_sidebar">
 					<h2>PANTS PLEATS</h2>
-					<p>HoneyBuy always endorses pants without pleats (flat front). For the man preferring pleats, please choose so accordingly.</p>
+					<p>Joybuy always endorses pants without pleats (flat front). For the man preferring pleats, please choose so accordingly.</p>
 					
 					<p class="error red" id="PANTS_PLEATS_noti" style="color: #CC0000"></p>
 				</div>
