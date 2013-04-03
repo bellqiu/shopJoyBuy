@@ -26,7 +26,7 @@
 						class="order_grand_total">${(userView.currencyRate*(order.totalPrice-order.couponCutOff+order.dePrice))?string(",##0.##")}</span></span></b>
 			</dd>
 			<dd class="red">
-				<span>
+				<!--  <span>
 					
 					<#if id ??>
 						<input name="id" value="${id}" type="hidden">
@@ -38,7 +38,7 @@
 					
 				<input
 					type="submit" class="button_02" value="Proceed to Checkout">
-				</span>
+				</span> -->
 			</dd>
 		</dl>
 		<p class="clearBoth"></p>
@@ -78,7 +78,7 @@
 			<li>
 				<div class="shipping_title" >
 					<input name="payType" type="radio" value="paypal" checked="checked" id="paypalPay">
-					<span>Paypal<img src="/style/image/home_97.gif">The safer, easier way to pay.</span>
+					<span>Paypal<img src="/style/image/home_97.gif">The fast, easy way to pay without revealing your credit card number</span>
 				</div>
 				<div class="shipping_desc" >
 					<p>How to pay by PayPal?</p>
@@ -88,7 +88,8 @@
 						or your debit card. Our PayPal account is:
 						pay@joybuy.co.uk</p>
 					<img src="/style/image/horizontal_solution_PP.gif">
-					<img src="/style/image/PaypalVerify.gif"> <br />
+					<a rel="nofollow" target="blank" href="https://www.paypal.com/verified/pal=pay@joybuy.co.uk">
+					<img border="none" width="69" height="70" src="/style/image/pic/6197576203911273.jpg"></a> <br>
 					<input type="submit" class="button_02" value="Proceed to Pay">
 					
 					<script type="text/javascript">

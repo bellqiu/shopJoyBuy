@@ -20,11 +20,11 @@
 	<div class="security">
 	 	<a style="border:0px none; float:left; margin-left:-10px; margin-top:-13px;" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
 		<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a>
-		<a style="float:left" href="${pageBaseURL}" title="Secure Ordering" ref="nofollow">
-			<img alt="Secure Ordering" src="/image/horizontal_solution.jpg">
+		<a style="float:left" target="blank" href="https://www.paypal.com/bz/webapps/mpp/paying-with-paypal" ref="nofollow">
+			<img alt="Globally Accepted and Purchase Protection" title="Globally Accepted and Purchase Protection" src="/image/horizontal_solution.jpg">
 		</a>
-		<a style="float:left" href="${pageBaseURL}" title="Secure Ordering" ref="nofollow">
-			<img alt="Secure Ordering" src="/image/Secure-Ordering.jpg">
+		<a style="float:left" href=" " ref="nofollow">
+			<img alt="Free shipping" title="Free shipping" src="/image/Secure-Ordering.jpg">
 		</a>
 		</div>
 	<#include "catalog/categoryMenu.hpl">
