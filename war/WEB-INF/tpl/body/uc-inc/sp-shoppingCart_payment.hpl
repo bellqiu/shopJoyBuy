@@ -1,3 +1,5 @@
+<!-- JB 默认为钱宝代码  2013-04-03 -->
+
 <div class="scart_con">
 	<#assign order = currentOrder!userView.cart.order> <#if
 	((order.items?size)> 0) >
@@ -8,7 +10,6 @@
 			<span style="font-size: 16px; color: red" >Order Number:   ${order.name} </span><br> 
 				Please proceed to checkout now, every order you place with us is safe and secure.
 		</div>
-				
 		<div class="separator"></div>
 		<dl class="scart_summary_list">
 			<dd>
@@ -26,7 +27,7 @@
 						class="order_grand_total">${(userView.currencyRate*(order.totalPrice-order.couponCutOff+order.dePrice))?string(",##0.##")}</span></span></b>
 			</dd>
 			<dd class="red">
-				<!--  <span>
+				<span>
 					
 					<#if id ??>
 						<input name="id" value="${id}" type="hidden">
@@ -37,11 +38,15 @@
 					</#if>
 					
 				<input
-					type="submit" class="button_02" value="Proceed to Checkout">
-				</span> -->
+					type="submit" class="button_02" id="process2payFinal" value="Proceed to Checkout">
+				</span>
+				
+			
+					
 			</dd>
 		</dl>
 		<p class="clearBoth"></p>
+		
 		<div class="separator_margin"></div>
 		
 		<#assign order = currentOrder!userView.cart.order> <#assign "address"=
@@ -80,7 +85,7 @@
 					<input name="payType" type="radio" value="paypal" checked="checked" id="paypalPay">
 					<span>Paypal<img src="/style/image/home_97.gif">The fast, easy way to pay without revealing your credit card number</span>
 				</div>
-				<div class="shipping_desc" >
+				<div class="shipping_desc" style="display: none;">
 					<p>How to pay by PayPal?</p>
 					<p>If you have PayPal account, please pay your order by PayPal
 						account directly. If you do not have PayPal account, it does not
@@ -100,7 +105,7 @@
 				</div>
 			</li>
 			<li>
-				<div class="shipping_title" >
+				<div class="shipping_title">
 					<input name="payType" type="radio" value="Globebill" id="GlobebillPay"> <span>Credit
 						Card 
 						<img width="32" src="/style/image/visa.png">
@@ -116,9 +121,17 @@
 					
 					<iframe name="GlobebillPayFrame" border="no" scroll="no" style="border: 0px;width:850px;overflow: hidden;height: 999px;display: block;margin-left: -26px">
 					</iframe>
-					
+					<!--  默认为钱宝 -->
 						<script type="text/javascript">
 							jq("#GlobebillPay").click(function(){
+								jq("#payForm").attr("target","GlobebillPayFrame").submit();
+							});
+							
+
+							jq("#process2payFinal").click(function(){
+								jq(document).scrollTop(800);
+								jq("#GlobebillPay").attr("checked", "checked");
+								jq("#GlobebillPayFrameDiv").show();
 								jq("#payForm").attr("target","GlobebillPayFrame").submit();
 							});
 							
