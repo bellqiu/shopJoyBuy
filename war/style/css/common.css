@@ -27,7 +27,7 @@ img {
 .button_01 {
 	background: url("/style/image/button01_bg.gif") repeat scroll 0 0
 		transparent !important;
-	border: 1px solid #45433E;
+
 	cursor: pointer;
 	font-size: 12px;
 	font-weight: bold;
@@ -1119,8 +1119,8 @@ div.scart_summary {
 }
 
 .scart_header {
-	background-color: #2E75CE;
-	padding-top: 20px;
+	background: url("/style/image/uc_background.png") repeat scroll 0 0 transparent;
+	padding-top: 28px;
 }
 
 .scart_header li {
