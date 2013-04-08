@@ -982,7 +982,7 @@ li.feedback_item_w4 {
 }
 
 .scart_c {
-	width: 972px;
+	width: 100%;
 }
 
 ul.scart_c li {
@@ -1059,7 +1059,7 @@ ul.scart_c li.scart_item_w5 {
 }
 
 li.scart_item_w5,ul.scart_c li.scart_item_w5 {
-	width: 85px;
+	width: 83px;
 }
 
 ul.scart_c li.scart_item_w6 {
@@ -3048,7 +3048,7 @@ input.valid, select.valid, texteara.valid{
 }
 
 .cart_list_block{
-	border: 1px solid #CCCCCC;
+	border: 1px solid #c7defc;
     margin-top: 5px;
     padding-bottom: 15px;
 
