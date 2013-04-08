@@ -192,7 +192,7 @@ public class BootstrapDataFilterInterceptor extends HandlerInterceptorAdapter{
 		siteView.setSite(site);
 		siteView.setCurrencies(currencies);
 		siteView.setCategories(categories);
-		siteView.setImageHost("http://www.honeybuy.com");
+		siteView.setImageHost(Constants.imageHost);
 		siteView.setCrossSales(crossSales);
 		
 		List<Country> countries = ServiceFactory.getService(CountryService.class).getAllCountries();

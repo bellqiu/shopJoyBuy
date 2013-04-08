@@ -274,4 +274,8 @@ public class Constants {
     public static final String ORDER_PREFIX = "JY";
 
 	public static final String CATEGORIE_VIEW_IN_REQUEST = "CATEGORIE_VIEW_IN_REQUEST";
-}
+	
+	public static final String imageHost = "http://www.joybuy.co.uk";
+	
+	public static final String PAYPAL_ACCOUNT = "pay@joybuy.co.uk";
+}	
