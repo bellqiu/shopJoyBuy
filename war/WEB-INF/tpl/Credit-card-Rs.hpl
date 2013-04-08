@@ -1,6 +1,6 @@
-<#assign pageKeywords = "Globebill, Honeybuy.com"> 
-<#assign pageDescription = "Pay by Globebill"> 
-<#assign pageTitle = "Pay by Globebill">
+<#assign pageKeywords = "MasterCard, Visa Card, Globebill, Joybuy.co.uk"> 
+<#assign pageDescription = "Pay by MasterCard, Visa Card, Globebill"> 
+<#assign pageTitle = "Pay by Credit Card: MasterCard, Visa Card">
 <#include "/header/top_clean.hpl">
 <#assign cartStep = "cartStep3">
 <#include "/header/top_no_nav.hpl">

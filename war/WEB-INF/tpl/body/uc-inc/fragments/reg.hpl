@@ -44,7 +44,7 @@
 					<input type="checkbox" name="acceptLicense" id="cbx_agree" value="true"
 						checked="checked" class="cheo">&nbsp;&nbsp;I agree that I
 					accept <a
-						href="http://www.honeybuy.com/c/Terms-Of-Use"
+						href="/c/Terms-Conditions"
 						target="_blank" class="cursor_point_and_underline">Terms of
 						Usage</a>
 				</p>

@@ -1,4 +1,4 @@
-<#assign pageKeywords = "Western Union, Honeybuy.com"> 
+<#assign pageKeywords = "Western Union, joybuy.co.uk"> 
 <#assign pageDescription = "Pay by Western Union"> 
 <#assign pageTitle = "Pay by Western Union">
 <#assign cartStep = "cartStep2" >

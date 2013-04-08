@@ -1,72 +1,110 @@
-<div id="bottom">
+<link rel="stylesheet" type="text/css" href="/style/css/helpCenter.css?799">
+<div class="jbfooter">
+<div class="row">
 
-<div style="margin:0; border:0;" class="pay">
-		<div class="pal">
-			<div class="noth">
-				<a style="float: left; border: 0; margin-left: 5px"
-					title="Click to Verify - This site chose 
-VeriSign SSL for secure e-commerce and confidential 
-communications."><script
-						type="text/javascript"
-						src="https://seal.verisign.com/getseal?host_name=www.HoneyBuy.com&amp;size=L&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script>
-				</a>
-			</div>
-			<div class="zhongjian">
-				<img src="/style/image/pic/84995201997600.jpg.png" height="27"
-					width="616"><img src="/style/image/pic/6199016674013598.jpg"
-					height="30" width="109">
-			</div>
-			<div class="paypal">
-				<a href="https://www.paypal.com/verified/pal=paypal@honeybuy.com"
-					target="blank" rel="nofollow"><img
-					src="/style/image/pic/6197576203911273.jpg" height="70" width="69">
-				</a>
-			</div>
-		</div>
-		<div class="tag-index-banner "
-			style="text-align: center; border: 1px solid #dddddd; border-right: none; border-left: none; line-height: 30px;">
-			Product <a href="http://www.honeybuy.com/tags/index">Tags</a>:&nbsp;&nbsp;&nbsp; <a
-				href="http://www.honeybuy.com/tags/index/A">A</a>&nbsp;|&nbsp; <a
-				href="http://www.honeybuy.com/tags/index/B">B</a>&nbsp;|&nbsp; <a
-				href="http://www.honeybuy.com/tags/index/C">C</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/D">D</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/E">E</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/F">F</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/G">G</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/H">H</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/I">I</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/J">J</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/K">K</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/L">L</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/M">M</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/N">N</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/O">O</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/P">P</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/Q">Q</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/R">R</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/S">S</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/T">T</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/U">U</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/V">V</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/W">W</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/X">X</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/Y">Y</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/Z">Z</a>&nbsp;|&nbsp;<a
-				href="http://www.honeybuy.com/tags/index/0_9">0_9</a>
-		</div>
-		<p>
-			Shop the<a href="/"> HoneyBuy.com Online Store</a>
-			(0086-592-5183012), visit a<a href="/c/Wedding-Dresses"> Dress
-				Retail Store</a>, or find a <a href="/c/wholesaler">wholesaler</a>.
-		</p>
-		<div class="Copyright">
-			Copyright © 2012 HONEYSTORE CO., LIMITED. All rights
-			reserved.&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/c/Terms-Of-Use">Terms
-				of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/c/Privacy-Policy">Privacy
-				Policy</a>
-		</div>
-		<div class="Copyright">
-			Add: NO.136, Picasso Town, Tangzhen, Pudong,Shanghai, China.
-		</div>
-	</div>
+<!--   div class="footerCompany"><div class="footer-center">
+<div class="box-01"><div class="title"><h3>HOT CATEGORIES</h3></div>
+<ul>
+<li><a href="http://joybuy.co.uk/c/Latest-Wedding-Dresses-UK" title="Latest Wedding Dresses" >Latest Wedding Dresses</a></li>
+<li><a href="http://joybuy.co.uk/c/Latest-Prom-Dresses-UK" title="Latest Prom Dresses" >Latest Prom Dresses</a></li>
+<li><a href="http://joybuy.co.uk/c/Wedding-Suits-UK" title="Wedding Suits" >Wedding Suits</a></li>
+<li><a href="http://joybuy.co.uk/c/Ready-to-Wear-Dresses" title="Ready to Wear Dresses" >Ready to Wear Dresses</a></li>
+<li><a href="http://joybuy.co.uk/c/Ties-Uk" title="Joybuy Ties" >Ties</a></li>
+<li><a href="http://joybuy.co.uk/c/Wedding-Shoes" title="Wedding Shoes" >Wedding Shoes</a></li>
+</ul></div>
+<div class="box-01"><div class="title"><h3>ABOUT JOYBUY</h3></div>
+<ul>
+<li><a href="http://joybuy.co.uk/c/Contact-Us" title="Contact Us" rel="nofollow">Contact Us</a></li>
+<li><a href="http://joybuy.co.uk/c/Payment-Methods" title="Payment Methods" rel="nofollow">Payment Methods</a></li>
+<li><a href="http://joybuy.co.uk/c/Privacy-Policy" title="Privacy Policy" rel="nofollow">Privacy Policy</a></li>
+<li><a href="http://joybuy.co.uk/c/Terms-Conditions" title="Terms & Conditions" rel="nofollow">Terms & Conditions</a></li>
+<li><a href="http://joybuy.co.uk/c/Delivery-Guide" title="Delivery Guide" rel="nofollow">Delivery Guide</a></li>
+<li><a href="http://joybuy.co.uk/c/Return-Refund" title="Return & Refund" rel="nofollow">Return & Refund</a></li>
+</ul></div>
+<div class="box-01"><div class="title"><h3>LATEST OFFERS</h3></div>
+<ul>
+<li><a href="http://joybuy.co.uk/c/Coupons" title="Coupons" rel="nofollow">Coupons</a></li>
+<li><a href="http://joybuy.co.uk/c/Holiday-Sales" title="Holiday Sales" rel="nofollow">Holiday Sales</a></li>
+<li><a href="http://joybuy.co.uk/c/Wholesale" title="Wholesale" rel="nofollow">Wholesale</a></li>
+<li><a href="http://joybuy.co.uk/c/Happy-Customers" title="Happy Customers" rel="nofollow">Happy Customers</a></li>
+<li><a href="http://joybuy.co.uk/c/Buying-Guides" title="Buying Guides" rel="nofollow">Buying Guides</a></li>
+<li><a href="http://joybuy.co.uk/c/Customer-Service" title="Customer Service" rel="nofollow">Customer Service</a></li>
+</ul></div>
+
+</div>
+<div class="box-01" style="width:125px;"><div class="title"><h3>FOLLOW US</h3></div>
+<ul>
+<li><a href="https://plus.google.com/100066114457703852702" rel="publisher" title="Google+" >Google+</a></li>
+<li><a href="https://www.facebook.com/HoneyBuyCity" title="Facebook" rel="nofollow">Facebook</a></li>
+<li><a href="https://twitter.com/HoneyBuy"   title="Twitter" rel="nofollow">Twitter</a></li>
+<li><a href="http://pinterest.com/honeybuy"   title="Pinterest" rel="nofollow">Pinterest</a></li>
+<li><a href="http://www.youtube.com/user/honeybuyshow"  title="YouTub" rel="nofollow">YouTube</a></li>
+<p>&nbsp;</p>
+</ul>
+</div>
+<div class="box-01" style="width:290px; border:0;">
+<div class="title"><h3>Joybuy.co.uk Worldwide Shipping</h3>
+<p >Get discounts and special offers to win gifts and cash prizes!</p>
+<div class="search_bottom"><input type="text" id="txt_Emails" value="Your E-mail Address"><input type="button" class="subt" style="width:76px; height:26px; margin-left:5px"></div>
+<div class="search_bottom">
+<a href="http://www.youtube.com/user/honeybuyshow" rel="nofollow"><img alt="YouTub" title="YouTub"  width="24" border="0" style="margin:0" src="/style/image/pic/youtube-logo.jpg"></a>
+<a href="http://pinterest.com/honeybuy" rel="nofollow"><img alt="Pinterest" title="Pinterest" width="24" border="0" src="/style/image/pic/big-p-button.png"></a>
+<a href="https://plus.google.com/100066114457703852702/posts" rel="nofollow"><img alt="Follow Joybuy.co.uk on google plus" title="Follow Joybuy.co.uk on google plus" width="24" border="0" src="/style/image/pic/gplus-32.png"></a>
+<a href="https://twitter.com/HoneyBuy" rel="nofollow"><img alt="Twitter" title="Twitter" width="24" border="0" src="/style/image/pic/twitter_32.png"></a>
+<a href="https://www.facebook.com/HoneyBuyCity" rel="nofollow"><img alt="Facebook" title="Facebook" width="24" border="0" src="/style/image/pic/facebook_32.png"></a>
+</div>
+</div>
+</div>
+</div>
+-->
+
+<div style="clear:both; height:20px;"></div>
+<div style="line-height:30px; height: 55px; "><div style="float: left;">
+<a style="border: 0px none; float: left; margin-left: -10px; margin-top: -10px;" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+		<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a>
+</div>
+<div style="float: left; margin:10px 2px 0 0px"><a rel="nofollow" target="blank" href="https://www.paypal.com/verified/pal=pay@joybuy.co.uk"><img title="Paypal verified Merchant: Globally Accepted and Purchase Protection" alt="Paypal verified Merchant: Globally Accepted and Purchase Protection" border="0" src="/style/image/paypal.gif"></a></div>
+<div style="float: left; margin-top:12px">
+<img title="hsbc" alt="hsbc" border="0" src="/style/image/hsbc.gif" >
+<img title="western" alt="western" border="0" src="/style/image/western.gif">
+<img title="ems" alt="ems" border="0" src="/style/image/ems.gif">
+<img title="dhl" alt="dhl" border="0" src="/style/image/dhl.gif">
+<img title="tnt" alt="tnt" border="0" src="/style/image/tnt.gif">
+<img title="ups" alt="ups" border="0" src="/style/image/ups.gif">
+</div>
+</div>
+<div style="text-align:center; border:1px solid 
+#dddddd; border-right:none; 
+border-left:none;line-height:30px;" class="tag-index-banner ">Product 
+<a href="http://joybuy.co.uk/tags/index">Tags</a>:&nbsp;&nbsp;&nbsp; 
+<a href="http://joybuy.co.uk/tags/index/A">A</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/B">B</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/C">C</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/D">D</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/E">E</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/F">F</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/G">G</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/H">H</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/I">I</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/J">J</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/K">K</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/L">L</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/M">M</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/N">N</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/O">O</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/P">P</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/Q">Q</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/R">R</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/S">S</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/T">T</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/U">U</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/V">V</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/W">W</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/X">X</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/Y">Y</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/Z">Z</a>&nbsp;|&nbsp;
+<a href="http://joybuy.co.uk/tags/index/0_9">0_9</a></div>
+<div class="jbfooter-bottom">
+<div class="copy-txt"><span>Copyright 2012-2015 HONEYSTORE CO., LIMITED, All rights reserved.</span></div></div>
+</div>
 </div>
