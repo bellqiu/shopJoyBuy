@@ -31,9 +31,13 @@ import static com.spshop.utils.Constants.USER_ACCOUNT_ERROR;
 import static com.spshop.utils.Constants.USER_INFO;
 import static com.spshop.utils.Constants.USER_NAME_PWD_SPLIT;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -50,7 +54,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import jxl.write.NumberFormat;
-
 import net.sf.json.JSONObject;
 
 import org.apache.commons.collections.CollectionUtils;
@@ -78,14 +81,18 @@ import com.spshop.service.factory.ServiceFactory;
 import com.spshop.service.intf.CouponService;
 import com.spshop.service.intf.OrderService;
 import com.spshop.service.intf.UserService;
+import com.spshop.utils.Constants;
 import com.spshop.utils.EmailTools;
 import com.spshop.utils.Encrypt;
 import com.spshop.utils.FeedTools;
 import com.spshop.utils.Utils;
 
 @Controller
+@RequestMapping("/uc")
 @SessionAttributes({CURRENT_PRODUCT,"continueShopping"})
 public class ShoppingController extends BaseController{
+	
+	private static final String ACCOUNT = "pay@joybuy.co.uk";
 	
 	private static final String COLOR = COLOR_PARAM_PRE;
 	private static final String QTY = QTY_PARAM;
@@ -220,7 +227,7 @@ public class ShoppingController extends BaseController{
 	
 	@RequestMapping(value="/createAccount", method = RequestMethod.POST)
     public String createAccount(Model model,HttpServletRequest request,HttpServletResponse response) {
-		
+		boolean noError = true;
 		String email = request.getParameter(REG_USER_NAME);
 		String pwd1 = request.getParameter(REG_PWD);
 		String pwd2 = request.getParameter(REG_PWD_RE);
@@ -239,7 +246,8 @@ public class ShoppingController extends BaseController{
 		user.setUpdateDate(new Date());
 		
 		if(!TRUE.equals(acceptLicense)){
-			getUserView().getErr().put(ACCEPT_LICENSE_ERR, "Please accept license");
+			model.addAttribute(ACCEPT_LICENSE_ERR, "Please accept license");
+			noError = false;
 		}
 		
 		String landingpage = null;
@@ -250,39 +258,40 @@ public class ShoppingController extends BaseController{
 		}
 			
 		if(null==email || !(email.contains("@"))){
-				getUserView().getErr().put(REG_USER_NAME_ERR, "Invalid user account");
+				model.addAttribute(REG_USER_NAME_ERR, "Invalid user account");
+				noError = false;
 		}else{
 			User u = ServiceFactory.getService(UserService.class).queryUserByEmail(email);
 			if(u != null){
-				getUserView().getErr().put(REG_USER_NAME_ERR, "account already exist");
+				model.addAttribute(REG_USER_NAME_ERR, "account already exist");
+				noError = false;
 			}
 		}
 		
 		if(pwd1==null || pwd1.length()<5){
-			getUserView().getErr().put(REG_PWD_ERR, "Invalid password");
+				model.addAttribute(REG_PWD_ERR, "Invalid password");
+				noError = false;
 		}else{
 			if(pwd2==null || !pwd1.equals(pwd2)){
-				getUserView().getErr().put(REG_PWD_RE_ERR, "Two passwords are not same");
+				model.addAttribute(REG_PWD_RE_ERR, "Two passwords are not same");
+				noError = false;
 			}
 		}
 		
 		
-		if(getUserView().getErr().isEmpty()){
+		if(noError){
 			final User u = ServiceFactory.getService(UserService.class).saveUser(user);
 			if(null!=u){
-				getUserView().getMsg().put(REG_USER_NAME_SUC, "Create Account successfully");
+					model.addAttribute(REG_USER_NAME_SUC, "Create Account successfully");
+					model.addAttribute("createdUser", user);
 				   final Map<String,Object> root = new HashMap<String,Object>(); 
 		            root.put("user", u);
 		            u.setPassword(u.getPassword());
 		            
 		            model.addAttribute(USER_INFO, u);
-					request.getSession().setAttribute(USER_INFO,u);
+					request.getSession().setAttribute(USER_INFO, u);
 					getUserView().setLoginUser(u);
-					Cookie cookie = new Cookie(COOKIE_ACCOUNT, Utils.OBJ.getEncryString(u.getEmail()+USER_NAME_PWD_SPLIT+u.getPassword()));
-					cookie.setMaxAge(99999999);
-					cookie.setPath("/");
-					response.addCookie(cookie);
-		            
+					
 		            new Thread(){
 		                public void run() {
 		                    try{
@@ -755,7 +764,7 @@ public class ShoppingController extends BaseController{
 	}
 	
 	@RequestMapping("globebillPayRs")
-	public String globebillPayRs(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException{
+	public String globebillPayRs(HttpServletRequest request, HttpServletResponse response, Model model) throws UnsupportedEncodingException{
 		/*
 		cardNo String
 		【支付卡号】
@@ -813,8 +822,10 @@ public class ShoppingController extends BaseController{
 		}
 		logger.info("order.getAddressType():"+order.getAddressType());
 		
+		model.addAttribute("tradeInfo", orderInfo);
+		model.addAttribute(Constants.PROCESSING_ORDER, order);
 		
-		return "redirect:/uc/orderDetails?id="+orderNo+"&tradeInfo=" + URLEncoder.encode(orderInfo, "UTF-8");
+		return "Credit-card-Rs";
 	}
 	
 	@RequestMapping(value="/yoursPayResults")
@@ -874,7 +885,7 @@ public class ShoppingController extends BaseController{
 		ShoppingCart cart = getUserView().getCart();
 		Map<String, String> rs = new HashMap<String, String>();
 		
-		Order order = cart.getOrder();
+		/*Order order = cart.getOrder();
 		
 		Coupon coupon = ServiceFactory.getService(CouponService.class).getCouponByCode(order.getCouponCode());
 		
@@ -896,7 +907,7 @@ public class ShoppingController extends BaseController{
 			}
 		}else{
 			rs.put("couponFeedbackErr", "Invalid coupon");
-		}
+		}*/
 		
 		
 		if(null!=itemID){
@@ -931,5 +942,124 @@ public class ShoppingController extends BaseController{
 		rs.put("itemCount", cart.getItemCount()+"");
 		
 		return rs;
+	}
+	
+	
+	@RequestMapping("/checkorder")
+	public String PaypalRS(HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		
+		try {
+			logger.info("Accept request");
+			
+			List<String> errorStrings = new ArrayList<String>();
+			List<String> msgs = new ArrayList<String>();
+			
+			Enumeration en = request.getParameterNames();
+			String str = "cmd=_notify-validate";
+			logger.info("################Accept######################");
+			while (en.hasMoreElements()) {
+				String paramName = (String) en.nextElement();
+				String paramValue = request.getParameter(paramName);
+				str = str + "&" + paramName + "="
+						+ URLEncoder.encode(paramValue, "iso-8859-1");
+				logger.info(paramName+": " + request.getParameter(paramName));
+			}
+			logger.info("######################################");
+			logger.info("str: " + str);
+			logger.info("######################################");
+			
+//			URL u = new URL("http://www.sandbox.paypal.com/c2/cgi-bin/webscr");
+			 URL u = new URL("http://www.paypal.com/cgi-bin/webscr");
+			URLConnection uc = u.openConnection();
+			uc.setDoOutput(true);
+
+			uc.setRequestProperty("Content-Type",
+					"application/x-www-form-urlencoded");
+			PrintWriter pw = new PrintWriter(uc.getOutputStream());
+			pw.println(str);
+			pw.close();
+			
+			BufferedReader in = new BufferedReader(new InputStreamReader(
+					uc.getInputStream()));
+			String res = in.readLine();
+			in.close();
+			
+			// https://www.paypal.com/IntegrationCenter/ic_ipn-pdt-variable-reference.html
+			String itemName = request.getParameter("item_name");
+			String quantity = request.getParameter("quantity");
+			String paymentStatus = request.getParameter("payment_status");
+			String paymentAmount = request.getParameter("mc_gross");
+			String paymentCurrency = request.getParameter("mc_currency");
+			String txnId = request.getParameter("txn_id");
+			String receiverEmail = request.getParameter("receiver_email");
+			
+			String payerEmail = request.getParameter("payer_email");
+			String address_city = request.getParameter("address_city");
+			String contact_phone = request.getParameter("contact_phone");
+			String address_country = request.getParameter("address_country");
+			String address_street = request.getParameter("address_street");
+			String address_zip = request.getParameter("address_zip");
+			String first_name = request.getParameter("first_name");
+			String last_name = request.getParameter("last_name");
+			Enumeration els = request.getParameterNames();
+			
+			if ("VERIFIED".equals(res)) {
+				Order order = ServiceFactory.getService(OrderService.class).getOrderById(itemName);
+				logger.info(">>>>>>>>>>>>>>>>>>>VERIFIED>>>>>>>>>>>>>>>>>>>>>>");
+				if(null!=order){
+					order.setCustomerEmail(payerEmail);
+					logger.info(">>>>>>>>>>>>>>>>>>>paymentAmount:"+paymentAmount+">>>>>>>>>>>>>>>>>>>>>>");
+					logger.info(">>>>>>>>>>>>>>>>>>>paymentCurrency:"+paymentCurrency+">>>>>>>>>>>>>>>>>>>>>>");
+					logger.info(">>>>>>>>>>>>>>>>>>>receiverEmail:"+receiverEmail+">>>>>>>>>>>>>>>>>>>>>>");
+					logger.info(">>>>>>>>>>>>>>>>>>>itemNumber:"+quantity+">>>>>>>>>>>>>>>>>>>>>>");
+					logger.info(">>>>>>>>>>>>>>>>>>>(order.getTotalPrice()+order.getDePrice() - order.getCouponCutOff()):"+(order.getTotalPrice()+order.getDePrice() - order.getCouponCutOff())+">>>>>>>>>>>>>>>>>>>>>>");
+					
+					logger.info(">>>>>>>>>>>>>>>>>>>receiverEmail.equalsIgnoreCase(ACCOUNT):"+receiverEmail.equalsIgnoreCase(ACCOUNT)+">>>>>>>>>>>>>>>>>>>>>>");
+					logger.info(">>>>>>>>>>>>>>>>>>>itemNumber.equals('1'):"+quantity.equals("1")+">>>>>>>>>>>>>>>>>>>>>>");
+					logger.info(">>>>>>>>>>>>>>>>>>>order.getCurrency().equals(paymentCurrency):"+order.getCurrency().equals(paymentCurrency)+">>>>>>>>>>>>>>>>>>>>>>");
+					logger.info(">>>>>>>>>>>>>>>>>>>receiverEmail.equalsIgnoreCase(ACCOUNT):"+receiverEmail.equalsIgnoreCase(ACCOUNT)+">>>>>>>>>>>>>>>>>>>>>>");
+					
+					
+					float rate = getSiteView().getCurrencies().get(order.getCurrency());
+					
+					logger.info(">>>>>>>>>>>>>>>>>>>((order.getTotalPrice()+order.getDePrice() - order.getCouponCutOff())*rate- 1) <= Float.parseFloat(paymentAmount):"+(((order.getTotalPrice()+order.getDePrice() - order.getCouponCutOff())*rate- 1)  <= Float.parseFloat(paymentAmount))+">>>>>>>>>>>>>>>>>>>>>>");
+					if(((order.getTotalPrice()+order.getDePrice() - order.getCouponCutOff())*rate- 1) <= Float.parseFloat(paymentAmount)
+							&&order.getCurrency().equals(paymentCurrency)
+							&&receiverEmail.equalsIgnoreCase(ACCOUNT)
+							&&quantity.equals("1")){
+						//order.setStatus(OrderStatus.PAID.getValue());
+						Map<String,Object> root = new HashMap<String,Object>(); 
+						root.put("order", order);
+						root.put("currencyRate", rate);
+						//EmailTools.sendMail("paid2", "Order Received and Payment Confirmation", root,order.getCustomerEmail());
+						try{
+							Coupon coupon = ServiceFactory.getService(CouponService.class).getCouponByCode(order.getCouponCode());
+							if(null != coupon){
+								coupon.setUsedCount(coupon.getUsedCount()+1);
+								ServiceFactory.getService(CouponService.class).saveCoupon(coupon);
+							}
+						}catch(Exception e){
+							logger.info(e.getMessage(),e);
+						}
+					}else{
+						logger.info(">>>>>>>>>>>>>>>>>>>NOT enough mony>>>>>>>>>>>>>>>>>>>>>>");
+					}
+					logger.info("order.getAddressType():"+order.getAddressType());
+					ServiceFactory.getService(OrderService.class).saveOrder(order, OrderStatus.PAID.getValue());
+					
+				}
+				
+				
+			} else if ("INVALID".equals(res)) {
+				logger.info("##############INVALID########################");
+			} else {
+				logger.info("##############ORTHER########################");
+			}
+		} catch (Exception e) {
+			logger.error(e.getMessage(), e);
+		}
+
+		 return null;
 	}
 }

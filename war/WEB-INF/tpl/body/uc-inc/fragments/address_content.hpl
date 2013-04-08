@@ -1,0 +1,11 @@
+<li><strong>${(address.firstName)!''} ${(address.lastName)!''}</strong></li>
+<li>${(address.address1)!''}
+	<#if address.address2 ??>
+		<#if (address.address2?length > 1)>
+			, ${(address.address2)!''}
+		</#if>
+	</#if>
+</li>
+<li> ${(address.city)!''} <#if address.stateProvince ??> ,${(address.stateProvince)!''}</#if> </li>
+<li>${siteView.countryMap[address.country?string].name}</li>
+<li><span class="redPhoneIcon">Phone:${(address.phone)!''}</span></li>

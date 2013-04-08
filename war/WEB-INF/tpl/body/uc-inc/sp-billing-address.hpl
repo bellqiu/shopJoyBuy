@@ -1,0 +1,139 @@
+<#if errorMsg??>
+<p class="red" style="border: dashed 1px red; padding: 10px; font-weight: bold;" >
+	Warning : ${errorMsg}
+</p>
+</#if>
+<div class="scart_con">
+	<#if processingOrder ??>
+	<#assign order = processingOrder>
+	<#assign currencyRate = (siteView.currencies[order.currency])!0 >
+	<p class="clearBoth"></p>
+	<div class="cart_list_block">
+		<h1 class="title">Billing Address</h1>
+		<div class="content">
+			<ul class="addres_list_for_select">
+			<#assign orderAddressStr = ((order.billingAddress.firstName)!'') + '^' + ((order.billingAddress.lastName)!'') + '^' + ((order.billingAddress.address1)!'') > 
+			<#if userView.loginUser.billingAddress ??>
+				<#assign address = userView.loginUser.billingAddress>
+					<li>
+						<#assign usrAddressStr = ((address.firstName)!'') + '^' + ((address.lastName)!'') + '^' + ((address.address1)!'') >
+						
+						<input type="radio" name="order_shippingAddress" value="${address.id}" 
+							<#if orderAddressStr == usrAddressStr >
+								checked="checked"
+							</#if>
+						>
+						
+						<label><strong>${(address.firstName)!''} ${(address.lastName)!''}</strong>&nbsp;(${(address.address1)!''}
+									<#if address.address2 ??>
+										<#if (address.address2?length > 1)>
+											${(address.address2)!''}
+										</#if>
+									</#if> <#if address.stateProvince ??> ${(address.stateProvince)!''}</#if> ${(address.city)!''} ${siteView.countryMap[address.country?string].name}) </label>
+						&nbsp;<a href="javascript:void(0)" class="edit_usr_add" id="add${address.id}">Edit</a>
+						<script>
+							jQuery("#add${address.id}").click(function(){
+								jQuery.HB.AddressWindow(
+										{contentUrl:"/uc/listAddress?id="+${address.id}, 
+											postUrl:"/uc/addOrUpdateBillingAddress?id="+${address.id}, 
+											title:"Edit Billing Address",
+											success : function(data){
+												
+												jQuery.HB.applyShippingAddress(jq("input[name='order_shippingAddress'][value='${address.id}']"),'${order.name}',
+													function(){
+														window.location.reload();	
+													}		
+												);
+												
+												//window.location.reload();
+												//jQuery("#user_shipping_address").append(data);
+											},
+											error : function (data){
+												alert('Failed');
+											}
+										});
+							});
+						</script>
+						
+						<p style="padding-top: 10px">
+							Please make sure the billing address you entered matches your credit card.
+						</p>
+					</li>
+			<#else>
+				<li><button class="button_01" id="Add_a_New_Billing_Address_from_shipping_cart">Add a New Billing Address</button></li>
+								<script>
+					jQuery("#Add_a_New_Billing_Address_from_shipping_cart").click(function(){
+						jQuery.HB.AddressWindow(
+								{contentUrl:"/uc/listAddress", 
+									postUrl:"/uc/addOrUpdateBillingAddress", 
+									title:"Billing Address is required (Make sure this address matches your credit card)",
+									success : function(data){
+										window.location.reload();
+									},
+									error : function (data){
+										alert('Failed');
+									}
+								});
+					});
+					jQuery("#Add_a_New_Billing_Address_from_shipping_cart").click();
+				</script>
+			</#if>
+				
+				
+				
+			</ul>
+
+		</div>
+	</div>
+	
+	
+	
+	<div class="scart_summary">
+		<div class="scart_summary_coupon_code">
+				<!-- <div class="box_sub_item_title">Have a <a href="https://www.facebook.com/HoneyBuyCity/app_208195102528120" target="_blank">Coupon Code?</a> Add it here</div>
+				<div>
+					<p>Enter code (if applicable) then click "Apply":</p>
+					<div class="form_error red" id="coupon_code_noti"></div>
+					<div>
+						Code:
+						<input name="coupon_code" type="text" class="txt_input" id="coupon_code">
+						<input	type="button" class="button_01" id="submit_coupon" value="Apply" onclick="SP.applyCoupon(jq('#coupon_code').val())">
+					</div>
+				</div>
+				 <div class="box_sub_item_title">Leave your special requirements</div>
+				<div>
+					<p>Leave your special requirements here:</p>
+					<div class="form_error red" id="order_msg_noti"></div>
+					<textarea maxlength="800" rows="4" class="order_msg" name="order_msg" id="order_msg">${(userView.cart.order.customerMsg)!''}</textarea>
+				</div>-->
+			
+		</div>
+
+		<dl class="scart_summary_list">
+			<dd >Item Sub total:<span class="red">${(order.currency)} &nbsp;<span class="order_sub_total">${(currencyRate*order.totalPrice)?string(",##0.##")}</span></span></dd>
+			<dd >Coupon:<span class="red">${(order.currency)} &nbsp;<span class="order_coupon_total">-${(currencyRate*order.couponCutOff)?string(",##0.##")}</span></span></dd>
+			<dd>
+				Shipping Cost:<span class="red">${(order.currency)}&nbsp;<span class="order_shipping_total">${(currencyRate*order.dePrice)?string(",##0.##")}</span></span>
+			</dd>
+			<dd class="separator"><dd>
+			<dd class="red">
+				<b>Grand Total:<span id="GrabdTotal">${(order.currency)} &nbsp;<span class="order_grand_total">${(currencyRate*(order.totalPrice-order.couponCutOff + order.dePrice))?string(",##0.##")}</span></span></b>
+			</dd>
+			<dd class="red">
+				<form action="https://${RawRequest.serverName}/uc/checkout_credit_card">
+					<span>
+						<input type="hidden" name="add" value="${(address.id)!0?string}">
+						<input type="hidden" name="orderSN" value="${order.name}">
+						<input	type="submit" class="button_02" value="Proceed to Checkout">
+					</span>
+				</form>
+			</dd>
+		</dl>
+	</div>
+	<p class="clearBoth"></p>
+<#else>
+		<ul class="scart_c">
+			<li class="red"><b>No order found</b></li>
+		</ul>
+</#if>
+</div>

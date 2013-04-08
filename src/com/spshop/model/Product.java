@@ -353,5 +353,4 @@ public class Product extends Component{
 		this.deleted = deleted;
 	}
 	
-	
 }

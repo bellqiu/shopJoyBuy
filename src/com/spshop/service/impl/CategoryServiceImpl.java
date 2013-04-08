@@ -33,7 +33,7 @@ public class CategoryServiceImpl extends AbstractService<Category,CategoryDAO, L
 		QueryResult<Component> qs = ServiceFactory.getService(SiteService.class).query(criteria);
 		
 		for(Category category : qs.<Category>toSpecificResult()){
-			filter(category,includeDisable,false);
+			filter(category,!includeDisable,false);
 		}
 		
 		return qs.<Category>toSpecificResult();

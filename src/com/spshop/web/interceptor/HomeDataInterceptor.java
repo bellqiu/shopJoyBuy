@@ -19,10 +19,10 @@ import com.spshop.web.view.HomeView;
 public class HomeDataInterceptor extends HandlerInterceptorAdapter {
     private final static String HOME_CATEGORY_NAME = "home";
 
-    @Override
+ /*   @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         HomeView homeView = new HomeView();
-        Utils.populateCategoryForCategoryPage(HOME_CATEGORY_NAME, homeView);
+        Utils.populateCategoryForCategoryPage(HOME_CATEGORY_NAME, );
         if (homeView.getCategory() == null) {
             Category category = ServiceFactory.getService(CategoryService.class).getCategoryByName(HOME_CATEGORY_NAME);
             homeView.setCategory(category);
@@ -50,5 +50,5 @@ public class HomeDataInterceptor extends HandlerInterceptorAdapter {
                 modelAndView.addObject(Constants.HOME_VIEW, controller.getHomeView());
             }
         }
-    }
+    }*/
 }

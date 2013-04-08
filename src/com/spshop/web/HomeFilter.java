@@ -25,7 +25,6 @@ import org.apache.log4j.Logger;
  */
 public class HomeFilter implements Filter{
 	
-	private static final Logger LOGGER = Logger.getLogger(HomeFilter.class);
 	
 	private static final String ENSURE_SCURE_URLS = "securedUrls";
 	
@@ -109,7 +108,7 @@ public class HomeFilter implements Filter{
 	
 	
 	public static void main(String[] args) {
-		System.out.println("https://www.honeybuy.com/uc/orderDetails".matches("(?i)(^https:.*)"));
+		System.out.println("/sdfsd.txt".matches("^(/)([^/\\.]+)"));
 	}
 
 }

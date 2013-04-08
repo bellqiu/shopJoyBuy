@@ -544,13 +544,14 @@ public class CommandFactory {
         };
     }
     
-    public static Command popUpReplyPanel(final boolean multiSelect, final Message message, final SelectedCallBack callBack) {
+    public static Command popUpReplyPanel(final boolean multiSelect, final Message message, final List<Order> recentOrders, final SelectedCallBack callBack) {
         return new CommandAdapter(){
             @Override
             public void execute() {
                 List<Message> messages = retrieveMessageThread(message);
                 PostMessage postMessage = new PostMessage();
                 postMessage.setMessageList(messages);
+                postMessage.setRecentOrders(recentOrders);
                 
                 final PopWindow popWindow = new PopWindow("Reply Customers", postMessage, true, true);
                 popWindow.center();

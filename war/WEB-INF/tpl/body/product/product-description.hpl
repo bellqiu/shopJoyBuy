@@ -43,3 +43,5 @@
 	});
 </script>
 </div>
+<div class="height-10"></div>
+<#include "fragments/shipping-desc.hpl">

@@ -201,4 +201,11 @@
 		<property name="indexFile" value="${index.dir}"></property>
 	</bean>
 	
+	<bean id="com.spshop.service.intf.AddressService.target" class="com.spshop.service.impl.AddressServiceImpl">
+	</bean>
+	
+	<bean id="com.spshop.service.intf.AddressService" parent="transactionBase">
+		<property name="target" ref="com.spshop.service.intf.AddressService.target" />
+	</bean>
+	
 </beans>

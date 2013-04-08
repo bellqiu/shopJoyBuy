@@ -17,14 +17,18 @@ import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.Widget;
 import com.spshop.admin.client.AdminWorkspace;
 import com.spshop.admin.client.CommandFactory;
+import com.spshop.admin.client.PopWindow;
 import com.spshop.admin.client.businessui.callback.AsyncCallbackAdapter;
+import com.spshop.admin.client.businessui.callback.OperationListenerAdapter;
 import com.spshop.model.Message;
+import com.spshop.model.Order;
 
 public class PostMessage extends Composite {
 
     private static PostMessageUiBinder uiBinder = GWT.create(PostMessageUiBinder.class);
 
     private List<Message> messageList = new ArrayList<Message>();
+    private List<Order> recentOrders = new ArrayList<Order>();
     
     interface PostMessageUiBinder extends UiBinder<Widget, PostMessage> {
     }
@@ -40,6 +44,8 @@ public class PostMessage extends Composite {
     @UiField FlexTable msgThread;
     @UiField FlexTable msgHeader;
     @UiField TextArea msgContent;
+    @UiField FlexTable recent3Orders;
+    @UiField FlexTable recent3OrdersHeader;
 
     private void initTable(){
         msgHeader.getColumnFormatter().setWidth(0, "140px");
@@ -50,6 +56,18 @@ public class PostMessage extends Composite {
         
         msgThread.getColumnFormatter().setWidth(0, "140px");
         msgThread.getColumnFormatter().setWidth(1, "600px");
+        
+        recent3OrdersHeader.getColumnFormatter().setWidth(0, "140px");
+        recent3OrdersHeader.getColumnFormatter().setWidth(1, "600px");
+        recent3OrdersHeader.getColumnFormatter().setWidth(2, "300px");
+        
+        recent3OrdersHeader.setText(0, 0, "Date");
+        recent3OrdersHeader.setText(0, 1, "Order NO.");
+        recent3OrdersHeader.setText(0, 2, "Operation");
+        
+        recent3Orders.getColumnFormatter().setWidth(0, "140px");
+        recent3Orders.getColumnFormatter().setWidth(1, "600px");
+        recent3Orders.getColumnFormatter().setWidth(2, "300px");
     }
 
     @UiHandler("postMsg")
@@ -91,6 +109,43 @@ public class PostMessage extends Composite {
 
     public List<Message> getMessageList() {
         return messageList;
+    }
+
+    public List<Order> getRecentOrders() {
+        return recentOrders;
+    }
+
+    public void setRecentOrders(List<Order> recentOrders) {
+        DateTimeFormat dateTimeFormat = DateTimeFormat.getFormat("yy/MM/dd");
+        this.recentOrders = recentOrders;
+        if (this.recentOrders!=null && this.recentOrders.size()>0) {
+            int i = 0;
+            for (Order order : recentOrders) {
+                if (i<3) {
+                    recent3Orders.setText(i, 0, dateTimeFormat.format(order.getCreateDate()));
+                    recent3Orders.setText(i, 1, order.getName());
+                    Operation<Order> operation = new Operation<Order>(order);
+                    operation.setListener(new OperationListenerAdapter<Order>(){
+                        @Override
+                        public void onEdit(Order content) {
+                            OrderInfo orderInfo = new OrderInfo(content);
+                            orderInfo.setSize("1200px", "700px");
+                            orderInfo.setTitle("Order Info");
+                            PopWindow pop = new PopWindow("Order Info",orderInfo, true, true);
+                            pop.center();
+                        }
+                        @Override
+                        public void onDelete(Order content) {
+                            // TODO Auto-generated method stub
+                            super.onDelete(content);
+                        }
+                    });
+                    recent3Orders.setWidget(i, 2, operation);
+                } else {
+                    break;
+                }
+            }
+        }
     }
 
 }

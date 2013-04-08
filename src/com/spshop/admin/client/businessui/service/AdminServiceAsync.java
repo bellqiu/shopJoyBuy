@@ -64,4 +64,6 @@ public interface AdminServiceAsync {
 	void queryByHQL(String hql, List<Object> params, String className, AsyncCallback<QueryResult<Component>> callback);
 	
 	void replyMessage(Message parent, Message message, AsyncCallback<Message> callback);
+	
+	void queryOrdersByUserId(long userId, AsyncCallback<List<Order>> callback);
 }

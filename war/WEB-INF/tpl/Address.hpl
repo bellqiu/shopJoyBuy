@@ -1,0 +1,121 @@
+<div>
+	<div style="width: 100%">
+		<form method="post" action="" name="address">
+			<p>
+				<span class="required">*</span>&nbsp;<span class="indicates">Indicates required fields.</span>
+				<input name="id" type="hidden">
+			</p>
+			<table style="width: 100%">
+				<tbody>
+					<tr>
+						<th style="width: 180px"><label>Name:</label></th>
+						<td>
+							<input type="text" name="firstname" value="${(address.firstName)!''}" maxlength="32" data-required="true" data-describedby="name-description" data-description="name">
+							<span class="required">*</span> First Name
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" name="lastname" value="${(address.lastName)!''}" maxlength="32" data-required="true" data-describedby="name-description" data-description="name">
+							<span class="required">*</span> Last Name
+							<div>
+								<div class="errorInfo" id="name-description"></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th><span class="required">*</span><label> Address:</label></th>
+						<td><input type="text" name="address" value="${(address.address1)!''}" class="address" data-required="true" data-describedby="address-description" data-description="address">
+							<div class="errorInfo" id="address-description"></div>
+						</td>
+					</tr>
+					<tr>
+						<th><label>Address Continued:</label></th>
+						<td><input type="text" name="address_ext" class="address" value="${(address.address2)!''}">
+							<p>Example: apartment, suite, unit,
+								building, floor</p></td>
+					</tr>
+					<tr>
+						<th><span class="required" >*</span><label>City:</label></th>
+						<td><input value="${(address.city)!''}" type="text" maxlength="30" name="city" data-required="true" data-describedby="city-description" data-description="city">
+							<div class="errorInfo" id="city-description"></div></td>
+					</tr>
+					<tr>
+						<th><span class="required">*</span><label>Destination
+								Country/Region:</label></th>
+						<td>
+						<select name="country" data-required="true" data-describedby="country-description" data-description="country">
+						<option value="">Please Select</option>
+						<#list siteView.countries as country>
+							<option value="${country.id}" 
+								<#if ((address.country?string)!'0') == country.id?string > selected="selected"
+								 </#if>
+							>${country.name}</option>
+						</#list>
+						</select>
+						<div class="errorInfo" id="country-description"></div>
+					</td>
+					</tr>
+					<tr>
+						<th><span class="required"></span><label>State /
+								Province / Region:</label></th>
+						<td><input type="text" name="state_province" maxlength="32" value="${(address.stateProvince)!''}">
+							<p class="errorInfo"></p></td>
+					</tr>
+					<tr>
+						<th><span class="required"></span><label>ZIP /
+								Postal Code:</label></th>
+						<td><input type="text" name="postcode" 	maxlength="10" value="${(address.postalCode)!''}">
+							<p class="errorInfo"></p></td>
+					</tr>
+					<tr>
+						<th><span class="required">*</span><label>Phone
+								Number:</label></th>
+						<td><input name="phone_number" type="text" value="${(address.phone)!''}" data-required="true" data-describedby="phone-description" data-description="phone">
+							<span class="errorInfo" id="phone-description"></span>
+							<p id="phoneSample" class="lightGray clearfix">Example: +1
+								9549031647-535</p></td>
+					</tr>
+					<tr>
+						<th></th>
+						<td><div style="height: 30px"><button type="submit" class="button_01" style="float: left;margin: 4px">Save</button>
+							<button type="reset" class="button_01"  style="float: left;;margin: 4px">Reset</button><img class="ajax_loading" src="/style/image/ajax_loader.gif"  style="float: left;;margin: 4px; display: none;" /></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</form>
+	</div>
+</div>
+<script>
+(function($){
+	$('form[name=address]').validate({
+		onKeyup : true,
+		eachValidField : function() {
+	
+			$(this).removeClass('invalid');
+		},
+		eachInvalidField : function() {
+	
+			$(this).addClass('invalid');
+		},
+		description : {
+			name : {
+				required : 'Required',
+				pattern : 'Invalid name'
+			},
+			address : {
+				required : 'Address is required'
+			},
+			city : {
+				required : 'City is required'
+			},
+			country:{
+				required : 'Please select a country'
+			},
+			phone : {
+				required : 'Phone number is required'
+			}
+		}
+	});
+	
+})(jQuery)
+</script>

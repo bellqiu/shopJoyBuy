@@ -1,6 +1,12 @@
 package com.spshop.utils;
 
-import static com.spshop.utils.Constants.*;
+import static com.spshop.utils.Constants.COOKIE_ACCOUNT;
+import static com.spshop.utils.Constants.CURRENCY;
+import static com.spshop.utils.Constants.DEFAULT_CURRENCY;
+import static com.spshop.utils.Constants.SHOPPINGCART;
+import static com.spshop.utils.Constants.USER_INFO;
+import static com.spshop.utils.Constants.USER_NAME_PWD_SPLIT;
+import static com.spshop.utils.Constants.USER_PROFILE;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -25,6 +31,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
+
 import com.spshop.admin.shared.ImageSize;
 import com.spshop.cache.SCacheFacade;
 import com.spshop.model.Category;
@@ -37,12 +46,7 @@ import com.spshop.model.enums.OrderStatus;
 import com.spshop.service.factory.ServiceFactory;
 import com.spshop.service.intf.OrderService;
 import com.spshop.service.intf.UserService;
-import com.spshop.web.interceptor.ViewDataInterceptor;
-import com.spshop.web.view.BaseFrontendView;
-import com.spshop.web.view.PageView;
-
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+import com.spshop.web.interceptor.BootstrapDataFilterInterceptor;
 
 public class Utils {
 
@@ -64,7 +68,7 @@ public class Utils {
 		Properties cp = new Properties();
 		try {
 			
-			cp.load(ViewDataInterceptor.class.getResourceAsStream("/currency.properties"));
+			cp.load(BootstrapDataFilterInterceptor.class.getResourceAsStream("/currency.properties"));
 			for (Object currencyName : cp.keySet()) {
 				try {
 					float rate = Float.parseFloat(cp.get(currencyName).toString());
@@ -317,9 +321,9 @@ public class Utils {
 	        return result;
 	    }
 	    
-	    public static void populateCategoryForCategoryPage(String categoryName, BaseFrontendView view) {
+	    public static Category populateCategoryForCategoryPage(String categoryName) {
 	        List<Category> categories = SCacheFacade.getTopCategories();
 	        
-	        view.setCategory(searchCategory(categories, categoryName));
+	        return searchCategory(categories, categoryName);
 	    }
 }

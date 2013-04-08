@@ -31,7 +31,7 @@ import com.spshop.service.intf.OrderService;
 
 public class CheckOrder extends BaseAction {
 	
-	private static final String ACCOUNT = "pay@joybuy.co.uk";
+	private static final String ACCOUNT = "pay@honeybuy.com";
 	
 	private static Logger logger = Logger.getLogger(CheckOrder.class);
 	

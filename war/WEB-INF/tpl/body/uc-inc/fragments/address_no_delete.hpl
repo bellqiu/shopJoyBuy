@@ -1,0 +1,5 @@
+<#assign address=billingAddress >
+<ul class="addrSummary">
+		<#include "address_content.hpl">
+		<LI><button class="button_01" action="edit" onclick="editUserBillingAddress(this,'${address.id}')">Edit</button></LI>
+</ul>

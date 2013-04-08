@@ -6,31 +6,22 @@ import javax.servlet.http.HttpSession;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import com.spshop.model.Order;
 import com.spshop.model.OrderItem;
 import com.spshop.model.SuitMeasurement;
+import com.spshop.utils.Constants;
 import com.spshop.web.view.SiteView;
 import com.spshop.web.view.UserView;
 
 public class BaseController {
-	private SiteView siteView;
-	public static final String USER_SESSION_VIEW = "USER_SESSION_VIEW";
 	public SiteView getSiteView() {
-		return siteView;
+		HttpSession  session = ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().getSession();
+		return (SiteView) session.getServletContext().getAttribute(Constants.SITE_VIEW);
 	}
 
-	public void setSiteView(SiteView siteView) {
-		this.siteView = siteView;
-	}
-	
 	public UserView getUserView(){
 		HttpSession  session = ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().getSession();
-		return (UserView) session.getAttribute(USER_SESSION_VIEW);
-	}
-	
-	public void setUserView(UserView userView){
-		HttpSession  session = ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().getSession();
-		
-		session.setAttribute(USER_SESSION_VIEW, userView);
+		return (UserView) session.getAttribute(Constants.USER_VIEW);
 	}
 	
 	protected SuitMeasurement retrieveSuitMeasurement(HttpServletRequest request){
@@ -84,5 +75,13 @@ public class BaseController {
 		}
 		
 		return true;
+	}
+	
+	protected void syncShoppingCartAndProcessingOrder(Order order){
+		
+		if(order.getId() == getUserView().getCart().getOrder().getId()){
+			getUserView().getCart().setOrder(order);
+		}
+		
 	}
 }

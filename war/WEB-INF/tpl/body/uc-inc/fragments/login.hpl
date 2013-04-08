@@ -1,15 +1,19 @@
  <div class="login_left">
 	<div class="box_title">Login to my account</div>
-	<form id="FormLogin" method="post" action="/uc/login">
+	<form id="FormLogin" method="post" action="/hb_login">
 		<div>
 			<p class="form_label">E-mail Address</p>
-			<input type="text" name="LoginEmail" class="txt_input" value="${LoginEmail!''}" validation="username">
-			<div class="form_error red" id="LoginEmail_noti">${(userView.err.userAccountErr)!''}</div>
+			<input type="text" name="LoginEmail" class="txt_input" value="${(createdUser.email)!''}" validation="username">
+			<div class="form_error red" id="LoginEmail_noti">
+				
+				${(SPRING_SECURITY_LAST_EXCEPTION.message)!''}
+			
+			</div>
 			<p class="form_label">Password</p>
 			<input type="password" name="LoginPwd" id="LoginPwd"
-				class="txt_input" value="${LoginPwd!''}">
+				class="txt_input" value="${(createdUser.password)!''}">
 			<p class="form_label">
-				<input type="checkbox" name="rememberID" id="LoginRember" value="true" checked="checked">
+				<input type="checkbox" name="_spring_security_remember_me" id="LoginRember" value="true">
 				<span>Login automatically in next month</span>
 			</p>
 			<p class="form_label">
@@ -17,11 +21,17 @@
 			</p>
 			<input type="hidden" name="landing_page" value="${userView.requestPage!''}">
 			<p class="form_label">
-				<input name="" type="submit" class="button_01" value="Login">
+				<input id="FormLogin_submit" type="submit" class="button_01" value="Login">
 			</p>
-			<p><img src="/css/song.jpg" alt="get $5" title="get $5" /></p>
+			<p><a href="/c/Coupons"><img border="0" src="/css/registersave.jpg" alt="Coupons" title="Coupons" /></a></p>
 			<p class="form_label">Coupon will be sent to your E-mail after you register.</p>
 		</div>
 	</form>
 
 </div>
+
+<#if createdUser ??>
+	<script>
+		jq("#FormLogin_submit").click();
+	</script>
+</#if>

@@ -34,8 +34,7 @@ zzzz")} </#if></td><td width="22"> </td> </tr> </tbody> </table>
                 <td> <img src="http://cloud.lbox.me/images/wholesale/201009/n_car1283947100.jpg" style="PADDING-TOP: 
 25px"> </td><td width="30"> </td>
                 <td width="660">
-                  <p style="LINE-HEIGHT: 17px; MARGIN: 26px 0px 5px; paading: 0"> <strong style="COLOR: #000">Dear <#if 
-order.customerName??> ${order.customerName}</#if>,</strong></p>
+                  <p style="LINE-HEIGHT: 17px; MARGIN: 26px 0px 5px; paading: 0"> <strong style="COLOR: #000">Dear ${(order.shippingAddress.firstName)!''} ${(order.shippingAddress.lastName)!''} ,</strong></p>
                   <p style="LINE-HEIGHT: 17px; MARGIN: 5px 0px; paading: 0">We 
                   are pleased to inform you that one or more of your items has 
                   shipped. Please see the details of the shipment below. </p>
@@ -55,15 +54,14 @@ order.customerName??> ${order.customerName}</#if>,</strong></p>
                       <td width="15"> </td>
                       <td width="80" align="left"> <strong style="COLOR: #000">Ship to</strong> </td>
                       <td width="170" align="left">
-					  				  
-					  <#assign "address"= primary!order.primaryAddress >
-        
-		${address.fullName}
-		<br>
-        (${address.address1!''} ${address.city!''},
-							${address.stateProvince!''},
-							${primaryAddCountry!''}, Postal Code:
-							${address.postalCode!''}) Phone:${address.phone!''}
+							
+				<#if order.shippingAddress ??>
+						<#assign "address"= order.shippingAddress >
+						${(address.firstName)!''} ${(address.lastName)!''} 
+								(${address.address1!''} ${address.city!''},
+								${address.stateProvince!''},${countryMap[address.country?string].name},
+								Postal Code: ${address.postalCode!''}) Phone:${address.phone!''}
+				</#if>
 							
 					  </td> </tr>
                     <tr>

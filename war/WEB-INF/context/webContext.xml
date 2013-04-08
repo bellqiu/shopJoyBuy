@@ -4,6 +4,7 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc" 
 	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:security="http://www.springframework.org/schema/security"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	http://www.springframework.org/schema/context
@@ -11,17 +12,129 @@
 	http://www.springframework.org/schema/mvc
 	http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
 	http://www.springframework.org/schema/aop
-	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	http://www.springframework.org/schema/security 
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
 	<aop:aspectj-autoproxy />
-	<bean class="com.spshop.web.interceptor.ModelAttributeAndLoginCheckInjecter"></bean>
-	<bean id="handlerMapping"
-		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
-		<property name="interceptors" ref="viewDataInterceptor"></property>
+	<context:annotation-config/>
+	<mvc:annotation-driven/>
+	
+	<mvc:resources location="/css/" mapping="/css/**"/>
+	<mvc:resources location="/im/" mapping="/im/**"/>
+	<mvc:resources location="/image/" mapping="/image/**"/>
+	<mvc:resources location="/js/" mapping="/js/**"/>
+	<mvc:resources location="/script/" mapping="/script/**"/>
+	<mvc:resources location="/template/" mapping="/template/**"/>
+	<mvc:resources location="/style/" mapping="/style/**"/>
+	<mvc:resources location="/tempZip/" mapping="/tempZip/**"/>
+	<mvc:resources location="/admin/" mapping="/admin/**"/>
+	<mvc:resources location="/workspace/" mapping="/workspace/**"/>
+	
+	<security:http pattern="/css/**" security="none" />
+	<security:http pattern="/im/**" security="none" />
+	<security:http pattern="/image/**" security="none" />
+	<security:http pattern="/js/**" security="none" />
+	<security:http pattern="/script/**" security="none" />
+	<security:http pattern="/template/**" security="none" />
+	<security:http pattern="/style/**" security="none" />
+	<security:http pattern="/tempZip/**" security="none" />
+	<security:http pattern="/admin/**" security="none" />
+	<security:http pattern="/workspace/**" security="none" />
+	
+	<mvc:default-servlet-handler default-servlet-name="AdminLogin" />
+	<mvc:default-servlet-handler default-servlet-name="queryService" />
+	<mvc:default-servlet-handler default-servlet-name="initServlet" />
+	<mvc:default-servlet-handler default-servlet-name="ImageCreate" />
+	<mvc:default-servlet-handler default-servlet-name="ImageBatchCreate" />
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="com.spshop.web.interceptor.BootstrapDataFilterInterceptor"></bean>
+		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/*"/>
+			<bean class="com.spshop.web.interceptor.ProductDataInterceptor"></bean>
+		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/c/**"/>
+			<bean class="com.spshop.web.interceptor.CategoryDataInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	<security:http access-decision-manager-ref="accessDecisionManager">
+		
+		<security:intercept-url pattern="/uc/changePwd/**" access="USER" />
+		<security:intercept-url pattern="/uc/userProfile/**" access="USER" />
+		<security:intercept-url pattern="/uc/retrieveShippingPrice/**" access="USER" />
+		<security:intercept-url pattern="/uc/shoppingCart_address/**" access="USER" />
+		<security:intercept-url pattern="/uc/shoppingCart_payment/**" access="USER" />
+		<security:intercept-url pattern="/uc/shoppingCart_payment2/**" access="USER" />
+		<security:intercept-url pattern="/uc/shoppingCart_payment_2_pay/**" access="USER" />
+		<security:intercept-url pattern="/uc/myOrder/**" access="USER" />
+		<security:intercept-url pattern="/uc/orderDetails/**" access="USER" />
+		<security:intercept-url pattern="/uc/my-measurements/**" access="USER" />
+		<security:intercept-url pattern="/uc/feedback/**" access="USER" />
+		
+		
+		<security:intercept-url pattern="/uc/applyCoupon/**" access="USER" />
+		<security:intercept-url pattern="/uc/updateOrder/**" access="USER" />
+		<security:intercept-url pattern="/uc/applyShippingAddress/**" access="USER" />
+		<security:intercept-url pattern="/uc/applyShippingMethod/**" access="USER" />
+		<security:intercept-url pattern="/uc/checkout/**" access="USER" />
+		<security:intercept-url pattern="/uc/checkout_credit_card/**" access="USER" />
+		<security:intercept-url pattern="/uc/applyMsg/**" access="USER" />
+		
+		<security:intercept-url pattern="/uc/listAddress/**" access="USER" />
+		<security:intercept-url pattern="/uc/deleteUserShippingAddress/**" access="USER" />
+		<security:intercept-url pattern="/uc/addOrUpdateBillingAddress/**" access="USER" />
+		
+		
+		<security:form-login login-page="/uc/login" 
+							 default-target-url="/" 
+							 login-processing-url="/hb_login" 
+							 username-parameter="LoginEmail"
+							 password-parameter="LoginPwd" authentication-success-handler-ref="loginSuccessfulHandler" /> 
+		
+		<security:remember-me  />
+		
+		<security:logout logout-success-url="/" logout-url="/logout" delete-cookies="JSESSIONID" />
+		
+	</security:http>
+	
+	<security:authentication-manager >
+		<security:authentication-provider user-service-ref="userDetailsService" />
+	</security:authentication-manager>
+	
+	<bean id="accessDecisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
+		<constructor-arg>
+			<list>
+				<bean class="org.springframework.security.access.vote.RoleHierarchyVoter">
+					<constructor-arg>
+						<bean class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl">
+							<property name="hierarchy" >
+								<value>
+									ADMIN > USER
+						        </value>
+							</property>
+						</bean>
+					</constructor-arg>
+					<property name="rolePrefix" value=""></property>
+				</bean>
+			</list>
+		</constructor-arg>
 	</bean>
-
-	<bean id="viewDataInterceptor" class="com.spshop.web.interceptor.ViewDataInterceptor"></bean>
-
+	
+	<bean id="userDetailsService" class="com.spshop.security.HBUserDetailService"></bean>
+	<bean id="loginSuccessfulHandler" class="com.spshop.security.LoginSuccessfulHandler"></bean>
+	
+	<context:component-scan base-package="com.spshop.web">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
 	<bean id="viewResolver"
 		class="com.spshop.web.view.CustomFreeMarkerViewResolver">
 		<property name="suffix" value=".hpl" />

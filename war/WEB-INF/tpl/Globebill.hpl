@@ -2,94 +2,11 @@
 <#assign pageDescription = "Pay by Globebill"> 
 <#assign pageTitle = "Pay by Globebill">
 <#include "/header/top_clean.hpl">
-<p><img style="margin-left: 300px;margin-top: 160px" alt="Loading" src="/css/loading_img_s.gif"></p>
-<div>
-	<#assign defaultOrder = currentOrder>
-	<!-- 
-			merNo + gatewayNo +
-			orderNo + orderCurrency+ orderAmount +
-			returnUrl+ signkey
-	 -->
-	 
-	<form name="payForm"
-		action="https://payment.secure-checkoutserver.com/Interface"
-		method="post" id="paypaysubmitForm">
-		<input type="hidden" name="merNo" value="10309" />
-		 <input type="hidden" name="gatewayNo" value="10309001" /> 
-		 <input type="hidden" name="orderNo" value="${defaultOrder.name}" />
-		 <input type="hidden" name="orderCurrency" value="${defaultOrder.currency}" />
-		 <input type="hidden" name="orderAmount" value="${amount}" /> 
-		 <input type="hidden" name="signInfo" value="${signInfo}" />
-		<input type="hidden" name="returnUrl" value="${returnUrl}" /> 
-		<input type="hidden" name="firstName" value="${firstName}" /> 
-		<input type="hidden" name="lastName" value="${lastName!'N/A'}" />
-		<input type="hidden" name="email" value="${defaultOrder.customerEmail}" /> 
-		<input type="hidden" name="phone" value="${defaultOrder.customerTelephone}" /> 
-		<input type="hidden" name="paymentMethod" value="Credit Card" /> 
-		<input type="hidden" name="country" value="${cc}" /> 
-		<input type="hidden" name="city" value="${defaultOrder.city}" />
-		<input type="hidden" name="address" value="${defaultOrder.customerAddress}" />
-		<input type="hidden" name="zip" value="${defaultOrder.customerZipcode}" /> 
-	</form>
-	<script type="text/javascript">
-		jq("#paypaysubmitForm").submit();
-	</script>
-</div>
 
-<!-- Google Code for /uc/shoppingCart_payment_2_pay Conversion Page -->
-<script type="text/javascript">
-	/*           */
-	var google_conversion_id = 1010858884;
-	var google_conversion_language = "en";
-	var google_conversion_format = "3";
-	var google_conversion_color = "ffffff";
-	var google_conversion_label = "2ci0CLTo5gIQhPeB4gM";
-	var google_conversion_value = 0;
-	if (3) {
-		google_conversion_value = 3;
-	}
-	/*     */
-</script>
-<script type="text/javascript"
-	src="http://www.googleadservices.com/pagead/conversion.js">
-	
-</script>
-<noscript>
-	<div style="display: inline;">
-		<img height="1" width="1" style="border-style: none;" alt=""
-			src="http://www.googleadservices.com/pagead/conversion/1010858884/?value=3&amp;label=2ci0CLTo5gIQhPeB4gM&amp;guid=ON&amp;script=0" />
-	</div>
-</noscript>
+<#assign cartStep = 'cartStep2' >
+<#include "/header/top_no_nav.hpl">
 
-<!-- Google Code for /uc/shoppingCart_payment_2_pay Conversion Page end -->
+<#include "/body/body-sp-credit-card.hpl">	
 
-<!-- Bing trace code start -->
-<script type="text/javascript">
-	if (!window.mstag)
-		mstag = {
-			loadTag : function() {
-			},
-			time : (new Date()).getTime()
-		};
-</script>
-<script id="mstag_tops" type="text/javascript"
-	src="//flex.atdmt.com/mstag/site/b9398ab5-d7dc-4ef0-92b6-8f6e583ac2b2/mstag.js"></script>
-<script type="text/javascript">
-	mstag.loadTag("analytics", {
-		dedup : "1",
-		domainId : "1582462",
-		type : "1",
-		nonadvertisingcost : "",
-		revenue : "",
-		actionid : "53624"
-	})
-</script>
-<noscript>
-	<iframe
-		src="//flex.atdmt.com/mstag/tag/b9398ab5-d7dc-4ef0-92b6-8f6e583ac2b2/analytics.html?dedup=1&domainId=1582462&type=1&nonadvertisingcost=&revenue=&actionid=53624"
-		frameborder="0" scrolling="no" width="1" height="1"
-		style="visibility: hidden; display: none"> </iframe>
-</noscript>
-<!-- Bing trace code end -->
 
 <#include "/footer/bottom_clean.hpl">

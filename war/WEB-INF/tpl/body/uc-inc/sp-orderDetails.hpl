@@ -1,19 +1,4 @@
-<#if tradeInfo ??>
-	<#if ((tradeInfo)!'')=='Failed'>
-	<p style="color: #900; font-size:24px;padding: 20px 60px;text-align: center;font-weight: bolder;">NOTICE</p>
-    <p style="color: black; border: 1px solid red; font-size: 16px; padding: 30px 20px; line-height: 30px;">
-	<img title="notice" alt="notice" src="/style/image/smile-gif.gif" style="width: 100px; float: left; padding: 0px 10px;"> 1.Your
-	payment has been processing, please go to your bank account to check if
-	you've been charged after 24 hours.<br>2.We will send you an <strong>Order Received and Payment Confirmation</strong> email when we receive your payment.<br>
-	3.If you haven't been charged, please try again or contact your bank. <br>&nbsp;<br>
-	<span style="color: black; font-size: 14px;"> If you have any questions, please contact us: <a href="mailto:service@Joybuy.co.uk">service@Joybuy.co.uk</a>.
-	We will be honored to serve you.<br>Thanks again for shopping on Joybuy.co.uk.</span></p>
-	<#elseif ((tradeInfo)!'')=='Successful'>
-	<img alt="Payment Sucessful" title="Payment Sucessful" src="/style/image/sucessfulicon.png" style="float: left; width: 100px;padding: 40px 10px 40px 240px;">
-    <h1 style="color: black; border: 1px solid red;font-size: 24px;padding: 60px;"> Payment Status: Successful ! <br> Thank You ! </h1>
-	</#if>
-</#if>
-<form action="http://${RawRequest.serverName}/uc/shoppingCart_payment" method="post">
+<form action="https://${RawRequest.serverName}/uc/shoppingCart_address">
 <div class="scart_con">
 	<#if currentOrder ??> <#assign order = currentOrder> <#if
 	order.currency == "USD"> <#assign currencyRate = 1> <#else> <#assign
@@ -98,7 +83,15 @@
 					<tr>
 					<tr>
 						<td class="scart_status_list_table_w1">PAYMENT METHOD:</td>
-						<td class="scart_status_list_table_w2">${order.orderType!'Paypal'}</td>
+						<td class="scart_status_list_table_w2">
+							<#if ((order.orderType!'')=="Globebill")>
+								Credit or Debit Card
+							<#elseif ((order.orderType!'')=="Paypal")>
+								Paypal
+							<#else>
+								Other
+							</#if>
+						</td>
 					<tr>
 					<tr>
 						<td class="scart_status_list_table_w1">SHIPPING METHOD:</td>
@@ -111,27 +104,31 @@
 							<td class="scart_status_list_table_w2">${order.traceInfo}</td>
 						<tr>
 					</#if>
-					<#assign "address"= primary!order.primaryAddress >
-					<tr>
-						<td class="scart_status_list_table_w1">SHIPPED TO:</td>
-						<td class="scart_status_list_table_w2">${address.fullName}
-							(${address.address1!''} ${address.city!''},
-							${address.stateProvince!''},
-							${siteView.countryMap[address.country?string].name}, Postal Code:
-							${address.postalCode!''}) Phone:${address.phone!''}</td>
-					<tr>
-					<#if order.billingSameAsPrimary> 
-						<#assign "address"= order.primaryAddress >
-					<#else>
-					 	<#assign "address"= order.billingAddress >
-					 </#if>
-					<tr>
-						<td class="scart_status_list_table_w1">BILLED TO:</td>
-						<td class="scart_status_list_table_w2">${address.fullName}
-							(${address.address1!''} ${address.city!''},
-							${address.stateProvince!''},${siteView.countryMap[address.country?string].name},
-							Postal Code: ${address.postalCode!''}) Phone:${address.phone!''}</td>
-					<tr>
+					<#if order.billingAddress ??>
+						<#assign "address"= order.billingAddress >
+						<#if ((address.country!'0')?number> 0) >
+							<tr>
+								<td class="scart_status_list_table_w1">BILLED TO:</td>
+								<td class="scart_status_list_table_w2">${(address.firstName)!''} ${(address.lastName)!''} 
+									(${address.address1!''} ${address.city!''},
+									${address.stateProvince!''},
+									${siteView.countryMap[address.country?string].name}, Postal Code:
+									${address.postalCode!''}) Phone:${address.phone!''}</td>
+							<tr>
+						</#if>
+					</#if>
+					<#if order.shippingAddress ??>
+						<#assign "address"= order.shippingAddress >
+						<#if ((address.country!'0')?number> 0) >
+						<tr>
+							<td class="scart_status_list_table_w1">SHIPPED TO:</td>
+							<td class="scart_status_list_table_w2">${(address.firstName)!''} ${(address.lastName)!''} 
+								(${address.address1!''} ${address.city!''},
+								${address.stateProvince!''},${siteView.countryMap[address.country?string].name},
+								Postal Code: ${address.postalCode!''}) Phone:${address.phone!''}</td>
+						<tr>
+						</#if>
+					</#if>
 					<#if order.suitMeasurementComplete >
 					<tr>
 						<td>Suit Measurement</td>
@@ -184,7 +181,6 @@
 			<dd class="red">
 					<Span><input type="submit" class="button_02" value="Pay this Order>>" id="GO_TO_Fill_Address" ></Span>
 					<input type="hidden" name="id" value="${order.name}">
-					<input type="hidden" name="payType" value="${order.orderType}">
 			</dd>
 			</#if>
 		</dl>

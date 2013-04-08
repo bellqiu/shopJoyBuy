@@ -1,79 +1,397 @@
+<#if errorMsg??>
+<div class="red" style="border: 2px solid red; padding: 10px; font-weight: bold; height: 30px;">
+<div style="float:left; width:40%; text-align:right; "><img width="32" src="/style/image/notice.PNG"></div>
+<div style="float:right; line-height:30px; text-align: left; width:60%; text-indent:10px; ">
+	NOTICE: ${errorMsg}</div>
+</div>
+</#if>
+
 <div class="scart_con">
-<form action="http://${RawRequest.serverName}/uc/shoppingCart_address" method="post">
-	<div class="scart_step2"></div>
-	<#assign order = currentOrder!userView.cart.order>
-	<div class="scart_header2">
-		Fill Your Address
+ <div class="cart_list_block">
+	<ul class="scart_c scart_header">
+			<li class="scart_thumbnail">&nbsp;</li>
+			<li class="scart_desc">
+				Item(s)
+			</li>
+			<li class="scart_item_w2">Item Price</li>
+			<li class="scart_item_w3">Quantity
+			</li>
+			<li class="scart_item_w4">Amount</li>
+			<li class="scart_item_w5">Operation
+			</li>
+	</ul>
+	<h1 style="position: relative; top: -50px; left: 10px;" class="order_summary">Order summary</h1>
+	<#if processingOrder ??>
+	<#assign order = processingOrder>
+	<#assign currencyRate = (siteView.currencies[order.currency])!0 >
+	<#list order.items as item>
+		<ul class="scart_c" id="${item.name}">
+			<li class="scart_thumbnail"><a target="_blank"
+				href="${siteView.host}/${item.product.name}"><img
+					src="${siteView.imageHost}${item.product.images[0].smallUrl}"></a>
+			</li>
+			<li class="scart_desc">
+				<dl>
+					<dt>
+						<a target="_blank"
+							href="${siteView.host}/${item.product.name}">
+							${item.product.title}
+							</a>
+					</dt>
+					<dd class="scart_opt">
+						<ul>
+							<#list item.userOptions as opt>
+								<#switch opt.name>
+									<#case 'Color'>
+										<#assign optTypeRes = (opt.value!'')?matches("(.*?)(##)(.*)")>
+										<#list optTypeRes as moptTypeRes>
+											<#assign optType = moptTypeRes?groups[3]  >
+											<#assign optTitle = moptTypeRes?groups[1]  >
+											<#assign optSpliter = moptTypeRes?groups[2] >
+										</#list>
+										<#if optTypeRes?size ==0 && opt.value != 'The Same As Picture' && (optType!'') != 'ASP'>
+											<li>${opt.name } : ${opt.value}</li>
+										<#elseif opt.value == 'The Same As Picture' || (optType!'') == 'ASP'>
+											<li>${opt.name } : The Same As Picture</li>
+										<#else>
+											<li>${opt.name }: &nbsp;&nbsp;<img alt='${optTitle!""}' src=
+												<#if (optType!"")?starts_with("http") >
+													'${optType!""}'
+												<#else>
+													'${siteView.imageHost}/${optType!""}'
+												</#if> width="18" height="18"  title='${optTitle!""}'></li>
+										</#if>
+									<#break>
+									<#default>
+										<li>${opt.name } : ${opt.value }</li>
+								</#switch>
+							</#list>	
+						</ul>
+						<p class="clearBoth"></p>
+					</dd>
+				</dl>
+			</li>
+			<li class="scart_item_w2"><span class="red">${order.currency}</span> <span>${(currencyRate*item.finalPrice)?string(",##0.##")}</span></li>
+			<li class="scart_item_w3">
+				<div class="increase" onclick="jq.HB.updateItem(this,'${order.name}', '${item.id?string('##')}', true)">
+				</div> <input type="text"
+				class="increase_input item_qty" value="${item.quantity}" size="4">
+				<div class="decrease" onclick="jq.HB.updateItem(this,'${order.name}', '${item.id?string('##')}', false)"></div>
+			</li>
+			<li class="scart_item_w4"><span class="red">${(order.currency)}</span> <span class="item_amount">${(currencyRate*item.finalPrice*item.quantity)?string(",##0.##")}</span></li>
+			<li class="scart_item_w5">
+				<div class="sp_cart_remove">
+					<a onclick="jq.HB.updateItem(this,'${order.name}', '${item.id?string('##')}', false, true)">Remove</a>
+				</div>
+			</li>
+			<li class="scart_item_w6">&nbsp;</li>
+		</ul>
+	</#list>
+	
+	<p class="clearBoth"></p>
 	</div>
-	<div>
-		<div>
-			<div class="box_sub_item_title">Shipping to this address</div>
-			<#assign "addType"='primary'>
-			<#assign "address"= primary!userView.cart.order.primaryAddress >
-			<#assign "showSubmitBtn"=false >
-			<#include "fragments/address.hpl">
+	<div class="cart_list_block">
+		<h1 class="title">Coupon</h1>
+		<div class="content">
+				<div>
+					<div class="form_error red" id="coupon_code_noti"></div>
+					<div>
+						&nbsp; Enter your coupon code:
+						<input name="coupon_code" type="text" class="txt_input" id="coupon_code">
+						<input	type="button" class="button_01" id="submit_coupon" value="Apply" onclick="jq.HB.applyCoupon('${order.name}')">
+						<p class="red" id="coupon_code_err"></p>
+					</div>
+				</div>
 		</div>
 	</div>
-	<div>
-		<div>
-			<#assign "addType"='billing'>
-			<#assign "address"= billing!userView.cart.order.billingAddress >
-			<div class="box_sub_item_title">Billing address</div>
-			<div class="conditon_to_show_box">
-				<input id="billingAddress_check_box" type="checkbox" name="billingSameAsPrimary" ${order.billingSameAsPrimary?string('checked="checked"','')} value="true" ><span>Same as Primary Address</span>
-			</div>
-			<div class="${userView.loginUser.billingSameAsPrimary?string('hidden','')}" id="billingAddress_content">
-				<#assign "showSubmitBtn"=false >
-				<#include "fragments/address.hpl">
-			</div>
+	
+	<div class="cart_list_block">
+		<h1 class="title">Leave a message</h1>
+		<div class="content">
+				<div>
+					<p>Leave your special requirements here:</p>
+					<div class="form_error red" id="order_msg_noti"></div>
+					<textarea maxlength="800" rows="4" class="order_msg" name="order_msg" id="order_msg">${(order.customerMsg)!''}</textarea>
+					<br>
+					<input	type="button" class="button_01" id="submit_coupon" value="Apply" onclick="jq.HB.applyMsg('${order.name}')">
+				</div>
 		</div>
 	</div>
-	<div class="scart_header2">
-		Select Shipping Methods
+	
+	
+	<div class="cart_list_block">
+		<h1 class="title">Shipping Address</h1>
+		<div class="content">
+			<ul class="addres_list_for_select">
+			<#assign orderAddressStr = ((order.shippingAddress.firstName)!'') + '^' + ((order.shippingAddress.lastName)!'') + '^' + ((order.shippingAddress.address1)!'') > 
+			<#if userView.loginUser.shippingAddresses??>
+				<#list userView.loginUser.shippingAddresses as address>
+					<li>
+						<#assign usrAddressStr = ((address.firstName)!'') + '^' + ((address.lastName)!'') + '^' + ((address.address1)!'') >
+						<input type="radio" name="order_shippingAddress" value="${address.id}" onclick="jq.HB.applyShippingAddress(this,'${order.name}')"
+							<#if orderAddressStr == usrAddressStr >
+								checked="checked"
+							</#if>
+						>
+						
+						<label><strong>${(address.firstName)!''} ${(address.lastName)!''}</strong>&nbsp;(${(address.address1)!''}
+									<#if address.address2 ??>
+										<#if (address.address2?length > 1)>
+											${(address.address2)!''}
+										</#if>
+									</#if> <#if address.stateProvince ??> ${(address.stateProvince)!''}</#if> ${(address.city)!''} ${siteView.countryMap[address.country?string].name}) </label>
+						&nbsp;<a href="javascript:void(0)" class="edit_usr_add" id="add${address.id}" style="display: none;">Edit</a>
+						<script>
+							if(jq("input[name='order_shippingAddress'][value='${address.id}']").attr("checked") == 'checked'){
+								jQuery("#add${address.id}").show();
+							}
+							jQuery("#add${address.id}").click(function(){
+								jQuery.HB.AddressWindow(
+										{contentUrl:"/uc/listAddress?id="+${address.id}, 
+											postUrl:"/uc/addOrUpdateShippingAddress?id="+${address.id}, 
+											title:"Edit Shipping Address",
+											success : function(data){
+												
+												jQuery.HB.applyShippingAddress(jq("input[name='order_shippingAddress'][value='${address.id}']"),'${order.name}',
+													function(){
+														window.location.reload();	
+													}		
+												);
+												
+												//window.location.reload();
+												//jQuery("#user_shipping_address").append(data);
+											},
+											error : function (data){
+												alert('Failed');
+											}
+										});
+							});
+						</script>
+					</li>
+				</#list>
+			</#if>
+				<li><button class="button_01" id="Add_a_New_Billing_Address_from_shipping_cart">Add a New Shipping Address</button></li>
+			</ul>
+				<script type="text/javascript">
+					
+					<#if userView.loginUser.shippingAddresses[0]??>
+						jQuery("#Add_a_New_Billing_Address_from_shipping_cart").click(function(){
+							jQuery.HB.AddressWindow(
+									{contentUrl:"/uc/listAddress", 
+										postUrl:"/uc/addOrUpdateShippingAddress", 
+										title:"Add new Shipping Address",
+										success : function(data){
+											window.location.reload();
+										},
+										error : function (data){
+											alert('Failed');
+										}
+									});
+						});
+					<#else>
+						jQuery("#Add_a_New_Billing_Address_from_shipping_cart").click(function(){
+							jQuery.HB.AddressWindow(
+									{contentUrl:"/uc/listAddress", 
+										postUrl:"/uc/addOrUpdateShippingAddress", 
+										title:"Shipping Address is required",
+										success : function(data){
+											window.location.reload();
+										},
+										error : function (data){
+											alert('Failed');
+										}
+									});
+						});
+						jQuery("#Add_a_New_Billing_Address_from_shipping_cart").click();
+					</#if>
+				</script>
+				
+		</div>
 	</div>
-	<#assign shippingMethod=(order.shippingMethod)!'standard'>
-	<ul class="scart_c">
-       <li class="scart_c_w_l"><input name="shippingMethod" type="radio" value="standard" ${(shippingMethod=='standard')?string('checked="checked"','')}>Standard Shipping</li>
-       <li class="scart_c_w_m">Normally 5 - 8 days</li>
-       <li class="scart_c_w_r red ">${(order.currency)}&nbsp;<span class="order_shipping_standard">0</span></li>
-    </ul>
-    <p class="clearBoth">&nbsp;</p>
-    <ul class="scart_c">
-       <li class="scart_c_w_l"><input name="shippingMethod" type="radio" value="expedited" ${(shippingMethod=='standard')?string('','checked="checked"')}>Expedited Shipping</li>
-       <li class="scart_c_w_m">Normally 2 - 4 days</li>
-       <li class="scart_c_w_r red">${(order.currency)}&nbsp; <span class="order_shipping_expedited">0</span></li>
-    </ul>
-    <script type="text/javascript">
-    	var c = jq("#primarycountry").val();
-    	if(c!='0'){
-    		SP.getShippingPrice("#primarycountry",jq("input[name=shippingMethod]").filter("input[checked=checked]"));
-    	}
-    	
-    	jq("#primarycountry").change(function(){
-    		SP.getShippingPrice("#primarycountry",jq("input[name=shippingMethod]").filter("input[checked=checked]"));
-    	});
-    	
-    	jq("input[name=shippingMethod]").click(function(){
-    		SP.getShippingPrice("#primarycountry",jq(this));
-    	});
-    </script>
-    <p class="clearBoth"></p>
-    <div class="separator"></div>
-    <dl class="scart_summary_list">
-			<dd >Item Sub total:<span class="red">${(order.currency)}&nbsp;${(userView.currencyRate*order.totalPrice)?string(",##0.##")}</span></dd>
-			<dd >Coupon:<span class="red">${(order.currency)}&nbsp;-${(userView.currencyRate*order.couponCutOff)?string(",##0.##")}</span></dd>
-			<dd >Shipping Cost:<span class="red">${(order.currency)}&nbsp;<span class="order_shipping_total">${(userView.currencyRate*order.dePrice)?string(",##0.##")}</span></span></dd>
+	<#assign notExistingShipingAddress =  (((order.shippingAddress.firstName)!'')=='')>
+	<div class="cart_list_block" id="Shipping_and_Delivery_block" 
+		<#if  notExistingShipingAddress >
+			style="display: none;"
+		</#if>
+		>
+		<h1 class="title">Shipping & Delivery</h1>
+		<div class="content">
+				<div style="margin-left: 10px;">
+						<ul class="scart_c">
+					       <li class="scart_c_w_l"><input name="shippingMethod" type="radio" value="standard" 
+					       	<#if ((order.shippingMethod)!'')=='standard' >checked="checked"</#if>
+					        onclick="jq.HB.applyShippingMethod('${order.name}', 'standard')" ><strong>&nbsp; Standard Shipping</strong></li>
+					       <li class="scart_c_w_m">Normally 5 - 8 days</li>
+					       <li class="scart_c_w_r red ">${(order.currency)}&nbsp;<span class="order_shipping_standard">${stdShippingPrice}</span></li>
+					    </ul>
+					    <p class="clearBoth">&nbsp;</p>
+					    <ul class="scart_c">
+					       <li class="scart_c_w_l"><input name="shippingMethod" type="radio" value="expedited"
+					       		<#if ((order.shippingMethod)!'')=='expedited' >checked="checked"</#if>
+					        onclick="jq.HB.applyShippingMethod('${order.name}', 'expedited')" ><strong>&nbsp; Expedited Shipping</strong></li>
+					       <li class="scart_c_w_m">Normally 2 - 4 days</li>
+					       <li class="scart_c_w_r red">${(order.currency)}&nbsp; <span class="order_shipping_expedited">${extShippingPrice}</span></li>
+					    </ul>
+					      <p class="clearBoth">&nbsp;</p>
+					      
+					   <div>
+						   <img alt="Free" src="/css/shipping.jpg" class="free-shipping-img">
+							<p class="red">When will my order arrive?</p>
+							<p style="margin: 12px;">
+							<img src="/style/image/processing-time.jpg"></p>
+							<p>Learn more about <a class="red">processing time</a></p>
+							<ul>
+							<li style="line-height:20px;">Processing time is the time it takes to get your order ready to leave our warehouses. 
+							This includes preparing your items, performing quality checks, and packing for shipment.
+							<br>
+							<strong>Processing Time: </strong>8-12 days for custom-made items, 1-3 Days for other.<br>
+							<strong>Shipping Time: </strong>3-5 business days. </li></ul>
+								
+					   </div>
+				</div>
+		</div>
+	</div>
+	<form action="https://${RawRequest.serverName}/uc/checkout" >
+	<div class="cart_list_block">
+		<h1 class="title">Payment Method</h1>
+		<div class="payment">
+			<select name="payment">
+				<option value="allpaymthod">Please select your payment method</option>
+				<option value="Globebill"  >Credit or Debit Card</option>
+				<option value="paypal" selected="selected">Paypal</option>
+				<option value="WesternUnion">Western Union</option>
+				<option value="WireTransfer">Wire Transfer</option>
+			</select>
+			
+			<div id="allpaymthod" class="paymentmethod"> 
+				<p>We currently accept PayPal, common credit and debit cards, Western Union, wire transfer and realtime bank 
+				transfer for all orders (you can check the availability listed below). We also take security very seriously indeed, 
+				so your details will be safe with us. </p>
+				<p>
+					<span class="paypalIcon2"></span>
+					<span class="visaIcon"></span>
+					<span class="mcardIcon"></span>
+					<span class="visaEIcon"></span>
+					<span class="mcardIcon2"></span>
+					<span class="westernUIcon"></span>
+				</p>
+			</div>
+			
+			<div id="Globebill" class="paymentmethod">
+				<p>We accept the following credit and debit cards: </p>
+				<p>Note: For security purposes, we will not save any of your credit card data. </p>
+				<p>
+					<span class="visaIcon"></span>
+					<span class="mcardIcon"></span>
+					<span class="visaEIcon"></span>
+					<span class="mcardIcon2"></span>
+				</p>
+			</div>	
+			
+			<div id="paypal" class="paymentmethod">
+				<p>Existing PayPal users can complete your payment using your PayPal account.
+				<p>New PayPal users can register a PayPal account first, then continue the payment on PayPal website.</p>
+				<p>Note: you can send money to us on PayPal directly, our account is: XXX (accept many currencies).</p>
+				<a target="_blank" href="https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside">
+				<img alt="Checkout with PayPal – Faster. Safer. Easier." title="Checkout with PayPal – Faster. Safer. Easier." src="/style/image/paypal.gif">
+				</a>
+				<a class="paypalIcon" target="_blank" href=" "></a>
+			</div>	
+			
+			<div id="WesternUnion" class="paymentmethod WesternUnionText">
+				 <ul>
+			     <li><b>Beneficiary:</b>SHI YI LIU</li>
+			     <li><b>First Name:</b>Shiyi</li>
+			     <li><b>Last Name:</b>Liu</li>
+			     <li><b>Country:</b>China</li>
+			     <li><b>Address:</b>XiaMen, Fujian, PR China,361000</li>
+			     <li class="margin_t"><b>NOTICE:</b> Please email your order number, 
+			     the western union control number(mtcn), amount, sender's first and last name, sender's address 
+			     and country,sender's phone number to service@honeybuy.com after you send payment to us 
+			     by Western Union. Thanks!</li>
+			     </ul>        
+			</div>	
+			
+				<div id="WireTransfer" class="paymentmethod">
+				 <ul>
+				 <li><b>Name: </b>HONEYSTORE CO., LIMITED</li>
+				 <li><b>Account: </b>264-571043-883</li>
+				 <li><b>Bank Name: </b>HANG SENG BANK LIMITED</li>
+				 <li><b>Swift Code: </b>HASEHKHH</li>
+				 <li><b>Bank Address:</b>83 Des Voeux Road Central, HK</li>
+				 <li class="margin_t"><b>Notice:</b> Please email your order number, amount, sender's first and last name,
+				  sender's country, sender's phone number to service@honeybuy.com after you send the payment by wire transfer.
+				   Thanks!</li>
+				 </ul>
+			</div>	
+		</div>
+		
+		<script type="text/javascript">
+			jq(".paymentmethod").hide();
+			var me = jq("select[name=payment]").val();
+			
+			jq("#"+me).show();
+			
+			jq("select[name=payment]").change(function(){
+				jq(".paymentmethod").hide();
+				jq("#"+jq("select[name=payment]").val()).show();
+					
+			});
+			
+		</script>
+		
+	</div>
+
+</div>
+	
+	
+	<div class="scart_summary">
+		<div class="scart_summary_coupon_code">
+				<!-- <div class="box_sub_item_title">Have a <a href="https://www.facebook.com/HoneyBuyCity/app_208195102528120" target="_blank">Coupon Code?</a> Add it here</div>
+				<div>
+					<p>Enter code (if applicable) then click "Apply":</p>
+					<div class="form_error red" id="coupon_code_noti"></div>
+					<div>
+						Code:
+						<input name="coupon_code" type="text" class="txt_input" id="coupon_code">
+						<input	type="button" class="button_01" id="submit_coupon" value="Apply" onclick="SP.applyCoupon(jq('#coupon_code').val())">
+					</div>
+				</div>
+				 <div class="box_sub_item_title">Leave your special requirements</div>
+				<div>
+					<p>Leave your special requirements here:</p>
+					<div class="form_error red" id="order_msg_noti"></div>
+					<textarea maxlength="800" rows="4" class="order_msg" name="order_msg" id="order_msg">${(userView.cart.order.customerMsg)!''}</textarea>
+				</div>-->
+			
+		</div>
+
+		<dl class="scart_summary_list">
+			<dd >Item Sub total:<span class="red">${(order.currency)} &nbsp;<span class="order_sub_total">${(currencyRate*order.totalPrice)?string(",##0.##")}</span></span></dd>
+			<dd >Coupon:<span class="red">${(order.currency)} &nbsp;<span class="order_coupon_total">-${(currencyRate*order.couponCutOff)?string(",##0.##")}</span></span></dd>
+			<dd>
+				Shipping Cost:<span class="red">${(order.currency)}&nbsp;<span class="order_shipping_total">${(currencyRate*order.dePrice)?string(",##0.##")}</span></span>
+			</dd>
 			<dd class="separator"><dd>
 			<dd class="red">
-				<b>Grand Total:<span id="GrabdTotal">${(order.currency)}&nbsp;<span class="order_grand_total">${(userView.currencyRate*(order.totalPrice-order.couponCutOff+order.dePrice))?string(",##0.##")}</span></span></b>
+				<b>Grand Total:<span id="GrabdTotal">${(order.currency)} &nbsp;<span class="order_grand_total">${(currencyRate*(order.totalPrice-order.couponCutOff + order.dePrice))?string(",##0.##")}</span></span></b>
 			</dd>
 			<dd class="red">
-			<span>
-				<a href="/uc/shoppingCart">Back >> </a>
-				<input	type="submit" class="button_02" value="Continue" ></span>
+			
+				<span>
+					
+					<input type="hidden" name="orderSN" value="${order.name}">
+					<input	type="submit" class="button_02" value="Proceed to Checkout">
+				</span>
+				
 			</dd>
 		</dl>
-    
-	<p class="clearBoth"></p>
+	</div>
 	</form>
+	<p class="clearBoth"></p>
+<#else>
+		<ul class="scart_c">
+			<li class="red"><b>No order found</b></li>
+		</ul>
+</#if>
 </div>

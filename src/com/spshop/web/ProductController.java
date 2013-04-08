@@ -22,6 +22,7 @@ import com.spshop.utils.Constants;
 import com.spshop.web.view.PageView;
 
 @Controller
+@RequestMapping("/p")
 public class ProductController extends BaseController {
     private final static Properties popupConfig = new Properties();
     private static Logger logger = Logger.getLogger(ProductController.class);
@@ -95,15 +96,8 @@ public class ProductController extends BaseController {
         model.addAttribute(RELATED_PRODUCTS, products);
     }
 
-    public void setPageView(PageView pageView) {
-        ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest()
-                                                                                   .setAttribute(Constants.CATEGORIE_VIEW_IN_REQUEST,
-                                                                                                 pageView);
-    }
-
     public PageView getPageView() {
-        return (PageView)((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest()
-                                                                                                    .getAttribute(Constants.CATEGORIE_VIEW_IN_REQUEST);
+        return (PageView)((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().getAttribute(Constants.PAGE_VIEW);
     }
 
 }

@@ -1,0 +1,10 @@
+<#assign pageKeywords = "Fill Billing Address"> 
+<#assign pageDescription = "Fill Billing Address"> 
+<#assign pageTitle = "Fill Billing Address">
+<#include "/header/top_clean.hpl">
+<#assign cartStep = 'cartStep2' >
+<#include "/header/top_no_nav.hpl">
+
+<#include "/body/body-sp-billing-address.hpl">	
+
+<#include "/footer/bottom_clean.hpl">

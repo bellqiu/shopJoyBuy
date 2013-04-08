@@ -25,6 +25,7 @@ import com.spshop.utils.Utils;
 import com.spshop.web.view.PageView;
 
 @Controller
+@RequestMapping("/c")
 public class PageController extends BaseController {
     
     
@@ -135,15 +136,8 @@ public class PageController extends BaseController {
         page.addPageProperty(Constants.CATEGORY_IMAGE_SIZE_INFO_KEY, categoryImageSizeInfo);
     }
     
-   
     
-    public void setPageView(PageView pageView) {
-    	 ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().setAttribute(Constants.CATEGORIE_VIEW_IN_REQUEST, pageView);
-        /*this.pageViewThreadLocal.set(pageView);*/
-    }
-
     public PageView getPageView() {
-    	return (PageView) ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().getAttribute(Constants.CATEGORIE_VIEW_IN_REQUEST);
-//        return pageViewThreadLocal.get();
+    	return (PageView) ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes()).getRequest().getAttribute(Constants.PAGE_VIEW);
     }
 }

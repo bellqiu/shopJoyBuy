@@ -1,7 +1,6 @@
 package com.spshop.service.impl;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import com.spshop.dao.intf.SiteDAO;

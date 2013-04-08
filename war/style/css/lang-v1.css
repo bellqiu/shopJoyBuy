@@ -1,0 +1,113 @@
+@CHARSET "UTF-8";
+/* top level  */
+ul.xct-menu {
+	border-bottom: 1px solid #D1D1D1;
+    border-left: 1px solid #D1D1D1;
+    border-right: 1px solid #D1D1D1;
+    position:relative;
+    list-style:none !important;
+    text-indent:none;
+    margin:0;
+    padding:0;
+    width:130px !important;
+    overflow:hidden;
+    overflow:hidden;
+    text-align: left;
+}
+
+ul.xct-menu .xct-trigger-dropdown {
+    z-index:99999;
+}
+
+/* no focus dotted line  */
+ul.xct-menu :focus {
+
+}
+
+/* container of menu items */
+ul.xct-menu ul {
+    display:none;
+    position:absolute;
+    list-style:none !important;
+    text-indent:none;
+    margin:0;
+    padding:0;
+    background-color:#ebebeb;
+    border:1px solid #c0c0c0;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 173px;
+}
+
+
+/* auto placed menus need position static */
+ul.xct-autoPlace ul {
+    position:static !important;
+}
+
+
+/* list items (includes trigger) */
+ul.xct-menu li {
+    display:block;
+}
+
+/* styles trigger link */
+ul.xct-menu a.xct-trigger-link{
+    display:block;
+    text-decoration:none;
+    font-family:arial;
+    font-size:11.5px;
+    font-weight:bold;
+    color:#333333;
+    background-color:inherit;
+    cursor:pointer;
+    padding:3px 10px 3px 10px !important;
+    background-image:url('../image/arrow-down.png');
+    background-repeat:no-repeat;
+    background-position:right 6px;
+    letter-spacing:1px;
+}
+
+ul.xct-menu.xct-botRight a.xct-trigger-link {
+    background-image:url('../image/arrow-up.png');
+}
+
+/* styles item link tags */
+a.xct-link{
+    display:block;
+    padding:5px 5px 5px 8px;
+    text-decoration:none !important;
+    font-family:arial !important;
+    font-size:12px !important;
+    line-height:12px !important;
+    color:#000;
+    word-wrap: break-word;
+}
+
+a.xct-link .xct-link-label{
+    font-size: 10.998px;
+    font-weight: bold;
+    line-height: 14px;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #999;
+    padding: 1px 4px 2px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    min-width: 18px;
+}
+
+a.xct-link .xct-link-text{
+    padding-left: 5px;
+}
+
+/* hover state for menu items */
+ul.xct-menu li li a:hover{
+    color:#fff !important;
+    background-color:#5dccd8;
+}
+

@@ -5,7 +5,7 @@
 <#include "/header/top_clean.hpl">
 <img alt="Loading" src="/css/loading_img_s.gif">
 <div>
-	<#assign defaultOrder = currentOrder>
+	<#assign defaultOrder = processingOrder>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post"
 		id="paypaysubmitForm">
 		<input type="hidden" name="cmd" value="_xclick"> <input
@@ -16,13 +16,13 @@
 		<input type="hidden" name="currency_code"
 			value="${defaultOrder.currency}"> <input type="hidden"
 			name="lc" value="US"> <input type="hidden" name="notify_url"
-			value="http://www.joybuy.co.uk/uc/checkorder"> <input
+			value="https://${RawRequest.serverName}/uc/checkorder"> <input
 			type="hidden" name="return"
-			value="http://www.joybuy.co.uk/orders?id=${defaultOrder.name }">
+			value="https://${RawRequest.serverName}/uc/orderDetails?id=${defaultOrder.name }">
 	</form>
-	<script type="text/javascript">
+	 <script type="text/javascript">
 		jq("#paypaysubmitForm").submit();
-	</script>
+	</script> 
 </div>
 
 	

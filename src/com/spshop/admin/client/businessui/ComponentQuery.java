@@ -35,6 +35,8 @@ import com.spshop.model.User;
 import com.spshop.model.enums.ImageSizeType;
 import com.spshop.model.query.QueryCriteria;
 import com.spshop.model.query.QueryResult;
+import com.spshop.service.factory.ServiceFactory;
+import com.spshop.service.intf.OrderService;
 @SuppressWarnings("rawtypes")
 public class ComponentQuery extends ResizeComposite {
 
@@ -567,8 +569,10 @@ public class ComponentQuery extends ResizeComposite {
         DateTimeFormat dateTimeFormat = DateTimeFormat.getFormat("yy/MM/dd");
         for (int i = 0; i < result.getResult().size(); i++) {
             Order order = (Order) result.getResult().get(i);
-            table.setText(i, 0, order.getCustomerName());
-            table.setText(i, 1, order.getCustomerEmail());
+            if(null != order.getShippingAddress()){
+            	table.setText(i, 0, order.getShippingAddress().getFirstName() + " " + order.getShippingAddress().getLastName());
+            }
+            table.setText(i, 1, order.getCustomerEmail()==null ? (order.getUser()!=null?order.getUser().getEmail() : "" ): order.getCustomerEmail());
             table.setText(i, 2, dateTimeFormat.format(order.getCreateDate()));
             table.setText(i, 3, NumberFormat.getFormat("0.00").format(order.getTotalPrice()));
             table.setText(i, 4, order.getStatus());
@@ -601,9 +605,18 @@ public class ComponentQuery extends ResizeComposite {
             table.setText(i, 0, message.getName());
             table.setText(i, 1, message.getUser().getEmail());
             table.setText(i, 2, dateTimeFormat.format(message.getCreateDate()));
-            table.setText(i, 3, String.valueOf(message.getUser().getFullNameP()));
+            String customerName = "";
+            Long userId = 0l;
+            if (message.getReplyTo()!=null && !message.getReplyTo().getUser().getName().equals(AdminWorkspace.loginInfo.getLoginUser().getName())) {
+                customerName = message.getReplyTo().getUser().getName();
+                userId = message.getReplyTo().getUser().getId();
+            } else {
+                customerName = message.getUser().getName();
+                userId = message.getUser().getId();
+            }
+            table.setText(i, 3, customerName);
             table.setText(i, 4, message.isReplied()?"Replied":"Awaiting Replied");
-            ReplyMessage reply = new ReplyMessage(message);
+            ReplyMessage reply = new ReplyMessage(message, userId);
             table.setWidget(i, 5, reply);
             table.getCellFormatter().setHorizontalAlignment(i, 5,
                     HasHorizontalAlignment.ALIGN_RIGHT);

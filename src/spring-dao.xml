@@ -121,4 +121,7 @@
 		<bean id="com.spshop.dao.intf.MessageDAO" class="com.spshop.dao.impl.MessageDAOImpl">
 			<property name="sessionFactory" ref="sessionFactory"></property>
 		</bean>
+		<bean id="com.spshop.dao.intf.AddressDAO" class="com.spshop.dao.impl.AddressDAOImpl">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
 	</beans>

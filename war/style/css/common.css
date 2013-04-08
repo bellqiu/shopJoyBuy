@@ -2967,3 +2967,231 @@ img.current{
 .ep_qsearch b{
 	color:red;
 }
+/******************************************product page end***********************************************/
+
+
+.addrSummary{
+	float: left;
+	width: 370px;
+	
+}
+.addrSummary li{
+	line-height: 1.5;
+}
+
+.addrSummary button{
+	margin: 5px;
+}
+
+/**************************Address dialog**************************/
+
+#addressDialogDelegate{
+	text-align: left;
+}
+
+#addressDialogDelegate th{
+	border: none;
+}
+
+#addressDialogDelegate .required{
+	color: red;
+}
+
+#addressDialogDelegate .errorInfo{
+	color: red;
+}
+
+#addressDialogDelegate input.address{
+	width: 300px;
+}
+
+input.invalid, select.invalid, texteara.invalid{
+	border: 1px solid #ff0000
+}
+
+input.valid, select.valid, texteara.valid{
+	border: 1px solid #00ff00
+}
+
+
+
+/**************************Address dialog**************************/
+
+
+
+.cartStep1{
+	float: left;
+	background: url("/style/image/cart_step.jpg") 0px 0px no-repeat;
+	width: 294px;
+	height: 40px;
+	margin-left: 35px;
+}
+
+.cartStep2{
+	float: left;
+	background: url("/style/image/cart_step.jpg") 0px -40px no-repeat;
+	width: 294px;
+	height: 40px;
+	margin-left: 35px;
+}
+
+.cartStep3{
+	float: left;
+	background: url("/style/image/cart_step.jpg") 0px -80px no-repeat;
+	width: 294px;
+	height: 40px;
+	margin-left: 35px;
+}
+
+.cart_list_block{
+	border: 1px solid #CCCCCC;
+    margin-top: 5px;
+    padding-bottom: 15px;
+
+}
+
+.cart_list_block .title{
+	background: url("/style/image/uc_background.jpg ") repeat scroll 0 0 transparent;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    text-indent: 10px;
+}
+
+
+.addres_list_for_select li{
+	margin: 10px;
+}
+
+.ui-dialog{
+	z-index: 999!important;
+}
+
+/**************************payment**************************/
+
+.payment{
+	 padding: 20px 18px 10px;
+	 line-height: 20px;
+}
+.paypalIcon2, .mcardIcon, .visaIcon, .visaEIcon,  .mcardIcon2, .westernUIcon {
+    background: url("/style/image/paymethod.jpg") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 32px;
+    width: 51px;
+}
+
+.paypalIcon2 {
+    background-position: 0 -80px;
+}
+
+.visaIcon {
+    background-position: 0 -248px;
+}
+
+.mcardIcon {
+    background-position: 0 -164px;
+}
+
+.visaEIcon {
+    background-position: 0 -332px;
+}
+
+.mcardIcon2 {
+    background-position: 0 -122px;
+}
+
+.westernUIcon {
+    background-position: 0 -458px;
+}
+
+.WesternUnionText ul li {
+    color: #555555;
+    line-height: 20px;
+}
+.WesternUnionText .margin_t {
+    margin-top: 10px;
+}
+
+.content{
+	margin-left: 10px;
+}
+.payment select{
+	border: 1px solid #BBBBBB;
+    height: 20px;
+    padding: 1px;
+    width: 310px;
+    margin-bottom:10px;
+}
+.widget h3{
+	font:18px georgia;
+	color:#df8a00;
+}
+.widget h4{
+	font:16px/30px Arial bold;
+	color:#333;
+	margin-top:10px;
+}
+.widget ul{
+	margin:0 0 0 15px
+}
+.widget ul li{
+	font-size: 12px;
+    list-style: disc;
+    line-height:20px;
+}
+.widget .benefi{
+	margin:8px 0 8px 15px;
+	border:1px solid #ccc;
+    padding:8px
+}
+.widget .benefi p{
+	line-height: 20px;
+	color:#666;
+	text-indent: 10px;
+}
+.widget .olease{margin-top:8px; padding-top:8px; border-top:1px solid #ccc;}
+.Continue_shopping{
+	float: left;
+    display: block;
+    height: 28px;
+    margin-right:10px;
+    background: url("/style/image/uc_background.jpg") repeat scroll 0px 0px transparent; 
+    line-height: 28px;
+    padding: 0px 5px;
+    border: 1px solid #ccc;
+    margin-top: 3px;
+ }
+ .cart-side{
+    color: #666666;
+    font-size:12px;
+    font-family:arial;
+    margin-top:20px;
+}
+.cart-side .allborder {
+    float: left;
+    height: 148px;
+    margin-right:8px;
+    width:234px;
+    border:1px solid #DDDDDD;
+}
+
+.cart-side h4 {
+    background:#f6f0e7;
+    border-bottom: 1px solid #DDDDDD;
+    font-family: Georgia,serif;
+    font-size: 13px;
+    padding: 5px 10px;
+    font-size:14px;
+    font-family:arial;
+}
+.cart-side .allborder p {
+    color: #777777;
+    overflow: hidden;
+    padding: 10px;
+    line-height:18px;
+}
+.cart-side a.goto {
+    margin-left: 10px;
+    padding-right: 8px;
+    float:right;
+}

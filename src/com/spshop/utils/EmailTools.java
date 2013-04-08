@@ -3,6 +3,7 @@ package com.spshop.utils;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -11,6 +12,10 @@ import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
 import org.apache.commons.mail.SimpleEmail;
 import org.apache.log4j.Logger;
+
+import com.spshop.model.Country;
+import com.spshop.service.factory.ServiceFactory;
+import com.spshop.service.intf.CountryService;
 
 public class EmailTools {
     private final static Properties emailProperties = new Properties();
@@ -128,6 +133,18 @@ public class EmailTools {
      */
     public static void sendMail(String mailType, String subject, Map<String,Object> variable, String sendTo){
     	String templateType = commonEmailProperties.getProperty(mailType + ".template.type", "");
+    	
+    	List<Country> countries = ServiceFactory.getService(CountryService.class).getAllCountries();
+		
+		Map<String, Country> cMap = new HashMap<String,Country>();
+		
+		for (Iterator iterator = countries.iterator(); iterator.hasNext();) {
+			Country country = (Country) iterator.next();
+			cMap.put(country.getId()+"", country);
+		}
+		
+		variable.put("countryMap", cMap);
+		
     	String mailContent = TempleteParser.parseMailContent(templateType, variable);
     	logger.info("send mail to :" + sendTo);
     	if (mailContent != null) {

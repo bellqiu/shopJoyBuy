@@ -439,10 +439,10 @@ jq("#main_menu").ready(function() {
 		var width = jq(data).width();
 		var leftMargin = jq("#main_menu").offset().left;
 		if((left - leftMargin)  > 516){
-			jq(data).children(".sub_menu").offset({ left: - (516 - width + 90) });
+			jq(data).children(".sub_menu").offset({ top: 40, left: - (516 - width + 90) });
 			
 		}else if((left - leftMargin)  > 456){
-			jq(data).children(".sub_menu").offset({ left: - (456 - width + 90) });
+			jq(data).children(".sub_menu").offset({ top: 40, left: - (456 - width + 90) });
 		}
 		
 	});
@@ -853,3 +853,51 @@ function checkItem(){
 	
 	return true;
 }
+
+
+/*************************************Manager Address***************************************************/
+
+function deleteUserShippingAddress(btn, addId){
+	jQuery.ajax({
+		url : "/uc/deleteUserShippingAddress?id="+addId,
+		success : function(data){
+			window.location.reload();
+		},
+		error : function(){
+			alert("failed");
+		}
+	});
+}
+
+function editUserShippingAddress(btn, addId){
+	jQuery.HB.AddressWindow(
+			{contentUrl:"/uc/listAddress?id="+addId, 
+				postUrl:"/uc/addOrUpdateShippingAddress?id="+addId, 
+				title:"Edit Shipping Address",
+				success : function(data){
+					window.location.reload();
+					//jQuery("#user_shipping_address").append(data);
+				},
+				error : function (data){
+					alert('Failed');
+				}
+			});
+}
+
+function editUserBillingAddress(btn, addId){
+	jQuery.HB.AddressWindow(
+			{contentUrl:"/uc/listAddress?id="+addId, 
+				postUrl:"/uc/addOrUpdateBillingAddress?id="+addId, 
+				title:"Edit Billing Address",
+				success : function(data){
+					window.location.reload();
+					//jQuery("#user_shipping_address").append(data);
+				},
+				error : function (data){
+					alert('Failed');
+				}
+			});
+}
+
+
+

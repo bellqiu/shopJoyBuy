@@ -1,5 +1,8 @@
 package com.spshop.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User extends Component{
 	
 	/**
@@ -66,6 +69,9 @@ public class User extends Component{
 	private float crotch;
 	private float thighSize;
 	private float kneeSize;
+	
+	private Address billingAddress;
+	private List<Address> shippingAddresses;
 	
 	public float getHeight() {
 		return height;
@@ -606,47 +612,21 @@ public class User extends Component{
 			/* Does not have a clone() method */
 			obj.phoneB = this.phoneB;
 		}
+		
+		if (this.billingAddress != null) {
+			obj.billingAddress = this.billingAddress.clone();
+		}
+		
+		if (this.shippingAddresses != null) {
+			obj.shippingAddresses = new ArrayList<Address>();
+			for (Address add : this.shippingAddresses) {
+				obj.shippingAddresses.add(add);
+			}
+		}
+		
 		return obj;
 	}
 
-	public Address getPrimaryAddress() {
-		return new Address(fullNameP, address1P, address2P, cityP, stateProvinceP, countryP, postalCodeP, phoneP);
-	}
-
-	public void setPrimaryAddress(Address primaryAddress) {
-		this.fullNameP = primaryAddress.getFullName();
-		this.address1P = primaryAddress.getAddress1();
-		this.address2P = primaryAddress.getAddress2();
-		this.cityP = primaryAddress.getCity();
-		this.stateProvinceP = primaryAddress.getStateProvince();
-		this.countryP = primaryAddress.getCountry();
-		this.postalCodeP = primaryAddress.getPostalCode();
-		this.phoneP = primaryAddress.getPhone();
-	}
-
-	public Address getBillingAddress() {
-		return new Address(fullNameB, address1B, address2B, cityB, stateProvinceB, countryB, postalCodeB, phoneB);
-	}
-
-	public void setBillingAddress(Address billingAddress) {
-		this.fullNameB = billingAddress.getFullName();
-		this.address1B = billingAddress.getAddress1();
-		this.address2B = billingAddress.getAddress2();
-		this.cityB = billingAddress.getCity();
-		this.stateProvinceB = billingAddress.getStateProvince();
-		this.countryB = billingAddress.getCountry();
-		this.postalCodeB = billingAddress.getPostalCode();
-		this.phoneB = billingAddress.getPhone();
-	}
-
-	public boolean isBillingSameAsPrimary() {
-		return billingSameAsPrimary;
-	}
-
-	public void setBillingSameAsPrimary(boolean billingSameAsPrimary) {
-		this.billingSameAsPrimary = billingSameAsPrimary;
-	}
-	
 	public SuitMeasurement getSuitMeasurement(){
 		return new SuitMeasurement(height, weight, age, shoulder, chest, stomch, posture, shirtNeck, jacketShirtLenght, chestSize, stomachSize, jacketHips, shoulderSize, sleeveLength, bicepSize, wristSize, pantsLength, waist, crotch, thighSize, kneeSize);
 	}
@@ -673,6 +653,22 @@ public class User extends Component{
 		this.crotch = measurement.getCrotch();
 		this.thighSize = measurement.getThighSize();
 		this.kneeSize = measurement.getKneeSize();
+	}
+
+	public Address getBillingAddress() {
+		return billingAddress;
+	}
+
+	public void setBillingAddress(Address billingAddress) {
+		this.billingAddress = billingAddress;
+	}
+
+	public List<Address> getShippingAddresses() {
+		return shippingAddresses;
+	}
+
+	public void setShippingAddresses(List<Address> shippingAddresses) {
+		this.shippingAddresses = shippingAddresses;
 	}
 
 }

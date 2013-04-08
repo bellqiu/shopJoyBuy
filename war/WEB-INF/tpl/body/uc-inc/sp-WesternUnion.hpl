@@ -1,0 +1,21 @@
+<div class="widget ">
+<h3>Thank you for shopping with us! Your order detail has been received!</h3>
+
+<ul>
+<li>The information below will be needed to complete your payment at Western Union. The information can also be found in your email notification. </li>
+</ul>
+<div id="WesternUnion" class="WesternUnionText benefi">
+  <ul>
+	<li><b>Beneficiary: </b>SHI YI LIU</li>
+	 <li><b>First Name: </b>Shiyi</li>
+	 <li><b>Last Name: </b>Liu</li>
+	 <li><b>Country: </b>China</li>
+	 <li><b>Address: </b>XiaMen, Fujian, PR China,361000</li>
+	 <li class="margin_t"><b>NOTICE: </b> Please email your order number,the western union control number(mtcn), amount, sender's first and last name, sender's address and country,sender's phone number to service@honeybuy.com after you send payment to us by Western Union. Thanks!</li>
+  </ul>        
+</div>	
+<p style="line-height:20px; margin-left:15px">Customers who choose to pay via Western Union are responsible for all local Western Union handling fees. Therefore, customers should confirm the total payment amount with their local Western Union. </p><br>
+<ul><li>Confirm your email address to get your order status notice. </li>
+<li>You can check the status of your order by going to <a style="color:#df8a00" href="#">My Orders</a> </li></ul>
+<div class="line_olease"><p>Please Note: Your order status will change to “Payment Confirmed” within 2 working days after we verify your payment.  Some orders may take additional time to verify.</p></div>
+</div>

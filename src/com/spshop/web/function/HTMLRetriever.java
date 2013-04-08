@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
+
 import com.spshop.cache.SCacheFacade;
 import com.spshop.model.HTML;
 
@@ -17,7 +19,9 @@ public class HTMLRetriever implements TemplateMethodModel {
         List<String> manualKeys = Arrays.asList(String.valueOf(arg0.get(0)).split(","));
         List<HTML> htmls = new ArrayList<HTML>();
         for (String key : manualKeys) {
-            htmls.add(SCacheFacade.getHTML(Long.valueOf(key),false));
+            if (StringUtils.isNotBlank(key)) {
+                htmls.add(SCacheFacade.getHTML(Long.valueOf(key),false));
+            }
         }
         return htmls;
     }

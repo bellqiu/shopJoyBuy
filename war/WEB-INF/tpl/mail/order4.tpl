@@ -89,9 +89,7 @@ cellspacing:0in;border:none;
       <td width="660" valign="top" style="width:495.0pt;border:none;padding:0in 0in 0in 0in">
       <p style="margin-top:19.5pt;margin-right:0in;margin-bottom:3.75pt;
       margin-left:0in;line-height:12.75pt;paading: 0"><strong><span style="font-size:11.0pt;color:black">Dear 
-	  <#if order.customerName??>
-		${order.customerName}
-	  </#if>
+		${(order.firstName)!''} ${(order.lastName)!''} 
 	  ,</span></strong><span style="font-size:9.0pt"></span></p>
       <p style="margin-top:7.5pt;margin-right:0in;margin-bottom:7.5pt; margin-left:0in;line-height:13.5pt;paading: 0; 
 
@@ -146,19 +144,18 @@ fareast-font-family:&quot;Times New Roman&quot;;
         <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:10.0pt;mso-fareast-font-
 
 family:&quot;Times New Roman&quot;">
-		 <#if order.bcustomerName??>
-		${order.bcustomerName}
-		</#if>
-		<br>
-        <#if order.bcustomerAddress??>
-			${order.bcustomerAddress}
-		</#if>
-        <#if order.bcity??>
-			${order.bcity}
-		</#if><br>
-        Phone: <#if order.bphone??>
-			${order.bphone}
-		</#if><o:p></o:p></span></p>
+		
+				<#if order.billingAddress ??>
+					<#assign "address"= order.billingAddress >					
+				</#if>
+				<#if address??>
+					${(address.firstName)!''} ${(address.lastName)!''} 
+					(${address.address1!''} ${address.city!''},
+					${address.stateProvince!''},${countryMap[address.country?string].name},
+					Postal Code: ${address.postalCode!''}) Phone:${address.phone!''}
+				</#if>
+		
+		<o:p></o:p></span></p>
         </td>
        </tr>
        <tr style="mso-yfti-irow:1;height:11.25pt">
@@ -178,8 +175,9 @@ fareast-font-family:&quot;Times New Roman&quot;;
         </td>
         <td width="10" valign="top" style="width:7.5pt;padding:.75pt .75pt .75pt .75pt"></td>
         <td valign="top" style="padding:.75pt .75pt .75pt .75pt">
-        <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:10.0pt;">
-        <#if ((order.orderType!'')=="Globebill")>
+        <p class="MsoNormal" style="margin:0in;margin-bottom:.0001pt"><span style="font-size:10.0pt;mso-fareast-font-
+
+family:&quot;Times New Roman&quot;"><#if ((order.orderType!'')=="Globebill")>
 								Credit or Debit Card
 							<#elseif ((order.orderType!'')=="paypal")>
 								Paypal
@@ -209,14 +207,14 @@ fareast-font-family:&quot;Times New Roman&quot;;
 
 family:&quot;Times New Roman&quot;">
         
-        <#assign "address"= primary!order.primaryAddress >
-        
-		${address.fullName}
-		<br>
-        (${address.address1!''} ${address.city!''},
-							${address.stateProvince!''},
-							${primaryAddCountry!''}, Postal Code:
-							${address.postalCode!''}) Phone:${address.phone!''}</span></p>
+       	<#if order.shippingAddress ??>
+						<#assign "address"= order.shippingAddress >
+						${(address.firstName)!''} ${(address.lastName)!''} 
+								(${address.address1!''} ${address.city!''},
+								${address.stateProvince!''},${countryMap[address.country?string].name},
+								Postal Code: ${address.postalCode!''}) Phone:${address.phone!''}
+				</#if>
+			</span></p>
         </td>
        </tr>
        <tr style="mso-yfti-irow:1;height:11.25pt">

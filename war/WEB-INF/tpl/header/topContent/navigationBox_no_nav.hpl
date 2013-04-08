@@ -1,0 +1,25 @@
+<div class="top_box">
+	<div class="logo_box">
+		<a href="http://www.honeybuy.com/" title="home">
+			<img alt="logo" src="/style/image/honeybuy_logo.png">
+		</a>
+	</div>
+	<div class="search">
+		<div class="${cartStep!'cartStep1'}"></div>
+	</div>
+	
+	<div class="security">
+	
+		<a href="#" title="Custom size for free on honeybuy.com"> 
+		 	<img title="Custom size for free on honeybuy.com" alt="Custom size for free on honeybuy.com" src="/style/image/top01.jpg">
+		</a>
+		<a href="#" title="Free shipping over $80 on honeybuy.com"> 
+		  	<img title="Free shipping over $80 on honeybuy.com" alt="Free shipping over $80 on honeybuy.com" src="/style/image/top02.jpg">
+		</a>
+		<a title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications.">
+		<script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.HoneyBuy.com&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script>
+		</a>
+	</div>
+	
+	
+</div>

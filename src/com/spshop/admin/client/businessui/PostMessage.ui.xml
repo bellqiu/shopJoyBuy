@@ -15,6 +15,17 @@
 			border-bottom-style: dotted;
 			margin-bottom: 20px;
 		}
+
+		.recent3OrdersHeader {
+			border-bottom-width: 3px;
+			border-bottom-style: solid;
+		}
+
+		.recent3Orders{
+			border-bottom-width: 2px;
+			border-bottom-style: dotted;
+			margin-bottom: 20px;
+		}
 		
 		.msgContent{
 			width: 600px;
@@ -26,5 +37,8 @@
 		<g:FlexTable ui:field="msgThread" styleName="{style.msgThread}"/>
 		<g:TextArea ui:field="msgContent" styleName="{style.msgContent}"/>
 		<g:Button styleName="{style.important}" ui:field="postMsg" text="Compose" />
+		<g:Label text="Recent Orders" />
+		<g:FlexTable ui:field="recent3OrdersHeader" styleName="{style.recent3OrdersHeader}"/>
+		<g:FlexTable ui:field="recent3Orders" styleName="{style.recent3Orders}"/>
 	</g:HTMLPanel>
 </ui:UiBinder> 

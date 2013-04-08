@@ -21,7 +21,7 @@ public class ProductDAOImpl extends AbstractBaseDAO<Product, Long>  implements P
 
 	@Override
 	public Product getProductByName(String name) {
-		return (Product) getSession().createQuery("From Product where deleted = false and name = ? ").setParameter(0, name).uniqueResult();
+		return (Product) getSession().createQuery("From Product where name = ? and deleted = false").setParameter(0, name).uniqueResult();
 	}
 
 	@Override

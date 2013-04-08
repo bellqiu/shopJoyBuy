@@ -27,6 +27,7 @@ import com.spshop.service.intf.ProductService;
 import com.spshop.service.intf.TagsService;
 import com.spshop.utils.Utils;
 @Controller
+@RequestMapping("/tags")
 public class TagsController extends BaseController{
 	
 	public static int KEYWORD_PER_PAGE = 120;

@@ -1,0 +1,12 @@
+<#assign pageKeywords = "Western Union, Honeybuy.com"> 
+<#assign pageDescription = "Pay by Western Union"> 
+<#assign pageTitle = "Pay by Western Union">
+<#assign cartStep = "cartStep2" >
+
+<#include "/header/top_clean.hpl">
+
+<#include "/header/top_no_nav.hpl">
+
+<#include "/body/body-sp-Wiretransfer.hpl">	
+
+<#include "/footer/bottom-payment.hpl">

@@ -1,50 +1,24 @@
 package com.spshop.web;
 
-import static com.spshop.utils.Constants.ADDRESS1;
-import static com.spshop.utils.Constants.ADDRESS1_ERR;
-import static com.spshop.utils.Constants.ADDRESS2;
-import static com.spshop.utils.Constants.ADDRESS2_ERR;
-import static com.spshop.utils.Constants.ADD_TYPE;
-import static com.spshop.utils.Constants.ADD_TYPE_B;
-import static com.spshop.utils.Constants.ADD_TYPE_P;
-import static com.spshop.utils.Constants.BILLING_ADDRESS;
-import static com.spshop.utils.Constants.BILLING_SAME_AS_PRIMARY;
-import static com.spshop.utils.Constants.CITY;
-import static com.spshop.utils.Constants.CITY_ERR;
-import static com.spshop.utils.Constants.COUNTRY;
-import static com.spshop.utils.Constants.COUNTRY_ERR;
 import static com.spshop.utils.Constants.CURRENT_ORDER;
-import static com.spshop.utils.Constants.CURRENT_PRODUCT;
 import static com.spshop.utils.Constants.C_USER_FIRST_NAME;
 import static com.spshop.utils.Constants.C_USER_LAST_NAME;
 import static com.spshop.utils.Constants.DEFAULT_CURRENCY;
-import static com.spshop.utils.Constants.EMPTY_ORDER;
 import static com.spshop.utils.Constants.FIRST_NAME_ERR;
 import static com.spshop.utils.Constants.LAST_NAME_ERR;
 import static com.spshop.utils.Constants.MEASUREMENT_MSG;
 import static com.spshop.utils.Constants.PAGINATION;
-import static com.spshop.utils.Constants.POASTAL_CODE;
-import static com.spshop.utils.Constants.POSTAL_CODE_ERR;
-import static com.spshop.utils.Constants.PRIMARY_ADDRESS;
 import static com.spshop.utils.Constants.REG_PWD_RE_ERR;
 import static com.spshop.utils.Constants.REG_USER_NAME_SUC;
 import static com.spshop.utils.Constants.SHIPPING_EXPEDITED;
 import static com.spshop.utils.Constants.SHIPPING_METHOD;
 import static com.spshop.utils.Constants.SHIPPING_STANDARD;
 import static com.spshop.utils.Constants.SITE_VIEW;
-import static com.spshop.utils.Constants.STATE_PROVINCE;
-import static com.spshop.utils.Constants.STATE_PROVINCE_ERR;
 import static com.spshop.utils.Constants.SUIT_MEASUREMENT;
-import static com.spshop.utils.Constants.TEL_NUM;
-import static com.spshop.utils.Constants.TEL_NUM_ERR;
 import static com.spshop.utils.Constants.TXT_NEW_PWD1;
 import static com.spshop.utils.Constants.TXT_NEW_PWD2;
 import static com.spshop.utils.Constants.TXT_PWD;
 import static com.spshop.utils.Constants.UPDATE_ACC_SUC;
-import static com.spshop.utils.Constants.UPDATE_ADDRESS_1_SUC;
-import static com.spshop.utils.Constants.UPDATE_ADDRESS_2_SUC;
-import static com.spshop.utils.Constants.USERNAME;
-import static com.spshop.utils.Constants.USERNAME_ERR;
 import static com.spshop.utils.Constants.USER_ORDERS;
 import static com.spshop.utils.Constants.USER_ORDERS_COUNT;
 import static com.spshop.utils.Constants.WRONG_PWD;
@@ -66,7 +40,6 @@ import javax.servlet.http.HttpServletResponse;
 import jxl.write.NumberFormat;
 import net.sf.json.JSONObject;
 
-import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -76,13 +49,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.alipay.config.AlipayConfig;
-import com.alipay.util.AlipaySubmit;
-import com.spshop.model.Address;
 import com.spshop.model.Country;
 import com.spshop.model.Message;
 import com.spshop.model.Order;
-import com.spshop.model.OrderItem;
 import com.spshop.model.SuitMeasurement;
 import com.spshop.model.User;
 import com.spshop.model.enums.OrderStatus;
@@ -93,16 +62,18 @@ import com.spshop.service.intf.OrderService;
 import com.spshop.service.intf.UserService;
 import com.spshop.utils.Constants;
 import com.spshop.utils.EmailTools;
-import com.spshop.utils.Encrypt;
 import com.spshop.utils.EncryptUtil;
 import com.spshop.utils.Utils;
 import com.spshop.web.view.SiteView;
 
 @Controller
 @SessionAttributes({ "continueShopping" })
+@RequestMapping("/uc")
 public class UserCenterController extends BaseController {
 
 	Logger logger = Logger.getLogger(UserCenterController.class);
+	
+	//private static final String ORDER_ID = "orderId";
 
 	@RequestMapping("/changePwd")
 	public String changePwd(Model model) {
@@ -141,6 +112,45 @@ public class UserCenterController extends BaseController {
 	public String userProfile(Model model) {
 		return "userProfile";
 	}
+	
+	/*@RequestMapping("/updateOrderAddress")
+	public String updateOrderAddress(Model model,
+			HttpServletRequest request, HttpServletResponse response) throws JsonGenerationException, JsonMappingException, IOException{
+		
+		String orderId = request.getParameter(ORDER_ID);
+		String addType = request.getParameter(Constants.ADD_TYPE);
+		
+		Order order = null;
+
+		if(StringUtils.isNotBlank(orderId)){
+			order = ServiceFactory.getService(OrderService.class).getOrderById(orderId);
+		}else{
+			order = getUserView().getCart().getOrder();
+		}
+		
+		if(order != null){
+			
+			Address address = retrieveAddress(request);
+			
+			if(Constants.ADD_TYPE_P.equals(addType)){
+				address.setCountry(order.getPrimaryAddress().getCountry());
+				order.setPrimaryAddress(address);
+				ServiceFactory.getService(OrderService.class).saveOrder(order, order.getStatus());
+			}else{
+				order.setBillingSameAsPrimary(false);
+				address.setCountry(order.getPrimaryAddress().getCountry());
+				order.setBillingAddress(address);
+			}
+			
+			
+			JsonFactory f = new JsonFactory();
+			ObjectMapper mapper = new ObjectMapper(f);
+			mapper.writeValue(response.getOutputStream(), address);
+		
+		}
+		
+		return null;
+	}*/
 
 	@RequestMapping("/retrieveShippingPrice")
 	public String retrieveShippingPrice(Model model,
@@ -216,61 +226,39 @@ public class UserCenterController extends BaseController {
 	}
 
 	@RequestMapping(value = "/shoppingCart_address", method = RequestMethod.GET)
-	public String shoppingCartAdress(Model model) {
-
-		if (getUserView().getCart().getItemCount() < 1) {
-			getUserView().getErr().put(EMPTY_ORDER, "Shopping cart is empty");
-			return "shoppingCart";
-		}
-
-		for (OrderItem orderItem : getUserView().getCart().getOrder()
-				.getItems()) {
-			if (orderItem.getProduct().getOptType() == 1) {
-				SuitMeasurement measurement = getUserView().getLoginUser()
-						.getSuitMeasurement();
-				if (!validateMeasurements()) {
-					model.addAttribute(CURRENT_PRODUCT, orderItem.getProduct());
-					getUserView()
-							.getMsg()
-							.put(MEASUREMENT_MSG,
-									"You need fill the suit measurement then continue...");
-					model.addAttribute("continueShopping", "true");
-					return "redirect:/uc/my-measurements";
-				} else {
-					getUserView().getCart().getOrder()
-							.setMySuitMeasurement(measurement);
-					getUserView().getCart().getOrder()
-							.setSuitMeasurementComplete(true);
-					break;
+	public String shoppingCartAdress(Model model, @RequestParam(value="id", required=false) String id) {
+		
+		if(null != id){
+			Order order = ServiceFactory.getService(OrderService.class).getCartOrPendingOrderById(id, getUserView().getLoginUser().getId());
+			
+			
+			String stdShippingPrice  = "0";
+			String extShippingPrice  = "0";
+			
+			model.addAttribute(Constants.PROCESSING_ORDER, order);
+			if(null!=order && order.getItems().size()>0 ){
+				if(null != order.getShippingAddress()){
+					Country country = ServiceFactory.getService(CountryService.class).getCountryById(Long.valueOf(order.getShippingAddress().getCountry()));
+					float rate = getSiteView().getCurrencies().get(order.getCurrency());
+					if(null != country && order.getTotalPrice() < country.getFreeAdDePrice()){
+						extShippingPrice = Utils.toNumber(country.getAdDePrice()*rate);
+						if(order.getTotalPrice() < country.getFreeDePrice()){
+							stdShippingPrice = Utils.toNumber(country.getDePrice()*rate);
+						}
+						
+					}
 				}
+			}else{
+				order = null;
 			}
+			
+			model.addAttribute("stdShippingPrice", stdShippingPrice);
+			model.addAttribute("extShippingPrice", extShippingPrice);
+			model.addAttribute(Constants.PROCESSING_ORDER, order);
+			
 		}
-
-		Address primary = null;
-		Address billing = null;
-
-		getUserView().getCart().getOrder()
-				.setCustomerEmail(getUserView().getLoginUser().getEmail());
-
-		if (StringUtils.isNotBlank(getUserView().getCart().getOrder()
-				.getCustomerName())
-				&& StringUtils.isNotBlank(getUserView().getCart().getOrder()
-						.getPrimaryAddress().getPhone())) {
-			primary = getUserView().getCart().getOrder().getPrimaryAddress();
-		} else {
-			primary = getUserView().getLoginUser().getPrimaryAddress();
-		}
-
-		if (StringUtils.isNotBlank(getUserView().getCart().getOrder()
-				.getBcustomerName())) {
-			billing = getUserView().getCart().getOrder().getBillingAddress();
-		} else {
-			billing = getUserView().getLoginUser().getBillingAddress();
-		}
-
-		model.addAttribute(ADD_TYPE_P, primary);
-		model.addAttribute(ADD_TYPE_B, billing);
-
+		
+		
 		return "shoppingCart_address";
 	}
 
@@ -378,62 +366,62 @@ public class UserCenterController extends BaseController {
 				}.start();
 			}
 
-			if ("YoursPay".equals(payType)) {
-				/** 订单信息 **/
+			/*if ("YoursPay".equals(payType)) {
+				*//** 订单信息 **//*
 
 				String MerNo = "1624";
-				/** <必填>--商户号. **/
+				*//** <必填>--商户�? **//*
 
 				String BillNo = order.getName();
-				/** <必填>--订单号. 一个网店只能产生唯一的订单号,不能出现重复,可以是字母和数字的组合. **/
+				*//** <必填>--订单�? 一个网店只能产生唯一的订单号,不能出现重复,可以是字母和数字的组�? **//*
 
 				String MD5key = "YNWNUrlJ";
-				/** <必填>--密钥. 可以在YourSpay商户后台查询和修改,为了支付安全,建议一段时间更换一次. **/
+				*//** <必填>--密钥. 可以在YourSpay商户后台查询和修�?为了支付安全,建议一段时间更换一�? **//*
 
 				String Amount = new NumberFormat("##0.##").getNumberFormat()
 						.format((order.getTotalPrice() - order
 								.getCouponCutOff()) * currencyRate);
-				/** <必填>--订单总金额.包括运费在内. 必须只能为数字,并且大于0,最多为小数点两位. **/
+				*//** <必填>--订单总金�?包括运费在内. 必须只能为数�?并且大于0,最多为小数点两�? **//*
 
 				String Freight = new NumberFormat("##0.##").getNumberFormat()
 						.format((order.getDePrice()) * currencyRate);
-				/** <必填>--运费. 必须只能为数字,最多为小数点两位,如果无运费,可以为设为0. **/
+				*//** <必填>--运费. 必须只能为数�?最多为小数点两�?如果无运�?可以为设�?. **//*
 
 				String CurrencyCode = order.getCurrency();
-				/** <必填>--币种. 美元:USD,英镑:GBP,欧元:EUR,加元:CAD,澳元:AUD,日元:JPY. **/
+				*//** <必填>--币种. 美元:USD,英镑:GBP,欧元:EUR,加元:CAD,澳元:AUD,日元:JPY. **//*
 
-				/*
-				 * 以下为账单信息.为了让客户在支付页面无需重复填写账单信息,建议账单信息尽可能获取,如果网店系统无账单信息,建议用收货信息代替
+				
+				 * 以下为账单信�?为了让客户在支付页面无需重复填写账单信息,建议账单信息尽可能获�?如果网店系统无账单信�?建议用收货信息代�?
 				 * .
-				 */
+				 
 
 				String BFirstName = order.getUser().getFirstName() == null ? ""
 						: order.getUser().getFirstName();
-				/** <可选>--持卡人姓. 如果网店只有一个全名,建议把全名对姓和名各赋值一份. **/
+				*//** <可�?--持卡人姓. 如果网店只有一个全�?建议把全名对姓和名各赋值一�? **//*
 
 				String BLastName = order.getUser().getLastName() == null ? ""
 						: order.getUser().getLastName();
-				/** <可选>--持卡人名. 如果网店只有一个全名,建议把全名对姓和名各赋值一份. **/
+				*//** <可�?--持卡人名. 如果网店只有一个全�?建议把全名对姓和名各赋值一�? **//*
 
 				String Email = order.getUser().getEmail();
-				/** <必填>--持卡人邮箱. 用于支付成功或者失败,向客户发送支付成功/失败提示邮件. **/
+				*//** <必填>--持卡人邮�? 用于支付成功或者失�?向客户发送支付成�?失败提示邮件. **//*
 
 				String Phone = order.getUser().getBillingAddress().getPhone();
-				/** <可选>--持卡人电话. **/
+				*//** <可�?--持卡人电�? **//*
 
 				String BillAddress = order.getUser().getBillingAddress()
 						.getAddress1() == null ? "" : order.getUser()
 						.getBillingAddress().getAddress1();
-				/** <可选>--详细地址. **/
+				*//** <可�?--详细地址. **//*
 
 				String BillCity = order.getUser().getBillingAddress().getCity() == null ? ""
 						: order.getUser().getBillingAddress().getCity();
-				/** <可选>--城市. **/
+				*//** <可�?--城市. **//*
 
 				String BillState = order.getUser().getBillingAddress()
 						.getStateProvince() == null ? "" : order.getUser()
 						.getBillingAddress().getStateProvince();
-				/** <可选>--省份/州. **/
+				*//** <可�?--省份/�? **//*
 
 				String BillCountry = order.getUser().getBillingAddress()
 						.getCountry() == 0 ? "" : ServiceFactory
@@ -441,30 +429,30 @@ public class UserCenterController extends BaseController {
 						.getCountryById(
 								order.getUser().getBillingAddress()
 										.getCountry()).getAbbrCode();
-				/** <可选>--国家. 国家名称最好用大写,而且是国家简称. **/
+				*//** <可�?--国家. 国家名称最好用大写,而且是国家简�? **//*
 
 				String BillZip = order.getUser().getBillingAddress()
 						.getPostalCode() == null ? "" : order.getUser()
 						.getBillingAddress().getPostalCode();
-				/** <可选>--邮编. **/
+				*//** <可�?--邮编. **//*
 
 				if (order.getUser().isBillingSameAsPrimary()) {
 					Phone = order.getUser().getPrimaryAddress().getPhone();
-					/** <可选>--持卡人电话. **/
+					*//** <可�?--持卡人电�? **//*
 
 					BillAddress = order.getUser().getPrimaryAddress()
 							.getAddress1() == null ? "" : order.getUser()
 							.getPrimaryAddress().getAddress1();
-					/** <可选>--详细地址. **/
+					*//** <可�?--详细地址. **//*
 
 					BillCity = order.getUser().getPrimaryAddress().getCity() == null ? ""
 							: order.getUser().getPrimaryAddress().getCity();
-					/** <可选>--城市. **/
+					*//** <可�?--城市. **//*
 
 					BillState = order.getUser().getPrimaryAddress()
 							.getStateProvince() == null ? "" : order.getUser()
 							.getPrimaryAddress().getStateProvince();
-					/** <可选>--省份/州. **/
+					*//** <可�?--省份/�? **//*
 
 					BillCountry = order.getUser().getPrimaryAddress()
 							.getCountry() == 0 ? "" : ServiceFactory
@@ -472,67 +460,67 @@ public class UserCenterController extends BaseController {
 							.getCountryById(
 									order.getUser().getPrimaryAddress()
 											.getCountry()).getAbbrCode();
-					/** <可选>--国家. 国家名称最好用大写,而且是国家简称. **/
+					*//** <可�?--国家. 国家名称最好用大写,而且是国家简�? **//*
 
 					BillZip = order.getUser().getPrimaryAddress()
 							.getPostalCode() == null ? "" : order.getUser()
 							.getPrimaryAddress().getPostalCode();
 				}
 
-				/** 收货人信息 **/
+				*//** 收货人信�?**//*
 
 				String SFirstName = BFirstName;
-				/** <必填>--收货人姓. 如果网店只有一个全名,建议把全名对姓和名各赋值一份. **/
+				*//** <必填>--收货人姓. 如果网店只有一个全�?建议把全名对姓和名各赋值一�? **//*
 
 				String SLastName = BLastName;
-				/** <必填>--收货人名. 如果网店只有一个全名,建议把全名对姓和名各赋值一份. **/
+				*//** <必填>--收货人名. 如果网店只有一个全�?建议把全名对姓和名各赋值一�? **//*
 
 				String ShipAddress = "00000";
-				/** <必填>--详细地址. **/
+				*//** <必填>--详细地址. **//*
 
 				String ShipCity = "00000";
-				/** <必填>--城市. **/
+				*//** <必填>--城市. **//*
 
 				String ShipState = "00000";
-				/** <可选>--省份/州. **/
+				*//** <可�?--省份/�? **//*
 
 				String ShipCountry = "00000";
-				/** <必填>--国家. 国家名称最好用大写,而且是国家简称. **/
+				*//** <必填>--国家. 国家名称最好用大写,而且是国家简�? **//*
 
 				String ShipZip = "00000";
-				/** <必填>--邮编. **/
+				*//** <必填>--邮编. **//*
 
 				String ShipEmail = order.getUser().getEmail();
-				/** <可选>--邮箱. **/
+				*//** <可�?--邮箱. **//*
 
 				String ShipPhone = order.getUser().getPrimaryAddress()
 						.getPhone();
-				/** <可选>--电话. **/
+				*//** <可�?--电话. **//*
 
-				/** 通道信息 **/
+				*//** 通道信息 **//*
 				String Language = "2";
-				/** <必填>--通道参数,非语言,只能为固定值:2. **/
+				*//** <必填>--通道参数,非语言,只能为固定�?2. **//*
 
 				String LangCode = "en";
-				/** <可选>--支付页面语言. 英文:en,法语:fr,意大利语:it,德语:de,日语:ja,默认为英文(en). **/
+				*//** <可�?--支付页面语言. 英文:en,法语:fr,意大利语:it,德语:de,日语:ja,默认为英�?en). **//*
 
 				String Currency = "15";
-				/** <必填>--通道参数.非币种,只能为固定值:15. **/
+				*//** <必填>--通道参数.非币�?只能为固定�?15. **//*
 
 				String ReturnURL = "http://www.honeybuy.com//uc/yoursPayResults";
-				/** <必填>--返回页面. 支付完成后,将返回到此页面,提示支 付的结果(成功/失败). **/
+				*//** <必填>--返回页面. 支付完成�?将返回到此页�?提示�?付的结果(成功/失败). **//*
 
 				String Remark = "";
-				/** <可选>--备注. 网店中客户填写的备注. **/
+				*//** <可�?--备注. 网店中客户填写的备注. **//*
 
-				/**
+				*//**
 				 * <必填>--货物信息.如果购物多个,通过循环遍历,把所需的每个商品的名称(GoodsName),数量(Qty)单价(
 				 * Price)进行连结
-				 **/
-				/**
-				 * 比如：<Goods><GoodsName>商品名</GoodsName><Qty>数量</Qty><Price>单价</
+				 **//*
+				*//**
+				 * 比如�?Goods><GoodsName>商品�?/GoodsName><Qty>数量</Qty><Price>单价</
 				 * Price></Goods>
-				 **/
+				 **//*
 				StringBuilder GoodsListInfo = new StringBuilder();
 				GoodsListInfo = GoodsListInfo.append("<Goods><GoodsName>")
 						.append("Nike").append("</GoodsName><Qty>").append("2")
@@ -543,15 +531,15 @@ public class UserCenterController extends BaseController {
 						.append("</Qty><Price>").append("20")
 						.append("</Price></Goods>");
 
-				/** 参数组合, 顺序不能颠倒 **/
+				*//** 参数组合, 顺序不能颠�?**//*
 				StringBuilder md5src = new StringBuilder();
 				md5src = md5src.append(MerNo).append(BillNo).append(Freight)
 						.append(Amount).append(CurrencyCode).append(ReturnURL)
 						.append(Email).append(MD5key);
-				/** 对参数组合字符串进行md5加密,并且转换为大写 **/
+				*//** 对参数组合字符串进行md5加密,并且转换为大�?**//*
 				String MD5info = Encrypt.MD5(md5src.toString()).toUpperCase();
 
-				/** 把参数用xml组合成字符串 **/
+				*//** 把参数用xml组合成字符串 **//*
 				StringBuilder basexml = new StringBuilder();
 				basexml = basexml
 						.append("<?xml version='1.0' encoding='UTF-8' ?><Order>");
@@ -620,19 +608,19 @@ public class UserCenterController extends BaseController {
 				model.addAttribute("tradeInfo", TradeInfo);
 
 				return "yoursPay";
-			} else if ("alipay".equals(payType)) {
+			}*/ else if ("alipay".equals(payType)) {/*
 
 				// //////////////////////////////////请求参数//////////////////////////////////////
 
 				// 服务器异步通知页面路径
 				String notify_url = getSiteView().getHost()+"/uc/aliPayAsyncResults";
-				// 需http://格式的完整路径，不允许加?id=123这类自定义参数
+				// 需http://格式的完整路径，不允许加?id=123这类自定义参�?
 
 				// 页面跳转同步通知页面路径
 				String return_url = getSiteView().getHost()+"/uc/aliPaySyncResults";
-				// 需http://格式的完整路径，不允许加?id=123这类自定义参数
+				// 需http://格式的完整路径，不允许加?id=123这类自定义参�?
 
-				// 商户订单号
+				// 商户订单�?
 				String out_trade_no = order.getName();
 				// 必填
 
@@ -644,8 +632,8 @@ public class UserCenterController extends BaseController {
 					cardType = "boc-visa";
 				}
 				// 默认网银
-				String default_bank = cardType/*request.getParameter("default_bank")*/;
-				// 必填，如果要使用外卡支付功能，本参数需赋值为“12.5 银行列表”中的值
+				String default_bank = cardTyperequest.getParameter("default_bank");
+				// 必填，如果要使用外卡支付功能，本参数需赋值为�?2.5 银行列表”中的�?
 				
 				// 公用业务扩展参数
 				
@@ -654,7 +642,7 @@ public class UserCenterController extends BaseController {
 				String countryCode = customerCountry == null ? "NA": customerCountry.getAbbrCode();
 				
 				String extend_param = "ship_to_country^"+countryCode
-										+"|ship_to_state^"+order.getState()
+										+"|ship_to_state^"+order.get
 										+"|ship_to_street1^"+order.getCustomerAddress()
 										+"|ship_to_phonenumber^"+order.getCustomerTelephone()
 										+"|ship_to_postalcode^"+order.getCustomerZipcode()
@@ -665,9 +653,9 @@ public class UserCenterController extends BaseController {
 										+"|registration_name^"+order.getUser().getEmail()
 										+"|registration_email^"+order.getUser().getEmail()
 										+"|registration_phone^"+order.getCustomerTelephone();
-				// 必填，用于商户的特定业务信息的传递
+				// 必填，用于商户的特定业务信息的传�?
 
-				// 卖家支付宝账号
+				// 卖家支付宝账�?
 				String seller_logon_id = "honeybuy@foxmail.com";
 				// 必填
 
@@ -681,10 +669,10 @@ public class UserCenterController extends BaseController {
 				
 				// 商品展示地址
 				String show_url = "www.honeybuy.com/uc/orderDetails?id="+order.getName();
-				// 空值
+				// 空�?
 
 				// 币种
-				String currency = /*order.getCurrency()*/"USD";
+				String currency = order.getCurrency()"USD";
 				// 必填，default_bank为boc-visa或boc-master时，支持USD，为boc-jcb时，不支持currency参数，即默认支持RMB
 
 				// ////////////////////////////////////////////////////////////////////////////////
@@ -717,9 +705,9 @@ public class UserCenterController extends BaseController {
 				//out.println(sHtmlText);
 				
 				return "alipay";
-			}else if ("Globebill".equals(payType)){
+			*/}else if ("Globebill".equals(payType)){
 				
-				globebillPay(order,model);
+				globebillPay(order,model,request);
 				
 				return "Globebill";
 			}
@@ -730,15 +718,15 @@ public class UserCenterController extends BaseController {
 		return "shoppingCart_payment";
 	}
 
-	private void globebillPay(Order order, Model model) {
+	private void globebillPay(Order order, Model model, HttpServletRequest request) {
 		String merNo = "10309";
 		String gatewayNo = "10309001";
 		String signKeyNo = "2066v826";
-		String orderNumber = order.getName();//订单号
+		String orderNumber = order.getName();//订单�?
 		//订单金额, 两位小数
 	    String amount = new NumberFormat("##0.##").getNumberFormat().format(getSiteView().getCurrencies().get(order.getCurrency())*(order.getTotalPrice() + order.getDePrice() - order.getCouponCutOff()));
 
-	    String returnUrl = getSiteView().getHost() + "/uc/globebillPayRs";
+	    String returnUrl = request.getScheme()+"://" + request.getServerName() + "/uc/globebillPayRs";
 	    
 	    
 	    /**
@@ -759,17 +747,17 @@ public class UserCenterController extends BaseController {
 	    String firstName = "";
 	    String lastName = "N/A";
 	    
-	    String username = order.getCustomerName();
+	   // String username = order.getCustomerName();
 	    
 	    String cc = "";
 	    
-	   long ccId = order.getCountry();
+	   long ccId = Long.valueOf(order.getBillingAddress().getCountry());
 	    
 	   if(ccId >0){
 		   cc = getSiteView().getCountryMap().get(String.valueOf(ccId)).getAbbrCode();
 	   }
 	   
-	   if(username != null){
+/*	   if(username != null){
 		   username = username.trim();
 		   int last = username.lastIndexOf(' ');
 		   if(last > 0){
@@ -778,18 +766,18 @@ public class UserCenterController extends BaseController {
 		   }else{
 			   firstName = username;
 		   }
-	   }
+	   }*/
 	    
 	    model.addAttribute("signInfo", signString);
 	    model.addAttribute("amount", amount);
 	    model.addAttribute("returnUrl", returnUrl);
-	    model.addAttribute("firstName", firstName);
-	    model.addAttribute("lastName", lastName);
+	    model.addAttribute("firstName", order.getShippingAddress().getFirstName());
+	    model.addAttribute("lastName", order.getShippingAddress().getLastName());
 	    model.addAttribute("cc", cc);
 	    
 	}
 	
-	@RequestMapping(value = "/shoppingCart_address", method = RequestMethod.POST)
+	/*@RequestMapping(value = "/shoppingCart_address", method = RequestMethod.POST)
 	public String submitAddressInfo(Model model, HttpServletRequest request,
 			HttpServletResponse response) {
 
@@ -820,7 +808,7 @@ public class UserCenterController extends BaseController {
 					.setShippingMethod(SHIPPING_EXPEDITED);
 		}
 
-		getUserView().setErr(vs);
+		//getUserView().setErr(vs);
 
 		if (MapUtils.isNotEmpty(getUserView().getErr())) {
 			return "shoppingCart_address";
@@ -867,7 +855,7 @@ public class UserCenterController extends BaseController {
 				OrderStatus.ONSHOPPING.toString());
 
 		return "redirect:/uc/shoppingCart_payment";
-	}
+	}*/
 
 	@RequestMapping(value = "/userProfile", params = { "action=updateAccount" }, method = RequestMethod.POST)
 	public String updateAccount(Model model, HttpServletRequest request,
@@ -903,21 +891,8 @@ public class UserCenterController extends BaseController {
 	public String updateAddress1(Model model, HttpServletRequest request,
 			HttpServletResponse response) {
 
-		String type = request.getParameter(ADD_TYPE);
-
-		Address address = retrieveAddress(request);
-
-		getUserView().getErr().putAll(validateAddress(address, type));
-
-		if (getUserView().getErr().isEmpty()) {
-			User user = getUserView().getLoginUser();
-			user.setPrimaryAddress(address);
-			user = ServiceFactory.getService(UserService.class).saveUser(user);
-			getUserView().getMsg().put(UPDATE_ADDRESS_1_SUC,
-					"Update successfully");
-		}
-
-		model.addAttribute(PRIMARY_ADDRESS, address);
+		
+		//model.addAttribute(PRIMARY_ADDRESS, address);
 
 		return "userProfile";
 	}
@@ -925,33 +900,6 @@ public class UserCenterController extends BaseController {
 	@RequestMapping(value = "/userProfile", params = { "action=updateAddress2" }, method = RequestMethod.POST)
 	public String updateAddress2(Model model, HttpServletRequest request,
 			HttpServletResponse response) {
-
-		String type = request.getParameter(ADD_TYPE);
-		String sameAsPrimary = request.getParameter(BILLING_SAME_AS_PRIMARY);
-		Address address = retrieveAddress(request);
-		if (!StringUtils.isNotBlank(sameAsPrimary)) {
-			getUserView().getErr().putAll(validateAddress(address, type));
-
-			if (getUserView().getErr().isEmpty()) {
-				User user = getUserView().getLoginUser();
-				user.setBillingAddress(address);
-				user.setBillingSameAsPrimary(false);
-				user = ServiceFactory.getService(UserService.class).saveUser(
-						user);
-				getUserView().setLoginUser(user);
-				getUserView().getMsg().put(UPDATE_ADDRESS_2_SUC,
-						"Update successfully");
-			}
-		} else {
-			User user = getUserView().getLoginUser();
-			user.setBillingSameAsPrimary(true);
-			user = ServiceFactory.getService(UserService.class).saveUser(user);
-			getUserView().setLoginUser(user);
-			getUserView().getMsg().put(UPDATE_ADDRESS_2_SUC,
-					"Update successfully");
-		}
-
-		model.addAttribute(BILLING_ADDRESS, address);
 
 		return "userProfile";
 	}
@@ -1051,78 +999,6 @@ public class UserCenterController extends BaseController {
 		model.addAttribute(MEASUREMENT_MSG, "Update measurement successfully");
 
 		return "measurements";
-	}
-
-	private Address retrieveAddress(HttpServletRequest request) {
-		String type = request.getParameter(ADD_TYPE);
-		return retrieveAddress(request, type);
-	}
-
-	private Address retrieveAddress(HttpServletRequest request, String type) {
-		String userName = request.getParameter(type + USERNAME);
-		String add1 = request.getParameter(type + ADDRESS1);
-		String add2 = request.getParameter(type + ADDRESS2);
-		String city = request.getParameter(type + CITY);
-		String stateP = request.getParameter(type + STATE_PROVINCE);
-		String c = request.getParameter(type + COUNTRY);
-		String postalCode = request.getParameter(type + POASTAL_CODE);
-		String telNum = request.getParameter(type + TEL_NUM);
-
-		int intC = 0;
-
-		try {
-			intC = Integer.parseInt(c);
-		} catch (NumberFormatException e) {
-		}
-
-		return new Address(userName, add1, add2, city, stateP, intC,
-				postalCode, telNum);
-	}
-
-	private Map<String, String> validateAddress(Address address, String type) {
-		Map<String, String> err = new HashMap<String, String>();
-
-		if (StringUtils.isBlank(address.getFullName())
-				|| address.getFullName().length() > 100) {
-			err.put(type + USERNAME_ERR, "Invalid username");
-		}
-
-		if (StringUtils.isBlank(address.getAddress1())
-				|| address.getAddress1().length() > 200) {
-			err.put(type + ADDRESS1_ERR, "Invalid address");
-		}
-
-		if (StringUtils.isNotBlank(address.getAddress2())
-				&& address.getAddress2().length() > 200) {
-			err.put(type + ADDRESS2_ERR, "Invalid address");
-		}
-
-		if (StringUtils.isBlank(address.getCity())
-				|| address.getCity().length() > 100) {
-			err.put(type + CITY_ERR, "Invalid city");
-		}
-
-		if (null == ServiceFactory.getService(CountryService.class)
-				.getCountryById(address.getCountry())) {
-			err.put(type + COUNTRY_ERR, "Invalid country");
-		}
-
-		if (StringUtils.isBlank(address.getStateProvince())
-				|| address.getStateProvince().length() > 100) {
-			err.put(type + STATE_PROVINCE_ERR, "Invalid state");
-		}
-
-		if (StringUtils.isBlank(address.getPostalCode())
-				|| address.getPostalCode().length() > 100) {
-			err.put(type + POSTAL_CODE_ERR, "Invalid postal code");
-		}
-
-		if (StringUtils.isBlank(address.getPhone())
-				|| address.getPhone().length() > 100) {
-			err.put(type + TEL_NUM_ERR, "Invalid phone number");
-		}
-
-		return err;
 	}
 
 	@RequestMapping("/feedback")

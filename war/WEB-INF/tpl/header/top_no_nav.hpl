@@ -1,0 +1,2 @@
+	<#include "top_clean.hpl">
+	<#include "topContent/navigationBox_no_nav.hpl">

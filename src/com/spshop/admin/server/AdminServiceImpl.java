@@ -166,4 +166,9 @@ public class AdminServiceImpl extends RemoteService implements AdminService{
         return ServiceFactory.getService(MessageService.class).replyMessage(parent, message);
     }
 
+    @Override
+    public List<Order> queryOrdersByUserId(long userId) {
+        return ServiceFactory.getService(OrderService.class).getOrdersByUserId(userId);
+    }
+
 }

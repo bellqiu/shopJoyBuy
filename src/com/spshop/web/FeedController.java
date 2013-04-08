@@ -30,6 +30,7 @@ import com.spshop.model.Product;
 import com.spshop.utils.Utils;
 
 @Controller
+@RequestMapping("/feed")
 public class FeedController extends BaseController {
     private final static Properties feedConfig = new Properties();
     private static Logger logger = Logger.getLogger(FeedController.class);

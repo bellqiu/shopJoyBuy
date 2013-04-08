@@ -1,0 +1,89 @@
+<#if errorMsg??>
+<p class="red" style="border: dashed 1px red; padding: 10px; font-weight: bold;" >
+	Warning : ${errorMsg}
+</p>
+</#if>
+<#if processingOrder ??>
+	<#assign order = processingOrder>
+	<#assign currencyRate = (siteView.currencies[order.currency])!0 >
+	<div class="cart_list_block">
+		<h1 class="title">Order Number</h1>
+			Order Number:  <span class="red"> ${order.name}</span>
+		<div class="content">
+			Processing ...
+		</div>
+	</div>
+	<div class="scart_summary">
+		<dl class="scart_summary_list">
+			<dd >Item Sub total:<span class="red">${(order.currency)} &nbsp;<span class="order_sub_total">${(currencyRate*order.totalPrice)?string(",##0.##")}</span></span></dd>
+			<dd >Coupon:<span class="red">${(order.currency)} &nbsp;<span class="order_coupon_total">-${(currencyRate*order.couponCutOff)?string(",##0.##")}</span></span></dd>
+			<dd>
+				Shipping Cost:<span class="red">${(order.currency)}&nbsp;<span class="order_shipping_total">${(currencyRate*order.dePrice)?string(",##0.##")}</span></span>
+			</dd>
+			<dd class="separator"><dd>
+			<dd class="red">
+				<b>Grand Total:<span id="GrabdTotal">${(order.currency)} &nbsp;<span class="order_grand_total">${(currencyRate*(order.totalPrice-order.couponCutOff + order.dePrice))?string(",##0.##")}</span></span></b>
+			</dd>
+		</dl>
+	</div>
+	<p class="clearBoth"></p>
+	
+	<form name="payForm"
+					action="https://payment.secure-checkoutserver.com/Interface"
+					method="post" id="paypaysubmitForm">
+					<input type="hidden" name="merNo" value="10309" />
+					 <input type="hidden" name="gatewayNo" value="10309001" /> 
+					 <input type="hidden" name="orderNo" value="${order.name}" />
+					 <input type="hidden" name="orderCurrency" value="${order.currency}" />
+					 <input type="hidden" name="orderAmount" value="${amount}" /> 
+					 <input type="hidden" name="signInfo" value="${signInfo}" />
+					<input type="hidden" name="returnUrl" value="${returnUrl}" /> 
+					<input type="hidden" name="firstName" value="${firstName}" /> 
+					<input type="hidden" name="lastName" value="${lastName!'NA'}" />
+					<input type="hidden" name="email" value="${order.user.email}" /> 
+					<input type="hidden" name="phone" value="${(order.billingAddress.phone)!'12345678'}" /> 
+					<input type="hidden" name="paymentMethod" value="Credit Card" /> 
+					<input type="hidden" name="country" value="${cc}" /> 
+					<input type="hidden" name="city" value="${order.billingAddress.city}" />
+					<input type="hidden" name="address" value="${(order.billingAddress.address1)!'12345678'}" />
+					
+					<#if ((order.shippingAddress.postalCode)?length < 2)>
+						<input type="hidden" name="zip" value="8888" /> 
+					<#else>
+						<input type="hidden" name="zip" value="${order.billingAddress.postalCode}" /> 
+					</#if>
+					
+				</form>
+				
+			<script type="text/javascript">
+					jq("#paypaysubmitForm").submit();
+					jq("#GlobebillPayFrame").ready(function(){
+						jq("#Loading-GlobebillPayFrame").remove();		
+						jq("#GlobebillPayFrame").show();
+						jq("#GlobebillPayFrameDiv").show();
+					});
+					
+			</script>	
+	
+	<!--  
+	<div class="cart_list_block">
+		<h1 class="title">Credit And Debit Card Information</h1>
+		<div class="content" style="margin-left: 60px;">
+			<p><img id="Loading-GlobebillPayFrame" style="margin-left: 300px;margin-top: 160px" alt="Loading" src="/css/loading_img_s.gif"></p>
+			<div class="shipping_desc" id="GlobebillPayFrameDiv" style="width: 800px;height:540px;overflow: hidden;margin-left: 0px;">
+				<iframe name="GlobebillPayFrame"  border="no" scroll="no" style="border: 0px;width:850px;overflow: hidden;height: 999px;display: block;margin-left: -26px">
+								
+				</iframe>
+			</div>
+						merNo + gatewayNo +
+						orderNo + orderCurrency+ orderAmount +
+						returnUrl+ signkey
+		</div>
+	</div>-->
+	
+	<p class="clearBoth"></p>
+<#else>
+		<ul class="scart_c">
+			<li class="red"><b>No order found</b></li>
+		</ul>
+</#if>

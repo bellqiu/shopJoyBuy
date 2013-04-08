@@ -180,39 +180,43 @@
 		<property name="updateDate"></property>
 		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
 		
-		<property name="customerAddress" length="200"></property>
-		<property name="customerAddress2" length="200"></property>
-		<property name="customerCompany" length="200" ></property>
-		<property name="customerCountry" length="200"></property>
+		<component name="shippingAddress" class="Address"> 
+	       		<property name="firstName" column="shippingfirstName" length="100"></property>
+				<property name="lastName" column="shippinglastName"  length="100"></property>
+				<property name="address1" column="customerAddress" length="500"></property>
+				<property name="address2" column="customerAddress2" length="500"></property>
+				<property name="city" column="city" length="100"></property>
+				<property name="stateProvince" column="state" length="200"></property>
+				<property name="country" column="country"></property>
+				<property name="postalCode" column="customerZipcode" length="100" ></property>
+				<property name="phone" column="customerTelephone" length="100"></property>
+   	 	</component>
+   	 	
+   	 	<component name="billingAddress" class="Address"> 
+	       		<property name="firstName" column="billingfirstName" length="100"></property>
+				<property name="lastName" column="billingLastName" length="100"></property>
+				<property name="address1" column="bcustomerAddress"  length="500"></property>
+				<property name="address2" column="bcustomerAddress2" length="500"></property>
+				<property name="city" column="bcity" length="100"></property>
+				<property name="stateProvince" column="bstate" length="200"></property>
+				<property name="country" column="bcountry"></property>
+				<property name="postalCode" column="bcustomerZipcode" length="100"></property>
+				<property name="phone" column="bphone" length="100"></property>
+   	 	</component>
+		
 		<property name="customerEmail" length="200"></property>
-		<property name="customerName" length="200"></property>
-		<property name="customerTelephone" length="200"></property>
-		<property name="customerZipcode" length="200"></property>
 		<property name="deliverCode" length="200"></property>
 		<property name="deliverCompany" length="200"></property>
 		<property name="deliverPhone" length="200"></property>
 		<property name="orderType" length="200"></property>
 		<property name="addressType" length="200"></property>
-		<property name="city" length="200"></property>
 		<property name="dePrice"></property>
 		<property name="currency" length="200"></property>
 		<property name="customerMsg" ></property>
-		<property name="bcustomerName" ></property>
 		<property name="customGender" ></property>
 		<property name="bcustomGender" ></property>
-		<property name="bcustomerAddress" ></property>
-		<property name="bcustomerAddress2" ></property>
-		<property name="bcity" ></property>
-		<property name="state" ></property>
 		<property name="couponCode" ></property>
 		<property name="couponCutOff" ></property>
-		<property name="bstate" ></property>
-		<property name="bcustomerZipcode" ></property>
-		<property name="bphone" ></property>
-		<property name="billingSameAsPrimary" ></property>
-		<property name="country" ></property>
-		<property name="bcountry" ></property>
-		<property name="customerBCountry" ></property>
 		<property name="shippingMethod" ></property>
 		<property column="traceInfo" generated="never" lazy="false" name="traceInfo" length="255"/>
 		
@@ -249,7 +253,6 @@
 			<key column="order_id"></key>
 			<one-to-many class="OrderItem"/>
 		</bag>
-		<property name="totalPrice"></property>
 		<many-to-one name="user" class="User" column="user_id"></many-to-one>
 	</class>
 	
@@ -479,8 +482,6 @@
 		<property name="phoneP" ></property>
 		<property name="phoneB" ></property>
 		
-		<property name="billingSameAsPrimary" ></property>
-		
 		<!-- measurement -->
 		<property name="height" ></property>
 		<property name="weight" ></property>
@@ -505,6 +506,13 @@
 		<property name="kneeSize" ></property>
 		<property name="SuitMeasurementComplete" column="suitMeasurement"></property>
 		<!-- end measurement -->
+		
+		<bag name="shippingAddresses" cascade="all" table="User_ShippingAddresses">
+			<key column="user_id"></key>
+			<many-to-many class="Address" column="address_id" not-found="ignore"/>
+		</bag>
+		
+		<many-to-one name="billingAddress" cascade="all" column="billing_add_id" class="Address" not-found="ignore"></many-to-one>
 		
 	</class>
 	
@@ -544,5 +552,21 @@
 			not-found="ignore" />
 		<property generated="never" lazy="false" name="replied" />
 		<many-to-one class="User" column="user_id" name="user" />
+	</class>
+	
+	<class name="Address" table="SHOP_Address">
+		<id name="id" column="ID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="firstName" length="100"></property>
+		<property name="lastName" length="100"></property>
+		<property name="address1" length="500"></property>
+		<property name="address2" length="500"></property>
+		<property name="city" length="100"></property>
+		<property name="stateProvince" length="200"></property>
+		<property name="country" length="100"></property>
+		<property name="postalCode" length="100"></property>
+		<property name="phone" length="100"></property>
+		
 	</class>
 </hibernate-mapping>
