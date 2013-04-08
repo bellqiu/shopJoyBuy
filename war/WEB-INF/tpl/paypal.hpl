@@ -16,7 +16,7 @@
 		<input type="hidden" name="currency_code"
 			value="${defaultOrder.currency}"> <input type="hidden"
 			name="lc" value="US"> <input type="hidden" name="notify_url"
-			value="http://www.joybuy.co.uk/checkorder"> <input
+			value="http://www.joybuy.co.uk/uc/checkorder"> <input
 			type="hidden" name="return"
 			value="http://www.joybuy.co.uk/orders?id=${defaultOrder.name }">
 	</form>
