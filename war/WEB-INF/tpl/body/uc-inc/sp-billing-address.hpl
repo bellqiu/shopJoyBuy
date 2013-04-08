@@ -120,7 +120,7 @@
 				<b>Grand Total:<span id="GrabdTotal">${(order.currency)} &nbsp;<span class="order_grand_total">${(currencyRate*(order.totalPrice-order.couponCutOff + order.dePrice))?string(",##0.##")}</span></span></b>
 			</dd>
 			<dd class="red">
-				<form action="https://${RawRequest.serverName}/uc/checkout_credit_card">
+				<form action="http://${RawRequest.serverName}/uc/checkout_credit_card">
 					<span>
 						<input type="hidden" name="add" value="${(address.id)!0?string}">
 						<input type="hidden" name="orderSN" value="${order.name}">

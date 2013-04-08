@@ -16,9 +16,9 @@
 		<input type="hidden" name="currency_code"
 			value="${defaultOrder.currency}"> <input type="hidden"
 			name="lc" value="US"> <input type="hidden" name="notify_url"
-			value="https://${RawRequest.serverName}/uc/checkorder"> <input
+			value="http://${RawRequest.serverName}/uc/checkorder"> <input
 			type="hidden" name="return"
-			value="https://${RawRequest.serverName}/uc/orderDetails?id=${defaultOrder.name }">
+			value="http://${RawRequest.serverName}/uc/orderDetails?id=${defaultOrder.name }">
 	</form>
 	 <script type="text/javascript">
 		jq("#paypaysubmitForm").submit();

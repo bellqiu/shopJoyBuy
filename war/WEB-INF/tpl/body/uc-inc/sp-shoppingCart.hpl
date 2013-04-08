@@ -119,7 +119,7 @@
 <div class="red;" style="float: right; width: 34%;">
 	<span>
 		<a class="Continue_shopping" href="${siteView.host}"> << Continue shopping</a>
-		<form method="get" action="https://${RawRequest.serverName}/uc/shoppingCart_address">
+		<form method="get" action="http://${RawRequest.serverName}/uc/shoppingCart_address">
 		<input type="hidden" value="${userView.cart.order.name}" name="id">
 		<input style="float:left;" type="submit" value="Proceed to Checkout" class="button_02">
 		</form>

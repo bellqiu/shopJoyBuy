@@ -251,7 +251,7 @@
 				</div>
 		</div>
 	</div>
-	<form action="https://${RawRequest.serverName}/uc/checkout" >
+	<form action="http://${RawRequest.serverName}/uc/checkout" >
 	<div class="cart_list_block">
 		<h1 class="title">Payment Method</h1>
 		<div class="payment">

@@ -1,4 +1,4 @@
-<form action="https://${RawRequest.serverName}/uc/shoppingCart_address">
+<form action="http://${RawRequest.serverName}/uc/shoppingCart_address">
 <div class="scart_con">
 	<#if currentOrder ??> <#assign order = currentOrder> <#if
 	order.currency == "USD"> <#assign currencyRate = 1> <#else> <#assign

@@ -3,7 +3,7 @@
 <div class="scart_con">
 	<#assign order = currentOrder!userView.cart.order> <#if
 	((order.items?size)> 0) >
-	<form action="https://${RawRequest.serverName}/uc/shoppingCart_payment_2_pay" id="payForm" method="post">
+	<form action="http://${RawRequest.serverName}/uc/shoppingCart_payment_2_pay" id="payForm" method="post">
 
 		<div class="scart_step3"></div>
 		<div class="sc_order">
