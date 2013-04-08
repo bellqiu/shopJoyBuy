@@ -23,7 +23,7 @@
 			<p class="form_label">
 				<input id="FormLogin_submit" type="submit" class="button_01" value="Login">
 			</p>
-			<p><a href="/c/Coupons"><img border="0" src="/css/registersave.jpg" alt="Coupons" title="Coupons" /></a></p>
+			<p><a href="/c/Coupons"><img border="0" src="/css/song.jpg" alt="Coupons" title="Coupons" /></a></p>
 			<p class="form_label">Coupon will be sent to your E-mail after you register.</p>
 		</div>
 	</form>

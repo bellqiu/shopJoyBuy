@@ -977,6 +977,10 @@ li.feedback_item_w4 {
 	border-bottom: 1px solid black;
 }
 
+.scart_con h1{
+	font-size: 18px;
+}
+
 .scart_c {
 	width: 972px;
 }
@@ -3051,7 +3055,7 @@ input.valid, select.valid, texteara.valid{
 }
 
 .cart_list_block .title{
-	background: url("/style/image/uc_background.jpg ") repeat scroll 0 0 transparent;
+	background: url("/style/image/uc_background.png ") repeat scroll 0 0 transparent;
     height: 28px;
     line-height: 28px;
     margin-bottom: 15px;
