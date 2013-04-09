@@ -4,16 +4,13 @@
 			<img alt="logo" src="/image/2496802064581883.jpg">
 		</a>
 	</div>
-	<div class="search">
+	<div <div class="Cart_payment">>
 		<div class="${cartStep!'cartStep1'}"></div>
 	</div>
 	
-	<div class="security">
+   <div class="norton_payment">
 	
-		  <span class="top_payment"><img title="Custom size for free on joybuy.co.uk" alt="Custom size for free on joybuy.co.uk" src="/style/image/top01.jpg"></span>
-		  <span class="top_payment"><img title="Free shipping over £60 on joybuy.co.uk" alt="Free shipping over £60 on joybuy.co.uk" src="/image/Secure-Ordering.jpg"></span>	
-	
-			<a title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications.">
+		 	<a title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications.">
 			<script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script>
 			</a>
 	</div>
