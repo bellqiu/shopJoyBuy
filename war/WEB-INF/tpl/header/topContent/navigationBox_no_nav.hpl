@@ -10,15 +10,12 @@
 	
 	<div class="security">
 	
-		<a href="#" title="Custom size for free on joybuy.co.uk"> 
-		 	<img title="Custom size for free on joybuy.co.uk" alt="Custom size for free on joybuy.co.uk" src="/style/image/top01.jpg">
-		</a>
-		<a href="#" title="Free shipping over £60 on joybuy.co.uk"> 
-		  	<img title="Free shipping over £60 on joybuy.co.uk" alt="Free shipping over £60 on joybuy.co.uk" src="/image/Secure-Ordering.jpg">
-		</a>
-		<a title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications.">
-		<script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script>
-		</a>
+		  <span class="top_payment"><img title="Custom size for free on joybuy.co.uk" alt="Custom size for free on joybuy.co.uk" src="/style/image/top01.jpg"></span>
+		  <span class="top_payment"><img title="Free shipping over £60 on joybuy.co.uk" alt="Free shipping over £60 on joybuy.co.uk" src="/image/Secure-Ordering.jpg"></span>	
+	
+			<a title="Click to Verify - This site chose VeriSign SSL for secure e-commerce and confidential communications.">
+			<script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script>
+			</a>
 	</div>
 	
 	

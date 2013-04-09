@@ -2,8 +2,9 @@
 <#assign pageDescription = "Shipping and Billing Address on joybuy.co.uk - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
 <#assign pageTitle = "Shipping and Billing Address on joybuy.co.uk: Fashion Dress, Apparel, Suits With Free Shipping">
 
+<#assign cartStep = "cartStep1" >
 
-<#include "/header/top.hpl">
+<#include "/header/top_no_nav.hpl">
 <#include "/body/body-sp-shoppingCart_address.hpl">	
 
 <!-- Google Code for address Conversion Page -->
@@ -26,4 +27,4 @@ var google_conversion_value = 10;
 </noscript>
 
 
-<#include "/footer/bottom.hpl">
+<#include "/footer/bottom-payment.hpl">

@@ -448,7 +448,14 @@ span.icon_RUB {
 }
 
 .security a {
-	
+	display: block;
+    float: left;
+}
+
+.top_payment {
+	display: block;
+    float: left;
+    margin-top:23px;
 }
 
 .security a img {
@@ -974,7 +981,7 @@ li.feedback_item_w4 {
 	padding-bottom: 20px;
 	background: white;
 	padding-top: 10px;
-	border-bottom: 1px solid black;
+	
 }
 
 .scart_con h1{
@@ -3199,3 +3206,4 @@ input.valid, select.valid, texteara.valid{
     padding-right: 8px;
     float:right;
 }
+
