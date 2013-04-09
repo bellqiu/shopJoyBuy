@@ -544,7 +544,7 @@ class="MsoNormal">&nbsp;</p></td>
     <p align="center" class="MsoNormal" style="margin:0in;margin-bottom:.0001pt;
     text-align:center"><span style="font-size:9.0pt;mso-fareast-font-family:
     &quot;Times New Roman&quot;;color:#646464">Copyright&copy; 2012 Joybuy.co.uk; Inc. All
-    Rights Reserved. | <a href="http://www.Joybuy.co.uk/c/Terms-Of-Use">Terms
+    Rights Reserved. | <a href="http://joybuy.co.uk/c/Terms-Conditions">Terms
     of Use </a>| <a href="http://www.Joybuy.co.uk/c/Privacy-Policy">Privacy
     Policy </a><o:p></o:p></span></p>
     </td>

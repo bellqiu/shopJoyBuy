@@ -29,8 +29,6 @@ img {
 		transparent !important;
 
 	cursor: pointer;
-	font-size: 12px;
-	font-weight: bold;
 	height: 25px;
 	overflow: visible;
 	padding: 0 8px;
@@ -455,7 +453,7 @@ span.icon_RUB {
 .top_payment {
 	display: block;
     float: left;
-    margin-top:23px;
+    margin-top:10px;
 }
 
 .security a img {
@@ -474,7 +472,7 @@ span.icon_RUB {
 }
 
 .search {
-	left: 245px;
+	left: 225px;
 	position: absolute;
 	top: 28px;
 	z-index: 1;
@@ -486,6 +484,7 @@ span.icon_RUB {
 	height: 32px;
 	position: relative;
 	width: 307px;
+	margin-top: 15px;
 }
 
 .search_box .search_text {

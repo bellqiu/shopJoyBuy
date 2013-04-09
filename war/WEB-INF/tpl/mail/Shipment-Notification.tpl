@@ -236,7 +236,7 @@ cooperation!</td>
           <td width="22"> </td>
           <td height="20" align="center" style="COLOR: #646464; FONT-SIZE: 12px">Copyright&copy; 2012 joybuy.co.uk; 
 
-Inc. All Rights Reserved. | <a href="http://www.joybuy.co.uk/c/Terms-Of-Use">Terms of Use </a>| <a 
+Inc. All Rights Reserved. | <a href="http://joybuy.co.uk/c/Terms-Conditions">Terms of Use </a>| <a 
 
 href="http://www.joybuy.co.uk/c/Privacy-Policy">Privacy Policy </td>
           <td width="22"> </td> </tr>

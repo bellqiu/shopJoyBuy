@@ -76,7 +76,7 @@ src="https://www.joybuy.co.uk/image/2496802064581883.jpg"></span></p>
     <td width="22" style="width:16.5pt;padding:0in 0in 0in 0in"></td>
     <td style="padding:0in 0in 0in 0in">
     <p align="center" style="margin:0in;text-align:center"><span style="font-size:9.0pt;color:#646464">Copyright&copy; 2012 Joybuy.co.uk; Inc. All Rights Reserved. | 
-	<a href="http://www.Joybuy.co.uk/c/Terms-Of-Use">Terms of Use </a>| 
+	<a href="http://joybuy.co.uk/c/Terms-Conditions">Terms of Use </a>| 
 	<a href="http://www.Joybuy.co.uk/c/Privacy-Policy">Privacy Policy </a></span></p>
     </td>
    </tr>
