@@ -520,7 +520,7 @@ cellspacing:0in;mso-yfti-tbllook:
 
 immediately packaged and shipped to you. The average processing time for made-to-measure clothing (such as wedding, 
 
-suits or special occasion dresses) is 8-12 business days, and for all other items, approximately 1-3 business days. 
+suits or special occasion dresses) is 10-14 business days, and for all other items, approximately 1-3 business days. 
 
 And</p>
       <p style="text-align:left;font-size:8.0pt">If you have chosen Expedited shipping, your package(s) will arrive in 
