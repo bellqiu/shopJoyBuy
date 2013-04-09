@@ -25,15 +25,13 @@ img {
 }
 
 .button_01 {
-	background: url("/style/image/button01_bg.gif") repeat scroll 0 0
-		transparent !important;
-
+	background: url("/style/image/button01_bg.gif") repeat scroll 0 0 transparent !important;
 	cursor: pointer;
 	height: 25px;
 	overflow: visible;
 	padding: 0 8px;
 	color: #fff;
-	text-shadow: 1px 1px 0 #004085;
+	 border: 0 none;
 }
 
 .button_02 {
@@ -984,7 +982,7 @@ li.feedback_item_w4 {
 }
 
 .scart_con h1{
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .scart_c {
@@ -3165,7 +3163,7 @@ input.valid, select.valid, texteara.valid{
     display: block;
     height: 28px;
     margin-right:10px;
-    background: url("/style/image/uc_background.jpg") repeat scroll 0px 0px transparent; 
+    background: url("/style/image/uc_background.png") repeat scroll 0 0 transparent; 
     line-height: 28px;
     padding: 0px 5px;
     border: 1px solid #ccc;
@@ -3186,7 +3184,7 @@ input.valid, select.valid, texteara.valid{
 }
 
 .cart-side h4 {
-    background:#f6f0e7;
+    background:url("/style/image/uc_background.png") repeat scroll 0 0 transparent;
     border-bottom: 1px solid #DDDDDD;
     font-family: Georgia,serif;
     font-size: 13px;
@@ -3204,5 +3202,20 @@ input.valid, select.valid, texteara.valid{
     margin-left: 10px;
     padding-right: 8px;
     float:right;
+}
+
+.Cart_payment {
+    left: 300px;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+}
+
+.norton_payment {
+    height: 50px;
+    left: 800px;
+    position: absolute;
+    top: 8px;
+    width: 380px;
 }
 

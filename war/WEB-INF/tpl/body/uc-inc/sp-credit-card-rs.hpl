@@ -7,19 +7,16 @@
 	<#assign order = processingOrder>
 	<#assign currencyRate = (siteView.currencies[order.currency])!0 >
 	<div class="cart_list_block">
-		<h1 class="title">Order Number</h1>
-			Order Number:  <span class="red"> ${order.name}</span>
-			<p>&nbsp;</p>
+		<h2 class="title">Payment Result</h2>
+			<p style="padding: 0 12px; font-size:14px;">Order Number: <span class="red"> ${order.name}</span>.  
+			Click to view <a href="/uc/orderDetails?id=${order.name}"><span class="red">Order Detail</span></a>.</p>
+			
 			<#if tradeInfo ??>
 				<#if ((tradeInfo)!'')=='Failed'>
 				
 				<!--paid Faild  -->
-				<div>
-					<P class="red">
-					
-						View <a href="/uc/orderDetails?id=${order.name}">Order Detail</a>
-						
-						<p style="color: #900; font-size:24px;padding: 20px 60px;text-align: center;font-weight: bolder;">NOTICE</p>
+				<div>				
+					<p style="color: #900; font-size:24px;padding: 20px 60px;text-align: center;font-weight: bolder;">NOTICE</p>
     <p style="color: black; border: 1px solid red; font-size: 16px; padding: 30px 20px; line-height: 30px;">
 	<img title="notice" alt="notice" src="/style/image/smile-gif.gif" style="width: 100px; float: left; padding: 0px 10px;"> 1.Your
 	payment has been processing, please go to your bank account to check if
@@ -27,15 +24,15 @@
 	3.If you haven't been charged, please try again or contact your bank. <br>&nbsp;<br>
 	<span style="color: black; font-size: 14px;"> If you have any questions, please contact us: <a href="mailto:service@joybuy.co.uk">service@joybuy.co.uk</a>.
 	We will be honored to serve you.<br>Thanks again for shopping on joybuy.co.uk!</span></p>
-					</P>
+					
 				</div>	
 				<#else>
 				<!--paid succeed  -->
-					<P class="red">
+				<div>
 						<img alt="Payment Sucessful" title="Payment Sucessful" src="/style/image/sucessfulicon.png" style="float: left; width: 100px;padding: 40px 10px 40px 240px;">
     <h1 style="color: black; border: 1px solid red;font-size: 24px;padding: 60px;"> Payment Status: Successful ! <br> Thank You ! </h1>
-						View <a href="/uc/orderDetails?id=${order.name}">Order Detail</a>
-					</P>
+						
+				</div>		
 		
 				</#if>
 			</#if>

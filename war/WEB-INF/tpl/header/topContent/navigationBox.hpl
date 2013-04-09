@@ -23,9 +23,9 @@
 		<a style="float:left" target="blank" href="https://www.paypal.com/bz/webapps/mpp/paying-with-paypal" ref="nofollow">
 			<img alt="Globally Accepted and Purchase Protection" title="Globally Accepted and Purchase Protection" src="/image/horizontal_solution.jpg">
 		</a>
-		<a style="float:left" href="#" ref="nofollow">
+		<span style="float:left">
 			<img alt="Free shipping" title="Free shipping" src="/image/Secure-Ordering.jpg">
-		</a>
+		</span>
 		</div>
 	<#include "catalog/categoryMenu.hpl">
 	</div>
