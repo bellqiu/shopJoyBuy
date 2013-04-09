@@ -4,7 +4,7 @@
 			<img alt="logo" src="/image/2496802064581883.jpg">
 		</a>
 	</div>
-	<div <div class="Cart_payment">>
+	<div class="Cart_payment">
 		<div class="${cartStep!'cartStep1'}"></div>
 	</div>
 	

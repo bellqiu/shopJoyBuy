@@ -112,8 +112,7 @@
 					<p>Leave your special requirements here:</p>
 					<div class="form_error red" id="order_msg_noti"></div>
 					<textarea maxlength="800" rows="2" class="order_msg" name="order_msg" id="order_msg">${(order.customerMsg)!''}</textarea>
-					<br>
-					<input	type="button" class="button_01" id="submit_coupon" value="Submit" onclick="jq.HB.applyMsg('${order.name}')">
+					<span style="padding-left: 2px;" ><input	type="button" class="button_01" id="submit_coupon" value="Submit" onclick="jq.HB.applyMsg('${order.name}')"></span>
 				</div>
 		</div>
 	</div>
@@ -170,7 +169,7 @@
 					</li>
 				</#list>
 			</#if>
-				<li><button class="button_01" id="Add_a_New_Billing_Address_from_shipping_cart">Add a New Shipping Address</button></li>
+				<li><span style="padding-left: 20px;" ><button class="button_01" id="Add_a_New_Billing_Address_from_shipping_cart">Add a New Shipping Address</button></span></li>
 			</ul>
 				<script type="text/javascript">
 					
