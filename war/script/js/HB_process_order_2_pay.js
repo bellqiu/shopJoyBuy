@@ -108,11 +108,11 @@
 					$(".order_shipping_standard").html(data.shippingAddressView.standardPrice);
 					$(".order_shipping_expedited").html(data.shippingAddressView.expeditedPrice);
 					$("#Shipping_and_Delivery_block").show("normal");
-					if(data.shippingAddressView.standardChecked){
+/*					if(data.shippingAddressView.standardChecked){
 						$("input[name='shippingMethod'][value='standard']").attr("checked", "checked");
 					}else if(data.shippingAddressView.expeditedChecked){
 						$("input[name='shippingMethod'][value='expedited']").attr("checked", "checked");
-					}
+					}*/
 					
 					$(".order_sub_total").html(data.subTotal);
 					$(".order_coupon_total").html("-" + data.coupon);
@@ -170,10 +170,10 @@
 				
 			},
 			success : function(data){
-				$("#order_msg_noti").html("Apply message successfully.");
+				$("#order_msg_noti").html("Submit message successfully.");
 			},
 			error :function(){
-				$("#order_msg_noti").html("Apply message failed.");
+				$("#order_msg_noti").html("Submit message failed.");
 			}
 			
 		});

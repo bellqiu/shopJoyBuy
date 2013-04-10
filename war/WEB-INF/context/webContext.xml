@@ -99,7 +99,7 @@
 							 username-parameter="LoginEmail"
 							 password-parameter="LoginPwd" authentication-success-handler-ref="loginSuccessfulHandler" /> 
 		
-		<security:remember-me  />
+		<!-- <security:remember-me  /> -->
 		
 		<security:logout logout-success-url="/" logout-url="/logout" delete-cookies="JSESSIONID" />
 		
