@@ -16,9 +16,9 @@ import com.spshop.service.factory.ServiceFactory;
 import com.spshop.service.intf.ProductService;
 
 @Controller
+@RequestMapping("/q/cmd")
 public class SearchController extends BaseController {
     private static final String CATEGORIES_UI = "categories";
-    private static final String MARKET_ONLY_UI = "market";
     
     @RequestMapping("/search")
     public String renderHome(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {

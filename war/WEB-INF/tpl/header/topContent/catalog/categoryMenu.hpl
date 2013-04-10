@@ -12,8 +12,7 @@
 					<#else>
 						<a href='${(siteView.host+"/c/"+catlog.name)!""}' title="${catlog.displayName}">${catlog.displayName}</a></span>
 					</#if>
-					
-						<#if catlog.subCategories??>
+						<#if !(catlog.subCategories?? && ((catlog.subCategories)?size == 0))>
 							<div class="sub_menu">
 								<div class="inner_boxA">
 										<#list catlog.subCategories as subcatlog>
@@ -63,6 +62,30 @@
 											</#if>
 										</#list>
 								</div>
+								<#assign spExist = false>
+								<#list catlog.subCategories as subcatlog>
+									<#if (subcatlog.specialOffer && subcatlog.enable)>
+										<#assign url = (subcatlog.specialOfferImage.noChangeUrl)!'' >
+										<#if ((url?length) > 1)>
+											<#assign sp = subcatlog >
+											<#assign spExist = true>
+											<#break>
+										</#if>
+									</#if>	
+								</#list>
+								<#if !spExist>
+									<#list catlog.subCategories as subcatlog>
+										<#list subcatlog.subCategories as sb2>
+											<#assign url = (sb2.specialOfferImage.noChangeUrl)!'' >
+											<#if ((url?length) > 1)>
+												<#assign sp = sb2>
+												<#assign  spExist = true>
+												<#break>
+											</#if>
+										</#list>
+									</#list>
+								</#if>
+								<#if spExist>
 								<div class="inner_box_along">
 									<dl>
 										<#list catlog.subCategories as subcatlog>
@@ -96,33 +119,11 @@
 									</dl>
 									<div style="clear: both;"></div>
 									<div class="topNavClassAdWrapper">
+									
 										<div class=" SpecialboxShadow topNavAdSpecialOffer">
 											<span class="topNavAdSpecialOffertxt Specialtextshadow ">Special offer</span>
 										</div>
 										<ul class="topNavClassAd">
-											<#assign spExist = false>
-											<#list catlog.subCategories as subcatlog>
-												<#if (subcatlog.specialOffer && subcatlog.enable)>
-													<#assign url = (subcatlog.specialOfferImage.noChangeUrl)!'' >
-													<#if ((url?length) > 1)>
-														<#assign sp = subcatlog >
-														<#assign spExist = true>
-														<#break>
-													</#if>
-												</#if>	
-											</#list>
-											<#if !spExist>
-												<#list catlog.subCategories as subcatlog>
-													<#list subcatlog.subCategories as sb2>
-														<#assign url = (sb2.specialOfferImage.noChangeUrl)!'' >
-														<#if ((url?length) > 1)>
-															<#assign sp = sb2>
-															<#assign  spExist = true>
-															<#break>
-														</#if>
-													</#list>
-												</#list>
-											</#if>
 											
 											<#if sp ??>
 													<li><a href="${siteView.host}/c/${sp.name}"
@@ -134,6 +135,7 @@
 										</ul>
 									</div>
 								</div>
+							</#if>
 						</div>
 					</#if>
 				</li>
