@@ -287,7 +287,7 @@ public class OrderPaymentController extends BaseController{
 		String merNo = "10309";
 		String gatewayNo = "10309001";
 		String signKeyNo = "2066v826";
-		String orderNumber = order.getName();//订单号
+		String orderNumber = order.getName();//订单�?
 		//订单金额, 两位小数
 	    String amount = new NumberFormat("##0.##").getNumberFormat().format(getSiteView().getCurrencies().get(order.getCurrency())*(order.getTotalPrice() + order.getDePrice() - order.getCouponCutOff()));
 
@@ -339,6 +339,8 @@ public class OrderPaymentController extends BaseController{
 	    model.addAttribute("firstName", firstName);
 	    model.addAttribute("lastName", lastName);
 	    model.addAttribute("cc", cc);
+	    
+	    ServiceFactory.getService(OrderService.class).saveOrder(order, order.getStatus());
 	    
 	}
 	
