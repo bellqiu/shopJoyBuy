@@ -99,7 +99,7 @@
 							 username-parameter="LoginEmail"
 							 password-parameter="LoginPwd" authentication-success-handler-ref="loginSuccessfulHandler" /> 
 		
-		<!-- <security:remember-me  /> -->
+	<!-- 	<security:remember-me  /> -->
 		
 		<security:logout logout-success-url="/" logout-url="/logout" delete-cookies="JSESSIONID" />
 		
@@ -144,6 +144,18 @@
 		<property name="templateLoaderPath" value="/WEB-INF/tpl/" />
 		<property name="defaultEncoding" value="UTF-8"></property>
 	</bean>
+	
+	<bean id="defaultExceptionHandler"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="order" value="0"></property>
+		<property name="defaultErrorView" value="error" />
+		<property name="exceptionMappings">
+			<props>
+				<prop key="500">error</prop>
+				<prop key="404">error</prop>
+			</props>
+		</property>		
+	</bean>	 
 
 
 </beans>

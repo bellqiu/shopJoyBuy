@@ -34,6 +34,24 @@ public class HomeController extends BaseController {
 		 return "forward:/home";
 	}
 	
+	@RequestMapping("/error/500")
+	 public String error500(Model model){
+		model.addAttribute("errorCode", "500");
+		 return "error";
+	}
+	
+	@RequestMapping("/error/404")
+	 public String error404(Model model){
+		model.addAttribute("errorCode", "404");
+		 return "error";
+	}
+	
+	@RequestMapping("/error/other")
+	 public String errorOther(Model model){
+		model.addAttribute("errorCode", "other");
+		 return "error";
+	}
+	
 	@RequestMapping("/{product}")
 	 public String reanderProductDefault(@PathVariable("product") String product){
 		 return "forward:/p/"+product;
