@@ -69,8 +69,7 @@
 								Number:</label></th>
 						<td><input name="phone_number" type="text" value="${(address.phone)!''}" data-required="true" data-describedby="phone-description" data-description="phone">
 							<span class="errorInfo" id="phone-description"></span>
-							<p id="phoneSample" class="lightGray clearfix">Example: +1
-								9549031647-535</p></td>
+							<p id="phoneSample" class="lightGray clearfix">Example: +44 9876543210-123</p></td>
 					</tr>
 					<tr>
 						<th></th>

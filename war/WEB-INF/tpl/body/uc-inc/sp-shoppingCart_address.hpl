@@ -288,11 +288,11 @@
 			<div id="paypal" class="paymentmethod">
 				<p>Existing PayPal users can complete your payment using your PayPal account.
 				<p>New PayPal users can register a PayPal account first, then continue the payment on PayPal website.</p>
-				<p>Note: you can send money to us on PayPal directly, our account is: pay@joybuy.co.uk (accept many currencies).</p>
+				<p>Note: you can send money to us on PayPal directly, our account is: <b>pay@joybuy.co.uk</b> (accept many currencies).</p>
 				<a target="_blank" href="https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside">
-				<img alt="Checkout with PayPal-Faster, Safer, Easier." title="Checkout with PayPal-Faster, Safer, Easier." src="/style/image/paypal.gif">
+				<img src="/style/image/paypal.gif" style="padding-bottom: 18px;" alt="Checkout with PayPal-Faster, Safer, Easier." title="Checkout with PayPal-Faster, Safer, Easier." >
 				</a>
-				<a class="paypalIcon" target="_blank" href="https://www.paypal.com/verified/pal=pay@joybuy.co.uk"></a>
+				<a class="paypalIcon" target="_blank" href="https://www.paypal.com/verified/pal=pay@joybuy.co.uk" alt="Paypal verified Merchant: Globally Accepted and Purchase Protection" title="Paypal verified Merchant: Globally Accepted and Purchase Protection"></a>
 			</div>	
 			
 			<div id="WesternUnion" class="paymentmethod WesternUnionText">
