@@ -235,9 +235,9 @@
 					      <p class="clearBoth">&nbsp;</p>
 					      
 					   <div>
-						   <img alt="Free" src="/css/shipping.jpg" class="free-shipping-img">
+						   <img alt="free shipping" src="/css/shipping.jpg" class="free-shipping-img">
 							<p class="red">When will my order arrive?</p>
-							<p style="margin: 12px;">
+							<p style="margin: 6px 0px 0px 16px;">
 							<img src="/style/image/processing-time.jpg"></p>
 							<ul><li style="line-height:20px;">Processing time is the time includes preparing your items, performing quality checks, and packing for shipment.
 							<br>
@@ -256,7 +256,7 @@
 				<option value="allpaymthod">Please select your payment method</option>
 				<option value="Globebill"  >Credit or Debit Card</option>
 				<option value="paypal" selected="selected">Paypal</option>
-				<option value="WesternUnion">Western Union</option>s
+				<option value="WesternUnion">Western Union</option>
 				<option value="WireTransfer">Wire Transfer</option>
 			</select>
 			
@@ -290,9 +290,9 @@
 				<p>New PayPal users can register a PayPal account first, then continue the payment on PayPal website.</p>
 				<p>Note: you can send money to us on PayPal directly, our account is: pay@joybuy.co.uk (accept many currencies).</p>
 				<a target="_blank" href="https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside">
-				<img alt="Checkout with PayPal – Faster. Safer. Easier." title="Checkout with PayPal – Faster. Safer. Easier." src="/style/image/paypal.gif">
+				<img alt="Checkout with PayPal-Faster, Safer, Easier." title="Checkout with PayPal-Faster, Safer, Easier." src="/style/image/paypal.gif">
 				</a>
-				<a class="paypalIcon" target="_blank" href=" "></a>
+				<a class="paypalIcon" target="_blank" href="https://www.paypal.com/verified/pal=pay@joybuy.co.uk"></a>
 			</div>	
 			
 			<div id="WesternUnion" class="paymentmethod WesternUnionText">

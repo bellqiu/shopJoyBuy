@@ -974,8 +974,8 @@ li.feedback_item_w4 {
 
 .scart_con {
 	width: 972px;
-	margin: 0px auto 20px;
-	padding-bottom: 20px;
+	margin: 0px auto 2px;
+	padding-bottom: 2px;
 	background: white;
 	padding-top: 10px;
 	
@@ -1068,7 +1068,7 @@ li.scart_item_w5,ul.scart_c li.scart_item_w5 {
 
 ul.scart_c li.scart_item_w6 {
 	clear: both;
-	padding: 6px 0 12px 6px;
+	
 	border-bottom: 1px dashed #7E7F7F;
 	width: 960px;
 	text-align: center;
@@ -1098,7 +1098,7 @@ ul.scart_c li.scart_item_w6 {
 
 div.scart_summary {
 	width: 967px;
-	padding: 16px 5px 5px 5px;
+	padding: 2px;
 }
 
 .scart_summary p {
@@ -3054,7 +3054,7 @@ input.valid, select.valid, texteara.valid{
 .cart_list_block{
 	border: 1px solid #c7defc;
     margin-top: 5px;
-    padding-bottom: 2px;
+    padding-bottom: 8px;
 
 }
 
@@ -3078,14 +3078,20 @@ input.valid, select.valid, texteara.valid{
 /**************************payment**************************/
 
 .payment{
-	 padding: 2px 18px;
+	 padding: 8px 18px;
 	 line-height: 20px;
 }
-.paypalIcon2, .mcardIcon, .visaIcon, .visaEIcon,  .mcardIcon2, .westernUIcon {
+.paypalIcon, .paypalIcon2, .mcardIcon, .visaIcon, .visaEIcon,  .mcardIcon2, .westernUIcon {
     background: url("/style/image/paymethod.jpg") no-repeat scroll 0 0 transparent;
     display: inline-block;
     height: 32px;
     width: 51px;
+}
+
+.paypalIcon {
+    background-position: 0 0;
+    height: 70px;
+    width: 70px;
 }
 
 .paypalIcon2 {
@@ -3129,7 +3135,7 @@ input.valid, select.valid, texteara.valid{
     padding: 2px;
     width: 310px;
     margin-bottom:10px;
-    font-size: 16px;
+    font-size: 14px;
 }
 .widget h3{
 	font:18px georgia;
