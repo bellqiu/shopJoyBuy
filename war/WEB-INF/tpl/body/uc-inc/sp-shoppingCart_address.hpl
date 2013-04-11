@@ -169,7 +169,8 @@
 					</li>
 				</#list>
 			</#if>
-				<li><span style="padding-left: 20px;" ><button class="button_01" id="Add_a_New_Billing_Address_from_shipping_cart">Add a New Shipping Address</button></span></li>
+				<li><span style="padding-left: 20px;" ><button class="button_01" id="Add_a_New_Billing_Address_from_shipping_cart">Add a New Shipping Address</button>
+				Please note we do not ship to <b>PO.BOX</b> address, thanks!</span></li>
 			</ul>
 				<script type="text/javascript">
 					

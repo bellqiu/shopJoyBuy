@@ -21,16 +21,15 @@
 						</td>
 					</tr>
 					<tr>
-						<th><span class="required">*</span><label> Address:</label></th>
+						<th><span class="required">*</span><label> Address Line1:</label></th>
 						<td><input type="text" name="address" value="${(address.address1)!''}" class="address" data-required="true" data-describedby="address-description" data-description="address">
 							<div class="errorInfo" id="address-description"></div>
 						</td>
 					</tr>
 					<tr>
-						<th><label>Address Continued:</label></th>
+						<th><label> Address Line2:</label></th>
 						<td><input type="text" name="address_ext" class="address" value="${(address.address2)!''}">
-							<p>Example: apartment, suite, unit,
-								building, floor</p></td>
+							<p>Example: apartment, suite, unit, building, floor<br>Please note we do <b>not</b> ship to PO.BOX address, thanks!</p></td>
 					</tr>
 					<tr>
 						<th><span class="required" >*</span><label>City:</label></th>
