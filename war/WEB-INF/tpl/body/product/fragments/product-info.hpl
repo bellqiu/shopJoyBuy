@@ -7,6 +7,16 @@
 	<div class="product-shopping-code">Item Code: ${productInfo.id?c!""}</div>
 	
 	<div class="product-shopping-info">
+		<#if ((1 - productInfo.actualPrice / productInfo.price) > 0.4)>
+			<div class="sales-logo-on-product">
+				<label class="text">
+					Save
+				</label>
+				<label class="percentage">
+					${((1 - productInfo.actualPrice / productInfo.price) * 100)?int + "%"}
+				</label>
+			</div>
+		</#if>
 		<table>
 			<tbody>
 				<#list productInfo.properties as property>

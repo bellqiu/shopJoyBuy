@@ -1799,6 +1799,32 @@ li.scart_c_w_r {
 	font-weight: bold;
 }
 
+.sales-logo-on-product {
+	background: url("/css/sales_bg.png") no-repeat scroll 0 0 transparent;
+    height: 65px;
+    position: absolute;
+    right: 0;
+    top: -70px;
+    width: 65px;
+}
+
+.sales-logo-on-product .text {
+	right:-18px;
+	font-size: 12px;
+	position: relative;
+	top: 7px;
+	color: white;
+}
+
+.sales-logo-on-product .percentage {
+	right:-13px;
+	font-size: 22px;
+	position: relative;
+	top: 5px;
+	color: white;
+	font-weight: bold;
+}
+
 .pagination {
 	padding: 10px 8px;
 }
