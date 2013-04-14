@@ -1825,6 +1825,19 @@ li.scart_c_w_r {
 	font-weight: bold;
 }
 
+.product-save-price-num{
+	color: red;
+    float: right;
+    font-size: 14px;
+}
+
+.free-shipping-tips{
+	float: left;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+}
+
 .pagination {
 	padding: 10px 8px;
 }

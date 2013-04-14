@@ -29,6 +29,15 @@
 				${productInfo.actualPrice * userView.currencyRate}
 			</span>
 		</span>
+		<br/>
+		
+		<#if (productInfo.price != productInfo.actualPrice)>
+		<span class="product-save-price-num">
+			<span id="money">
+			Save: ${(productInfo.price - productInfo.actualPrice)}
+			</span>
+		</span>
+		</#if>
 		
 		<div class="currency-all">
 			<#list siteView.currencies?keys as currencyKey>
@@ -247,6 +256,12 @@
 	<div id="CustomizedColorDesp" style="display: none;padding: 4px;"> </div>
 	<ul style="display: none;" id="choosePro" class="choosePro"> </ul>
 	
+	</div>
+	<div class="free-shipping-tips">
+	<#if (productInfo.actualPrice > 80)>
+		<img alt="Free" src="/css/shipping.jpg" class="free-shipping-img"/>
+		<span class="free-shipping-text">Free Shipping</span>
+	</#if>
 	</div>
 	<div class="addtocart">
 		<#if (productInfo.optType<1)>
