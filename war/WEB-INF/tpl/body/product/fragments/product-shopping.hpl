@@ -86,7 +86,7 @@
 			
 				<div class="color-window-list">
 				<#list pOption.items as item>
-					<#if item.value?ends_with(".jpg")>
+					<#if (item.value!"")?ends_with(".jpg")>
 						<img alt="${item.name}" src="${siteView.imageHost + item.value}" title="${item.name}">
 					</#if>
 				</#list>
@@ -213,6 +213,19 @@
 					</div>
 			</#if>
 		</#list>
+		
+		<div class="last-arrival-date">
+			Latest Arrival Date: <br>
+			<p style="color: #999">(Only For Custom Made Product)</p>
+			<input name="lastArrivalDate" type="text" id="lastArrival"  style="width: 175px;"/>
+		</div>
+		<script>
+			 jq(function() {
+				jq( "#lastArrival" ).datepicker({ minDate: +12, maxDate: "+2M" });
+			 });
+		</script>
+		
+		
 		<input type="hidden" value="${productInfo.name}" name="ProductId">
 		<input type="hidden" id="CustomizedHidden">
 		<input type="hidden" name="operation" value="addItem">
@@ -220,6 +233,7 @@
 			<i id="StocksInfo"></i>
 		</div>
 	</div>
+	
 	
 	<script>
 		var iscustom='';

@@ -14,7 +14,8 @@ public class OrderItem extends Component{
 	private Product product;
 	private int quantity;
 	private float finalPrice;
-	private List<UserOption> userOptions; 
+	private List<UserOption> userOptions;
+	private String lastArrivalDate;
 	
 	public OrderItem() {
 	}
@@ -52,7 +53,15 @@ public class OrderItem extends Component{
 		return getFinalPrice()*getQuantity();
 	}
 
-	public OrderItem clone() {
+	public String getLastArrivalDate() {
+        return lastArrivalDate;
+    }
+
+    public void setLastArrivalDate(String lastArrivalDate) {
+        this.lastArrivalDate = lastArrivalDate;
+    }
+
+    public OrderItem clone() {
 		OrderItem obj = null;
 		obj = new OrderItem(this);
 		if (this.product != null) {
@@ -60,6 +69,7 @@ public class OrderItem extends Component{
 		}
 		obj.quantity = this.quantity;
 		obj.finalPrice = this.finalPrice;
+		obj.lastArrivalDate = this.lastArrivalDate;
 		if (this.userOptions != null) {
 			/* Does not have a clone() method */
 			List<UserOption> options = new ArrayList<UserOption>();

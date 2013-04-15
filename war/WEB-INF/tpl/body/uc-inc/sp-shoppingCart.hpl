@@ -60,7 +60,8 @@
 									<#default>
 										<li>${opt.name } : ${opt.value }</li>
 								</#switch>
-							</#list>	
+							</#list>
+							<li>Latest arrival date: ${item.lastArrivalDate!"N/A"}</li>
 							<#if (item.product.optType==1) >
 								<li  style="color: blue;">(Note: This Product Require to Complete Body Measurement) <input	type="button" class="button_01" style="float: left;" value="Edit My Mesurement" id="GO_TO_Fill_Address" onclick="javascript:window.location='/uc/my-measurements'"></li>
 							</#if>

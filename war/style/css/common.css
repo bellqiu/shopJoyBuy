@@ -2323,6 +2323,10 @@ li.scart_c_w_r {
     width: 192px;
 }
 
+.product-shopping .last-arrival-date{
+	margin-top: 10px;
+}
+
 .product-shopping .product-properties{
 	background: none repeat scroll 0 0 #F5F5F5;
     border: 1px solid #F5F5F5;

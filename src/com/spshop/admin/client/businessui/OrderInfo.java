@@ -191,6 +191,7 @@ public class OrderInfo extends Composite {
                 this.orderTable.setHTML(i, 2, "<img src='"+"http://"+site.getDomain()+"/"+this.order.getItems().get(i).getProduct().getImages().get(0).getIconUrl()+"'/><a target='_blank' href='"+"http://"+site.getDomain()+"/"+this.order.getItems().get(i).getProduct().getName()+"'>"+this.order.getItems().get(i).getProduct().getTitle()+"</a>");
                 this.orderTable.setText(i, 3, String.valueOf(this.order.getItems().get(i).getQuantity()));
                 this.orderTable.setText(i, 4, NumberFormat.getFormat("0.00").format(this.order.getItems().get(i).getFinalPrice()));
+                this.orderTable.setText(i, 5, this.order.getItems().get(i).getLastArrivalDate());
             }
         }
     }
@@ -240,18 +241,21 @@ public class OrderInfo extends Composite {
         this.orderHeader.getColumnFormatter().setWidth(2, "250px");
         this.orderHeader.getColumnFormatter().setWidth(3, "30px");
         this.orderHeader.getColumnFormatter().setWidth(4, "40px");
+        this.orderHeader.getColumnFormatter().setWidth(5, "80px");
         
         this.orderHeader.setText(0, 0, "Serial NO.");
         this.orderHeader.setText(0, 1, "Creation Date");
         this.orderHeader.setText(0, 2, "Product Name");
         this.orderHeader.setText(0, 3, "Qty.");
         this.orderHeader.setText(0, 4, "Price");
+        this.orderHeader.setText(0, 5, "Last Arrival Date");
         
         this.orderTable.getColumnFormatter().setWidth(0, "150px");
         this.orderTable.getColumnFormatter().setWidth(1, "90px");
         this.orderTable.getColumnFormatter().setWidth(2, "250px");
         this.orderTable.getColumnFormatter().setWidth(3, "30px");
         this.orderTable.getColumnFormatter().setWidth(4, "40px");
+        this.orderTable.getColumnFormatter().setWidth(5, "80px");
     }
     
     public void setOrder(Order order) {

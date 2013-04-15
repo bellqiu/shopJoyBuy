@@ -1,0 +1,1 @@
+ALTER TABLE `sshop`.`shop_orderitem` ADD COLUMN `lastArrivalDate` VARCHAR(45) NULL  AFTER `order_id` ;

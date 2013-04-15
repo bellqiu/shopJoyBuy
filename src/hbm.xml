@@ -267,6 +267,7 @@
 		<property name="finalPrice"></property>
 		<many-to-one name="product" class="Product" column="product_id"></many-to-one>
 		<property name="quantity"></property>
+		<property name="lastArrivalDate"></property>
 		<bag name="userOptions" cascade="all">
 			<key column="item_id"></key>
 			<one-to-many class="UserOption"/>

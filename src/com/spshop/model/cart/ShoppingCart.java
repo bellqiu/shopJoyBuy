@@ -33,7 +33,7 @@ public class ShoppingCart {
 		return order;
 	}
 
-	public void addItem(Product product, List<UserOption> options, int qty) {
+	public void addItem(Product product, List<UserOption> options, int qty, String lastArrivalDate) {
 		if(null==order.getItems()){
 			order.setItems(new ArrayList<OrderItem>());
 		}
@@ -46,6 +46,7 @@ public class ShoppingCart {
 						item.setQuantity(item.getQuantity()+qty);
 						item.setUpdateDate(new Date());
 						item.setFinalPrice((float)product.getActualPrice());
+						item.setLastArrivalDate(lastArrivalDate);
 					}
 				}
 			}
@@ -59,6 +60,7 @@ public class ShoppingCart {
 				orderItem.setUpdateDate(new Date());
 				orderItem.setQuantity(qty);
 				orderItem.setFinalPrice((float)product.getActualPrice());
+				orderItem.setLastArrivalDate(lastArrivalDate);
 				order.getItems().add(orderItem);
 			}
 			

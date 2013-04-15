@@ -121,7 +121,7 @@ public class ShoppingController extends BaseController{
 		List<UserOption> options = retriveUserOptions(request);
 		if(null!=product){
 			
-			getUserView().getCart().addItem(product, options, qty);
+			getUserView().getCart().addItem(product, options, qty, lastArrivalDate);
 			
 			if(product.getOptType() > 0){
 				model.addAttribute("continueShopping", "true");
@@ -131,7 +131,7 @@ public class ShoppingController extends BaseController{
 				for (String pid : relatedProducts) {
 					Product p = SCacheFacade.getProduct(pid);
 					if(null!=p){
-						getUserView().getCart().addItem(p, new ArrayList<UserOption>(), 1);
+						getUserView().getCart().addItem(p, new ArrayList<UserOption>(), 1, lastArrivalDate);
 					}
 				}
 			}
