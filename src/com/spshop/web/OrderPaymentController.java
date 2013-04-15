@@ -214,6 +214,10 @@ public class OrderPaymentController extends BaseController{
 				order.setOrderType("WesternUnion");
 				checkOutOrder(model, order);
 				return "WesternUnion";
+			}else if("WireTransfer".equals(payment)){
+				order.setOrderType("WireTransfer");
+				checkOutOrder(model, order);
+				return "WireTransfer";
 			}else{
 				model.addAttribute("errorMsg", "Please select a payment method");
 			}
