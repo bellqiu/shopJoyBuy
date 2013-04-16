@@ -1826,9 +1826,16 @@ li.scart_c_w_r {
 }
 
 .product-save-price-num{
-	color: red;
+	background: none repeat scroll 0 0 #AD3231;
+    border-radius: 6px 6px 6px 6px;
+    color: #FFFFFF;
     float: right;
-    font-size: 14px;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 6px;
+    padding: 1px 6px;
+    font-style: italic;
 }
 
 .free-shipping-tips{
@@ -2314,10 +2321,10 @@ li.scart_c_w_r {
 
 .product-shopping{
 	background: none repeat scroll 0 0 #F5F5F5;
-    box-shadow:  2px 10px 6px #AAAAAA;
+    box-shadow:  2px 2px 6px #AAAAAA;
     float: right;
     margin-right: 3px;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     padding-left: 8px;
     padding-right: 4px;
     width: 192px;
@@ -2330,7 +2337,7 @@ li.scart_c_w_r {
 .product-shopping .product-properties{
 	background: none repeat scroll 0 0 #F5F5F5;
     border: 1px solid #F5F5F5;
-    margin: 20px 0;
+    margin: 8px 0;
     padding: 2px;
 }
 
@@ -2375,7 +2382,7 @@ li.scart_c_w_r {
 .product-shopping .product-current-price{
 	float: right;
     font-size: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     position: relative;
 }
 
