@@ -3270,9 +3270,8 @@ input.valid, select.valid, texteara.valid{
 
 .norton_payment {
     height: 50px;
-    left: 800px;
     position: absolute;
+    right: 10px;
     top: 8px;
-    width: 380px;
 }
 
