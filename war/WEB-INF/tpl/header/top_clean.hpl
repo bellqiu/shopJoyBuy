@@ -48,6 +48,8 @@
 		<!-- Additional Importing Start -->
 		<script src="http://cdn.gigya.com/js/socialize.js?apiKey=3_gGObGZB96M9EJm8iSReWnC3GSUBsHggOVGoAkPobuADEsMzwI-Hw8h4daBJpiQ8Y"></script>
 		<!-- Additional Importing End -->
-				
+		<script src="${pageBaseURL}/js/ga.js" type="text/javascript"></script>
+		<link href="https://plus.google.com/100066114457703852702" rel="publisher" />	
+			
 	</head>
 <body>
