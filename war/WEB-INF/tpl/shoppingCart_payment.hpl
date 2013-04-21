@@ -1,7 +1,7 @@
 <#assign pageKeywords = "Payment on joybuy.co.uk, Fashion Dress, Apparel, Suits With Free Shipping">
 <#assign pageDescription = "Payment on joybuy.co.uk - Enjoy Online Shopping For Fashion Dress, Apparel, Suits With Free Shipping">
 <#assign pageTitle = "Payment on joybuy.co.uk: Fashion Dress, Apparel, Suits With Free Shipping">
-
+<#include "/header/top.hpl">
 <!--Facebook Conversion Tracking-arrive payment page -->
 <script type="text/javascript">
 var fb_param = {};
@@ -18,7 +18,7 @@ fb_param.value = '0.00';
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6008396513788&amp;value=0" /></noscript>
 <!--Facebook Conversion Tracking-arrive payment page END-->
 
-<#include "/header/top.hpl">
+
 <#include "/body/body-sp-shoppingCart_payment.hpl">	
 
 <!-- Google Code for Payment Conversion Page -->
