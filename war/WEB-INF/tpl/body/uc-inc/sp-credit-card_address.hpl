@@ -29,7 +29,7 @@
 	<p class="clearBoth"></p>
 	
 	<form name="payForm"
-					action="https://payment.secure-checkoutserver.com/Interface"
+					action="https://payment.globebill.com/Interface"
 					method="post" id="paypaysubmitForm">
 					<input type="hidden" name="merNo" value="10309" />
 					 <input type="hidden" name="gatewayNo" value="10309001" /> 
