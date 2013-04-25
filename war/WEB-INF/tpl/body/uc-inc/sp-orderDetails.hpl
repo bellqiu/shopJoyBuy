@@ -40,8 +40,8 @@
 							<#elseif opt.value == 'The Same As Picture' || (optType!'') == 'ASP'>
 								<li>${opt.name } : The Same As Picture</li> 
 							<#else>
-								<li>${opt.name }: &nbsp;&nbsp;<img alt='${optTitle!""}'
-									src=
+								<li>${opt.name }: &nbsp;&nbsp;<img alt='${optTitle!""}'	
+								src=
 												<#if (optType!"")?starts_with("http") >
 													'${optType!""}'
 												<#else>
@@ -50,7 +50,13 @@
 							</#if> 
 								<#break> 
 							<#default>
-								<li>${opt.name } : ${opt.value }</li> 
+								<li>${opt.name } : ${opt.value }
+												<#if (opt.priceChange>0.001)>
+													 ( +${(opt.priceChange*currencyRate)?string("##0.##")})
+												<#elseif (opt.priceChange<-0.001) >
+													( ${(opt.priceChange*currencyRate)?string("##0.##")})
+												</#if>
+								</li> 
 							</#switch> 
 						</#list>
 					</ul>

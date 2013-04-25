@@ -45,7 +45,7 @@ public class ShoppingCart {
 						existItem = true;
 						item.setQuantity(item.getQuantity()+qty);
 						item.setUpdateDate(new Date());
-						item.setFinalPrice((float)product.getActualPrice());
+						item.setFinalPrice((float)product.getActualPrice() + getAdditionalPrice(options));
 						item.setLastArrivalDate(lastArrivalDate);
 					}
 				}
@@ -59,7 +59,7 @@ public class ShoppingCart {
 				orderItem.setCreateDate(new Date());
 				orderItem.setUpdateDate(new Date());
 				orderItem.setQuantity(qty);
-				orderItem.setFinalPrice((float)product.getActualPrice());
+				orderItem.setFinalPrice((float)product.getActualPrice() + getAdditionalPrice(options));
 				orderItem.setLastArrivalDate(lastArrivalDate);
 				order.getItems().add(orderItem);
 			}
@@ -67,6 +67,18 @@ public class ShoppingCart {
 		}
 		
 		updateCat();
+	}
+	
+	private float getAdditionalPrice(List<UserOption> options){
+		float rs = 0f;
+		
+		if(null != options){
+			for (UserOption userOption : options) {
+				rs = rs + userOption.getPriceChange();
+			}
+		}
+		
+		return rs;
 	}
 
 	@Deprecated
@@ -91,7 +103,7 @@ public class ShoppingCart {
 						count = 1;
 					}
 					item.setQuantity(count);
-					item.setFinalPrice((float)(item.getProduct().getActualPrice()));
+					item.setFinalPrice((float)(item.getFinalPrice()));
 				}
 			}
 		}

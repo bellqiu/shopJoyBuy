@@ -804,6 +804,17 @@ jQuery( ".product-shopping" ).ready(function() {
 		jQuery("#alert_thing_box_customizedsize").hide();
 	});
 	
+	jQuery( "select[name^='text@']" ).each(function(index, el){
+		jQuery(el).change(function(){
+			var selector = jQuery(this);
+			var itemFeild =  jQuery("input[name='optItem@"+selector.attr("name") + "']");
+			var value = selector.val();
+			var itemId = selector.find("option[value='"+value+"']").attr("data-opt-item");
+			
+			itemFeild.value=itemFeild.val(itemId);
+		});
+	});
+	
 });
 
 

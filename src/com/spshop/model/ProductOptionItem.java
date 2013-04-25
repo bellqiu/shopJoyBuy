@@ -11,6 +11,7 @@ public class ProductOptionItem extends Component{
 	private String altTitle;
 	private String displayName;
 	private ProductOption option;
+	private float priceChange;
 	public String getValue() {
 		return value;
 	}
@@ -58,6 +59,9 @@ public class ProductOptionItem extends Component{
 	public ProductOptionItem clone(boolean withOption) {
 		ProductOptionItem obj = null;
 		obj = new ProductOptionItem(this);
+		
+		obj.priceChange = this.priceChange;
+		
 		if (this.value != null) {
 			/* Does not have a clone() method */
 			obj.value = this.value;
@@ -79,6 +83,12 @@ public class ProductOptionItem extends Component{
 			}
 		}
 		return obj;
+	}
+	public float getPriceChange() {
+		return priceChange;
+	}
+	public void setPriceChange(float priceChange) {
+		this.priceChange = priceChange;
 	}
 	
 }

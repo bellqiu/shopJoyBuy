@@ -63,7 +63,14 @@
 										</#if>
 									<#break>
 									<#default>
-										<li>${opt.name } : ${opt.value }</li>
+										<li>${opt.name } : ${opt.value }
+												${opt.priceChange?string}
+												<#if (opt.priceChange>0.001)>
+													 ( +${(opt.priceChange*currencyRate)?string("##0.##")})
+												<#elseif (opt.priceChange<-0.001) >
+													( ${(opt.priceChange*currencyRate)?string("##0.##")})
+												</#if>
+										</li>
 								</#switch>
 							</#list>	
 						</ul>

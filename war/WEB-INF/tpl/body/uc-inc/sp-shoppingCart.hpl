@@ -44,9 +44,21 @@
 											<#assign optSpliter = moptTypeRes?groups[2] >
 										</#list>
 										<#if optTypeRes?size ==0 && opt.value != 'The Same As Picture' && (optType!'') != 'ASP'>
-											<li>${opt.name } : ${opt.value}</li>
+											<li>${opt.name } : ${opt.value}
+												<#if (opt.priceChange>0.001)>
+													 ( +${(opt.priceChange*userView.currencyRate)?string("##0.##")})
+												<#elseif (opt.priceChange<-0.001) >
+													( ${(opt.priceChange*userView.currencyRate)?string("##0.##")})
+												</#if>
+											</li>
 										<#elseif opt.value == 'The Same As Picture' || (optType!'') == 'ASP'>
-											<li>${opt.name } : The Same As Picture</li>
+											<li>${opt.name } : The Same As Picture
+												<#if (opt.priceChange>0.001)>
+													 ( +${(opt.priceChange*userView.currencyRate)?string("##0.##")})
+												<#elseif (opt.priceChange<-0.001) >
+													( ${(opt.priceChange*userView.currencyRate)?string("##0.##")})
+												</#if>
+											</li>
 										<#else>
 												<li>${opt.name }: &nbsp;&nbsp;<img alt='${optTitle!""}' src=
 												<#if (optType!"")?starts_with("http") >
@@ -58,7 +70,13 @@
 										</#if>
 									<#break>
 									<#default>
-										<li>${opt.name } : ${opt.value }</li>
+										<li>${opt.name } : ${opt.value }
+												<#if (opt.priceChange>0.001)>
+													 ( +${(opt.priceChange*userView.currencyRate)?string("##0.##")})
+												<#elseif (opt.priceChange<-0.001) >
+													( ${(opt.priceChange*userView.currencyRate)?string("##0.##")})
+												</#if>
+										</li>
 								</#switch>
 							</#list>
 							<li>Latest arrival date: ${item.lastArrivalDate!"N/A"}</li>

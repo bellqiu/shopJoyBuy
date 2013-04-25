@@ -157,7 +157,7 @@ public class BootstrapDataFilterInterceptor extends HandlerInterceptorAdapter{
 		}
 		userView.setCurrencyCode(cCode);
 		
-		if((StringUtils.isNotBlank(paramCurrency) && !userView.getCurrencyCode().equals(paramCurrency))){
+		if((StringUtils.isNotBlank(paramCurrency) && !userView.getCart().getOrder().getCurrency().equals(paramCurrency))){
 			
 			userView.getCart().getOrder().setCurrency(cCode);
 			if(null!=userView.getLoginUser()){

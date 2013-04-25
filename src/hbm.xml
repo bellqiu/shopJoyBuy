@@ -376,7 +376,7 @@
 		<property name="name" length="100"></property>
 		<property name="createDate"></property>
 		<property name="updateDate"></property>
-		
+		<property name="priceChange"></property>
 		<property name="altTitle" length="200"></property>
 		<property name="displayName" length="200"></property>
 		<property name="value" length="400"></property>
@@ -526,6 +526,7 @@
 		<property name="updateDate"></property>
 		<property name="strOptionType"></property>
 		<property name="optionName" length="200"></property>
+		<property name="priceChange"></property>
 		<property name="value" length="200"></property>
 	</class>
 	

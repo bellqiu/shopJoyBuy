@@ -11,6 +11,7 @@ public class UserOption extends Component{
 	
 	private String optionName;
 	private String value;
+	private float priceChange;
 	private String strOptionType;
 	//private OrderItem orderItem;
 	
@@ -62,6 +63,7 @@ public class UserOption extends Component{
 	public UserOption clone() {
 		UserOption obj = null;
 		obj = new UserOption(this);
+		obj.priceChange = this.priceChange;
 		if (this.optionName != null) {
 			/* Does not have a clone() method */
 			obj.optionName = this.optionName;
@@ -100,6 +102,14 @@ public class UserOption extends Component{
 		} else if (!value.equals(other.value))
 			return false;
 		return true;
+	}
+
+	public float getPriceChange() {
+		return priceChange;
+	}
+
+	public void setPriceChange(float priceChange) {
+		this.priceChange = priceChange;
 	}
 	
 	

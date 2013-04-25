@@ -108,7 +108,8 @@
 					$(".order_shipping_standard").html(data.shippingAddressView.standardPrice);
 					$(".order_shipping_expedited").html(data.shippingAddressView.expeditedPrice);
 					$("#Shipping_and_Delivery_block").show("normal");
-/*					if(data.shippingAddressView.standardChecked){
+					
+					/*if(data.shippingAddressView.standardChecked){
 						$("input[name='shippingMethod'][value='standard']").attr("checked", "checked");
 					}else if(data.shippingAddressView.expeditedChecked){
 						$("input[name='shippingMethod'][value='expedited']").attr("checked", "checked");

@@ -44,7 +44,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -66,7 +65,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.alipay.util.AlipayNotify;
 import com.spshop.cache.SCacheFacade;
 import com.spshop.model.Coupon;
 import com.spshop.model.Order;
@@ -80,10 +78,10 @@ import com.spshop.model.enums.SelectType;
 import com.spshop.service.factory.ServiceFactory;
 import com.spshop.service.intf.CouponService;
 import com.spshop.service.intf.OrderService;
+import com.spshop.service.intf.ProductOptionItemService;
 import com.spshop.service.intf.UserService;
 import com.spshop.utils.Constants;
 import com.spshop.utils.EmailTools;
-import com.spshop.utils.Encrypt;
 import com.spshop.utils.FeedTools;
 import com.spshop.utils.Utils;
 
@@ -144,7 +142,7 @@ public class ShoppingController extends BaseController{
 	
 	private void persistantCart(){
 		Order order = getUserView().getCart().getOrder();
-		if(OrderStatus.ONSHOPPING.toString().equals(order.getStatus())){
+		if(OrderStatus.ONSHOPPING.toString().equals(order.getStatus()) || null == order.getStatus()){
 			order = ServiceFactory.getService(OrderService.class).saveOrder(getUserView().getCart().getOrder(), OrderStatus.ONSHOPPING.toString());
 		}
 	}
@@ -198,6 +196,13 @@ public class ShoppingController extends BaseController{
 					option.setValue(request.getParameter(param));
 					option.setOptionType(SelectType.SINGLE_LIST);
 					options.add(option);
+					
+					String item = request.getParameter("optItem@"+param);
+					
+					if(StringUtils.isNotBlank(item)&&item.matches("\\d+")){
+						float changePrice = ServiceFactory.getService(ProductOptionItemService.class).getItemChangePrice(Long.valueOf(item));
+						option.setPriceChange(changePrice);
+					}
 				}
 				
 				if(TEXTS.equals(ps[0])){
