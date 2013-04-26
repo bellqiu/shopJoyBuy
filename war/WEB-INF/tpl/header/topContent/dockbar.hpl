@@ -98,7 +98,7 @@
 				</#if>
 					<div class="user_menu_hidd" style="width: 200px; cursor: default;">
 						<div class="user_menu_content">
-							<form action="/uc/login" method="post">
+							<form action="/hb_login" method="post">
 								<div class="border_bot indexlogin">
 									<dl>
 										<dd>
@@ -110,7 +110,7 @@
 												class="loginuserpass" name="LoginPwd">
 										</dd>
 										<dd>
-											Remember me<br> <input type="checkbox" name="rememberID" id="LoginRember" value="true" checked="checked">
+											Remember me<br> <input type="checkbox" name="_spring_security_remember_me" id="LoginRember" value="true" checked="checked">
 										</dd>
 										<dd class="Question_mark">
 											Forgot your password?<br> <a rel="nofollow"
