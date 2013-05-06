@@ -6,6 +6,7 @@ import java.util.TreeSet;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.DoubleBox;
 import com.google.gwt.user.client.ui.Image;
 import com.google.gwt.user.client.ui.Widget;
 import com.spshop.admin.client.businessui.callback.ChangeObservable;
@@ -33,6 +34,7 @@ public class ProdOptionItemCreation extends Composite implements ChangeObservabl
 
 	@UiField Button delete;
 	@UiField HorizontalPanel value;
+	@UiField DoubleBox priceChange;
 
 	private ProductOptionItem optionItem;
 	
@@ -68,6 +70,7 @@ public class ProdOptionItemCreation extends Composite implements ChangeObservabl
 			this.value.add(tb);
 		}
 		this.name.setValue(optionItem.getName());
+		this.priceChange.setValue(Double.valueOf(optionItem.getPriceChange()));
 	}
 
 	public ProductOptionItem getOptionItem() {

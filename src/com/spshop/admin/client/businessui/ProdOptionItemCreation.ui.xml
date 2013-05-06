@@ -10,6 +10,9 @@
 					<g:TextBox  ui:field="name"/>
 				</g:customCell>
 				<g:customCell>
+					<g:DoubleBox ui:field="priceChange" />
+				</g:customCell>
+				<g:customCell>
 					<g:HorizontalPanel ui:field="value"/>
 				</g:customCell>
 				<g:customCell>

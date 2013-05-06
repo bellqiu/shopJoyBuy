@@ -30,6 +30,14 @@
 								</g:customCell>
 							</g:row>
 							<g:row>
+								<g:customCell>
+									<g:Label text="Enable:" />
+								</g:customCell>
+								<g:customCell>
+									<g:CheckBox ui:field="enable" />
+								</g:customCell>
+							</g:row>
+							<g:row>
 							<g:customCell>
 									<g:Label text="Title:" />
 								</g:customCell>

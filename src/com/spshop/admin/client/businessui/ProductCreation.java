@@ -73,6 +73,7 @@ public class ProductCreation extends Composite{
 	@UiField Button removeManual;
 	@UiField TabLayoutPanel manual;
 	@UiField ListBox optionTypes;
+	@UiField CheckBox enable;
 	
 	private Product product;
 
@@ -216,6 +217,7 @@ public class ProductCreation extends Composite{
 		prodActualPrice.setValue(product.getActualPrice());
 		showComments.setValue(product.isShowComments());
 		showLikeButton.setValue(product.isShowlikeButton());
+		enable.setValue(product.isDeleted());
 	}
 	public Product getProduct() {
 		return product;
