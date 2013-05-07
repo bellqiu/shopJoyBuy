@@ -1,0 +1,14 @@
+<html>
+	<body>
+		<ul>
+		<#if cache ??>
+			<#list cache as el>
+			<li>
+				${el} <a href="/cacheManager________/remove?el=${el}">clear</a>
+			</li>
+			</#list>
+		</#if>
+		</ul>
+	</body>
+
+</html>
