@@ -19,7 +19,6 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.event.dom.client.KeyUpHandler;
 import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 
@@ -80,6 +79,12 @@ public class ProdOptionItemCreation extends Composite implements ChangeObservabl
 	@UiHandler("name")
 	void onNameKeyUp(KeyUpEvent event) {
 		this.optionItem.setName(name.getValue());
+		notifyChange();
+	}
+	
+	@UiHandler("priceChange")
+	void onPriceChangeKeyUp(KeyUpEvent event) {
+		this.optionItem.setPriceChange(priceChange.getValue().floatValue());
 		notifyChange();
 	}
 

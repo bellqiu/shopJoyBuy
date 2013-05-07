@@ -142,7 +142,7 @@ public class ShoppingController extends BaseController{
 	
 	private void persistantCart(){
 		Order order = getUserView().getCart().getOrder();
-		if(OrderStatus.ONSHOPPING.toString().equals(order.getStatus()) || null == order.getStatus()){
+		if(OrderStatus.ONSHOPPING.toString().equals(order.getStatus()) && null == order.getStatus() && null!=order.getUser()){
 			order = ServiceFactory.getService(OrderService.class).saveOrder(getUserView().getCart().getOrder(), OrderStatus.ONSHOPPING.toString());
 		}
 	}

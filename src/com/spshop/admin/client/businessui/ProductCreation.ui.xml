@@ -31,7 +31,7 @@
 							</g:row>
 							<g:row>
 								<g:customCell>
-									<g:Label text="Enable:" />
+									<g:Label text="Delated" />
 								</g:customCell>
 								<g:customCell>
 									<g:CheckBox ui:field="enable" />

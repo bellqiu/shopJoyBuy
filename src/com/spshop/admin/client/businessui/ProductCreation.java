@@ -282,6 +282,12 @@ public class ProductCreation extends Composite{
 	void onProdPriceKeyUp(KeyUpEvent event) {
 		product.setPrice(prodPrice.getValue());
 	}
+	
+	@UiHandler("enable")
+	void onEnableChange(ClickEvent event) {
+		product.setDeleted(enable.getValue());
+	}
+	
 	@UiHandler("pickRelatedProduct")
 	void onPickRelatedProductClick(ClickEvent event) {
 		CommandFactory.popUpTabProductQuery(false, new SelectedCallBack() {
