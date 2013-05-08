@@ -288,9 +288,9 @@ public class OrderPaymentController extends BaseController{
 
 	private void globebillPay(Order order, Model model, HttpServletRequest request) {
 		
-		String merNo = "10096";
-		String gatewayNo = "10096001";
-		String signKeyNo = "0Zd0j042";
+		String merNo = "10309";
+		String gatewayNo = "10309001";
+		String signKeyNo = "2066v826";
 		String orderNumber = order.getName();
 	    String amount = new NumberFormat("##0.##").getNumberFormat().format(getSiteView().getCurrencies().get(order.getCurrency())*(order.getTotalPrice() + order.getDePrice() - order.getCouponCutOff()));
 
