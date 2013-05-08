@@ -127,6 +127,14 @@ public class AdminServiceImpl extends RemoteService implements AdminService{
 
 	@Override
 	public List<HTML> getHTMLs(String ids) throws ServiceValidateException {
+		ids = ids.trim();
+		if(ids.startsWith(",")){
+			ids = ids.replaceFirst(",", "");
+		}
+		if(ids.endsWith(",")){
+			ids = ids.substring(0, ids.lastIndexOf(","));
+		}
+		
 		return ServiceFactory.getService(HTMLService.class).getHTMLs(ids);
 	}
 
@@ -170,5 +178,5 @@ public class AdminServiceImpl extends RemoteService implements AdminService{
     public List<Order> queryOrdersByUserId(long userId) {
         return ServiceFactory.getService(OrderService.class).getOrdersByUserId(userId);
     }
-
+    
 }

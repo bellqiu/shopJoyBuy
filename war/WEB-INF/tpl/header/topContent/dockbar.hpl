@@ -91,7 +91,7 @@
 				<li class="" id="base_unlogin_li">
 				<#assign loginUser = userView.loginUser!"0">
 				<#if userView.loginUser ??>
-					${userView.loginUser.email}<a href="/uc/logout">(Logout)</a>
+					${userView.loginUser.email}<a href="/logout">(Logout)</a>
 				</#if>
 				<#if loginUser=="0">
 					<a href="/uc/login">Login or Register</a>
@@ -110,7 +110,7 @@
 												class="loginuserpass" name="LoginPwd">
 										</dd>
 										<dd>
-											Remember me<br> <input type="checkbox" name="_spring_security_remember_me" id="LoginRember" value="true" checked="checked">
+											Remember me<br> <input type="checkbox" name="_spring_security_remember_me" id="LoginRember" value="true">
 										</dd>
 										<dd class="Question_mark">
 											Forgot your password?<br> <a rel="nofollow"

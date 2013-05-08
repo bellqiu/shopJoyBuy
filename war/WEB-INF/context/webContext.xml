@@ -30,6 +30,7 @@
 	<mvc:resources location="/tempZip/" mapping="/tempZip/**"/>
 	<mvc:resources location="/admin/" mapping="/admin/**"/>
 	<mvc:resources location="/workspace/" mapping="/workspace/**"/>
+	<mvc:resources location="/___admin/" mapping="/___admin/**"/>
 	
 	<security:http pattern="/css/**" security="none" />
 	<security:http pattern="/im/**" security="none" />
@@ -41,6 +42,7 @@
 	<security:http pattern="/tempZip/**" security="none" />
 	<security:http pattern="/admin/**" security="none" />
 	<security:http pattern="/workspace/**" security="none" />
+	<security:http pattern="/___admin/**" security="none" />
 	
 	<mvc:default-servlet-handler default-servlet-name="AdminLogin" />
 	<mvc:default-servlet-handler default-servlet-name="queryService" />
