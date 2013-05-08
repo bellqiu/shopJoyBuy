@@ -228,7 +228,7 @@
 					       <li class="scart_c_w_l"><input name="shippingMethod" type="radio" value="standard" 
 					       	<#if ((order.shippingMethod)!'')=='standard' >checked="checked"</#if>
 					        onclick="jq.HB.applyShippingMethod('${order.name}', 'standard')" ><strong>&nbsp; Standard Shipping</strong></li>
-					       <li class="scart_c_w_m">Normally 5 - 8 days</li>
+					       <li class="scart_c_w_m">Normally 4 - 6 days</li>
 					       <li class="scart_c_w_r red ">${(order.currency)}&nbsp;<span class="order_shipping_standard">${stdShippingPrice}</span></li>
 					    </ul>
 					    <p class="clearBoth">&nbsp;</p>
@@ -261,7 +261,7 @@
 		<div class="payment">
 			<select name="payment">
 				<option value="allpaymthod">Please select your payment method</option>
-				<option value="Globebill"  >Credit or Debit Card</option>
+				<!--  <option value="Globebill"  >Credit or Debit Card</option> -->
 				<option value="paypal" selected="selected">Paypal</option>
 				<option value="WesternUnion">Western Union</option>
 				<option value="WireTransfer">Wire Transfer</option>
@@ -294,8 +294,8 @@
 			
 			<div id="paypal" class="paymentmethod">
 				<p>Existing PayPal users can complete your payment using your PayPal account.
-				<p>New PayPal users can register a PayPal account first, then continue the payment on PayPal website.</p>
-				<p>Note: you can send money to us on PayPal directly, our account is: <b>pay@joybuy.co.uk</b> (accept many currencies).</p>
+				<p>If you do not have a PayPal account yet, you can still complete the payment using a wide variety of credit/debit cards. 	</p>
+				<p>We accept payments in many currencies.</p>
 				<a target="_blank" href="https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside">
 				<img src="/style/image/paypal.gif" style="padding-bottom: 18px;" alt="Checkout with PayPal-Faster, Safer, Easier." title="Checkout with PayPal-Faster, Safer, Easier." >
 				</a>
