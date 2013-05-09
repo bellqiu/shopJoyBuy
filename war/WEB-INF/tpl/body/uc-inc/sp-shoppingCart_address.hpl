@@ -172,6 +172,15 @@
 											}
 										});
 							});
+							
+							if(jQuery("input[name=order_shippingAddress][checked]").length < 1){
+								jQuery.HB.applyShippingAddress(jq("input[name='order_shippingAddress']:first"),'${order.name}',
+										function(){
+											window.location.reload();	
+										}		
+									);							
+							}
+							
 						</script>
 					</li>
 				</#list>
@@ -188,6 +197,7 @@
 										postUrl:"/uc/addOrUpdateShippingAddress", 
 										title:"Add new Shipping Address",
 										success : function(data){
+											
 											window.location.reload();
 										},
 										error : function (data){
@@ -240,7 +250,12 @@
 					       <li class="scart_c_w_r red">${(order.currency)}&nbsp; <span class="order_shipping_expedited">${extShippingPrice}</span></li>
 					    </ul>
 					      <p class="clearBoth">&nbsp;</p>
-					      
+					      <script>
+							  	if(jQuery("input[name=shippingMethod][checked]").length < 1){
+							  		jQuery("input[name=shippingMethod][value=standard]").click();
+									//jQuery.HB.applyShippingMethod('${order.name}','standard');							
+								}
+					      </script>
 					   <div>
 						   <img alt="free shipping" src="/css/shipping.jpg" class="free-shipping-img">
 							<p class="red">When will my order arrive?</p>
