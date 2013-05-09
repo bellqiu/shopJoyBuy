@@ -134,7 +134,7 @@
 				<#list userView.loginUser.shippingAddresses as address>
 					<li>
 						<#assign usrAddressStr = ((address.firstName)!'') + '^' + ((address.lastName)!'') + '^' + ((address.address1)!'') >
-						<input type="radio" name="order_shippingAddress" value="${address.id}" onclick="jq.HB.applyShippingAddress(this,'${order.name}')"
+						<input type="radio" name="order_shippingAddress" value="${(address.id)?string("##")}" onclick="jq.HB.applyShippingAddress(this,'${order.name}')"
 							<#if orderAddressStr == usrAddressStr >
 								checked="checked"
 							</#if>
@@ -146,19 +146,19 @@
 											${(address.address2)!''}
 										</#if>
 									</#if> <#if address.stateProvince ??> ${(address.stateProvince)!''}</#if> ${(address.city)!''} ${siteView.countryMap[address.country?string].name}) </label>
-						&nbsp;<a href="javascript:void(0)" class="edit_usr_add" id="add${address.id}" style="display: none;">Edit</a>
+						&nbsp;<a href="javascript:void(0)" class="edit_usr_add" id="add${(address.id)?string("##")}" style="display: none;">Edit</a>
 						<script>
-							if(jq("input[name='order_shippingAddress'][value='${address.id}']").attr("checked") == 'checked'){
-								jQuery("#add${address.id}").show();
+							if(jq("input[name='order_shippingAddress'][value='${(address.id)?string("##")}']").attr("checked") == 'checked'){
+								jQuery("#add${(address.id)?string("##")}").show();
 							}
-							jQuery("#add${address.id}").click(function(){
+							jQuery("#add${(address.id)?string("##")}").click(function(){
 								jQuery.HB.AddressWindow(
-										{contentUrl:"/uc/listAddress?id="+${address.id}, 
-											postUrl:"/uc/addOrUpdateShippingAddress?id="+${address.id}, 
+										{contentUrl:"/uc/listAddress?id="+${(address.id)?string("##")}, 
+											postUrl:"/uc/addOrUpdateShippingAddress?id="+${(address.id)?string("##")}, 
 											title:"Edit Shipping Address",
 											success : function(data){
 												
-												jQuery.HB.applyShippingAddress(jq("input[name='order_shippingAddress'][value='${address.id}']"),'${order.name}',
+												jQuery.HB.applyShippingAddress(jq("input[name='order_shippingAddress'][value='${(address.id)?string("##")}']"),'${order.name}',
 													function(){
 														window.location.reload();	
 													}		
@@ -176,7 +176,7 @@
 					</li>
 				</#list>
 			</#if>
-				<li><span style="padding-left: 20px;" ><button class="button_01" id="Add_a_New_Billing_Address_from_shipping_cart">Add a New Shipping Address</button>
+				<li><span style="padding-left: 20px;" ><button class="button_01" id="Add_a_New_Billing_Address_from_shipping_cart">Add a New Shipping Address</button>  
 				Please note we do not ship to <b>PO.BOX</b> address, thanks!</span></li>
 			</ul>
 				<script type="text/javascript">

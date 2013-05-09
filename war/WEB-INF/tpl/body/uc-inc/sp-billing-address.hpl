@@ -18,7 +18,7 @@
 					<li>
 						<#assign usrAddressStr = ((address.firstName)!'') + '^' + ((address.lastName)!'') + '^' + ((address.address1)!'') >
 						
-						<input type="radio" name="order_shippingAddress" value="${address.id}" 
+						<input type="radio" name="order_shippingAddress" value="${(address.id)?string("##")}" 
 							<#if orderAddressStr == usrAddressStr >
 								checked="checked"
 							</#if>
@@ -30,16 +30,16 @@
 											${(address.address2)!''}
 										</#if>
 									</#if> <#if address.stateProvince ??> ${(address.stateProvince)!''}</#if> ${(address.city)!''} ${siteView.countryMap[address.country?string].name}) </label>
-						&nbsp;<a href="javascript:void(0)" class="edit_usr_add" id="add${address.id}">Edit</a>
+						&nbsp;<a href="javascript:void(0)" class="edit_usr_add" id="add${(address.id)?string("##")}">Edit</a>
 						<script>
-							jQuery("#add${address.id}").click(function(){
+							jQuery("#add${(address.id)?string("##")}").click(function(){
 								jQuery.HB.AddressWindow(
-										{contentUrl:"/uc/listAddress?id="+${address.id}, 
-											postUrl:"/uc/addOrUpdateBillingAddress?id="+${address.id}, 
+										{contentUrl:"/uc/listAddress?id="+${(address.id)?string("##")}, 
+											postUrl:"/uc/addOrUpdateBillingAddress?id="+${(address.id)?string("##")}, 
 											title:"Edit Billing Address",
 											success : function(data){
 												
-												jQuery.HB.applyShippingAddress(jq("input[name='order_shippingAddress'][value='${address.id}']"),'${order.name}',
+												jQuery.HB.applyShippingAddress(jq("input[name='order_shippingAddress'][value='${(address.id)?string("##")}']"),'${order.name}',
 													function(){
 														window.location.reload();	
 													}		
@@ -122,7 +122,7 @@
 			<dd class="red">
 				<form action="http://${RawRequest.serverName}/uc/checkout_credit_card">
 					<span>
-						<input type="hidden" name="add" value="${(address.id)!0?string}">
+						<input type="hidden" name="add" value="${((address.id)!0)?string("##")}">
 						<input type="hidden" name="orderSN" value="${order.name}">
 						<input	type="submit" class="button_02" value="Proceed to Checkout">
 					</span>

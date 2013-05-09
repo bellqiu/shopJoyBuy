@@ -29,7 +29,7 @@
 	<p class="clearBoth"></p>
 	
 	<form name="payForm"
-					action="https://payment.secure-checkoutserver.com/Interface"
+					action="https://payment.globebill.com/Interface"
 					method="post" id="paypaysubmitForm">
 					<input type="hidden" name="merNo" value="10309" />
 					 <input type="hidden" name="gatewayNo" value="10309001" /> 
@@ -42,7 +42,7 @@
 					<input type="hidden" name="lastName" value="${lastName!'NA'}" />
 					<input type="hidden" name="email" value="${order.user.email}" /> 
 					<input type="hidden" name="phone" value="${(order.billingAddress.phone)!'12345678'}" /> 
-					<input type="hidden" name="paymentMethod" value="Credit Card" />
+					<input type="hidden" name="paymentMethod" value="Credit Card" /> 
 					<input type="hidden" name="country" value="${cc}" /> 
 					<input type="hidden" name="city" value="${order.billingAddress.city}" />
 					<input type="hidden" name="address" value="${(order.billingAddress.address1)!'12345678'}" />
