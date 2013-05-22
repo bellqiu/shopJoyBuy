@@ -17,7 +17,7 @@
 		<#assign hAndPadding = calculateImageSize(imageSize[0]!"438", imageSize[1]!"438", imageSize[2]!"317", "225")>
 		
 		<span class="" style="padding-top:10px; display:inline-block; width:100%; background:url('/css/Promotions_tab.gif') repeat-x scroll 0 0 transparent; height:39px;text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);">
-			<a href='${siteView.host+"/"+"c"+"/"+categoryData[categoryName].name}' style="font-weight:bold; margin-left: 15px;">${categoryData[categoryName].displayName}</a>
+			<a href='${siteView.host+"/"+"c"+"/"+categoryData[categoryName].name}' style="font-weight:bold; margin-left: 15px;">${categoryData[categoryName].displayName}</a><#if (categoryData[categoryName].productCount!=0)><span class="c-count">(${categoryData[categoryName].productCount!""})</span></#if>
 			<a style="float:right; margin-right:10px;" href='${siteView.host+"/"+"c"+"/"+categoryData[categoryName].name}'>More >></a>
 		</span>
 		<div>

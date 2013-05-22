@@ -1,14 +1,65 @@
+<#assign calculateCount = "com.spshop.web.function.CalculateCountOfProPerCategory"?new()>
 <div class="category-tree">
-	<h2 class="title">
-		${pageView.category.displayName?string!""}
-	</h2>
+<style>
+.ui-menu { width: 185px; font-size:12px;}
 
-	<ul class="category-tree-items">
-		<#list pageView.category.subCategories as subCategory>
-			<li class="category-tree-item">
-				<a href='${(siteView.host+"/"+"c"+"/"+subCategory.name)?string!""}'>${subCategory.displayName?string!""}</a>
-				<img class="hot-category" src="/css/thing_hot.gif">
+.c-count {color:gray; margin-left:5px;}
+
+#category-menu {
+    margin: 0;
+}
+
+#category-menu ul {
+    z-index:9999;
+}
+</style>
+
+<#if (pageView.category.subCategories?? && pageView.category.subCategories?size!=0)>
+<ul id="category-menu">
+<#list pageView.category.subCategories as subCategory>
+<#assign subCategory = calculateCount(subCategory.name!"")>
+	<li>
+		<a href='${(siteView.host+"/"+"c"+"/"+subCategory.name)?string!""}'>${subCategory.displayName} 
+		<#if (subCategory.productCount!=0)>
+			<span class="c-count">(${subCategory.productCount})</span>
+		</#if>
+		</a>
+		<#if (subCategory.subCategories?? && subCategory.subCategories?size!=0)>
+		<ul style="width:auto;">
+		<#list subCategory.subCategories as subSubCategory>
+		<#assign subSubCategory = calculateCount(subSubCategory.name!"")>
+			<li>
+				<a href='${(siteView.host+"/"+"c"+"/"+subSubCategory.name)?string!""}'>${subSubCategory.displayName} 
+				<#if (subSubCategory.productCount!=0)>
+					<span class="c-count">(${subSubCategory.productCount})</span>
+				</#if> 
+				</a>
+				<#if (subSubCategory.subCategories?? && subSubCategory.subCategories?size!=0 )>
+				<ul>
+					<#list subSubCategory.subCategories as childrenCategory>
+					<#assign childrenCategory = calculateCount(childrenCategory.name!"")>
+					<li>
+						<a href='${(siteView.host+"/"+"c"+"/"+childrenCategory.name)?string!""}'>${childrenCategory.displayName} 
+						<#if (childrenCategory.productCount!=0)>
+						<span class="c-count">(${childrenCategory.productCount})</span>
+						</#if> 
+						</a>
+					</li>
+					</#list>
+				</ul>
+				</#if>
 			</li>
 		</#list>
-	</ul>
+		</ul>
+		</#if>
+	</li>
+</#list>
+</ul>
+</#if>
+ <script>
+	jq(function() {
+	jq( "#category-menu" ).menu();
+	});
+</script>
+
 </div>

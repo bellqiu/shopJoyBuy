@@ -62,5 +62,10 @@
 		timeToLiveSeconds="60" maxElementsInMemory="10"
 		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
 		maxElementsOnDisk="100000" />
+	
+	<cache name="categoryProducts" eternal="false"
+		timeToLiveSeconds="864000" maxElementsInMemory="10"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		maxElementsOnDisk="100000" />
 
 </ehcache>

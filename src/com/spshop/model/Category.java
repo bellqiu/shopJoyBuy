@@ -22,6 +22,7 @@ public class Category  extends Component{
 	private boolean displayMarketOnly;
 	private String description;
 	private int index;
+	private long productCount = 0;
 	
 	private List<Category> subCategories = new ArrayList<Category>();
 	private Category parent;
@@ -210,6 +211,14 @@ public class Category  extends Component{
 
 	public boolean isDeleted() {
 		return deleted;
+	}
+
+	public long getProductCount() {
+		return productCount;
+	}
+
+	public void setProductCount(long productCount) {
+		this.productCount = productCount;
 	}
 
 }

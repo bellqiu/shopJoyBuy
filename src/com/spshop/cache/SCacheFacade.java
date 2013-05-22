@@ -38,7 +38,9 @@ public class SCacheFacade{
 	public static final String COUNTRY_CACHE = "countryCache";
 	public static final String ORDER_CACHE = "orderCache";
 	public static final String COLOR_CACHE = "colorCache";
-	 public static final String TAGS_PRODUCT_CACHE  = "tagsProduct";
+	public static final String TAGS_PRODUCT_CACHE  = "tagsProduct";
+	public static final String CATEGORY_PRODUCTS_CACHE = "categoryProducts";
+
 	
 	static{
 		cacheManager = new SCacheManager(SCacheFacade.class.getResourceAsStream("/ehcache.xml"));
@@ -78,6 +80,10 @@ public class SCacheFacade{
 	
 	public static SCache getTagsProductCache(){
 		return cacheManager.getSCache(TAGS_PRODUCT_CACHE);
+	}
+	
+	public static SCache getCategoryProductsCache(){
+	    return cacheManager.getSCache(CATEGORY_PRODUCTS_CACHE);
 	}
 
 	public static Order getOrder(String userEmail) {
@@ -275,6 +281,18 @@ public class SCacheFacade{
 		}
 		
 		return products;
+	}
+	
+	public static Long getProductCountsByCategory(Category c){
+	    String key = c.getName();
+	    
+	    Long count = (Long)getCategoryProductsCache().get(key);
+	    
+	    if (count == null) {
+            count = ServiceFactory.getService(ProductService.class).queryCountByCategory(c);
+            getCategoryProductsCache().put(key, count);
+        }
+	    return count;
 	}
 	
 }
