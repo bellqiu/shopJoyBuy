@@ -1,5 +1,5 @@
 <#assign pageKeywords = '${pageView.pageProperties.productDetail.keywords!""}'>
-<#assign pageDescription = '${pageView.pageProperties.productDetail.title!""}'>
+<#assign pageDescription = '${("Buy " + pageView.pageProperties.productDetail.title + " at wholesale price from JoyBuy.co.uk, all free shipping! Buy Now!")!""}'>
 <#assign pageTitle = '${pageView.pageProperties.productDetail.title!""}'>
 <#assign pageBaseURL = '${siteView.host+"/"}'>
 
