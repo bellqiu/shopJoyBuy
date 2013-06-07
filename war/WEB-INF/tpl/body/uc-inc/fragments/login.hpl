@@ -30,8 +30,3 @@
 
 </div>
 
-<#if createdUser ??>
-	<script>
-		jq("#FormLogin_submit").click();
-	</script>
-</#if>

@@ -47,6 +47,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -58,6 +59,12 @@ import net.sf.json.JSONObject;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -75,6 +82,7 @@ import com.spshop.model.UserOption;
 import com.spshop.model.cart.ShoppingCart;
 import com.spshop.model.enums.OrderStatus;
 import com.spshop.model.enums.SelectType;
+import com.spshop.security.LoginSuccessfulHandler;
 import com.spshop.service.factory.ServiceFactory;
 import com.spshop.service.intf.CouponService;
 import com.spshop.service.intf.OrderService;
@@ -91,6 +99,13 @@ import com.spshop.utils.Utils;
 public class ShoppingController extends BaseController{
 	
 	private static final String ACCOUNT = Constants.PAYPAL_ACCOUNT;
+	
+	@Autowired
+	@Qualifier("authenticationManager")
+	private AuthenticationManager authenticationManager;
+	
+	@Autowired
+	private LoginSuccessfulHandler loginSuccessfulHandler;
 	
 	private static final String COLOR = COLOR_PARAM_PRE;
 	private static final String QTY = QTY_PARAM;
@@ -142,7 +157,7 @@ public class ShoppingController extends BaseController{
 	
 	private void persistantCart(){
 		Order order = getUserView().getCart().getOrder();
-		if(OrderStatus.ONSHOPPING.toString().equals(order.getStatus()) && null == order.getStatus() && null!=order.getUser()){
+		if(OrderStatus.ONSHOPPING.toString().equals(order.getStatus()) && null != order.getStatus() && null!=order.getUser()){
 			order = ServiceFactory.getService(OrderService.class).saveOrder(getUserView().getCart().getOrder(), OrderStatus.ONSHOPPING.toString());
 		}
 	}
@@ -231,7 +246,7 @@ public class ShoppingController extends BaseController{
     }
 	
 	@RequestMapping(value="/createAccount", method = RequestMethod.POST)
-    public String createAccount(Model model,HttpServletRequest request,HttpServletResponse response) {
+    public String createAccount(Model model,HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException {
 		boolean noError = true;
 		String email = request.getParameter(REG_USER_NAME);
 		String pwd1 = request.getParameter(REG_PWD);
@@ -308,12 +323,24 @@ public class ShoppingController extends BaseController{
 		            }.start();
 				
 			}
+			
+			UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword());
+			
+			Authentication authentication = authenticationManager.authenticate(authenticationToken);
+			
+			if(null != authentication){
+				SecurityContextHolder.getContext().setAuthentication(authentication);
+				loginSuccessfulHandler.onAuthenticationSuccess(request, response, authentication);
+				return null;
+			}
 		}
 		
 		if(StringUtils.isNotBlank(landingpage)){
 			getUserView().setRequestPage(landingpage);
 		}
 		model.addAttribute(REG_USER, user);
+		
+		
 		
         return "login";
     }

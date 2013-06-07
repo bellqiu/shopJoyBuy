@@ -107,7 +107,7 @@
 		
 	</security:http>
 	
-	<security:authentication-manager >
+	<security:authentication-manager alias="authenticationManager">
 		<security:authentication-provider user-service-ref="userDetailsService" />
 	</security:authentication-manager>
 	
