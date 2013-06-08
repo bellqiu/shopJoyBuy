@@ -74,16 +74,16 @@
 					<div class="user_menu_hidd" style="width: 200px;">
 						<dl>
 							<dd>
-								<a class="menuNav" href="/uc/changePwd">Change Password</a>
+								<a class="menuNav" href="/uc/changePwd" rel="nofollow">Change Password</a>
 							</dd>
 							<dd>
-								<a class="menuNav" href="/uc/userProfile">My Profile</a>
+								<a class="menuNav" href="/uc/userProfile" rel="nofollow">My Profile</a>
 							</dd>
 							<dd>
-								<a class="menuNav" href="/uc/myOrder">My Order</a>
+								<a class="menuNav" href="/uc/myOrder" rel="nofollow">My Order</a>
 							</dd>
 							<dd>
-								<a class="menuNav" href="/uc/feedback">My Message</a>
+								<a class="menuNav" href="/uc/feedback" rel="nofollow">My Message</a>
 							</dd>
 						</dl>
 					</div>
@@ -91,10 +91,10 @@
 				<li class="" id="base_unlogin_li">
 				<#assign loginUser = userView.loginUser!"0">
 				<#if userView.loginUser ??>
-					${userView.loginUser.email}<a href="/logout">(Logout)</a>
+					${userView.loginUser.email}<a href="/logout" rel="nofollow">(Logout)</a>
 				</#if>
 				<#if loginUser=="0">
-					<a href="/uc/login">Login or Register</a>
+					<a href="/uc/login" rel="nofollow">Login or Register</a>
 				</#if>
 					<div class="user_menu_hidd" style="width: 200px; cursor: default;">
 						<div class="user_menu_content">

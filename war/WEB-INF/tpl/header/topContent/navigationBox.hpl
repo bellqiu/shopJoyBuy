@@ -1,6 +1,6 @@
 <div class="top_box">
 	<div class="logo_box">
-		<a href='${(siteView.host)!"${pageBaseURL}/"}' title="home" ref="nofollow">
+		<a href='${(siteView.host)!"${pageBaseURL}/"}' title="home">
 			<img alt="logo" src="/image/2496802064581883.jpg">
 		</a>
 	</div>
