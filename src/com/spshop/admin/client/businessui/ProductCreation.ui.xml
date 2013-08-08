@@ -79,6 +79,23 @@
 							</g:row>
 							<g:row>
 								<g:customCell>
+									<g:Label text="Abstract Template"/>
+								</g:customCell>
+								<g:customCell>
+									<g:ListBox ui:field="absTemplates">
+									</g:ListBox>
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
+									<g:Label text="Abstract" />
+								</g:customCell>
+								<g:customCell>
+									<g:TextArea width="800px" height="200px" ui:field="abstractText" />
+								</g:customCell>
+							</g:row>
+							<g:row>
+								<g:customCell>
 									<g:Label text="Categories"/>
 								</g:customCell>
 								<g:customCell>

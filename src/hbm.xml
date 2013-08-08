@@ -311,7 +311,7 @@
 		<property name="updateDate"></property>
 		<many-to-one name="site" class="Site" column="site_id"></many-to-one>
 		
-		<property name="abstractText" length="400"></property>
+		<property name="abstractText" length="500"></property>
 		<property name="keywords" length="400"></property>
 		<property name="hit"></property>
 		<property name="weight"></property>
