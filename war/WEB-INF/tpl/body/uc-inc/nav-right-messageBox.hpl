@@ -170,7 +170,7 @@ textarea {
 		<dd class="W_border content">
 			<div class="R_msg">
 			<form action="/uc/feedback" method="post">
-				<input type="hidden" name="lastMsgId" value="${lastMsgId}"/>
+				<input type="hidden" name="lastMsgId" value='${lastMsgId?c!""}'/>
 				<input type="hidden" name="optType" value="postMsg"/>
 				<div>
 					<textarea name="newMessage" class="textarea"

@@ -14,7 +14,7 @@
 				<li class="feedback_item_w1">${(msg.name)!'N/A'}</li>
 				<li class="feedback_item_w2">${(msg.createDate?string("yyyy-MM-dd hh:mm:ss a"))}</li>
 				<li class="feedback_item_w3">${msg.replied?string('Replied','Awaiting Reply')}</li>
-				<li class="feedback_item_w4"><a href="/uc/feedback/?messageId=${msg.id}&optType=viewThread">View Thread</a></li>
+				<li class="feedback_item_w4"><a href='/uc/feedback/?messageId=${msg.id?c!""}&optType=viewThread'>View Thread</a></li>
 			</ul>
 			</#list>
 		</div>
