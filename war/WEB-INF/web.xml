@@ -53,6 +53,11 @@
 		<servlet-name>AdminLogin</servlet-name>
 		<url-pattern>/admin</url-pattern>
 	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>initServlet</servlet-name>
+		<url-pattern>/initServlet</url-pattern>
+	</servlet-mapping>
 
 	<servlet-mapping>
 		<servlet-name>queryService</servlet-name>
