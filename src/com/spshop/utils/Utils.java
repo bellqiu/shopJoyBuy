@@ -326,4 +326,20 @@ public class Utils {
 	        
 	        return searchCategory(categories, categoryName);
 	    }
+	    
+	    public static Category getSecondaryLayerCategory(String cName){
+	    	List<Category> categories = SCacheFacade.getTopCategories();
+	    	Category c = searchCategory(categories, cName);
+	    	Category sc = c;
+	    	while (c.getParent() != null) {
+	    		sc = c;
+				c = c.getParent();
+			}
+	    	return sc;
+	    }
+	    
+	    public static Category getCategoryByName(String cName){
+	    	List<Category> categories = SCacheFacade.getTopCategories();
+	    	return searchCategory(categories, cName);
+	    }
 }
