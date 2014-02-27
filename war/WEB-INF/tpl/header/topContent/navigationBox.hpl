@@ -18,8 +18,12 @@
 		</form>
 	</div>
 	<div class="security">
-	 	<a style="border:0px none; float:left; margin-left:-10px; margin-top:-13px;" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
-		<script	type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.joybuy.co.uk&amp;size=S&amp;use_flash=YES&amp;use_transparent=YES&amp;lang=en"></script></a>
+	 	<a style="border:0px none; float:left; margin-left:-10px; margin-top:-13px;" 
+	 		title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications."
+	 		href="https://safeweb.norton.com/report/show?url=joybuy.co.uk&ulang=eng"
+	 		target="_blank">
+			<img alt="Globally Accepted and Purchase Protection" title="Globally Accepted and Purchase Protection" src="/image/norton.gif">
+		</a>
 		<a style="float:left" target="blank" href="https://www.paypal.com/verified/pal=pay@joybuy.co.uk" ref="nofollow">
 			<img alt="Globally Accepted and Purchase Protection" title="Globally Accepted and Purchase Protection" src="/image/horizontal_solution.jpg">
 		</a>
