@@ -48,4 +48,9 @@ public class ProductDAOImpl extends AbstractBaseDAO<Product, Long>  implements P
 		
 		return re;
 	}
+	
+	@Override
+	public void updateViews(int hit, long pid) {
+		getSession().createSQLQuery("update shop_product as p set p.hit=? where p.id=?").setParameter(0, hit).setParameter(1, pid).executeUpdate();
+	}
 }

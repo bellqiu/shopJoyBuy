@@ -38,6 +38,9 @@
 		${currency }<del>
 		${product.price * userView.currencyRate}
 		</del> <br />
+		<#if (product.hit>0)>
+		<span style="color:#538C9D;float:left;">${product.hit} Views</span>
+		</#if>
 		<span class="red fontbold" style="font-size: 18px;">${product.actualPrice * userView.currencyRate}</span> 
 	</div>
 </li>

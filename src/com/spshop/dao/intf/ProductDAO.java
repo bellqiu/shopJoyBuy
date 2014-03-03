@@ -12,4 +12,6 @@ public interface ProductDAO extends BaseDAO<Product, Long>{
 	Product getProductByName(String name);
 	
 	Map<String, String> search(String keyword, int start, int end);
+	
+	void updateViews(int hit, long pid);
 }

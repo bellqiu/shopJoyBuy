@@ -58,6 +58,7 @@ public class ProductCreation extends Composite{
 	@UiField ProdAttributeManager attributeManager;
 	@UiField TextBox name;
 	@UiField TextBox title;
+	@UiField TextBox view;
 	@UiField TextArea keywords;
 	@UiField TextArea abstractText;
 	@UiField TextArea tags;
@@ -219,6 +220,7 @@ public class ProductCreation extends Composite{
 		
 		name.setValue(product.getName());
 		title.setValue(product.getTitle());
+		view.setValue(String.valueOf(product.getHit()));
 		keywords.setValue(product.getKeywords());
 		tags.setValue(product.getTags());
 		detail.setHTML(product.getDetail());
@@ -275,6 +277,10 @@ public class ProductCreation extends Composite{
 	@UiHandler("title")
 	void onTitleKeyUp(KeyUpEvent event) {
 		product.setTitle(title.getValue());
+	}
+	@UiHandler("view")
+	void onViewKeyUp(KeyUpEvent event){
+		product.setHit(Integer.valueOf(view.getValue()));
 	}
 	@UiHandler("detail")
 	void onDetailBlur(BlurEvent event) {

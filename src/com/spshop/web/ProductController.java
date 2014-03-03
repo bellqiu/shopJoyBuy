@@ -18,6 +18,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import com.spshop.cache.SCacheFacade;
 import com.spshop.model.Category;
 import com.spshop.model.Product;
+import com.spshop.service.factory.ServiceFactory;
+import com.spshop.service.intf.ProductService;
 import com.spshop.utils.Constants;
 import com.spshop.web.view.PageView;
 
@@ -43,12 +45,26 @@ public class ProductController extends BaseController {
     @RequestMapping(value = "/{productName}")
     public String renderProduct(Model model, HttpServletRequest request, @PathVariable String productName) {
 
-        Product product = SCacheFacade.getProduct(productName);
+        final Product product = SCacheFacade.getProduct(productName);
         getPageView().addPageProperty(PRODUCT_DETAILS, product);
         prepareCorrelationProducts(model, product.getCategories().get(0));
         figureOutAncesterCategory(model, product.getCategories());
         prepareRelatedProducts(model, product.getTabProductKey());
         prepareCustomizePopup(model, product.getCategories());
+        
+        int hit = product.getHit();
+        if (hit==0) {
+			int h=(int)(1000+Math.random()*1000);
+			product.setHit(h);
+		}
+        product.setHit(product.getHit()+1);
+        
+        new Thread(){
+        	public void run() {
+        		ServiceFactory.getService(ProductService.class).updateViews(product.getHit(), product.getId());
+        	};
+        }.start();
+        
         return PRODUCT_UI;
     }
 

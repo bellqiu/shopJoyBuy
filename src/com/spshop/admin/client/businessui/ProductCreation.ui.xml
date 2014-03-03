@@ -46,6 +46,14 @@
 								</g:customCell>
 							</g:row>
 							<g:row>
+								<g:customCell>
+									<g:Label text="View:" />
+								</g:customCell>
+								<g:customCell>
+									<g:TextBox width="236px" ui:field="view" />
+								</g:customCell>
+							</g:row>
+							<g:row>
 							<g:customCell>
 								<g:Label text="Price:"/>
 							</g:customCell>

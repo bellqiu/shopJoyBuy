@@ -33,4 +33,6 @@ public interface ProductService extends BaseService<Product,ProductDAO, Long>{
 	int getProductCountByTag(String tag);
 	
 	List<String> getTags();
+	
+	void updateViews(int hit, long pid);
 }

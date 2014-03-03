@@ -171,5 +171,8 @@ public class ProductServiceImpl extends AbstractService<Product,ProductDAO, Long
 		return rs;
 	}
 	
-	
+	@Override
+	public void updateViews(int hit, long pid) {
+		getDao().updateViews(hit, pid);
+	}
 }
