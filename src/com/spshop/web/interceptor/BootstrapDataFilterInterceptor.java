@@ -101,7 +101,7 @@ public class BootstrapDataFilterInterceptor extends HandlerInterceptorAdapter{
 		setCurrency(request,userView,siteView.getCurrencies());
 		
 		setCurrentProductID(request);
-		
+		siteView.setCategories(SCacheFacade.getTopCategories());
 		request.getSession().getServletContext().setAttribute(Constants.SITE_VIEW, siteView);
 		request.getSession().setAttribute(Constants.USER_VIEW, userView);
 		
