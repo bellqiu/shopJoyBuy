@@ -20,7 +20,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestParam;
 import com.spshop.cache.SCacheFacade;
 import com.spshop.feed.google.rss.AbstractGoogleRSSFeed;
 import com.spshop.feed.google.rss.GoogleRSSFeed4US;
@@ -44,6 +44,8 @@ public class RSSFeedController extends BaseController {
         Integer pageSize = 100;
         Integer startIndex = 1;
         String mappedCategory = AbstractGoogleRSSFeed.GoogleCategoryMapper.mapping(category);
+        String include2image=request.getParameter("include2image");
+        String feedImage = request.getParameter("feedImage");
 
         if (StringUtils.isNotBlank(index)) {
             startIndex = Integer.valueOf(index);
@@ -54,7 +56,7 @@ public class RSSFeedController extends BaseController {
 
         List<Product> products = searchProductsByCategory(category, startIndex - 1, startIndex + pageSize - 1);
 
-        Document doc = GoogleRSSFeed4US.buildRSSXMLByProducts(products, countryCode, category, mappedCategory, getSiteView().getHost(), getSiteView().getImageHost(), request);
+        Document doc = GoogleRSSFeed4US.buildRSSXMLByProducts(Boolean.valueOf(include2image), Boolean.valueOf(feedImage), products, countryCode, category, mappedCategory, getSiteView().getHost(), getSiteView().getImageHost(), request);
         XMLOutputter xmlOutputter = new XMLOutputter();
         try {
             File file = new File(AbstractGoogleRSSFeed.getProperty("feed.file.location"), generateFileName(category, String.valueOf(startIndex), String.valueOf(startIndex + pageSize)));

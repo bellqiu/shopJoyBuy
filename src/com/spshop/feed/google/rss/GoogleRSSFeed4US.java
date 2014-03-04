@@ -18,7 +18,7 @@ import com.spshop.utils.Utils;
 public class GoogleRSSFeed4US extends AbstractGoogleRSSFeed {
     private static final Namespace namespace = Namespace.getNamespace("g", "http://base.google.com/ns/1.0");
     
-    public static Document buildRSSXMLByProducts(List<Product> products, String cc, String originalCategory, String category, String host, String imageHost, HttpServletRequest request) {
+    public static Document buildRSSXMLByProducts(boolean include2Image, boolean feedImage, List<Product> products, String cc, String originalCategory, String category, String host, String imageHost, HttpServletRequest request) {
         Element root = new Element("rss", namespace);
         root.setAttribute("version", "2.0");
         
@@ -46,10 +46,18 @@ public class GoogleRSSFeed4US extends AbstractGoogleRSSFeed {
             e.addContent(new Element("product_type", namespace).setText(c.getDisplayName()));
             e.addContent(new Element("link", namespace).setText(host + "/" + product.getName()));
             String img1 = product.getImages().get(0).getLargerUrl();
-            e.addContent(new Element("image_link", namespace).setText(getFeedImage(imageHost, img1)));
-            if (product.getImages().size()>1) {
+            if (feedImage) {
+            	e.addContent(new Element("image_link", namespace).setText(getFeedImage(imageHost, img1)));
+			} else {
+				e.addContent(new Element("image_link", namespace).setText(imageHost+img1));
+			}
+            if (product.getImages().size()>1&&include2Image) {
             	String img2 = product.getImages().get(1).getLargerUrl();
-            	e.addContent(new Element("additional_image_link", namespace).setText(getFeedImage(imageHost, img2)));
+            	if (feedImage) {
+                	e.addContent(new Element("additional_image_link", namespace).setText(getFeedImage(imageHost, img2)));
+    			} else {
+    				e.addContent(new Element("additional_image_link", namespace).setText(imageHost+img2));
+    			}
 			}
             //
             //‘全新' [new]
@@ -66,16 +74,13 @@ public class GoogleRSSFeed4US extends AbstractGoogleRSSFeed {
              */
             e.addContent(new Element("availability", namespace).setText("in stock"));
             e.addContent(new Element("price", namespace).setText(String.valueOf(formater.format(product.getPrice()*Double.valueOf(getCurrency(getProperty(cc).toUpperCase()))))+" "+getProperty(cc).toUpperCase()));
-            e.addContent(new Element("sale_price", namespace).setText(String.valueOf(formater.format(product.getActualPrice()*Double.valueOf(getCurrency(getProperty(cc).toUpperCase()))))+" "+getProperty(cc).toUpperCase()));
-            
-            e.addContent(new Element("sale_price_effective_date", namespace).setText("2013-12-30T13:00-0800/2016-03-11T15:30-0800"));
             
             e.addContent(new Element("brand", namespace).setText("HoneyBuy"));
             e.addContent(new Element("gender", namespace).setText("female"));
             e.addContent(new Element("age_group", namespace).setText("adult"));
             Category adGroup = Utils.getCategoryByName(originalCategory);
             e.addContent(new Element("adwords_grouping", namespace).setText(adGroup.getDisplayName()));
-            e.addContent(new Element("color", namespace).setText("White/Black/Blue"));
+            e.addContent(new Element("color", namespace).setText("Black/Blue/White"));
             e.addContent(new Element("size", namespace).setText("02-04-06-08-10-12-14-16"));
             
             e.addContent(new Element("tax", namespace).setContent(new Element("rate", namespace).setText("0")));
