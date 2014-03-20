@@ -14,6 +14,7 @@ public interface SiteService extends BaseService<Site,SiteDAO, Long>{
 	Site getSiteById(long defaultSiteId);
 	QueryResult<Component> query(QueryCriteria criteria);
 	QueryResult<Component> queryByHQL(String hql, List<Object> params, String className);
+	public QueryResult<Component> queryByHQL(String hql, List<Object> params, String className, int start, int max);
 	List<Image> getAllColors();
 	Image getColorImgById(long id);
 }

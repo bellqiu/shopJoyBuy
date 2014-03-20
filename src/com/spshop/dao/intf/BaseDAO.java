@@ -54,4 +54,6 @@ public interface BaseDAO<T extends Component, ID extends Serializable> {
 	public QueryResult<Component> queryByHQL(String hql, List<Object> params, String className);
 	
 	public Object queryByHQL(String hql,Map<String,Object> params);
+	
+	public QueryResult<Component> queryByHQL(String hql, List<Object> params, String className, int start, int max);
 }

@@ -75,7 +75,6 @@ public class PopWindow extends DialogBox {
 	      // Use the popup's key preview hooks to close the dialog when either
 	      // enter or escape is pressed.
 	      switch (evt.getKeyCode()) {
-	        case KeyCodes.KEY_ENTER:
 	        case KeyCodes.KEY_ESCAPE:
 	          hide();
 	          RootPanel.get().remove(this);

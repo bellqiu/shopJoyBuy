@@ -637,7 +637,7 @@ public class ComponentQuery extends ResizeComposite {
 		List<Object> params = this.queryCondition.getParams();
 		String className = this.queryCondition.getType().getName();
 		if (hql != null && className != null && hql.trim() != "" && className.trim() != "") {
-		    AdminWorkspace.ADMIN_SERVICE_ASYNC.queryByHQL(hql, params, className, new AsyncCallbackAdapter<QueryResult<Component>>() {
+		    AdminWorkspace.ADMIN_SERVICE_ASYNC.queryByHQL(hql, params, className, startIndex * VISIBLE_RECORD_COUNT, VISIBLE_RECORD_COUNT, new AsyncCallbackAdapter<QueryResult<Component>>() {
 		        @Override
 		        public void onSuccess(QueryResult<Component> rs) {
 		            setResult(rs);

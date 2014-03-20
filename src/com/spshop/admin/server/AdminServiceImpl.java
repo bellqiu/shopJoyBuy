@@ -165,8 +165,8 @@ public class AdminServiceImpl extends RemoteService implements AdminService{
     }
 
     @Override
-    public QueryResult<Component> queryByHQL(String hql, List<Object> params, String className) throws IllegalArgumentException {
-        return ServiceFactory.getService(SiteService.class).queryByHQL(hql, params, className);
+    public QueryResult<Component> queryByHQL(String hql, List<Object> params, String className, int start, int max) throws IllegalArgumentException {
+        return ServiceFactory.getService(SiteService.class).queryByHQL(hql, params, className, start, max);
     }
 
     @Override

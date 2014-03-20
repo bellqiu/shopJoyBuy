@@ -41,7 +41,7 @@ public interface AdminService  extends RemoteService{
 	public List<Country> getAllCountries() throws ServiceValidateException;
 	public Country getCountryById(long id) throws ServiceValidateException;
 	Order updateOrderStatus(Order order,String status);
-	QueryResult<Component> queryByHQL(String hql, List<Object> params, String className) throws IllegalArgumentException;
+	QueryResult<Component> queryByHQL(String hql, List<Object> params, String className, int start, int max) throws IllegalArgumentException;
 	Message replyMessage(Message parent, Message message);
 	List<Order> queryOrdersByUserId(long userId);
 }

@@ -31,6 +31,12 @@ public class SiteServiceImpl extends AbstractService<Site,SiteDAO, Long> impleme
         QueryResult<Component> qs = getDao().queryByHQL(hql, params, className);
         return qs.clone();
     }
+    
+    @Override
+    public QueryResult<Component> queryByHQL(String hql, List<Object> params, String className, int start, int max) {
+        QueryResult<Component> qs = getDao().queryByHQL(hql, params, className, start, max);
+        return qs.clone();
+    }
 
 	@Override
 	public List<Image> getAllColors() {
