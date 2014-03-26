@@ -106,12 +106,11 @@ public abstract class AbstractBaseDAO<T extends Component, ID extends Serializab
             }
         }
         
-        String countHql = "select count(name) "+hql;
-        
         List<Component> qs = q.list();
-		Query countQuery = getSession().createQuery(countHql);
+        
+		Query countQuery = getSession().createQuery(hql);
+		int count = countQuery.list().size();
 		
-		int count = Integer.valueOf(countQuery.list().get(0).toString());
         QueryResult<Component> qr = new QueryResult<Component>();
         qr.setRecordCount(count);
         qr.setResult(qs);
