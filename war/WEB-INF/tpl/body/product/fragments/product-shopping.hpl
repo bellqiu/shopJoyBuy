@@ -227,7 +227,7 @@
 		<div class="last-arrival-date">
 			Latest Arrival Date: <br>
 			<p style="color: #999">(Only For Custom Made Product)</p>
-			<input name="lastArrivalDate" type="text" id="lastArrival"  style="width: 175px;"/>
+			<input name="lastArrivalDate" type="text" id="lastArrival"  style="width: 175px;" readonly="readonly" />
 		</div>
 		<script>
 			 jq(function() {
